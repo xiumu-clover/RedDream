@@ -1,0 +1,56 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import ChapterContent from '../../components/ChapterContent.astro';
+import PageShell from '../../components/PageShell.astro';
+import { BOOKS, BOOK_IDS, belongsToBook, type BookId } from '../../lib/books';
+import type { CompiledChapter } from '../../lib/chapter-compiler';
+import { compileChapter } from '../../lib/chapter-compiler';
+import { validateChapterImages } from '../../lib/chapter-images';
+
+interface CompiledEntry {
+	entry: CollectionEntry<'chapters'>;
+	chapter: CompiledChapter;
+}
+
+export async function getStaticPaths() {
+	const entries = await getCollection('chapters');
+	return Promise.all(BOOK_IDS.map(async (book) => {
+		const chapters = (await Promise.all(
+			entries
+				.filter((entry) => belongsToBook(entry.data.order, book))
+				.map(async (entry) => {
+					const chapter = compileChapter(entry.body ?? '', { sourceName: `content/chapters/${entry.id}.md` });
+					await validateChapterImages(chapter);
+					return { entry, chapter };
+				}),
+		)).sort((a, b) => (a.entry.data.order ?? 0) - (b.entry.data.order ?? 0));
+
+		return { params: { book }, props: { book, chapters } };
+	}));
+}
+
+interface Props {
+	book: BookId;
+	chapters: CompiledEntry[];
+}
+
+const { book, chapters } = Astro.props;
+const definition = BOOKS[book];
+---
+
+<PageShell title={`${definition.title} · 连续阅读`} description={`连续阅读${definition.rangeDetail}。`} activeSection={book}>
+	<header class="continuous-reading-heading">
+		<p>{definition.range}</p>
+		<a href={definition.href}>返回{definition.title}目录</a>
+	</header>
+	<div class="continuous-reading" data-all-chapters data-continuous-book={book}>
+		{
+			chapters.map(({ entry, chapter }) => (
+				<section class="continuous-chapter" id={`chapter-${entry.id}`} aria-label={chapter.title}>
+					<ChapterContent chapter={chapter} book={book} />
+				</section>
+			))
+		}
+	</div>
+</PageShell>

@@ -1,0 +1,44 @@
+---
+interface ChapterLink {
+	id: string;
+	title: string;
+}
+
+interface Props {
+	previous?: ChapterLink;
+	next?: ChapterLink;
+	directoryHref?: string;
+	directoryLabel?: string;
+}
+
+const {
+	previous,
+	next,
+	directoryHref = '/chapters/',
+	directoryLabel = '返回目录',
+} = Astro.props;
+---
+
+<nav class="chapter-navigation" aria-label="章节翻页">
+	{
+		previous ? (
+			<a class="chapter-navigation__chapter chapter-navigation__chapter--previous" href={`/chapters/${previous.id}/`}>
+				<span>← 上一回</span>
+				<strong>{previous.title}</strong>
+			</a>
+		) : (
+			<span class="chapter-navigation__spacer" aria-hidden="true"></span>
+		)
+	}
+	<a class="chapter-navigation__directory" href={directoryHref}>{directoryLabel}</a>
+	{
+		next ? (
+			<a class="chapter-navigation__chapter chapter-navigation__chapter--next" href={`/chapters/${next.id}/`}>
+				<span>下一回 →</span>
+				<strong>{next.title}</strong>
+			</a>
+		) : (
+			<span class="chapter-navigation__spacer" aria-hidden="true"></span>
+		)
+	}
+</nav>

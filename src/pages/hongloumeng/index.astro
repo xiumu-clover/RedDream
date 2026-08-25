@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BookDirectory from '../../components/BookDirectory.astro';
+import PageShell from '../../components/PageShell.astro';
+import { belongsToBook } from '../../lib/books';
+import { compileChapter } from '../../lib/chapter-compiler';
+import { validateChapterImages } from '../../lib/chapter-images';
+
+const book = 'hongloumeng' as const;
+const chapters = (await Promise.all(
+	(await getCollection('chapters'))
+		.filter((entry) => belongsToBook(entry.data.order, book))
+		.map(async (entry) => {
+			const compiled = compileChapter(entry.body ?? '', { sourceName: `content/chapters/${entry.id}.md` });
+			await validateChapterImages(compiled);
+			return {
+				id: entry.id,
+				order: entry.data.order,
+				title: compiled.title,
+				description: entry.data.description,
+			};
+		}),
+)).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+---
+
+<PageShell title="红楼梦 · 前八十回" description="阅读《红楼梦》前八十回。" activeSection={book}>
+	<BookDirectory book={book} chapters={chapters} />
+</PageShell>

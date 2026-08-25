@@ -1,0 +1,13 @@
+---
+import PageShell from '../components/PageShell.astro';
+import ReadingSettings from '../components/ReadingSettings.astro';
+---
+
+<PageShell title="阅读设置" description="分别设置《红楼梦》与《癸酉本》的阅读方式。" activeSection="settings">
+	<header class="page-heading settings-heading">
+		<p class="eyebrow">Reading Preferences</p>
+		<h1>阅读设置</h1>
+		<p>两本书独立配置。修改任意一项都会立即保存，不会影响另一本。</p>
+	</header>
+	<ReadingSettings />
+</PageShell>

@@ -1,0 +1,157 @@
+---
+import PageShell from '../components/PageShell.astro';
+
+const marks = [
+	{ syntax: '[T]标题', name: '标题', description: '只作用于当前行；首个顶层标题同时作为章节名称。' },
+	{ syntax: '[zp]...[-]', name: '原脂批', description: '红色文字，可嵌套其他内容标记。' },
+	{ syntax: '[mp]...[-]', name: '书批', description: '墨蓝文字；多行时保留换行，每行自动空两字。' },
+	{ syntax: '[zpsc]...[-]', name: '脂批诗词', description: '脂批中的诗词，使用红色楷体并保留逐行换行。' },
+	{ syntax: '[sc]...[-]', name: '普通诗词', description: '诗块整体居中、诗句左对齐，使用较小楷体。' },
+	{ syntax: '[fu]...[-]', name: '长赋', description: '用于赋体、骈文等长篇韵文，保留逐行换行。' },
+	{ syntax: '[B]...[-]', name: '加粗', description: '加粗内容，可嵌套在正文、批语、诗词和尾注中。' },
+	{ syntax: '[wz]...[-]', name: '尾注', description: '在当前位置自动插入编号，并生成气泡和章末尾注。' },
+	{ syntax: '[img]文件名\n图注[-]', name: '图片', description: '插入独立图片；图注可省略，点击图片可在当前页面放大。' },
+	{ syntax: '[-]', name: '结束标记', description: '关闭最近一个尚未结束的标记。' },
+];
+
+const nestedExample = `[wz]这里引用一首诗：
+[sc]无材可去补苍天，
+枉入红尘若许年。[-]
+——第八回[-]`;
+---
+
+<PageShell title="标记说明" description="红楼共读自定义章节标记的速查表与显示示例。" activeSection="guide">
+	<header class="page-heading guide-heading">
+		<p class="eyebrow">Markup Guide</p>
+		<h1>标记说明</h1>
+		<p class="guide-intro">忘记缩写时看这里。Markdown 仍是唯一编辑源，标记只控制章节网页和打印稿的排版。</p>
+	</header>
+
+	<nav class="guide-toc" aria-label="标记说明目录">
+		<a href="#quick-reference">标记速查</a>
+		<a href="#visual-examples">显示效果</a>
+		<a href="#writing-rules">书写规则</a>
+	</nav>
+
+	<section class="guide-section" id="quick-reference">
+		<div class="guide-section__heading">
+			<p class="eyebrow">Quick Reference</p>
+			<h2>标记速查</h2>
+		</div>
+		<div class="guide-table-wrap">
+			<table class="guide-table">
+				<thead>
+					<tr><th scope="col">写法</th><th scope="col">名称</th><th scope="col">用途</th></tr>
+				</thead>
+				<tbody>
+					{marks.map((mark) => (
+						<tr>
+							<td><code>{mark.syntax}</code></td>
+							<td>{mark.name}</td>
+							<td>{mark.description}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section class="guide-section" id="visual-examples">
+		<div class="guide-section__heading">
+			<p class="eyebrow">Examples</p>
+			<h2>写法与显示效果</h2>
+		</div>
+
+		<div class="guide-examples">
+			<article class="guide-example">
+				<h3>原脂批 <code>[zp]</code></h3>
+				<pre><code>[zp]此处点明全书主旨。[-]</code></pre>
+				<div class="guide-example__preview"><span class="chapter-mark chapter-mark--zp">此处点明全书主旨。</span></div>
+			</article>
+
+			<article class="guide-example">
+				<h3>书批 <code>[mp]</code></h3>
+				<pre><code>{`[mp]第一行书批
+第二行书批
+——朽木[-]`}</code></pre>
+				<div class="guide-example__preview">
+					<span class="chapter-mark chapter-mark--mp guide-mp-preview"><span class="chapter-mp-indent" aria-hidden="true"></span>第一行书批<br /><span class="chapter-mp-indent" aria-hidden="true"></span>第二行书批<span class="chapter-attribution">朽木</span></span>
+				</div>
+			</article>
+
+			<article class="guide-example">
+				<h3>普通诗词 <code>[sc]</code></h3>
+				<pre><code>{`[sc]满纸荒唐言，
+一把辛酸泪。[-]`}</code></pre>
+				<div class="guide-example__preview"><div class="chapter-verse chapter-verse--sc">满纸荒唐言，<br />一把辛酸泪。</div></div>
+			</article>
+
+			<article class="guide-example">
+				<h3>脂批诗词 <code>[zpsc]</code></h3>
+				<pre><code>{`[zp]此处有诗：
+[zpsc]字字看来皆是血，
+十年辛苦不寻常。[-][-]`}</code></pre>
+				<div class="guide-example__preview"><span class="chapter-mark chapter-mark--zp">此处有诗：<span class="chapter-mark chapter-mark--zpsc">字字看来皆是血，<br />十年辛苦不寻常。</span></span></div>
+			</article>
+
+			<article class="guide-example">
+				<h3>长赋 <code>[fu]</code></h3>
+				<pre><code>{`[fu]其文曰：
+若夫日出而林霏开，
+云归而岩穴暝。[-]`}</code></pre>
+				<div class="guide-example__preview"><div class="chapter-fu">其文曰：<br />若夫日出而林霏开，<br />云归而岩穴暝。</div></div>
+			</article>
+
+			<article class="guide-example">
+				<h3>加粗 <code>[B]</code></h3>
+				<pre><code>这是[B]需要注意的内容[-]。</code></pre>
+				<div class="guide-example__preview">这是<span class="chapter-mark chapter-mark--bold">需要注意的内容</span>。</div>
+			</article>
+
+			<article class="guide-example guide-example--wide">
+				<h3>插入图片 <code>[img]</code></h3>
+				<pre><code>{`[img]红楼批语对照.png
+脂批版本对照[-]`}</code></pre>
+				<div class="guide-example__preview">
+					<div class="guide-image-placeholder" role="img" aria-label="图片显示位置示意">
+						<span>图片在这里居中显示，点击可放大</span>
+					</div>
+					<p class="guide-image-placeholder__caption">脂批版本对照</p>
+				</div>
+				<p class="guide-example__note">把图片文件放入 <code>public/images/chapters/</code>，标记第一行只写文件名；第二行图注可以省略。</p>
+			</article>
+
+			<article class="guide-example guide-example--wide">
+				<h3>自动尾注 <code>[wz]</code></h3>
+				<pre><code>正文中的概念[wz]这里直接写尾注内容[-]继续正文。</code></pre>
+				<div class="guide-example__preview">
+					正文中的概念<span class="guide-note-anchor"><sup>1</sup></span>继续正文。
+					<div class="guide-endnote-preview"><span>1</span><p>这里直接写尾注内容</p></div>
+				</div>
+				<p class="guide-example__note">编号按每个文件中的出现顺序自动从 1 开始；插入、删除或移动尾注后会自动重排。</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="guide-section" id="writing-rules">
+		<div class="guide-section__heading">
+			<p class="eyebrow">Rules</p>
+			<h2>容易忘记的规则</h2>
+		</div>
+		<ul class="guide-rules">
+			<li><strong>普通正文：</strong>一次回车直接开始新段落。</li>
+			<li><strong>同段换行：</strong>在行尾写一个反斜杠 <code>\</code>。</li>
+			<li><strong>字面方括号：</strong>写 <code>\[</code> 可以输出普通的 <code>[</code>。</li>
+			<li><strong>嵌套关闭：</strong><code>[-]</code> 永远关闭最近一个尚未关闭的标记。</li>
+			<li><strong>出处行：</strong>非正文内容中，以 <code>——</code> 开始的内容会另起一行靠右；后面紧跟“第”时保留破折号，其他情况隐藏破折号。</li>
+			<li><strong>章节顺序：</strong>在文件开头的 frontmatter 中填写 <code>order</code>，目录、上一回/下一回和连续打印都会按它排序。</li>
+			<li><strong>章节图片：</strong>文件统一放在 <code>public/images/chapters/</code>；支持 PNG、JPG、JPEG、WebP、GIF 和 AVIF，不支持 SVG。<code>[img]</code> 必须独占顶层段落，且不能嵌套其他标记。</li>
+		</ul>
+
+		<div class="guide-nesting">
+			<h3>嵌套尾注示例</h3>
+			<pre><code>{nestedExample}</code></pre>
+			<p><code>[wz]</code> 内可嵌套批语、诗词、长赋和加粗，但不能再嵌套另一个 <code>[wz]</code>，也不能使用 <code>[T]</code>。</p>
+		</div>
+	</section>
+</PageShell>

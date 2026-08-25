@@ -1,0 +1,45 @@
+---
+import { BOOKS, formatChapterOrder, type BookId } from '../lib/books';
+
+interface ChapterItem {
+	id: string;
+	order?: number;
+	title: string;
+	description?: string;
+}
+
+interface Props {
+	book: BookId;
+	chapters: ChapterItem[];
+}
+
+const { book, chapters } = Astro.props;
+const definition = BOOKS[book];
+---
+
+<header class="page-heading book-directory-heading">
+	<p class="eyebrow">{definition.range}</p>
+	<h1>{definition.title}</h1>
+	<p class="book-directory-heading__intro">{definition.description}</p>
+	<div class="book-directory-heading__meta">
+		<span>{definition.rangeDetail}</span>
+		<a href={definition.continuousHref}>连续阅读本册</a>
+	</div>
+</header>
+
+{
+	chapters.length > 0 ? (
+		<ol class="chapter-list">
+			{chapters.map((chapter) => (
+				<li data-chapter-number={formatChapterOrder(chapter.order)}>
+					<div>
+						<h2><a href={`/chapters/${chapter.id}/`}>{chapter.title}</a></h2>
+						{chapter.description && <p>{chapter.description}</p>}
+					</div>
+				</li>
+			))}
+		</ol>
+	) : (
+		<p class="empty-state">本册还没有可阅读的回目。</p>
+	)
+}

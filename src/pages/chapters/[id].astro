@@ -1,0 +1,72 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import ChapterContent from '../../components/ChapterContent.astro';
+import ChapterNavigation from '../../components/ChapterNavigation.astro';
+import PageShell from '../../components/PageShell.astro';
+import { BOOKS, BOOK_IDS, getChapterBook, type BookId } from '../../lib/books';
+import type { CompiledChapter } from '../../lib/chapter-compiler';
+import { compileChapter } from '../../lib/chapter-compiler';
+import { validateChapterImages } from '../../lib/chapter-images';
+
+interface ChapterLink {
+	id: string;
+	title: string;
+}
+
+export async function getStaticPaths() {
+	const chapters = (await Promise.all(
+		(await getCollection('chapters')).map(async (entry) => {
+			const chapter = compileChapter(entry.body ?? '', {
+				sourceName: `content/chapters/${entry.id}.md`,
+			});
+			await validateChapterImages(chapter);
+			return { entry, chapter };
+		}),
+	))
+		.sort((a, b) => {
+			const orderA = a.entry.data.order ?? Number.MAX_SAFE_INTEGER;
+			const orderB = b.entry.data.order ?? Number.MAX_SAFE_INTEGER;
+			return orderA - orderB || a.chapter.title.localeCompare(b.chapter.title, 'zh-CN', { numeric: true });
+		});
+
+	return BOOK_IDS.flatMap((book) => {
+		const bookChapters = chapters.filter(({ entry }) => getChapterBook(entry.data.order) === book);
+		return bookChapters.map(({ entry, chapter }, index) => ({
+			params: { id: entry.id },
+			props: {
+				entry,
+				chapter,
+				book,
+				previous: index > 0
+					? { id: bookChapters[index - 1].entry.id, title: bookChapters[index - 1].chapter.title }
+					: undefined,
+				next: index < bookChapters.length - 1
+					? { id: bookChapters[index + 1].entry.id, title: bookChapters[index + 1].chapter.title }
+					: undefined,
+			},
+		}));
+	});
+}
+
+interface Props {
+	entry: CollectionEntry<'chapters'>;
+	chapter: CompiledChapter;
+	book: BookId;
+	previous?: ChapterLink;
+	next?: ChapterLink;
+}
+
+const { entry, chapter, book, previous, next } = Astro.props;
+const definition = BOOKS[book];
+---
+
+<PageShell title={chapter.title} description={entry.data.description} activeSection={book}>
+	<ChapterContent chapter={chapter} book={book} />
+	<ChapterNavigation
+		previous={previous}
+		next={next}
+		directoryHref={definition.href}
+		directoryLabel={`返回${definition.title}目录`}
+	/>
+</PageShell>
