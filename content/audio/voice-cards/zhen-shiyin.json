@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "zhen-shiyin",
+  "label": "甄士隐",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-YunyangNeural",
+  "prosody": {
+    "rate": "-12%",
+    "pitch": "-4Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-14%",
+      "pitch": "-3Hz"
+    },
+    "joy": {
+      "rate": "-8%",
+      "pitch": "-2Hz"
+    },
+    "sad": {
+      "rate": "-18%",
+      "pitch": "-6Hz"
+    },
+    "anger": {
+      "rate": "-6%",
+      "pitch": "-3Hz"
+    },
+    "fear": {
+      "rate": "-10%",
+      "pitch": "-2Hz"
+    },
+    "urgent": {
+      "rate": "-4%",
+      "pitch": "-3Hz"
+    },
+    "whisper": {
+      "rate": "-17%",
+      "pitch": "-5Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-16%",
+      "pitch": "-6Hz"
+    }
+  },
+  "aliases": [
+    "甄费",
+    "士隐",
+    "甄老先生"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [],
+  "rationale": "第81回明确其为香菱年老父亲并有大段悲诉；采用可靠男声的低缓配置，除年龄和当场悲痛外不外推性格。"
+}

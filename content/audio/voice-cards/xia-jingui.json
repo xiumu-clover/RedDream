@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "id": "xia-jingui",
+  "label": "夏金桂",
+  "tier": "B",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+1%",
+    "pitch": "-2Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-2%",
+      "pitch": "-1Hz"
+    },
+    "joy": {
+      "rate": "+6%",
+      "pitch": "+0Hz"
+    },
+    "sad": {
+      "rate": "-7%",
+      "pitch": "-4Hz"
+    },
+    "anger": {
+      "rate": "+8%",
+      "pitch": "-1Hz"
+    },
+    "fear": {
+      "rate": "+4%",
+      "pitch": "+0Hz"
+    },
+    "urgent": {
+      "rate": "+11%",
+      "pitch": "-1Hz"
+    },
+    "whisper": {
+      "rate": "-5%",
+      "pitch": "-3Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-4%",
+      "pitch": "-4Hz"
+    }
+  },
+  "aliases": [
+    "金桂",
+    "夏家小姐",
+    "桂花夏家的姑娘",
+    "薛大奶奶"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/夏金桂.md"
+  ],
+  "rationale": "人物卡明确其十七岁、说话常以反问或二选一施压；第81回台词虽短但推动关键情节，采用较低、偏快的年轻女声。"
+}

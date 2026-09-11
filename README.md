@@ -2,9 +2,30 @@
 
 一个使用 Astro 构建的章节阅读站。章节以 Markdown 文件保存，并在构建时由项目内的自定义编译器解析为正文、脂批、诗词、长赋和气泡注释。
 
+## 工程结构
+
+```text
+content/chapters/          唯一的章节 Markdown 正文
+  hongloumeng/             前言与第 1—80 回
+  guiyou/                  第 81—108 回整理版
+  guiyou-original/         第 81—108 回原稿版
+content/audio/             音频标注、map、音色卡与本地缓存
+public/images/chapters/    章节原图
+public/audio/              manifest 实际引用的已发布音轨
+src/components/            按 books、chapters、layout、settings 分类的页面组件
+src/lib/                   按 books、chapters、preferences 分类的业务逻辑
+src/pages/                 Astro 路由；书册目录使用 [book] 动态路由
+src/styles/                全站阅读与打印样式
+research/                  独立的私有研究仓库，不属于本仓库
+scripts/                   按 audio、chapters、research 分类的维护脚本
+tests/                     与源码领域对应的自动化测试
+```
+
+网站运行只依赖公开仓库中的 `content/`、`public/` 和 `src/`。`research/` 是原位嵌套的独立私有仓库，缺失时不影响测试或网站构建；安装方法见 `docs/research_workspace.md`。所有页面通过 `src/lib/chapters/collection.ts` 读取、编译、校验并排序章节，不要在页面里重复实现这一流程。
+
 ## 编辑章节
 
-在 `content/chapters/` 中新增 `.md` 文件。frontmatter 可使用：
+按书册在 `content/chapters/hongloumeng/`、`content/chapters/guiyou/` 或 `content/chapters/guiyou-original/` 中新增 `.md` 文件。frontmatter 可使用：
 
 ```yaml
 ---
@@ -68,6 +89,7 @@ npm run astro -- dev --background --host
 ```sh
 npm test
 npm run build
+npm run extract:zhipi
 npm run astro -- dev --background
 npm run astro -- dev status
 npm run astro -- dev logs

@@ -10,12 +10,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --experimental-strip-types --test tests/chapter-compiler.test.ts"
+    "audio:generate": "tsx scripts/audio/generate_audio.js",
+    "audio:publish": "node scripts/audio/publish_audio.js",
+    "audio:voices": "node scripts/audio/generate_voice_previews.js",
+    "extract:zhipi": "node --experimental-strip-types scripts/research/zhipi/extract.mjs",
+    "test": "node --experimental-strip-types --test tests/chapters/compiler.test.ts tests/chapters/collection-layout.test.ts tests/audio/chapter-text.test.ts tests/audio/audio-blocks.test.ts tests/audio/files.test.ts tests/audio/voice-cards.test.ts tests/research/zhipi-extractor.test.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.7",
     "astro": "^7.2.4",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "ws": "^8.21.3"
   }
 }

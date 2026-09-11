@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "older-women-pool",
+  "label": "年长女眷（共享）",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-3%",
+    "pitch": "-4Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-5%",
+      "pitch": "-3Hz"
+    },
+    "joy": {
+      "rate": "+1%",
+      "pitch": "-2Hz"
+    },
+    "sad": {
+      "rate": "-8%",
+      "pitch": "-6Hz"
+    },
+    "anger": {
+      "rate": "+2%",
+      "pitch": "-3Hz"
+    },
+    "fear": {
+      "rate": "-1%",
+      "pitch": "-2Hz"
+    },
+    "urgent": {
+      "rate": "+4%",
+      "pitch": "-3Hz"
+    },
+    "whisper": {
+      "rate": "-7%",
+      "pitch": "-5Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-7%",
+      "pitch": "-6Hz"
+    }
+  },
+  "aliases": [
+    "年长女眷"
+  ],
+  "sharedCharacters": [
+    "孙家婆子",
+    "司棋母"
+  ],
+  "sourceCards": [],
+  "rationale": "第81回只明确二人均为年长女性，且分处送别与司棋归家两个场景，没有直接对话；证据不足处保持中性，用情感韵律覆盖区分当场陪笑与责骂。"
+}

@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "id": "xiangling",
+  "label": "香菱",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-8%",
+    "pitch": "+1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-10%",
+      "pitch": "+2Hz"
+    },
+    "joy": {
+      "rate": "-4%",
+      "pitch": "+3Hz"
+    },
+    "sad": {
+      "rate": "-14%",
+      "pitch": "-1Hz"
+    },
+    "anger": {
+      "rate": "-2%",
+      "pitch": "+2Hz"
+    },
+    "fear": {
+      "rate": "-6%",
+      "pitch": "+3Hz"
+    },
+    "urgent": {
+      "rate": "+0%",
+      "pitch": "+2Hz"
+    },
+    "whisper": {
+      "rate": "-13%",
+      "pitch": "+0Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-12%",
+      "pitch": "-1Hz"
+    }
+  },
+  "aliases": [
+    "英莲",
+    "甄英莲",
+    "秋菱",
+    "菱姑娘"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/香菱.md"
+  ],
+  "rationale": "人物卡明确其为年轻女子，语言有学诗悟性，受凌虐时多隐忍；第81回有多段梦境与临别对话，采用温暖女声的偏缓配置。"
+}

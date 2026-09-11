@@ -1,38 +1,21 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
-import ChapterContent from '../../components/ChapterContent.astro';
-import PageShell from '../../components/PageShell.astro';
-import { BOOKS, BOOK_IDS, belongsToBook, type BookId } from '../../lib/books';
-import type { CompiledChapter } from '../../lib/chapter-compiler';
-import { compileChapter } from '../../lib/chapter-compiler';
-import { validateChapterImages } from '../../lib/chapter-images';
-
-interface CompiledEntry {
-	entry: CollectionEntry<'chapters'>;
-	chapter: CompiledChapter;
-}
+import ChapterContent from '../../components/chapters/ChapterContent.astro';
+import PageShell from '../../components/layout/PageShell.astro';
+import { BOOKS, BOOK_IDS, type BookId } from '../../lib/books/catalog';
+import type { PreparedChapter } from '../../lib/chapters/collection';
+import { loadCompiledChapters } from '../../lib/chapters/collection';
 
 export async function getStaticPaths() {
-	const entries = await getCollection('chapters');
-	return Promise.all(BOOK_IDS.map(async (book) => {
-		const chapters = (await Promise.all(
-			entries
-				.filter((entry) => belongsToBook(entry.data.order, book))
-				.map(async (entry) => {
-					const chapter = compileChapter(entry.body ?? '', { sourceName: `content/chapters/${entry.id}.md` });
-					await validateChapterImages(chapter);
-					return { entry, chapter };
-				}),
-		)).sort((a, b) => (a.entry.data.order ?? 0) - (b.entry.data.order ?? 0));
-
-		return { params: { book }, props: { book, chapters } };
+	const chapters = await loadCompiledChapters();
+	return BOOK_IDS.map((book) => ({
+		params: { book },
+		props: { book, chapters: chapters.filter((chapter) => chapter.book === book) },
 	}));
 }
 
 interface Props {
 	book: BookId;
-	chapters: CompiledEntry[];
+	chapters: PreparedChapter[];
 }
 
 const { book, chapters } = Astro.props;
@@ -46,8 +29,8 @@ const definition = BOOKS[book];
 	</header>
 	<div class="continuous-reading" data-all-chapters data-continuous-book={book}>
 		{
-			chapters.map(({ entry, chapter }) => (
-				<section class="continuous-chapter" id={`chapter-${entry.id}`} aria-label={chapter.title}>
+			chapters.map(({ id, chapter }) => (
+				<section class="continuous-chapter" id={`chapter-${id}`} aria-label={chapter.title}>
 					<ChapterContent chapter={chapter} book={book} />
 				</section>
 			))

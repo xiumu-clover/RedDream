@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "zi-juan",
+  "label": "紫鹃",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-2%",
+    "pitch": "+1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-4%",
+      "pitch": "+2Hz"
+    },
+    "joy": {
+      "rate": "+2%",
+      "pitch": "+3Hz"
+    },
+    "sad": {
+      "rate": "-8%",
+      "pitch": "-1Hz"
+    },
+    "anger": {
+      "rate": "+4%",
+      "pitch": "+2Hz"
+    },
+    "fear": {
+      "rate": "+0%",
+      "pitch": "+3Hz"
+    },
+    "urgent": {
+      "rate": "+6%",
+      "pitch": "+2Hz"
+    },
+    "whisper": {
+      "rate": "-7%",
+      "pitch": "+0Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-6%",
+      "pitch": "-1Hz"
+    }
+  },
+  "aliases": [
+    "鹦哥",
+    "紫鹃姐姐"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/紫鹃.md"
+  ],
+  "rationale": "人物卡明确其为黛玉近侍，语言常以劝诫、试探和生活照护为主；第81回与黛玉、绮霰直接对话，采用温暖女声的平稳配置并保持独立。"
+}

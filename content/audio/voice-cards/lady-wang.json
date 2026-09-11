@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "id": "lady-wang",
+  "label": "王夫人",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-6%",
+    "pitch": "-3Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-8%",
+      "pitch": "-2Hz"
+    },
+    "joy": {
+      "rate": "-2%",
+      "pitch": "-1Hz"
+    },
+    "sad": {
+      "rate": "-12%",
+      "pitch": "-5Hz"
+    },
+    "anger": {
+      "rate": "+0%",
+      "pitch": "-2Hz"
+    },
+    "fear": {
+      "rate": "-4%",
+      "pitch": "-1Hz"
+    },
+    "urgent": {
+      "rate": "+2%",
+      "pitch": "-2Hz"
+    },
+    "whisper": {
+      "rate": "-11%",
+      "pitch": "-4Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-10%",
+      "pitch": "-5Hz"
+    }
+  },
+  "aliases": [
+    "二太太",
+    "二舅母",
+    "舅母",
+    "姨娘"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/王夫人.md"
+  ],
+  "rationale": "人物卡明确其约五十岁、内宅主母身份，家务指令多为简短裁决句；采用温暖女声的偏低、偏缓配置。"
+}

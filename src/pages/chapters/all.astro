@@ -1,33 +1,18 @@
 ---
-import { getCollection } from 'astro:content';
-import ChapterContent from '../../components/ChapterContent.astro';
-import PageShell from '../../components/PageShell.astro';
-import { getChapterBook } from '../../lib/books';
-import { compileChapter } from '../../lib/chapter-compiler';
-import { validateChapterImages } from '../../lib/chapter-images';
+import ChapterContent from '../../components/chapters/ChapterContent.astro';
+import PageShell from '../../components/layout/PageShell.astro';
+import { loadCompiledChapters } from '../../lib/chapters/collection';
 
-const chapters = (await Promise.all(
-	(await getCollection('chapters')).map(async (entry) => {
-		const chapter = compileChapter(entry.body ?? '', {
-			sourceName: `content/chapters/${entry.id}.md`,
-		});
-		await validateChapterImages(chapter);
-		return { entry, chapter };
-	}),
-))
-	.sort((a, b) => {
-		const orderA = a.entry.data.order ?? Number.MAX_SAFE_INTEGER;
-		const orderB = b.entry.data.order ?? Number.MAX_SAFE_INTEGER;
-		return orderA - orderB || a.chapter.title.localeCompare(b.chapter.title, 'zh-CN', { numeric: true });
-	});
+const chapters = (await loadCompiledChapters())
+	.filter(({ book }) => book !== 'guiyou-original');
 ---
 
 <PageShell title="全书连续阅读" description="按顺序连续阅读并打印全部回目。">
 	<div class="continuous-reading" data-all-chapters>
 		{
-			chapters.map(({ entry, chapter }) => (
-				<section class="continuous-chapter" id={`chapter-${entry.id}`} aria-label={chapter.title}>
-					<ChapterContent chapter={chapter} book={getChapterBook(entry.data.order)} />
+			chapters.map(({ id, chapter, book }) => (
+				<section class="continuous-chapter" id={`chapter-${id}`} aria-label={chapter.title}>
+					<ChapterContent chapter={chapter} book={book} />
 				</section>
 			))
 		}

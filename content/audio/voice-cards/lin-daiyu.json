@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "id": "lin-daiyu",
+  "label": "林黛玉",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-7%",
+    "pitch": "+2Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-9%",
+      "pitch": "+3Hz"
+    },
+    "joy": {
+      "rate": "-2%",
+      "pitch": "+4Hz"
+    },
+    "sad": {
+      "rate": "-14%",
+      "pitch": "+0Hz"
+    },
+    "anger": {
+      "rate": "-1%",
+      "pitch": "+3Hz"
+    },
+    "fear": {
+      "rate": "-5%",
+      "pitch": "+4Hz"
+    },
+    "urgent": {
+      "rate": "+2%",
+      "pitch": "+3Hz"
+    },
+    "whisper": {
+      "rate": "-13%",
+      "pitch": "+1Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-12%",
+      "pitch": "+0Hz"
+    }
+  },
+  "aliases": [
+    "黛玉",
+    "林妹妹",
+    "林姑娘",
+    "颦颦",
+    "颦儿",
+    "潇湘妃子",
+    "潇湘子"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/林黛玉.md"
+  ],
+  "rationale": "人物卡写其为少女，言语机敏、常带讥讽，也有病弱与自伤身世的明确描写；采用温暖女声，音调略高、语速克制。"
+}

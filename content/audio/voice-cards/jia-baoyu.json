@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "id": "jia-baoyu",
+  "label": "贾宝玉",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-YunxiNeural",
+  "prosody": {
+    "rate": "-2%",
+    "pitch": "+2Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-5%",
+      "pitch": "+3Hz"
+    },
+    "joy": {
+      "rate": "+4%",
+      "pitch": "+4Hz"
+    },
+    "sad": {
+      "rate": "-11%",
+      "pitch": "+0Hz"
+    },
+    "anger": {
+      "rate": "+6%",
+      "pitch": "+3Hz"
+    },
+    "fear": {
+      "rate": "+1%",
+      "pitch": "+4Hz"
+    },
+    "urgent": {
+      "rate": "+9%",
+      "pitch": "+3Hz"
+    },
+    "whisper": {
+      "rate": "-9%",
+      "pitch": "+1Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-8%",
+      "pitch": "+0Hz"
+    }
+  },
+  "aliases": [
+    "宝玉",
+    "宝二爷",
+    "怡红公子",
+    "绛洞花主",
+    "绛洞花王",
+    "富贵闲人",
+    "无事忙"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/贾宝玉.md"
+  ],
+  "rationale": "人物卡明载其为少年，语言常笑、情感表达直接且多极端表白；采用目录中活泼明朗的青年男声，基础语速稍缓。"
+}

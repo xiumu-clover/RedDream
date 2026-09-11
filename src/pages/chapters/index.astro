@@ -1,0 +1,33 @@
+---
+import PageShell from '../../components/layout/PageShell.astro';
+import { formatChapterOrder } from '../../lib/books/catalog';
+import { loadCompiledChapters } from '../../lib/chapters/collection';
+
+const chapters = (await loadCompiledChapters())
+	.filter(({ book }) => book !== 'guiyou-original');
+---
+
+<PageShell title="总目录" description="按顺序浏览全部章节。">
+	<header class="page-heading">
+		<p class="eyebrow">Chapters</p>
+		<h1>总目录</h1>
+		<p class="chapter-count">共 {chapters.length} 篇章节</p>
+	</header>
+
+	{
+		chapters.length > 0 ? (
+			<ol class="chapter-list">
+				{chapters.map(({ id, order, description, chapter }) => (
+					<li data-chapter-number={formatChapterOrder(order)}>
+						<div>
+							<h2><a href={`/chapters/${id}/`}>{chapter.title}</a></h2>
+							{description && <p>{description}</p>}
+						</div>
+					</li>
+				))}
+			</ol>
+		) : (
+			<p class="empty-state">还没有章节。在 content/chapters/ 对应书册目录中添加 Markdown 文件后，标题会自动出现在这里。</p>
+		)
+	}
+</PageShell>

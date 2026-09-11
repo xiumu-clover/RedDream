@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "sheyue",
+  "label": "麝月",
+  "tier": "B",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "+0%",
+    "pitch": "-1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-2%",
+      "pitch": "+0Hz"
+    },
+    "joy": {
+      "rate": "+5%",
+      "pitch": "+1Hz"
+    },
+    "sad": {
+      "rate": "-7%",
+      "pitch": "-3Hz"
+    },
+    "anger": {
+      "rate": "+6%",
+      "pitch": "+0Hz"
+    },
+    "fear": {
+      "rate": "+2%",
+      "pitch": "+1Hz"
+    },
+    "urgent": {
+      "rate": "+9%",
+      "pitch": "+0Hz"
+    },
+    "whisper": {
+      "rate": "-6%",
+      "pitch": "-2Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-5%",
+      "pitch": "-3Hz"
+    }
+  },
+  "aliases": [],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/麝月.md"
+  ],
+  "rationale": "人物卡明确其为大丫鬟，能迅速转入规矩与身份次序并收束争端；采用温暖女声的清楚、偏稳配置。"
+}

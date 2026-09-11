@@ -1,0 +1,41 @@
+---
+import type { BookId } from '../../lib/books/catalog';
+import { BOOKS, BOOK_IDS } from '../../lib/books/catalog';
+import type { PreparedChapter } from '../../lib/chapters/collection';
+import { loadCompiledChapters } from '../../lib/chapters/collection';
+import BookDirectory from '../../components/books/BookDirectory.astro';
+import PageShell from '../../components/layout/PageShell.astro';
+
+export async function getStaticPaths() {
+	const chapters = await loadCompiledChapters();
+	return BOOK_IDS.map((book) => ({
+		params: { book },
+		props: {
+			book,
+			chapters: chapters.filter((chapter) => chapter.book === book),
+		},
+	}));
+}
+
+interface Props {
+	book: BookId;
+	chapters: PreparedChapter[];
+}
+
+const { book, chapters } = Astro.props;
+const definition = BOOKS[book];
+const directoryChapters = chapters.map(({ id, order, description, chapter }) => ({
+	id,
+	order,
+	title: chapter.title,
+	description,
+}));
+---
+
+<PageShell
+	title={`${definition.title} · ${definition.range}`}
+	description={`阅读《${definition.title}》${definition.rangeDetail}。`}
+	activeSection={book}
+>
+	<BookDirectory book={book} chapters={directoryChapters} />
+</PageShell>

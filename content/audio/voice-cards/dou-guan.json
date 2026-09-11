@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "dou-guan",
+  "label": "荳官",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+11%",
+    "pitch": "+4Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+8%",
+      "pitch": "+5Hz"
+    },
+    "joy": {
+      "rate": "+17%",
+      "pitch": "+6Hz"
+    },
+    "sad": {
+      "rate": "+2%",
+      "pitch": "+2Hz"
+    },
+    "anger": {
+      "rate": "+19%",
+      "pitch": "+5Hz"
+    },
+    "fear": {
+      "rate": "+14%",
+      "pitch": "+6Hz"
+    },
+    "urgent": {
+      "rate": "+22%",
+      "pitch": "+5Hz"
+    },
+    "whisper": {
+      "rate": "+4%",
+      "pitch": "+3Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "+5%",
+      "pitch": "+2Hz"
+    }
+  },
+  "aliases": [
+    "豆官",
+    "小花面豆官"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/梨香院十二个女戏.md"
+  ],
+  "rationale": "人物卡明确其身量年纪极小、言语爱戏谑；第81回承担主要争辩，采用活泼女声中更轻快、偏高的配置。"
+}

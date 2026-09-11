@@ -1,0 +1,58 @@
+---
+import '../../styles/global.css';
+import { BOOKS, BOOK_IDS, type BookId } from '../../lib/books/catalog';
+
+interface Props {
+	title: string;
+	description?: string;
+	activeSection?: 'home' | BookId | 'settings' | 'guide';
+}
+
+const {
+	title,
+	description = '一个用于整理章节与书评的中文阅读网站。',
+	activeSection,
+} = Astro.props;
+
+const documentTitle = title === '红楼共读' ? title : `${title} · 红楼共读`;
+const currentSection = activeSection ?? (Astro.url.pathname === '/' ? 'home' : undefined);
+const current = (section: NonNullable<Props['activeSection']>) =>
+	currentSection === section ? 'page' : undefined;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>{documentTitle}</title>
+	</head>
+	<body>
+		<a class="skip-link" href="#main-content">跳到正文</a>
+		<header class="site-header">
+			<div class="site-header__inner">
+				<a class="site-name" href="/">红楼共读</a>
+				<nav aria-label="主导航">
+					<a href="/" aria-current={current('home')}>首页</a>
+					{BOOK_IDS.map((book) => (
+						<a href={BOOKS[book].href} aria-current={current(book)}>{BOOKS[book].title}</a>
+					))}
+					<a href="/settings/" aria-current={current('settings')}>阅读设置</a>
+					<a href="/guide/" aria-current={current('guide')}>标记说明</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main-content" class="reading-container">
+			<slot />
+		</main>
+
+		<footer class="site-footer">
+			<p>以文字为径，慢慢读一部书。</p>
+		</footer>
+	</body>
+</html>

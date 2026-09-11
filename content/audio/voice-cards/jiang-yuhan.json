@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "jiang-yuhan",
+  "label": "蒋玉菡",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-YunxiNeural",
+  "prosody": {
+    "rate": "-3%",
+    "pitch": "+1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-5%",
+      "pitch": "+2Hz"
+    },
+    "joy": {
+      "rate": "+2%",
+      "pitch": "+3Hz"
+    },
+    "sad": {
+      "rate": "-10%",
+      "pitch": "-1Hz"
+    },
+    "anger": {
+      "rate": "+3%",
+      "pitch": "+2Hz"
+    },
+    "fear": {
+      "rate": "-1%",
+      "pitch": "+3Hz"
+    },
+    "urgent": {
+      "rate": "+6%",
+      "pitch": "+2Hz"
+    },
+    "whisper": {
+      "rate": "-9%",
+      "pitch": "+0Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-8%",
+      "pitch": "-1Hz"
+    }
+  },
+  "aliases": [
+    "琪官",
+    "玉菡"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/蒋玉菡.md"
+  ],
+  "rationale": "人物卡明确其为唱小旦的优伶，宝玉眼中妩媚温柔；第81回承担婚事商议对话，采用明朗青年男声并略缓、略高。"
+}

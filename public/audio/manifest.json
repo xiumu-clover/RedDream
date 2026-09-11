@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "chapters": {
+    "081": {
+      "source": "content/chapters/guiyou/081-惜昵近公子做良媒 讳笞罚丫鬟结恶党.md",
+      "sourceSpeechHash": "5b129d144533e2e9c6287b3c6a4fc3d22200f1184efa5098f73f49e646355de8",
+      "defaultVariant": "female",
+      "variants": {
+        "female": {
+          "url": "/audio/081.mp3",
+          "trackHash": "9a7c62a386a016963e8ba3b7b1a0ebf72c6e57b282efd9eefafacf8686167b8e",
+          "fileHash": "e47b90b2d35cadda4773b10483cac1b756ba6de2902a45e67b3d62e808860a04",
+          "bytes": 12819024,
+          "durationSeconds": 2136.504
+        }
+      },
+      "publishedAt": "2026-09-07T14:41:24.220Z"
+    }
+  }
+}

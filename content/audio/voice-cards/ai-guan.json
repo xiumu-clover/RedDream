@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "ai-guan",
+  "label": "艾官",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+8%",
+    "pitch": "+3Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+5%",
+      "pitch": "+4Hz"
+    },
+    "joy": {
+      "rate": "+14%",
+      "pitch": "+5Hz"
+    },
+    "sad": {
+      "rate": "-1%",
+      "pitch": "+1Hz"
+    },
+    "anger": {
+      "rate": "+16%",
+      "pitch": "+4Hz"
+    },
+    "fear": {
+      "rate": "+11%",
+      "pitch": "+5Hz"
+    },
+    "urgent": {
+      "rate": "+19%",
+      "pitch": "+4Hz"
+    },
+    "whisper": {
+      "rate": "+1%",
+      "pitch": "+2Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "+2%",
+      "pitch": "+1Hz"
+    }
+  },
+  "aliases": [
+    "艾官儿"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/梨香院十二个女戏.md"
+  ],
+  "rationale": "人物卡明确其为年轻女戏、行当为老外，并记录其悄报与直接发言；第81回承担主要争辩，采用活泼女声的快速、偏高配置。"
+}

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "zhou-rui-wife",
+  "label": "周瑞家的",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "+2%",
+    "pitch": "-4Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+0%",
+      "pitch": "-3Hz"
+    },
+    "joy": {
+      "rate": "+6%",
+      "pitch": "-2Hz"
+    },
+    "sad": {
+      "rate": "-4%",
+      "pitch": "-6Hz"
+    },
+    "anger": {
+      "rate": "+8%",
+      "pitch": "-3Hz"
+    },
+    "fear": {
+      "rate": "+4%",
+      "pitch": "-2Hz"
+    },
+    "urgent": {
+      "rate": "+10%",
+      "pitch": "-3Hz"
+    },
+    "whisper": {
+      "rate": "-3%",
+      "pitch": "-5Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-2%",
+      "pitch": "-6Hz"
+    }
+  },
+  "aliases": [
+    "周瑞媳妇"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/司棋.md"
+  ],
+  "rationale": "第81回明确其以管事婆子身份喝问并执行邢夫人的命令；现有来源卡仅旁及其行动，采用偏低、略快的成年女声。"
+}

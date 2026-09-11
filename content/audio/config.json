@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "chapterRange": {
+    "min": 81,
+    "max": 108
+  },
+  "publishAllowlist": [
+    "081"
+  ],
+  "defaultVariant": "female",
+  "narratorProfiles": {
+    "female": {
+      "label": "女声旁白",
+      "provider": "edge",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-5%",
+      "pitch": "+0Hz",
+      "volume": "+0%"
+    },
+    "male": {
+      "label": "男声旁白",
+      "provider": "edge",
+      "voiceCardId": "narrator"
+    }
+  }
+}

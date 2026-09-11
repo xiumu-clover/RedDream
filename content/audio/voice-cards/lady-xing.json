@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "id": "lady-xing",
+  "label": "邢夫人",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "prosody": {
+    "rate": "-1%",
+    "pitch": "-3Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-3%",
+      "pitch": "-2Hz"
+    },
+    "joy": {
+      "rate": "+4%",
+      "pitch": "-1Hz"
+    },
+    "sad": {
+      "rate": "-8%",
+      "pitch": "-5Hz"
+    },
+    "anger": {
+      "rate": "+5%",
+      "pitch": "-2Hz"
+    },
+    "fear": {
+      "rate": "+1%",
+      "pitch": "-1Hz"
+    },
+    "urgent": {
+      "rate": "+8%",
+      "pitch": "-2Hz"
+    },
+    "whisper": {
+      "rate": "-7%",
+      "pitch": "-4Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-6%",
+      "pitch": "-5Hz"
+    }
+  },
+  "aliases": [
+    "大太太",
+    "大舅母",
+    "大娘",
+    "大老爷太太"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/邢夫人.md"
+  ],
+  "rationale": "人物卡明确其为长房夫人，话语常直接责难并划分身份；采用温暖女声的偏低配置，语速比王夫人更快以便同场区分。"
+}

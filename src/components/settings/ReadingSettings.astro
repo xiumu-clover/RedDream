@@ -1,0 +1,135 @@
+---
+import { BOOKS, BOOK_IDS } from '../../lib/books/catalog';
+import { DEFAULT_READING_PREFERENCES } from '../../lib/preferences/reading';
+
+const options = [
+	{ key: 'showZp', title: '显示脂批', description: '显示原脂批与脂批诗词。' },
+	{ key: 'showMp', title: '显示书批', description: '显示随读书批。' },
+	{ key: 'showNotes', title: '显示气泡注释', description: '显示正文编号、气泡和章末尾注。' },
+	{ key: 'compact', title: '紧凑排版', description: '缩小字号与段落间距。' },
+	{ key: 'continuous', title: '连续阅读', description: '进入回目后自动切换为本册连续阅读。' },
+] as const;
+---
+
+<div class="reading-preferences" data-reading-preferences>
+	<div class="settings-grid">
+		{
+			BOOK_IDS.map((book) => {
+				const definition = BOOKS[book];
+				const defaults = DEFAULT_READING_PREFERENCES[book];
+				return (
+					<section class="settings-book" data-settings-book={book} aria-labelledby={`settings-${book}`}>
+						<header class="settings-book__header">
+							<div>
+								<p>{definition.range}</p>
+								<h2 id={`settings-${book}`}>{definition.title}</h2>
+							</div>
+							<span class={`settings-default settings-default--${book}`}>
+								{definition.settingsBadge}
+							</span>
+						</header>
+
+						<div class="settings-options">
+							{options.map((option) => (
+								<label class="setting-row">
+									<span>
+										<strong>{option.title}</strong>
+										<small>{option.description}</small>
+									</span>
+									<input
+										type="checkbox"
+										role="switch"
+										data-book-setting={option.key}
+										checked={defaults[option.key]}
+										aria-label={`${definition.title}：${option.title}`}
+									/>
+								</label>
+							))}
+							{definition.hasAudio && (
+								<label class="setting-row">
+									<span>
+										<strong>有声书旁白</strong>
+										<small>选择本册有声书的默认旁白，未发布的音色会自动回退。</small>
+									</span>
+									<select
+										data-book-select-setting="audioNarrator"
+										aria-label={`${definition.title}：有声书旁白`}
+									>
+										<option value="female" selected={defaults.audioNarrator === 'female'}>女声</option>
+										<option value="male" selected={defaults.audioNarrator === 'male'}>男声</option>
+									</select>
+								</label>
+							)}
+						</div>
+
+						<footer class="settings-book__footer">
+							<button type="button" data-reset-book>恢复本册默认</button>
+							<span role="status" aria-live="polite" data-settings-status>自动保存</span>
+						</footer>
+					</section>
+				);
+			})
+		}
+	</div>
+	<p class="settings-storage-note">设置只保存在当前浏览器中。只要你做过选择，个人设置就会优先于网站默认值。</p>
+</div>
+
+<script>
+	import { isBookId, type BookId } from '../../lib/books/catalog';
+	import {
+		getDefaultReadingPreferences,
+		loadReadingPreferences,
+		saveReadingPreferences,
+		type BookReadingPreferences,
+	} from '../../lib/preferences/reading';
+
+	type BooleanPreferenceKey = Exclude<keyof BookReadingPreferences, 'audioNarrator'>;
+
+	const root = document.querySelector<HTMLElement>('[data-reading-preferences]');
+	const preferences = loadReadingPreferences();
+
+	const syncCard = (card: HTMLElement, book: BookId) => {
+		card.querySelectorAll<HTMLInputElement>('[data-book-setting]').forEach((input) => {
+			const key = input.dataset.bookSetting as BooleanPreferenceKey;
+			input.checked = preferences[book][key];
+		});
+		const narrator = card.querySelector<HTMLSelectElement>('[data-book-select-setting="audioNarrator"]');
+		if (narrator) narrator.value = preferences[book].audioNarrator;
+	};
+
+	const announceSaved = (card: HTMLElement, saved: boolean) => {
+		const status = card.querySelector<HTMLElement>('[data-settings-status]');
+		if (!status) return;
+		status.textContent = saved ? '已保存' : '当前浏览器无法保存';
+	};
+
+	root?.querySelectorAll<HTMLElement>('[data-settings-book]').forEach((card) => {
+		const bookValue = card.dataset.settingsBook;
+		if (!isBookId(bookValue)) return;
+		const book = bookValue;
+		syncCard(card, book);
+
+		card.addEventListener('change', (event) => {
+			const input = event.target;
+			if (!(input instanceof HTMLInputElement) || !input.matches('[data-book-setting]')) return;
+			const key = input.dataset.bookSetting as BooleanPreferenceKey;
+			preferences[book] = { ...preferences[book], [key]: input.checked };
+			announceSaved(card, saveReadingPreferences(preferences));
+		});
+
+		card.querySelector<HTMLSelectElement>('[data-book-select-setting="audioNarrator"]')
+			?.addEventListener('change', (event) => {
+				const select = event.currentTarget;
+				if (!(select instanceof HTMLSelectElement)) return;
+				const audioNarrator = select.value === 'male' ? 'male' : 'female';
+				preferences[book] = { ...preferences[book], audioNarrator };
+				announceSaved(card, saveReadingPreferences(preferences));
+			});
+
+		card.querySelector<HTMLButtonElement>('[data-reset-book]')?.addEventListener('click', () => {
+			preferences[book] = getDefaultReadingPreferences(book);
+			syncCard(card, book);
+			announceSaved(card, saveReadingPreferences(preferences));
+		});
+	});
+</script>

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "chunyan",
+  "label": "春燕",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+4%",
+    "pitch": "+2Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+2%",
+      "pitch": "+3Hz"
+    },
+    "joy": {
+      "rate": "+8%",
+      "pitch": "+4Hz"
+    },
+    "sad": {
+      "rate": "-2%",
+      "pitch": "+0Hz"
+    },
+    "anger": {
+      "rate": "+10%",
+      "pitch": "+3Hz"
+    },
+    "fear": {
+      "rate": "+6%",
+      "pitch": "+4Hz"
+    },
+    "urgent": {
+      "rate": "+12%",
+      "pitch": "+3Hz"
+    },
+    "whisper": {
+      "rate": "-1%",
+      "pitch": "+1Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "aliases": [
+    "小燕"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/春燕.md"
+  ],
+  "rationale": "人物卡只明确其为年轻丫鬟，善于求助、传话和说明园中规矩；证据不足处保持中性，以清楚轻快为主。"
+}

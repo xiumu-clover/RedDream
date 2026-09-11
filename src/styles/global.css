@@ -169,7 +169,10 @@ h1 {
 
 .book-shelf {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	width: min(calc(100vw - 2rem), var(--shell-width));
+	margin-left: 50%;
+	transform: translateX(-50%);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1rem;
 }
 
@@ -196,7 +199,8 @@ h1 {
 	content: '';
 }
 
-.book-card--guiyou::after {
+.book-card--guiyou::after,
+.book-card--guiyou-original::after {
 	background: #425f62;
 }
 
@@ -210,7 +214,8 @@ h1 {
 	line-height: 1;
 }
 
-.book-card--guiyou .book-card__number {
+.book-card--guiyou .book-card__number,
+.book-card--guiyou-original .book-card__number {
 	color: color-mix(in srgb, #425f62 16%, transparent);
 }
 
@@ -224,14 +229,15 @@ h1 {
 	letter-spacing: 0.16em;
 }
 
-.book-card--guiyou .book-card__range {
+.book-card--guiyou .book-card__range,
+.book-card--guiyou-original .book-card__range {
 	color: #425f62;
 }
 
 .book-card h2 {
 	position: relative;
 	margin: 0;
-	font-size: clamp(2.2rem, 7vw, 3.6rem);
+	font-size: clamp(1.8rem, 4vw, 3rem);
 	line-height: 1.15;
 }
 
@@ -429,6 +435,11 @@ h1 {
 	color: #425f62;
 }
 
+.settings-default--guiyou-original {
+	border-color: color-mix(in srgb, #425f62 35%, var(--border));
+	color: #425f62;
+}
+
 .settings-options {
 	display: grid;
 	padding: 0 1.25rem;
@@ -501,6 +512,23 @@ h1 {
 	outline-offset: 0.16rem;
 }
 
+.setting-row select,
+.chapter-audio select {
+	min-width: 5.5rem;
+	padding: 0.38rem 1.75rem 0.38rem 0.55rem;
+	border: 1px solid var(--border);
+	border-radius: 0.35rem;
+	background: var(--surface);
+	color: var(--text);
+	font: 0.78rem/1.4 system-ui, sans-serif;
+}
+
+.setting-row select:focus-visible,
+.chapter-audio select:focus-visible {
+	outline: 0.18rem solid color-mix(in srgb, var(--accent) 42%, transparent);
+	outline-offset: 0.16rem;
+}
+
 .settings-book__footer {
 	display: flex;
 	align-items: center;
@@ -569,6 +597,61 @@ h1 {
 	--comment-mine-surface: #eef1f2;
 	font-size: clamp(1.04rem, 2vw, 1.16rem);
 	line-height: 2;
+}
+
+.chapter-audio {
+	margin: 0 0 clamp(2.5rem, 7vw, 4.5rem);
+	padding: 1rem 1.1rem;
+	border: 1px solid var(--border);
+	border-radius: 0.55rem;
+	background: color-mix(in srgb, var(--surface) 88%, transparent);
+	box-shadow: 0 0.7rem 1.8rem rgb(45 41 36 / 5%);
+	font-family: system-ui, sans-serif;
+}
+
+.chapter-audio__heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.8rem;
+	gap: 1rem;
+}
+
+.chapter-audio__heading p,
+.chapter-audio__heading h2,
+.chapter-audio__status {
+	margin: 0;
+}
+
+.chapter-audio__heading p {
+	color: var(--accent);
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+
+.chapter-audio__heading h2 {
+	font-size: 1rem;
+}
+
+.chapter-audio__heading label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--muted);
+	font-size: 0.74rem;
+}
+
+.chapter-audio audio {
+	display: block;
+	width: 100%;
+}
+
+.chapter-audio__status {
+	min-height: 1.3em;
+	margin-top: 0.45rem;
+	color: var(--muted);
+	font-size: 0.72rem;
 }
 
 .chapter-content__body {
@@ -1352,6 +1435,12 @@ body.chapter-image-lightbox-open {
 		grid-template-columns: 1fr;
 	}
 
+	.book-shelf {
+		width: 100%;
+		margin-left: 0;
+		transform: none;
+	}
+
 	.book-card {
 		min-height: 21rem;
 	}
@@ -1386,6 +1475,7 @@ body.chapter-image-lightbox-open {
 	.skip-link,
 	.site-header,
 	.site-footer,
+	.chapter-audio,
 	.chapter-navigation {
 		display: none;
 	}

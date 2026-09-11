@@ -1,35 +1,30 @@
 ---
-import PageShell from '../components/PageShell.astro';
+import PageShell from '../components/layout/PageShell.astro';
+import { BOOKS, BOOK_IDS } from '../lib/books/catalog';
 ---
 
-<PageShell title="红楼共读" description="前八十回《红楼梦》与后二十八回《癸酉本》，分册阅读。" activeSection="home">
+<PageShell title="红楼共读" description="前八十回《红楼梦》与两个癸酉本版本，分册对读。" activeSection="home">
 	<header class="hero hero--books">
-		<p class="eyebrow">一部红楼 · 两册相读</p>
+		<p class="eyebrow">一部红楼 · 三册对读</p>
 		<h1>从这里，选择一本书</h1>
-		<p class="lead">全书分为前八十回《红楼梦》与后二十八回《癸酉本》。两册各有自己的阅读设置，互不影响。</p>
+		<p class="lead">先读前八十回《红楼梦》，再从《癸酉本》与《癸酉本润色版》中选择后二十八回。三册各有自己的阅读设置，互不影响。</p>
 	</header>
 
 	<section class="book-shelf" aria-label="选择书册">
-		<article class="book-card book-card--hongloumeng">
-			<div class="book-card__number" aria-hidden="true">壹</div>
-			<p class="book-card__range">前八十回</p>
-			<h2>红楼梦</h2>
-			<p>由甄士隐梦幻识通灵，读至懦弱迎春肠回九曲。脂批与书批默认隐藏，可在阅读设置中分别开启。</p>
-			<div class="book-card__footer">
-				<span>第一至八十回</span>
-				<a href="/hongloumeng/">进入本册 <span aria-hidden="true">→</span></a>
-			</div>
-		</article>
-
-		<article class="book-card book-card--guiyou">
-			<div class="book-card__number" aria-hidden="true">贰</div>
-			<p class="book-card__range">后二十八回</p>
-			<h2>癸酉本</h2>
-			<p>从惜昵近公子做良媒续读至幻中幻境展演情榜。批语默认显示，也会始终尊重读者保存的个人选择。</p>
-			<div class="book-card__footer">
-				<span>第八十一至一百零八回</span>
-				<a href="/guiyou/">进入本册 <span aria-hidden="true">→</span></a>
-			</div>
-		</article>
+		{BOOK_IDS.map((book) => {
+			const definition = BOOKS[book];
+			return (
+				<article class={`book-card book-card--${book}`}>
+					<div class="book-card__number" aria-hidden="true">{definition.homeNumber}</div>
+					<p class="book-card__range">{definition.range}</p>
+					<h2>{definition.title}</h2>
+					<p>{definition.homeDescription}</p>
+					<div class="book-card__footer">
+						<span>{definition.rangeDetail}</span>
+						<a href={definition.href}>进入本册 <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+			);
+		})}
 	</section>
 </PageShell>

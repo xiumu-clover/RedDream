@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "kui-guan",
+  "label": "葵官",
+  "tier": "B",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+2%",
+    "pitch": "-1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    },
+    "joy": {
+      "rate": "+7%",
+      "pitch": "+1Hz"
+    },
+    "sad": {
+      "rate": "-5%",
+      "pitch": "-3Hz"
+    },
+    "anger": {
+      "rate": "+8%",
+      "pitch": "+0Hz"
+    },
+    "fear": {
+      "rate": "+4%",
+      "pitch": "+1Hz"
+    },
+    "urgent": {
+      "rate": "+11%",
+      "pitch": "+0Hz"
+    },
+    "whisper": {
+      "rate": "-4%",
+      "pitch": "-2Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-3%",
+      "pitch": "-3Hz"
+    }
+  },
+  "aliases": [
+    "大花面葵官"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/梨香院十二个女戏.md"
+  ],
+  "rationale": "人物卡明确其为年轻女戏、行当为大花面，并有短发与男装记录；采用活泼女声中较低、较稳的配置。"
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "young-maids-pool",
+  "label": "年轻丫鬟（共享）",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+6%",
+    "pitch": "+2Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+4%",
+      "pitch": "+3Hz"
+    },
+    "joy": {
+      "rate": "+10%",
+      "pitch": "+4Hz"
+    },
+    "sad": {
+      "rate": "+1%",
+      "pitch": "+0Hz"
+    },
+    "anger": {
+      "rate": "+11%",
+      "pitch": "+3Hz"
+    },
+    "fear": {
+      "rate": "+8%",
+      "pitch": "+4Hz"
+    },
+    "urgent": {
+      "rate": "+13%",
+      "pitch": "+3Hz"
+    },
+    "whisper": {
+      "rate": "+2%",
+      "pitch": "+1Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "+2%",
+      "pitch": "+0Hz"
+    }
+  },
+  "aliases": [
+    "年轻丫鬟"
+  ],
+  "sharedCharacters": [
+    "王夫人丫头",
+    "莲花儿"
+  ],
+  "sourceCards": [],
+  "rationale": "第81回只明确二人均为年轻丫鬟，分别承担传话与探望司棋，不在同场直接对话；保持中性轻快，避免凭短句补写性格。"
+}

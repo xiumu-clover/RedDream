@@ -1,13 +1,12 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
-import ChapterContent from '../../components/ChapterContent.astro';
-import ChapterNavigation from '../../components/ChapterNavigation.astro';
-import PageShell from '../../components/PageShell.astro';
-import { BOOKS, BOOK_IDS, getChapterBook, type BookId } from '../../lib/books';
-import type { CompiledChapter } from '../../lib/chapter-compiler';
-import { compileChapter } from '../../lib/chapter-compiler';
-import { validateChapterImages } from '../../lib/chapter-images';
+import ChapterContent from '../../components/chapters/ChapterContent.astro';
+import AudioPlayer, { type ChapterAudioRecord } from '../../components/chapters/AudioPlayer.astro';
+import ChapterNavigation from '../../components/chapters/ChapterNavigation.astro';
+import PageShell from '../../components/layout/PageShell.astro';
+import { BOOKS, BOOK_IDS } from '../../lib/books/catalog';
+import type { PreparedChapter } from '../../lib/chapters/collection';
+import { loadCompiledChapters } from '../../lib/chapters/collection';
+import audioManifest from '../../../public/audio/manifest.json';
 
 interface ChapterLink {
 	id: string;
@@ -15,34 +14,19 @@ interface ChapterLink {
 }
 
 export async function getStaticPaths() {
-	const chapters = (await Promise.all(
-		(await getCollection('chapters')).map(async (entry) => {
-			const chapter = compileChapter(entry.body ?? '', {
-				sourceName: `content/chapters/${entry.id}.md`,
-			});
-			await validateChapterImages(chapter);
-			return { entry, chapter };
-		}),
-	))
-		.sort((a, b) => {
-			const orderA = a.entry.data.order ?? Number.MAX_SAFE_INTEGER;
-			const orderB = b.entry.data.order ?? Number.MAX_SAFE_INTEGER;
-			return orderA - orderB || a.chapter.title.localeCompare(b.chapter.title, 'zh-CN', { numeric: true });
-		});
+	const chapters = await loadCompiledChapters();
 
 	return BOOK_IDS.flatMap((book) => {
-		const bookChapters = chapters.filter(({ entry }) => getChapterBook(entry.data.order) === book);
-		return bookChapters.map(({ entry, chapter }, index) => ({
-			params: { id: entry.id },
+		const bookChapters = chapters.filter((chapter) => chapter.book === book);
+		return bookChapters.map((preparedChapter, index) => ({
+			params: { id: preparedChapter.id },
 			props: {
-				entry,
-				chapter,
-				book,
+				preparedChapter,
 				previous: index > 0
-					? { id: bookChapters[index - 1].entry.id, title: bookChapters[index - 1].chapter.title }
+					? { id: bookChapters[index - 1].id, title: bookChapters[index - 1].chapter.title }
 					: undefined,
 				next: index < bookChapters.length - 1
-					? { id: bookChapters[index + 1].entry.id, title: bookChapters[index + 1].chapter.title }
+					? { id: bookChapters[index + 1].id, title: bookChapters[index + 1].chapter.title }
 					: undefined,
 			},
 		}));
@@ -50,18 +34,25 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-	entry: CollectionEntry<'chapters'>;
-	chapter: CompiledChapter;
-	book: BookId;
+	preparedChapter: PreparedChapter;
 	previous?: ChapterLink;
 	next?: ChapterLink;
 }
 
-const { entry, chapter, book, previous, next } = Astro.props;
+const { preparedChapter: { order, description, chapter, book }, previous, next } = Astro.props;
 const definition = BOOKS[book];
+const audioId = String(order).padStart(3, '0');
+const manifest = audioManifest as {
+	version: number;
+	chapters: Record<string, ChapterAudioRecord | undefined>;
+};
+const audioRecord = definition.hasAudio && manifest.version === 2
+	? manifest.chapters[audioId]
+	: undefined;
 ---
 
-<PageShell title={chapter.title} description={entry.data.description} activeSection={book}>
+<PageShell title={chapter.title} description={description} activeSection={book}>
+	<AudioPlayer book={book} chapterId={audioId} record={audioRecord} />
 	<ChapterContent chapter={chapter} book={book} />
 	<ChapterNavigation
 		previous={previous}

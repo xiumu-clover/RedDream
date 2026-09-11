@@ -1,0 +1,5135 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "annotations": {
+    "081-b0001": {
+      "textHash": "c59b82057a83d37d99eb320a492507f54705c0e0c6637295e2e982f850ae021b",
+      "contextHash": "09f45e13f3617e7c37c164d2c66c0c77daae02188a6c54d45ddd3c32268e6507",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "neutral",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；平稳交代。"
+    },
+    "081-b0002": {
+      "textHash": "929d387722922017064f1ab92b7c279dac886989c2329f581607682d0468cf5e",
+      "contextHash": "7318a8eb1363beb3b717a08e1866bf46504bfd93f51e3476d46f35b1a404ccc0",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "neutral",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；平稳交代。"
+    },
+    "081-b0003": {
+      "textHash": "cbbd291aed95162b8d3e7bc4f167a318e89ea09d9299aa737721050f8832f5e2",
+      "contextHash": "ec8bfbdd15a302b94b758811bd1d93accf330d1eb3e40ab36c33102dbcb43cfe",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0004": {
+      "textHash": "266afd221431ff02b3b2946c8047ea84859d7e792c6b6b97ea8ff89ccbda8710",
+      "contextHash": "d633ade80cdfc5097a173b91356d5e3975e7a7d5553dbdccc3ed4b7b7100a0eb",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0005": {
+      "textHash": "088dc14a0b3111a455694419a9d30c87251d635b8e34ac124e3760c01562d8dd",
+      "contextHash": "c2e345cde14d4449e2d7bf30951765f1abd138846439a576b8a4d591ccf0cecd",
+      "speakerRef": "older-women-pool",
+      "emotion": {
+        "family": "calm",
+        "variant": "knowing-smile",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.82,
+      "note": "年长婆子；陪笑迎人，带着看破离情却不点破的客气。"
+    },
+    "081-b0006": {
+      "textHash": "401c3ec01f531377cad1f387289c0a50df67f84c2c7593efff278432b87cb7d0",
+      "contextHash": "b623a21cab766aacc57e14a5d7e1c0eafa8329ab6ab0c0d022c7837c87e4bf6d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；带出哭泣后的余韵。"
+    },
+    "081-b0007": {
+      "textHash": "8ed6774015d332d5e62c0986d22cc606bb5996cd19f66b0c7a045ce36dc2113a",
+      "contextHash": "5b95841f4de1a32a2deab1c5dfb6a6d445c6099e35219e11389db98d163cde8f",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tender-farewell",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "贾宝玉；宝玉含泪叮嘱姐姐，亲情深而语气克制。"
+    },
+    "081-b0008": {
+      "textHash": "98c9cf52ae1ecff4d9fa5e9d9645dd5d012c80170a093c65a18ab8a0cbae3ece",
+      "contextHash": "22d3a079dfb8c58e142901ae19eee8897b7c8540a107d10609e0c2c5e49c6d36",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0009": {
+      "textHash": "01ffbd1e6a29ab8844f507b34b890e20ea506dd581f288589763c7977f33526c",
+      "contextHash": "d70190eb7cb23f4ab72e36b49ea1d934047a79c346e1768eea4a25c99403719c",
+      "speakerRef": "jia-yingchun",
+      "emotion": {
+        "family": "sadness",
+        "variant": "selfless-consolation",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "贾迎春；迎春反过来安慰宝玉，带着忍悲自持。"
+    },
+    "081-b0010": {
+      "textHash": "95d361719e12a6f7194e8b9386555eb4d9104982aa432942154e9eebd9eeaec0",
+      "contextHash": "46619cb7149d447fbddee195444ca95b134a40a9513d018ed5268e78ffbd48df",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0011": {
+      "textHash": "63c78b1003bcd1a46d1b6d3747c84c61ff37be6d0d7c1feb58e97dc8fa0daa0b",
+      "contextHash": "5ef3a2ba24f8153254aee659bd191fc287c0abd520f2b1865d4d0a9e8e4cf4c4",
+      "speakerRef": "lady-wang",
+      "emotion": {
+        "family": "calm",
+        "variant": "gentle-directive",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "王夫人；王夫人以母亲口吻劝离，关切中带家法压力。"
+    },
+    "081-b0012": {
+      "textHash": "6878f780d98a6dfae786d1b626b7589c7b3dee94e30311dabb944b9e5d8a1dc9",
+      "contextHash": "786b40de7afdfb213db9dcd3550a7da8d851de12878d38cadc0b2c70e113ccff",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；带出哭泣后的余韵。"
+    },
+    "081-b0013": {
+      "textHash": "a7a66b95abfdc616aa400f89011a17982ae2fa664ddddf99daa42c9c330f037c",
+      "contextHash": "c968a37064eb0e865f4e5e3966e32859b9bb45aed1e2faa103972ebeab47f908",
+      "speakerRef": "lady-wang",
+      "emotion": {
+        "family": "anger",
+        "variant": "restrained-warning",
+        "intensity": 1
+      },
+      "pace": "urgent",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "王夫人；王夫人催促回去，明确以贾政震怒相警。"
+    },
+    "081-b0014": {
+      "textHash": "2dd81a52e4fe09cbec9bd239893b23fa05b4c34eac277c55145ed10e41ec0eb5",
+      "contextHash": "bf68543555e84092d1c8fd6c22cc1bc965bfc96401050f3a0b9333a0db787b26",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying",
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0015": {
+      "textHash": "c50d6178696780d604cb373c9463d983e89b104d5638615c38181f2cfb744412",
+      "contextHash": "e660d013891fdc1b711f229fa5d1e7bf10361bd881218ca59c8a93940fde3d80",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；带出哭泣后的余韵。"
+    },
+    "081-b0016": {
+      "textHash": "3e7e6f3e4205eff3b688618ffea7e61adadbaa12a14488883259e455b8a0098d",
+      "contextHash": "18db2dd493373fb830fe4e5360e4452241b166933139ac16ba358177add72eb1",
+      "speakerRef": "lin-daiyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "concerned-question",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.9,
+      "note": "林黛玉；按上下文保持连贯语气。"
+    },
+    "081-b0017": {
+      "textHash": "e1aabab095f81d0db5eb42a3dbc7f7757c29e8404e6d7599a22994d08c15b445",
+      "contextHash": "f0274ae2a494af0c58040b1b952d167901f528b84e6cd69cd50a46f0c24b1354",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0018": {
+      "textHash": "f1223fc5ce163b5d814047fc32ca088917cb6d9a717854962d32b8775a7b5ecb",
+      "contextHash": "ec67b545344a8d60ee7633fede464be0732cd6034cf457b603dba726a24e2dc5",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "choked-sadness",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉回忆海棠社并感叹女儿命运，悲痛牵连自身。"
+    },
+    "081-b0019": {
+      "textHash": "304e688f4c2602af30b4abcc68508b4266cb5bc7f6785275b67e67687a57d4bd",
+      "contextHash": "b355e4856c760b9f2b622d697617227537cf7ba583a99608cb91b44a7eb3b0c0",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0020": {
+      "textHash": "3259c980ef929e8993ca93e280df6a9830a3c2e360698f68f824d36137694d99",
+      "contextHash": "7beab870415a67b251c3dca450929dbc51b85015b496eb679eda09b04b3d7c98",
+      "speakerRef": "lin-daiyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "wary-concern",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "林黛玉；黛玉体贴提醒舅母在意，语气轻而带忧惧。"
+    },
+    "081-b0021": {
+      "textHash": "36f3d84d0c412c296c46df9393520231e1359717a817ced232123a6953803363",
+      "contextHash": "1eda1ee026b3e39fb9b870bc015ca6512c666a30e3f1e46eba556fefb2cba195",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；带出哭泣后的余韵。"
+    },
+    "081-b0022": {
+      "textHash": "0cd8156d58178eb54215a1cf653eb8cea39d9c0ee8947358447f249f2b4e063c",
+      "contextHash": "b8741a0b45087b88ccc3f9635ba90a1ecef1230c327bef2feeec5be1e80a435b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0023": {
+      "textHash": "7cd6ea37ba39525340d3a0a6fd8c81c027297adc1724a1a29de368038bb370c3",
+      "contextHash": "834f90dc368e89662bcdee781052cdd72bcf23b56cfe0a5670a46730b49b3101",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "quiet-suspicion",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "breathy"
+      ],
+      "modifiers": [
+        "whispering"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "贾宝玉；宝玉暗自猜疑院中喧闹，按内心低声处理。"
+    },
+    "081-b0024": {
+      "textHash": "f5ec119f05501e79734a89289c67da20033ba09778f3af4f961585fb8834a85d",
+      "contextHash": "b1171201288b26ed5c3cb2db4426cda45c58428e2a457c6b551f7022c49f68be",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "breathy",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0025": {
+      "textHash": "ab7bdb973407a1d9ed31b7afb9d430ea7ac7038be74b1bfe3e51c1078af300c2",
+      "contextHash": "f057cd8708a48d3c7bfeff6335e801eb63b5451973f3add58a79a0b0fd1b2551",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "puzzled-question",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "贾宝玉；宝玉不解三人为何返园，属于疑惑的自问。"
+    },
+    "081-b0026": {
+      "textHash": "a07ffd41bcb9eb7e45bb2b64bdf72e00ae27b0d86974894adccffdb4cbef4cec",
+      "contextHash": "8f0245eed8f2563435e5ad3795828770b694e9c40156b7f84d1a34d7b5230ede",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "mixed",
+        "variant": "urgent-action",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；加快节奏表现动作紧迫。"
+    },
+    "081-b0027": {
+      "textHash": "5f11e34179ff21e316cb5650fe78a2a92339ca344662171848743a53775235e2",
+      "contextHash": "f680e5eb5b74ae8654135a26b20a5f9c88b1c0f3835117c2762604feb6e13584",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0028": {
+      "textHash": "924642c208d725e808fe8d300cd3ffeaec6995488ac13df1545bd954a8d88be2",
+      "contextHash": "a0210c4778bdf821907c5cc65f539f6e1568add967e08467f9a59fcec05e1351",
+      "speakerRef": "ai-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "scathing-rage",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "艾官；艾官当面辱骂并揭短，尖利逼迫、怒火外露。"
+    },
+    "081-b0029": {
+      "textHash": "49a683478200f630fb145636ca0d159c485bc1bed69454c11ffecfc05a624dba",
+      "contextHash": "05c627e5b24687077989112f96d8f31b8a570c41a80405e52487896f3899eb43",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "breathy",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0030": {
+      "textHash": "88a2bcd32a06700a73fbd5d7d689b1baafc0ad31128caccaee22ae4446037cc4",
+      "contextHash": "2765cab37dcd8511e54c1d38f34073412eb27c79953d98fa3a4815ae5c418050",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "hushed-alarm",
+        "intensity": 1
+      },
+      "pace": "urgent",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [
+        "whispering"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉怕惊动外人，急切压低声音制止。"
+    },
+    "081-b0031": {
+      "textHash": "35c74983dcd4b45a073621e2c6d7f754c3ac0d4d0c88337148f8585feeb4184f",
+      "contextHash": "fa17f1e28fdaa62e68873147136477d3b06dfad0bdea3e4739d2753fc1c40b9b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0032": {
+      "textHash": "fa01d1466db5e1d18a9bb3d08711df8d629a55f22b615c009f10c5a700a1b9d4",
+      "contextHash": "ae1312c12a9b824b23972d27043b3fe84411dff4f76862dc49b678121ea3e425",
+      "speakerRef": "ai-guan",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-appeal",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.66,
+      "note": "三名女戏共同诉冤，无法从合说文本区分主声；暂以艾官卡承接，降低置信度。"
+    },
+    "081-b0033": {
+      "textHash": "f7a6a35c6f7efced93a127be9145b5cad98966d9c466eb2bebf55c1739ead0b4",
+      "contextHash": "2a25b24c5e3e1d64462cb547de589ad78ef8ff2bd20859c614d56c7e89a84e12",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0034": {
+      "textHash": "fa23edd59673d3a6fd5feb6e34233a6eb6d7a8edb1845d8d40393570b0adf0f9",
+      "contextHash": "76bdadeba8538a67ad0b6621924c23a1eafa6393714ee63d5f4c15a9e74fbce2",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-compassion",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉为重逢和她们受苦动情，几近以死相许。"
+    },
+    "081-b0035": {
+      "textHash": "fdcb182ef45c3ca1184232e8bf2cb1152fdab7fc40a533cb30ce2a0c7dd80dc7",
+      "contextHash": "3516cd66d0ed4189fd4b28525546bce24fc3f9e5305975d197ee7c0d2904f8f6",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0036": {
+      "textHash": "7c65ad8013d0c2f30ab1447d1fe10af5d246203c7051c77d5722e54e57473d19",
+      "contextHash": "b34953cde30552eb5b6242afe24a0400d908365e7bfe0e73a3076a9b1019184c",
+      "speakerRef": "kui-guan",
+      "emotion": {
+        "family": "sadness",
+        "variant": "weary-complaint",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.88,
+      "note": "葵官；葵官含泣交代众人被逼婚逃走的处境。"
+    },
+    "081-b0037": {
+      "textHash": "8dddfb9f2dc508139e9b421e95e101e7d72664a54831c9b26a54eac612d8e029",
+      "contextHash": "2f8e4881f96c40dbc10c74ebe5db4c3c3a52de9688ca41bc80fc74f6555c213f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0038": {
+      "textHash": "0ca07ebb43784faf8343ab9cb0e3d746cd7e8bd0601078a75559ee068f7866a5",
+      "contextHash": "ddce2c5eca4ad6b5d83971a1aca99e8c112e6b4fdcff39a5159da6e1bfb116ae",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "guilty-consolation",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉自责连累众人，同时谨慎压低声量。"
+    },
+    "081-b0039": {
+      "textHash": "42bf9b5ded7f1f572217fe35eef505b8fee2209723428f2bbd7689d8348845a3",
+      "contextHash": "4feb77a35f1f5288bb9364e8d1732243819c3a953d59be1c05774f0aa5f19876",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0040": {
+      "textHash": "3b40c8cde99cfd54c2f6a637ab4e252e23fa0e7b5832db1883a17e0c6fffd958",
+      "contextHash": "00dbded86240b07278fa826da463c40c44f6199211403156ba39b8c5d33c8162",
+      "speakerRef": "dou-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "bitter-accusation",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "荳官；荳官为被逐者讨公道，夹杂对袭人的尖锐控诉。"
+    },
+    "081-b0041": {
+      "textHash": "9af09c40e38cbc01121c443fdd37616d1bd898a9a8159974d22fc7fa84bc80c8",
+      "contextHash": "d441b7898d69fcc0d3efa0d880ea07cf29a357e1d4a7329f9ded56a8b769eb00",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0042": {
+      "textHash": "bb73d31986578c6ebc377a426b9073d53e29e3a5ffe0106ec33f8ce26035c2bb",
+      "contextHash": "82fbe9232c55559f49d8a8a5ade2f6afb7f0be91ee65a9f7fea9f23d16127f2d",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "anger",
+        "variant": "defensive-indignation",
+        "intensity": 3
+      },
+      "pace": "fast",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "袭人；袭人以规矩和太太信重自辩，忍怒反击。"
+    },
+    "081-b0043": {
+      "textHash": "ba2979832ed3312c96d5ba5fb673a48c9a445f82b4e60dcff6be77a9564f9a9a",
+      "contextHash": "cbb2317784ec7b36e96784209dbbf5b85012385ed3f101b05512b652c82ecc67",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0044": {
+      "textHash": "6290cec509e418d65f0095e1242f42975970f06ffb668d3365c961c800324d5e",
+      "contextHash": "91ad98760efbf8e0683a06ccc8de3e13ebaeee6fd64d6e096394ec575524eb59",
+      "speakerRef": "ai-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "oath-bound-fury",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "艾官；艾官逼袭人起誓，咒骂强烈且步步紧逼。"
+    },
+    "081-b0045": {
+      "textHash": "4b4738b4f3d5eaf9f0061cd5b08827a4540cce2360260544ce587da2bc093df3",
+      "contextHash": "c26ec72a3f7a122642ae617adc589148205ac687404110c6d53feb42ac9ce5dd",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0046": {
+      "textHash": "f4a6c18d6c5351dff79ee3fd16fe2171b4c720c69a3aa86462c7191fe413f244",
+      "contextHash": "7a745f589bd82bcd799ce90892cf1aecaab466fcdc7d1ae84bd05216ab9225fe",
+      "speakerRef": "dou-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "taunting-challenge",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "sharp"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "荳官；荳官拍手起哄，以挑衅逼袭人表态。"
+    },
+    "081-b0047": {
+      "textHash": "550954de38f4a4c94d93a61274ae8426d15e4b9bd0a41101d210d4133ec28eb2",
+      "contextHash": "3b957e6bdca371f7e4781dac8aa8636074d17a6767de1dfce28201a4db1ebb37",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0048": {
+      "textHash": "80764c2e63f7f4a40362c8be7bbf5d82434eff9b3ef52b91a4398a1d02cd699f",
+      "contextHash": "f44ed7aa76877d9203ed2b6369bd95998400b6a682bf597db732046b5bf39472",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "anger",
+        "variant": "sullen-defiance",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "袭人；袭人不肯赌咒，带着羞恼和强硬回避。"
+    },
+    "081-b0049": {
+      "textHash": "bceca058c4820099214da1f4d15a0ab5933b536920eab71a19aa7df045717e52",
+      "contextHash": "3a3d63f588708b24d1dcb3fad4b540a2c422e588de1f5fc215be858bfa7b378b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "breathy",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0050": {
+      "textHash": "10e0c4016918e59a7e73ed9756f3c4f487ff0312916c8d9a8c9aa9fce74d489b",
+      "contextHash": "a6e1aeda0a07a5271c770254a4dcf75eac557cc1c01652a0f27cefa18eda86d7",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0051": {
+      "textHash": "f401484c9d1e2c1ccc18d6812d5c715989d9c83906403313ac26047953028eca",
+      "contextHash": "6478e70468ccf62ec9fdb1f65f92f30ce8c63b5c075d7759ef1ac1b6e241e55e",
+      "speakerRef": "ai-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "inciting-anger",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "艾官；艾官趁势煽动宝玉追究，尖声指控。"
+    },
+    "081-b0052": {
+      "textHash": "d30771dbe332d207bd99eb4ff10d8832674190ece08f20ef669e1c96ac55aa2d",
+      "contextHash": "2d5703d8b8c69101c5e397ddb41bf90a99dcc6dfcdaf165badbb00ca871e0b59",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0053": {
+      "textHash": "0d8123a03e532ffa920819d9b00c31878281338a1f3eb4ffb40d202443bb12a6",
+      "contextHash": "86ce11f629bb4d0d78975fc940fcd4b11852ada78c09bf265729025ba44518f1",
+      "speakerRef": "dou-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "collective-outcry",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.66,
+      "note": "荳官、葵官齐声附和，采用荳官卡作集体主声，降低置信度。"
+    },
+    "081-b0054": {
+      "textHash": "b2623af81392962f77b68c60180717a4dd33c36d3750605417955bceee7dcf69",
+      "contextHash": "84a2d6e8ebb696614aef42f30d242ed9900778c974ef7f98f753b9098f652237",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "mixed",
+        "variant": "urgent-action",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；加快节奏表现动作紧迫。"
+    },
+    "081-b0055": {
+      "textHash": "8948cd882987a901501620b7722d43008e660f8b6745d340dc583e4b877e53b2",
+      "contextHash": "bd4ffb3a3be5acc5132d7d385f04fde9cf996cd265a78c53a5e56a71441cc1b7",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "mixed",
+        "variant": "urgent-action",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；加快节奏表现动作紧迫。"
+    },
+    "081-b0056": {
+      "textHash": "0ffd053cf41dc3ae4ee902f3e06af2067f0d898c994c7a9c8609bccdeb0b99f6",
+      "contextHash": "ee8242a88486f26ae63cc2bb37ed5d21582bed9e7a74ff315509e70f31cdf1b8",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "urgent-restraint",
+        "intensity": 2
+      },
+      "pace": "urgent",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉急拦争斗，担心三人和智能儿一并受罚。"
+    },
+    "081-b0057": {
+      "textHash": "0507e5269427fe1c58f6f16bacedb2a16daca7cf2bcca7e0689e0fa5a0c8a0d9",
+      "contextHash": "1d54b5222d0cc149119385270b98706e2eb8e36b4547bf3dc13bea449b1e7629",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0058": {
+      "textHash": "150fb8cae43a101d66151dc08a8b7d0bd0b6690fa92d89bde5a0d7a9113a491c",
+      "contextHash": "9bbd65d6a4cce155acc982eb50c3ca377a27d4b5967dcbed5e821e0eb905a315",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0059": {
+      "textHash": "d91757ee4adfedb605ab772fc594b5e0d3d565b5ebbab8b49ac3f6be7e1450dc",
+      "contextHash": "5c28ed302d1199d230ad045cdae5520e506b12fa59b8b31650ab9d6fecae675c",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "mixed",
+        "variant": "hushed-reassurance",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [
+        "whispering"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉先许诺公道，再催众人悄悄离开。"
+    },
+    "081-b0060": {
+      "textHash": "de759a402cf5bf19cce78cc2a394f68cde42d45c4494338a270c62e90becdab6",
+      "contextHash": "2c785683b658eb98af824e8de8df772563764263f7ca829fe97dc5308cce837c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0061": {
+      "textHash": "09ddf1e70b106974c23c9c808b7820979e2c8bd2543f41a2858096531609b0c1",
+      "contextHash": "b8b90f67c2c294d20c31b1d2a61d95577e61e4b5775f4b6195b91a00e67d7c76",
+      "speakerRef": "ai-guan",
+      "emotion": {
+        "family": "anger",
+        "variant": "bitter-warning",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "艾官；艾官收手但仍咬牙警告宝玉提防袭人。"
+    },
+    "081-b0062": {
+      "textHash": "885adddad6d73e78000bb7e61515acbbae11790cdf2c75168cce1e31b481c26f",
+      "contextHash": "a9ecd9ea30201f6ea1d316014d1224afb174b85764c182b7aff88189783d444c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0063": {
+      "textHash": "701834054be5f69a71ca8ba710429b45aa6a1f0540a78808ea4e378eac77c525",
+      "contextHash": "f347a189b83db4ceeefd255456ef06bcadf01159b3d66f34c02b9e66ff3edae4",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "mixed",
+        "variant": "resolute-release",
+        "intensity": 2
+      },
+      "pace": "urgent",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉痛定思痛，作出放尽丫鬟的决断。"
+    },
+    "081-b0064": {
+      "textHash": "22f9c00835623f77044dadd9f5b76a0c2e930ddb94df6f42bc5a6c70437d2492",
+      "contextHash": "a8bacc367b28473e07ea2eca5e9358fd58cdaf3df5a6c57d1acf79c8c502221d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0065": {
+      "textHash": "4de71430661bac1496b723b5559efb6fadb87b8da798759df5805a98e5d14474",
+      "contextHash": "15bec3b91b92ca7eb96dda1378895cb16bc984f2e63907b41caf11f87479aab1",
+      "speakerRef": "kui-guan",
+      "emotion": {
+        "family": "mixed",
+        "variant": "forced-agreement",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.66,
+      "note": "三人共同回应，采用葵官卡作集体主声，语气表面嘴硬、内里心虚。"
+    },
+    "081-b0066": {
+      "textHash": "995c5da0a1c30ca4bdfb46a6100323209dbade3c568725ebb6ec7889aadbdfb1",
+      "contextHash": "fba1d3c2c1617a9380d404ed45ee7d4e8d561004a1355ea46bf3f3fd75b7af71",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "mixed",
+        "variant": "urgent-action",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；加快节奏表现动作紧迫。"
+    },
+    "081-b0067": {
+      "textHash": "e4cc380d2a6160041a8853a6319405281c51770110eaf4cf149df02646c9d5bc",
+      "contextHash": "19fedb87fff081b72a6297675e07bdeea163397db42e17c6149c779b2b0282a0",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0068": {
+      "textHash": "a41de88a63ce0957f997f7355ffcdea018471e88ae7e847a8a192013296c224f",
+      "contextHash": "8c9b15313984aa7d5a2342549004a21c722d12a5de1b376db6b8270c775e17be",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "betrayed-sorrow",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉想到晴雯等旧事并失去信任，悲凉自问。"
+    },
+    "081-b0069": {
+      "textHash": "1b9b8a6f6413aaeac97ed947bb4ed9bc23e7feb1dbb85975547c92e02df4f861",
+      "contextHash": "8d5790ae8c3d6439309405f4d61d06a15f5f9eef172c61a6e03851300a79840d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0070": {
+      "textHash": "20b9ce849764d73657fada1a3bcedf010a5d2e8297c59e5915d5b191856e2fa1",
+      "contextHash": "eb18a40829e006edf274a34d282ba5fd8d0353fe32e2554c886a22924cd3a74d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0071": {
+      "textHash": "36b6f9442a69204c6a82d87bcbfd724ae85dc63f3c1d66986ca30237832a4ab6",
+      "contextHash": "6f9a04a01b78761008702b0e94c793f0866839cd77ca5cc88645f5e397f5f792",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "anger",
+        "variant": "defensive-irritation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "袭人；袭人被疑后以忙针线搪塞，恼怒而刻意冷淡。"
+    },
+    "081-b0072": {
+      "textHash": "5b2de84b5d42d423980119c57bc62b3761ce0269876b514f9f835c6eb6c71507",
+      "contextHash": "95617879af15fcc0ae44090e48decc57d3bd25a3188746b52baf0885a018f5a0",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "hushed-transition",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；轻声连接场景。"
+    },
+    "081-b0073": {
+      "textHash": "dee1fc5712ffd88e367076d7f34df882ceb53da3d30b10a3051304181dcdf1b6",
+      "contextHash": "94de960b7aa506ab5c6d2bfdd79e67bb2aafc695030034cfd9d6bd996994c405",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0074": {
+      "textHash": "4dda6ea007b1907d75d22f6ac3dcbbb3ab5ea934a8f0702f8f4ccb4513fae3ad",
+      "contextHash": "b21e037769b2c7c84360e951b2cedd920033267ee6276c2580d58713d3817a27",
+      "speakerRef": "chunyan",
+      "emotion": {
+        "family": "calm",
+        "variant": "light-inquiry",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "春燕；春燕见宝玉在门外，随口关切询问。"
+    },
+    "081-b0075": {
+      "textHash": "195cd949974ddd20d28ee0feea1b5274fac5e1890da4b446d0ff749cb064bf3e",
+      "contextHash": "f7adb7a39b233f7519a71b55188aea0ec1af7d2c8439bfd2464d39608ee37367",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0076": {
+      "textHash": "b23376e74b47ba6b6cf9c310b36718f60bf2f1f96a14afd42af6ae70d62b9b5b",
+      "contextHash": "513cb649cb17edd0292db0134ef74e309cda64b59805e4646dd84e278257bbc7",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "practical-instruction",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉借机召集丫头，语气平稳而有吩咐意味。"
+    },
+    "081-b0077": {
+      "textHash": "d59df7304a4dd6de4241978b3989e5d5eb3050de17cbff387eea340263c5416f",
+      "contextHash": "3e396c0b204ea44d452332a11fc7c6676939d1121a2edfaa23da8d6e38c2821b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0078": {
+      "textHash": "3129bf178e98ab85a945ee7697902de250ef563df7dedce9914cc930d262ad3d",
+      "contextHash": "802c44fad017c82c10e407d4456be491027ee09d102b935fd043ff3fe2facf5e",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0079": {
+      "textHash": "3c50fca7109187f6f7596b395f317447ec3c9add47dc9c623c898f8885072b77",
+      "contextHash": "9d5bc8fd42194c4b8bd61cb65859dfce2924412b90bce6fcd946a9059d306e42",
+      "speakerRef": "young-maids-pool",
+      "emotion": {
+        "family": "calm",
+        "variant": "respectful-report",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "年轻丫鬟；王夫人丫头传话，身份明确、语气简短恭谨。"
+    },
+    "081-b0080": {
+      "textHash": "9d34dc0a7bce9076bffddf0ed2c2b79473cf0570de1a1aba14941f65e9829e1f",
+      "contextHash": "b245be2192ea1a8f19df096cd76a084a9cff10db6a65cdc94c22977ef2a93724",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0081": {
+      "textHash": "798a209ecd1be090050c245d55c3a836a8fa83d882ee3f2888a7f591332ef0fa",
+      "contextHash": "21a6c74c268232d8ec90cc25c06fce0d47e46e98c0f63c4511e281a2d3b22c86",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "joy",
+        "variant": "playful-scold",
+        "intensity": 1
+      },
+      "pace": "fast",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "sharp"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "麝月；麝月笑骂小丫头，熟稔俏皮而非真正发怒。"
+    },
+    "081-b0082": {
+      "textHash": "458b7f0eae14f1c9f7d8bad0c6e69630cf9839faeff06e7460c80c79a67ab2e2",
+      "contextHash": "2fbf1fabe196f9d703026feb3bf4f8a444cb7720d8555a0785cff2ca7e8770d2",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0083": {
+      "textHash": "2d35ad9251f12c89a968285642f79777482dce2359bcb29cd70c4738246653e5",
+      "contextHash": "25f5f4f6e015c017c0c91cc8054d1d0629789de3bb507f21b2be3e9769a19e1f",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "matter-of-fact",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉回身解释春燕是自己使唤，顺带交代安排。"
+    },
+    "081-b0084": {
+      "textHash": "fd582fb7ace1264f34563670ba31b62be2e008345e71268fc01969ac1d61e799",
+      "contextHash": "1bd445685bab8d4f6fa5dd4243d379dd0a314b40b01f80655bec989e72dee992",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0085": {
+      "textHash": "0d0834170aad69b1e0fe482119be451a3663d860345d400036342e6f9b5a4d2c",
+      "contextHash": "b0a715d8f925dcb147983b26d19cdf746520c6c00ca7c6bc54ff153d01089599",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0086": {
+      "textHash": "97f24423302dc2e0422cfaff56fad771966f2b9cbe0feeddca30b20c591db1de",
+      "contextHash": "970c5a02f2861f09cfcfd5bb670f3b143dc07e9992a8e2939198c919b24f2b10",
+      "speakerRef": "qiu-wen",
+      "emotion": {
+        "family": "joy",
+        "variant": "playful-surprise",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.67,
+      "note": "秋纹、碧痕、绮霰合说，采用秋纹卡作集体主声，保持轻快疑惑。"
+    },
+    "081-b0087": {
+      "textHash": "1c4c344d03c807ef14197558000a2995421aa505925a7e8c0bdea64ecdf8dfa8",
+      "contextHash": "75a368c07c0e6f9a01449e001a541d2a7d1956d5803e08bb097bac64d5243581",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0088": {
+      "textHash": "388dac71796d211cb4d4e22bf0e0dbf9545476722a41c815d8a9b6ddc3c7440f",
+      "contextHash": "c726015d08aa06e25dde586113175be3ae555e249f7545bd24e77b3e2b823216",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "calm",
+        "variant": "plain-report",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "麝月；麝月如实转述宝玉吩咐，保持稳当。"
+    },
+    "081-b0089": {
+      "textHash": "315a496a0153afa532923afcd8bd2276efe982fa96815fcff8e8e4921ebaa2f4",
+      "contextHash": "2195ed4eef2d0a1002509174fa5931cff41138157a964d3f118aeb8cf87f881e",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0090": {
+      "textHash": "e03f365b0aac1700b2c8b1407049a31c1c4e976211236f351f429bb7536b3725",
+      "contextHash": "e42fcb10e34941ddb852cfe355e5b15d4a0870ddaeb907c043984b3aa8d732e8",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "sadness",
+        "variant": "weary-resignation",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "袭人；袭人淡淡说早想回家，含着疲惫和自我抽离。"
+    },
+    "081-b0091": {
+      "textHash": "a66c2c99ee5656ab9d4395144edd8f2125af9f6845a80ac722e19afcdeb9a0a9",
+      "contextHash": "b51e84a6ca3036be60c15e1fcb03c7bfadcf781796a4c2efc1671a78651419fa",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0092": {
+      "textHash": "0359dfb472bd4d9f14eff459f851b29a639c6f04ae0da1848a3d3d7f52859902",
+      "contextHash": "74469453dc38c80bc36ae1fa8dc4dbe678343897046714d7c6f4bba16f61c009",
+      "speakerRef": "qiu-wen",
+      "emotion": {
+        "family": "fear",
+        "variant": "puzzled-protest",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.67,
+      "note": "秋纹等合说，采用秋纹卡作集体主声，突出突然被牵连的疑惑。"
+    },
+    "081-b0093": {
+      "textHash": "ea4624084a746d77e92a58b23fc728bf08c7a12fab0ee0b35e2a9c39c972cd51",
+      "contextHash": "31a9278b3692a8663fd07987ac749d6ad0dcf0d1ac8cbec66a736fe14ebc29fd",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0094": {
+      "textHash": "f0e16daa5f4acf01ef85be7ffcde89abb56662620c9d1c24b73d80fe36c0820a",
+      "contextHash": "05e6fdba12f1d5053bce1a6228f7d137e9f32fe8a658fe7c86dc8ec091a68f86",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0095": {
+      "textHash": "b52b4295d1dcf44b94c6ea5820ddb43e87382e0df8c26df2b5e569c023633d93",
+      "contextHash": "3c3d2cd232d1bce57a2a651105aadbac62ee2a621d32ec7c0ea601339c362742",
+      "speakerRef": "lady-wang",
+      "emotion": {
+        "family": "anger",
+        "variant": "maternal-reproach",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "王夫人；王夫人责宝玉跟随，仍以念书规训为主。"
+    },
+    "081-b0096": {
+      "textHash": "4010737831077115327a930fc031b5caa442f6aca950d1b4be97c2a32a759b5c",
+      "contextHash": "bc8a7ec5993e4a826a159452b84418b6100594c6b14d5fff99d4e8498277da1d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0097": {
+      "textHash": "244bbba87c16ec1a248b6218a23f083b445d77e07110c50921a249fe5fe8bf6b",
+      "contextHash": "6c6670983e5534156590b4fd250b9b8289888fad28b0cac70d800b304753480a",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "deferential-explanation",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.97,
+      "note": "贾宝玉；宝玉恭敬说明另有几句话要回。"
+    },
+    "081-b0098": {
+      "textHash": "2a65f54eb6014ace0e402f04bbaeb11d536dffacbcae0f49e6af8135736a2ccb",
+      "contextHash": "e88e72a3c4a92c07b26ea147c3008c5aa81588433b1cd378b46db4bf6cad7d5f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0099": {
+      "textHash": "8f5ac49ec3da17beef4640c7019572ddf3c4520d2398685af3338266e8643120",
+      "contextHash": "3ad4ed8e6be7d663fca7b8a0f604dfb1c553c1437d4997382d7b76e3944eebab",
+      "speakerRef": "lady-wang",
+      "emotion": {
+        "family": "calm",
+        "variant": "satisfied-warning",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "王夫人；王夫人误以为只放小丫头，宽慰后仍不忘训诫。"
+    },
+    "081-b0100": {
+      "textHash": "925daf7f081113f4dddefac5af5958eab44936c378ff655aa7617f62679a4ab8",
+      "contextHash": "0c4757fe84bbffdf477232c1ac28d370fa13818b524d2aa9a217b99f0b88eb0c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0101": {
+      "textHash": "1493897cf7bc5d285296fc4fd9e4f23f021747baee71a4c46e06e83f59e3f645",
+      "contextHash": "973fd965168db55b129fb6e9d94f937ee726c6f44cfccbbd78a91bc58f32ea0f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "weary-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以疲惫的低缓语气叙述。"
+    },
+    "081-b0102": {
+      "textHash": "bfe80964956316c556a4bacec69d03544abfaf9df0f4387528fea343b82ea2b4",
+      "contextHash": "7a0d1417f86a202bb9ab3dbe86cde323caea6f96d5e07bc88f1ec11208d81549",
+      "speakerRef": "zi-juan",
+      "emotion": {
+        "family": "fear",
+        "variant": "caring-warning",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "紫鹃；紫鹃替黛玉披衣，关切中带对寒凉的担忧。"
+    },
+    "081-b0103": {
+      "textHash": "262b8d2fa54e1920c87a964440cd3c9ca8fc3cbe0d1b21b7af07946e9ef0fbfc",
+      "contextHash": "6427517cf1df9a83809c5fc1edb96a1834ed5c409421fc4ad76c553b3ade2e11",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0104": {
+      "textHash": "a5578bdb32c8f7e90b5c0a11ce57b0e904878430e80d465cbd0af4e359187d6b",
+      "contextHash": "6398de618b331035fc3f3573619639dd84c78fcaf4bd1fff7bbd0f68d0431bad",
+      "speakerRef": "lin-daiyu",
+      "emotion": {
+        "family": "joy",
+        "variant": "light-deflection",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "林黛玉；黛玉以笑语化开紫鹃的担心，带病中的俏皮。"
+    },
+    "081-b0105": {
+      "textHash": "770bd68e8397371399e82a302e73ee29c6c1a68aaee7b24bddd3dd733ecfce2a",
+      "contextHash": "5e63baea851f6471c0d06069e5e3d929aa049b1b462e9c31426f79aa42ab1719",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0106": {
+      "textHash": "6b0998784bf2380d3293c03efff8ff88b57cbecea63b1d3a611ba7f49bc3b17f",
+      "contextHash": "920c7c73492b22f61c30744eeaee28a25d23d1fae5e4cd63cbe8c10dbbbfc492",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "weary-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以疲惫的低缓语气叙述。"
+    },
+    "081-b0107": {
+      "textHash": "0c258d7a4b946eb634f537ad674a959134038b3ce2ad454043e669137b1f16c0",
+      "contextHash": "f31ce8cbbc4ce70b9e288c374d62b0e1d62ea1a74983a6c0dc4efa5e14de771a",
+      "speakerRef": "lin-daiyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "quiet-concern",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "林黛玉；黛玉见绮霰含泪，轻声询问来意。"
+    },
+    "081-b0108": {
+      "textHash": "33fc8c33ddc7261c1ae764784e641c23d8a2b239ee2d6fe2436f5d0227edd59c",
+      "contextHash": "b3691700912259e3916af6b5c7d83d8b170521fcf302d9b82d9fae6d119a5213",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0109": {
+      "textHash": "35a2a077e56c838d89024a1f13ed41e48e4759630b3be2d53883ee60dfa37cb2",
+      "contextHash": "f56c1f1481768a07a51ba79d7b11311fbc0728359dad316a71268b2236dc7516",
+      "speakerRef": "zi-juan",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-report",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "紫鹃；紫鹃转述道别和离院消息，声音带泪。"
+    },
+    "081-b0110": {
+      "textHash": "2f25ad5cda096d11b6996c0f2e3efc820dc7328cfad985338e7e0f2aa1af18ea",
+      "contextHash": "fb3ffe9eb74732426e0ae16f960e94f47f456765dd2b062008837eb4663c4f9f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0111": {
+      "textHash": "deb0f7a2287678a32cf63f9827621e9002d5ee70fc5f741108f0387c45016c05",
+      "contextHash": "e40bd77be5a1fdc7c4c486850fbe6b2e4745d61892f9aa7a38a822dabb5f7e2b",
+      "speakerRef": "lin-daiyu",
+      "emotion": {
+        "family": "mixed",
+        "variant": "bitter-jest",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [
+        "bitter-smile"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "林黛玉；黛玉说去也好，实为替宝玉和丫头们忧虑，以玩笑遮悲。"
+    },
+    "081-b0112": {
+      "textHash": "6d860a437cc1fc2a8fec9e7a1cd2381a3023753a38e4244a33cb430de6a77e61",
+      "contextHash": "57ac6d7243303a4caa4ea10eeea0bc831d04c20f8e89a35ef72dc166726a741d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0113": {
+      "textHash": "b7f82db3e5a512b9bca0492c76957a9acee2094b3d464556df12e8466ee13012",
+      "contextHash": "d9d4f86f206d6cbd3feceb2c98917728db7125e25388dde0970c97405dbde559",
+      "speakerRef": "zi-juan",
+      "emotion": {
+        "family": "joy",
+        "variant": "teasing-smile",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "紫鹃；紫鹃没好气地打趣黛玉，亲近而轻松。"
+    },
+    "081-b0114": {
+      "textHash": "1f30562c115d3b925afdf3ae88ebea9c0125721d45a253a5053bb7bc66803187",
+      "contextHash": "8bf62dcc5179fc006c569379e79d34b13247f907ccf6e9000f4cd4def38b5658",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0115": {
+      "textHash": "3b0bcd1110f4822ccf5b0eb5a3ab2d9291473c5643b92f82be3801b781a18be0",
+      "contextHash": "4e4353bb94ed3aa209f908eae0890bd18976d0614654a279d65652b0a6750e70",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0116": {
+      "textHash": "8c0be8772b70844b4fa82684202b7277c51a0122087c13c5dc01b9b1ce726e32",
+      "contextHash": "ae507ddb33d030788b19abbc6786a02747bb13d2d1cd0a7ed1da438a5e1cceed",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0117": {
+      "textHash": "6632966ef7d11194695fd29e3eafa2ce423fe8b2a0028f40b7a0c14a06e37b5c",
+      "contextHash": "84de43d1deb4305238f257033cd69136bb9592ba893bb8edbc2a6bd5d0f6feee",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0118": {
+      "textHash": "49eeb8445b1755a2b5e687ee7a4e7e95ebd796fb6715d7eb377da7b5d4f09590",
+      "contextHash": "527d0df5583b28fd50301f156d227403b90b6308321e7cb46eb6dc20755aa0ab",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0119": {
+      "textHash": "a66f0798141240991e7e92dd51718274a5c20b53af0ca5d3b5ca46319385afa5",
+      "contextHash": "3493e869de63f3fc6657ccd4125e0d909011782ece0a3b6fc0a6af3c0052d33c",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "earnest-matchmaking",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉郑重说明来意，关切袭人而不浮夸。"
+    },
+    "081-b0120": {
+      "textHash": "d46d8d9709efbb4641f0df41ddfa90abe863e10d814df4c4f2aa51328ac9af7f",
+      "contextHash": "8de14b09ba90dddad42a1fd800f60e755de9500e027a0ae15d645bb43e655621",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0121": {
+      "textHash": "2c3a27b2264ae8a0a524545297a1aa05b84ed2acd70c6b93c119cce07b3ea640",
+      "contextHash": "92470c1cda6fb97a8cd6866b95061a9a6f2b8b73639e5c73d573225a67ba0a0c",
+      "speakerRef": "jiang-yuhan",
+      "emotion": {
+        "family": "joy",
+        "variant": "delighted-surprise",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "蒋玉菡；蒋玉菡惊喜应允婚事，礼貌中显真诚。"
+    },
+    "081-b0122": {
+      "textHash": "10c9e1a43f0e2e5bf2e54f50fb3dbede512eb436326aec72d14625e62153e9b0",
+      "contextHash": "8dc0e5f2feb84e41bccf5668956a265cbcd32b1bc8bc16777c506af1d816e809",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0123": {
+      "textHash": "7bd8834d099ae1a8ab76820ae2e37987092f7e49864a2aad60438f44d1de8d34",
+      "contextHash": "4808375a7ca3d2a2ad1340844f311a3e448d441990c110392779149074207e47",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "protective-earnestness",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "firm",
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉强调明媒正娶，认真维护袭人名分。"
+    },
+    "081-b0124": {
+      "textHash": "89211fc7221ab961475bf1e07c6b83125604890b10b1adcd5110ed011e893b9c",
+      "contextHash": "2e68e00b27009a66d637c421e6d7fb7f1613345d7cfb373aefc7f0002d2f9c05",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0125": {
+      "textHash": "08db0ecb4e836fb7065ee6f365f99f93a374ad4e1d2388827abe4f1a42505e37",
+      "contextHash": "193437e52f1b3882d84b3229dca0d6ad3dc5ae813baecdaf86196c5444da1e6b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0126": {
+      "textHash": "508f34da73528d5e35da4854342a6e574d7440ce50d46365fb7c80f6c2875e80",
+      "contextHash": "127d93cb06b010f5cb41193a65b903ae4d203d4c1d87a96523c6eec4d3b9c69f",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "thoughtful-duty",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉还要去花家说明，语气务实周全。"
+    },
+    "081-b0127": {
+      "textHash": "6611a425b58f2a0e9bf3f9d757ddcbc1dc7e9c78f36cd17bd96758feb2d1f6c1",
+      "contextHash": "5e8261f5e9cffaead28963b71c50343188ec0cf35a3388382a644b914f360126",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0128": {
+      "textHash": "20e6b93e1b6842f3bea3652bbcca5d3b78efcea53eef5d84db21fa22e72388a6",
+      "contextHash": "21bba41cbad1864bd1c2d9080c984221e423bfe7e2c453f66c2d83ee1a2b4a8d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0129": {
+      "textHash": "168c69e771ce70b62ee055e94d7a4f21fd139c9b878bafe85504cd331f9d66f1",
+      "contextHash": "0a68880036ee9050a71dc98f13c3847e9f8ef4c34b6d866f06792d3a7d3bd526",
+      "speakerRef": "hua-zifang",
+      "emotion": {
+        "family": "fear",
+        "variant": "startled-greeting",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "花自芳；花自芳突然见宝玉登门，惊讶而恭敬。"
+    },
+    "081-b0130": {
+      "textHash": "6e3ea4562a1763ca658f85783f531e793352f03b7eb9df3a9c426bbd46de77d1",
+      "contextHash": "3d933a402cd0af82259ba105490ed4c5c2d497755f6fb70e12bfef819d8ece4b",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0131": {
+      "textHash": "79a70a2b17fc498083a37db497125853edf361a6e89748d4c12bc96ebe11ea7b",
+      "contextHash": "a2217365002e967402b510aa04d697a76bc000c1f5a40a4459a4da627064eaa3",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "sincere-proposal",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉完整交代蒋家条件和婚约，诚恳作保。"
+    },
+    "081-b0132": {
+      "textHash": "32b30027e833ca5fe4b147b13eade5a6e923382349ab4d88e056ce5c7e862870",
+      "contextHash": "d6a108206133808b554149d7e2aa1d51b1229a00e4548d63536d9e84f91fab37",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0133": {
+      "textHash": "72c8a09d77124955b52526ba38bd3e2aaefeecb6502665629c277638b0ea21d3",
+      "contextHash": "181d103e1c9b34dce101a38d7a070cc3bc2b8d8620a4c0c52cc8dde61f640871",
+      "speakerRef": "hua-zifang",
+      "emotion": {
+        "family": "joy",
+        "variant": "relieved-delight",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "花自芳；花自芳听见有房有地又是明媒正娶，喜出望外。"
+    },
+    "081-b0134": {
+      "textHash": "cc5b4580d197a3fe65603a4138b8a382bd6efdc69ad0cdd25a5b890f0c48d075",
+      "contextHash": "deae5dbcd0772434689591c40f137dc96928f5ac9368b60b0400997a89fd60f3",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0135": {
+      "textHash": "f1c06fa47019d1d7ddd19abdaade1715282d2016cecbadab1ce122fc2e16b4d8",
+      "contextHash": "fa7b0da27af9dfd3059589cca7e80b1edb2556a97973e9f3315a4aee19799338",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0136": {
+      "textHash": "4d8e44c8039d3bf388ac13aa8b63deec225b860140953194363dc8b46513c318",
+      "contextHash": "b709cbfd8c5c45ef673a40fb41c3bb77789a5f86ad3e047265be56e99c31c92b",
+      "speakerRef": "hua-zifang",
+      "emotion": {
+        "family": "calm",
+        "variant": "pragmatic-pressure",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.95,
+      "note": "花自芳；花自芳以生计和身契劝妹，现实而带压力。"
+    },
+    "081-b0137": {
+      "textHash": "aee88268579d047dc1a5c063badad079a7e02673dab1dbfa1537b01a522bbed2",
+      "contextHash": "70c7b4fffcc1dd9e67486f95c139ad32dad996681a3abe9ecdc6badf878d45eb",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0138": {
+      "textHash": "ed4c244af3148129d3e5c678ff4f1520182eeff5b33cfa855a94bf3bad98135b",
+      "contextHash": "380d3972c09fc815dcae3dc5678023e8e0138cb619a7ab1d1c621ecee947d0d4",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-resignation",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.96,
+      "note": "袭人；袭人明白婚事已定，只能低头接受。"
+    },
+    "081-b0139": {
+      "textHash": "7cf070c3f0bf9ed1a7ce409bb460b742326c9b8886e61af845cad7222e7852d2",
+      "contextHash": "892dd79d898ab91f56e07a530dc4472e3a0a34f45926043a2e1df6caf4dff8e9",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0140": {
+      "textHash": "b97836b344556b8784716447c591fe46550b744786be82e1b8590e8f340859e9",
+      "contextHash": "cae9b3e38d66ae5331a33fe535519b4e132450558ee23dc23cf651ad7d0956a9",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0141": {
+      "textHash": "1335e54ede44ba551eec5faeaac31e0619628b40fc2052d3911009d9cb3a19a3",
+      "contextHash": "5a9611c28cd606305bc513f32afebf85241c72039d8cd1bd6b14c0b0bda99085",
+      "speakerRef": "xiren",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tearful-care",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "袭人；袭人临别仍惦念宝玉起居，忍哭提出留麝月。"
+    },
+    "081-b0142": {
+      "textHash": "3fdaece09f7bad326df8cd28b205d7feb4398d0f1616252a796b0433e9237953",
+      "contextHash": "a4febf73aabbf159497c2aa5aa613128ed0254d7263a21735fe3f10a8bdf4131",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0143": {
+      "textHash": "b82d4eb3e33ca4b770b5d88fda47fe3e403e1983bb38f02e87cc5670bd1aef94",
+      "contextHash": "af001ddd89dbc8a675c001039f9ec5688e92bd39c489135b78b22f19ef813e01",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "tender-parting",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉酸楚安慰袭人，承诺留下麝月。"
+    },
+    "081-b0144": {
+      "textHash": "1a83a2fdba57698f73a1ffe9832360c12c438b690ac2730bd1394aad1fc384b5",
+      "contextHash": "dc31cc00ef718f208199cd402ac0c051faf8f4a74b24b934e96a580f6c424171",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0145": {
+      "textHash": "b50dde9bb88540babe4221532384bbfe7228a3c28110a41343c581c8348cc541",
+      "contextHash": "0975fe56ca4dd7510d8cca666eec3180cb4579c2961bcfcf3e08417b577ba438",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "ceremonial-address",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.45,
+      "note": "“奶奶”是婚后丫头仆妇的集体称谓，并非可核验的单一人物发言，保留旁白。"
+    },
+    "081-b0146": {
+      "textHash": "afef2522ece8788e90fa1c84ece749ace49f1a04f1c96e0ac7e5ec6bc6430c4e",
+      "contextHash": "ac9a511f07628ff2a50839a2c6ed174be20c60a0bced1c247923564de7895790",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0147": {
+      "textHash": "2681695bf2af198058a6bf28812be6af67ae61a96168adc56cbffd52a44f7ed2",
+      "contextHash": "a322d8403e820dbeeac62eef334ff435dd5e1cf4c5e047d7bf8734682064155e",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "warm-domestic",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持温和的日常质感。"
+    },
+    "081-b0148": {
+      "textHash": "8d540be6ff9448cafc08b5fffb37b633b3e67b2c0b84d24baa1e458333c31479",
+      "contextHash": "9d9b320e30e8d246810b9aa1c4be0689fa561748d841e18b3d935642ce9c675f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0149": {
+      "textHash": "380d7adf608ec849e7d45232c43d059e39561bd37e9d09586d3e33d2e7106677",
+      "contextHash": "f7c2bc54a07d26e1ad08bcf7225719f08f9ebbea6e63c38bd0c3577d4b996f7d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0150": {
+      "textHash": "b6b9f04ce21b6f22306c34275231a97c5b74e146cbc34ea9d40e5c66303e5b95",
+      "contextHash": "69f1a0b913b397b75e1abe07fae031309cc4737f77a5b528e7673cca1400e7c4",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "anger",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0151": {
+      "textHash": "ebd1e6f815dceba7876bb42909d04335dd4b00d943616c5c4f804783f2cd78a4",
+      "contextHash": "a28475a9b9976b871f78bca95c49881b478ed44b6a039c8b3aee6783805dfd84",
+      "speakerRef": "lady-xing",
+      "emotion": {
+        "family": "anger",
+        "variant": "scornful-interrogation",
+        "intensity": 3
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "邢夫人；邢夫人借鸡蛋旧事羞辱司棋，居高临下盘问。"
+    },
+    "081-b0152": {
+      "textHash": "9c86968eafce8091f9262156741f15ef6b797bd59247700a8713ca96a1070d37",
+      "contextHash": "0327ab26625be43e364232547de2edd1600d0cd99dbe5cb016b231ee165fa75e",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0153": {
+      "textHash": "914e3d544996286909bc7aabc5facc9896b90a6dde6bc9a084d01f921de5f0d8",
+      "contextHash": "761779582c85aa39783b70db5ba6325b39da9c4c46b542295b3e7e3e2f8800ba",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "sadness",
+        "variant": "pleading-remorse",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "司棋；司棋垂泪认过并求饶，努力自保。"
+    },
+    "081-b0154": {
+      "textHash": "a64a687250a6f4979590d9c67ce91740be77d4eab0288fbe1405e5c8539b114f",
+      "contextHash": "138b7e89b42100128423007759a06da73de0eb7934c61c0dd6a4a7329be876ba",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "anger",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0155": {
+      "textHash": "e595cdd3a3d5e2656b86d92667618ac1e3e0c761b4ef0a1bdcc8d1133a27c033",
+      "contextHash": "f01987f161caf4770040369772ac0e823ad48d06dc4e5e5f9dfe129a76573a7f",
+      "speakerRef": "lady-xing",
+      "emotion": {
+        "family": "anger",
+        "variant": "righteous-condemnation",
+        "intensity": 3
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "邢夫人；邢夫人以规矩和廉耻持续压迫，怒斥逼供。"
+    },
+    "081-b0156": {
+      "textHash": "a8c9488991b78fb225c8b7b173e8b47f82de3fbd6dc39b2fce7e55c69b19cf32",
+      "contextHash": "2c7093dcd18d5d0757cc3a79618dea19d0d58e0ad5ff788562970c173b4c6f50",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "anger",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0157": {
+      "textHash": "864519de11e98e4b145924e3029f70458e27311d61619b6dd7d1773ea0f37e8b",
+      "contextHash": "fdf9e614efac383b8b4d7709747a404d90f489705e2687a4c13a278dbfd11e51",
+      "speakerRef": "zhou-rui-wife",
+      "emotion": {
+        "family": "anger",
+        "variant": "harsh-bark",
+        "intensity": 2
+      },
+      "pace": "urgent",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "周瑞家的；周瑞家的奉命喝问，短促强硬。"
+    },
+    "081-b0158": {
+      "textHash": "e333f865dc33dc5a76386e9e5d9a091ef910bd16c90dfd6a6f7a46ba1b5c390b",
+      "contextHash": "90a8f2e7ddd816ea5888b3599f5c00c5ed791b27497308f7ac9f04f7ab805cf3",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0159": {
+      "textHash": "f469b5c17eb2d01486449c9bb673abb7b7cb4d0e852faeaf2c9ed3e5977b5c3c",
+      "contextHash": "92bcc8d33fb0b924e08492e1346f496d34820ada5033cbae5a9977001b583bf9",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "sadness",
+        "variant": "choked-plea",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "司棋；司棋掩面哭求慈悲，绝望中仍作最后申辩。"
+    },
+    "081-b0160": {
+      "textHash": "8775b7be3066158bede5cb6a8a3d5b1bb8611304aeac35e13f38eeb1c523289c",
+      "contextHash": "f46e3980b556bb231fe028454a571a19afe242852004d3f283ea146107347eae",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "anger",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0161": {
+      "textHash": "7d90d7cf0bcd65bb6b3cf1170c44b6305176fadee74b83d44bb4a742f6e2018d",
+      "contextHash": "0fa872b4fc9a73d43f29989e3025fe08ef947ede6dec2e52eb6e2d2ede461bdd",
+      "speakerRef": "lady-xing",
+      "emotion": {
+        "family": "anger",
+        "variant": "moralistic-fury",
+        "intensity": 3
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "邢夫人；邢夫人把私情定为败坏体统，宣告府中不容。"
+    },
+    "081-b0162": {
+      "textHash": "8dbfc211ed6d8db3537d2e1a84823335136f964192a54ff2fb6134fe22c1576b",
+      "contextHash": "8eacf3002828ffd0d1c743899df39d38f413e6a7ee293f9b18d872f05e00c806",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0163": {
+      "textHash": "0586d3b6792f681d925c650f0a33e50cbc954186672b40eb285538f9ff2e5887",
+      "contextHash": "092231ba67f45d49ca3de82e209c08dc6451470fec25c61146d251ffd17f7caa",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "anger",
+        "variant": "defiant-truth",
+        "intensity": 2
+      },
+      "pace": "urgent",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "司棋；司棋抗声承认与表弟真心相悦，带着不屈。"
+    },
+    "081-b0164": {
+      "textHash": "da060d2884e6b17914ad562132430c22ee3820618c7a468776e1eb8f9548aedf",
+      "contextHash": "cf4f8b0a090cbea718b0ebdf2dd9ae428536cdfb5bc78cfe63760156e9e0d834",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0165": {
+      "textHash": "318cb565b08740ca589f8dbaf299cd6e4faf9689143fa60847505dc66537d8de",
+      "contextHash": "a80ca517c9a38519d78bb07f06aed0236c2bfdca8fb1cfc62923bb69da91099c",
+      "speakerRef": "lady-xing",
+      "emotion": {
+        "family": "anger",
+        "variant": "mocking-contempt",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "sharp"
+      ],
+      "modifiers": [
+        "cold-laugh"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "邢夫人；邢夫人嗤笑司棋的辩词，刻薄轻蔑。"
+    },
+    "081-b0166": {
+      "textHash": "a1c227fabd407a55609d8b7d0d6644365f977d64c23f4bc6ace9774783440198",
+      "contextHash": "cee0b47cefef42a079369a53f7b700197ad04286c0ae451bbb29d5c06c64a202",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "anger",
+        "variant": "tense-observation",
+        "intensity": 2
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以克制力度表现骤然紧张。"
+    },
+    "081-b0167": {
+      "textHash": "025be151539d997049e342b9edd75fe5dfb5744e9d9ddfad3539fbd77ef478fa",
+      "contextHash": "4d47dae8272282566504eea1bcd7ef9841308da1ac8326eb3921e7dc8bd669a6",
+      "speakerRef": "lady-xing",
+      "emotion": {
+        "family": "anger",
+        "variant": "punitive-rage",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "邢夫人；邢夫人当场下令杖打并撵走，惩罚意味强烈。"
+    },
+    "081-b0168": {
+      "textHash": "66e6d8fc04866e3b833e65e717d9efe0775a414cf2c1064ce883e659fe2d09dd",
+      "contextHash": "ef764a38bd35893fbcde6efe23268b38122bf204db75e4b859ce99062f46e98d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0169": {
+      "textHash": "92bc4ee04329fae6ab004b5849711438532fef0fe410156bcfab4a051e5198b7",
+      "contextHash": "2564bf8a27a0053c9a21d2442e2400952d59cd0c67fe3a19d85dd5848cd781d9",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0170": {
+      "textHash": "4fc58abc72eb8398c0b50c385442f14306f8f5d9bd693cc3977ae363495ed7f7",
+      "contextHash": "695a02073ba22e07cd22ee7ed4073453bdc1bcd58f351cc726367e24107d464c",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "mixed",
+        "variant": "protective-appeal",
+        "intensity": 2
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "breathy"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "司棋；司棋既恨潘又安逃走，又替他求情，爱恨交杂。"
+    },
+    "081-b0171": {
+      "textHash": "0c5a94a8154e6e8d8f5a568052a91bee760537a33b463b9e9f80014e5ebbb8db",
+      "contextHash": "ae403b234434e104c816cc7a43f222e500caf634570040828a0cec4121349890",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0172": {
+      "textHash": "65cdaa28c448096147103b8eb1ee4edbf2ac2d199c4a45844701e3bfa87df5b7",
+      "contextHash": "13d5bc331b365f79b7dc4b6ffcc07cc6f65e4b3dfb9f390c42cbedfdc8d5b022",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0173": {
+      "textHash": "4521a0c86d5e48ec029dddd708b57897afeb9dfefccf9a5cba5372e2c5618bbd",
+      "contextHash": "7b87109bb0a752f939544609bba4cdbd2e332721a50901a3fb2181f9fb27ff36",
+      "speakerRef": "young-maids-pool",
+      "emotion": {
+        "family": "sadness",
+        "variant": "humiliated-complaint",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.65,
+      "note": "莲花儿等三个丫头合说，具体主声无法区分；采用年轻丫鬟公共卡并降低置信度。"
+    },
+    "081-b0174": {
+      "textHash": "db029fc599c856bc8e688de462509e06a43467c449fbefacdf97c717b2cc1584",
+      "contextHash": "3cbbeb49b96e4d516fb3dcd3a1e0e87ef45caf9adc5adda777d69c9a062e95eb",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0175": {
+      "textHash": "fc4ba09d8e8c14b21f0dbbcdb0759f9436b4ca10ae534f81b57af1a06e1c0c8b",
+      "contextHash": "144acf39e99bbb7a8603311c56b731482067d59913c91abfbef2df897a83046b",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "anger",
+        "variant": "vengeful-plotting",
+        "intensity": 3
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "司棋；司棋切齿发誓报仇，转为冷硬的算计。"
+    },
+    "081-b0176": {
+      "textHash": "04d2725d2b8eed880b0ef215bf37d631e2d356ce05d859aa96f015cc8df04a52",
+      "contextHash": "279710ed0c68047ddfe895ca87428fccd04a35399f7d71c708983435cd2de4c5",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0177": {
+      "textHash": "5865de52a877e99ed8e48d8eb85c39fdc77d89dd58992c750d487fda9ebad8bd",
+      "contextHash": "8a8be467845d6b4be8aff4d6ad478d632a7646bcebe3b05c897adae20ea21d56",
+      "speakerRef": "pan-youan",
+      "emotion": {
+        "family": "calm",
+        "variant": "conspiratorial-proposal",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.93,
+      "note": "潘又安；潘又安提出邀集外间朋友，语气平静却埋下祸心。"
+    },
+    "081-b0178": {
+      "textHash": "7cfd8decdd74284367cae67cd9ba3e69d0e649e7d8e3f8281dc955f911f01986",
+      "contextHash": "351da044d3d36a231f6fa5ad270785d33170e71f2825101fe3d01962013a70cb",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    },
+    "081-b0179": {
+      "textHash": "4376d14731595b3ed444549038fc6708eb5fe01e70ea1f594f75f76164c9d970",
+      "contextHash": "5667ae0a2730ff4342e6a15e882cf2a13429f8dbef45a127997f9b3046eeebf8",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0180": {
+      "textHash": "828d35b527e9b940e449c03274df2db093cce82aead59a8b7e9af166e03f977a",
+      "contextHash": "d5310fb104dcae2e43374de5a4a42fd299325ca4b21a0232c08b150c03c5dc9d",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0181": {
+      "textHash": "a876505e8e2bca6a961537fef17ef782fdba23d5556dc707a3c64dabc5d201d6",
+      "contextHash": "74518fbf42918b7ddf5f0d7b800fa457390edc6ca8bc96f43503114a004dbed1",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "dream-unease",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；放轻并放慢，保留梦境的不安。"
+    },
+    "081-b0182": {
+      "textHash": "6fe98698b734fc7a7d0d777534ee4b7d160a88d26edef3fc8bf0ac648c2aa4a5",
+      "contextHash": "2ed0a398a5f31b74a582097e1d6b99ff6a4df48425fb70490f401fa86810f2ff",
+      "speakerRef": "zhen-shiyin",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-father",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "hoarse",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "甄士隐；甄士隐梦中抱女痛哭，父爱与丧女预感交织。"
+    },
+    "081-b0183": {
+      "textHash": "7885d2ffcecd02f8dfa9f9140f0d2830f77f21f3109dadb83eb381e237cc8712",
+      "contextHash": "6ad676ba2a64a4c9f04a585408167acbdaaa92e4b12e2825cc231cecda87a530",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0184": {
+      "textHash": "4107b011da99b6f6bca27eecd6d9ebebd7ee2af3f603edda82ba3cf3f7aed584",
+      "contextHash": "9513544fa9f91010416e4136ba042aa48b5a8c5b92275fd08b95fbfbacd43567",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "fear",
+        "variant": "confused-question",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "breathy"
+      ],
+      "modifiers": [
+        "hesitating"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱在梦中茫然发问，尚未理解凶兆。"
+    },
+    "081-b0185": {
+      "textHash": "e70c0ebe62a94323af0460f63858dc45e08909794f408e28055f2f4cdd606fd1",
+      "contextHash": "d0851c6f35ec9086c1c7ba4aba28a6e45cc3c4c7a2a86568138b775434ece61c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0186": {
+      "textHash": "67975f9d4c24135926cb9dec65cbe2b6fa1bbbd536a78771a2f5c176f09c9d14",
+      "contextHash": "23ff5470635208b3bb686a5f9627ab33aafbd94036bb3ab46e986b3c9a641c5f",
+      "speakerRef": "zhen-shiyin",
+      "emotion": {
+        "family": "sadness",
+        "variant": "slow-grief-narration",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "hoarse",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "甄士隐；甄士隐含泣叙女儿身世和死讯，低缓而沉痛。"
+    },
+    "081-b0187": {
+      "textHash": "b16ac92a436cf364d4abd6e1f141003e4503bcddad87e2d39c31237d1a803101",
+      "contextHash": "cf48465dd87b92c7f97dfa6538af0325fa5030459da2abe369ae21024099bc76",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0188": {
+      "textHash": "bee4e731fbe1c5bf857c366e1948c8478c15ad4354c4a60b0fe3093d96a65f29",
+      "contextHash": "d0ac8cd718765d05b22462efb979d49ba1522cdc57b79a346cfa858045f0faa7",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "sadness",
+        "variant": "childlike-grief",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱抱父哭诉迟来，委屈和依恋同时爆发。"
+    },
+    "081-b0189": {
+      "textHash": "765ba9466580094e03c37b58dbb269ace55d791fdaa8233d183ae66aef12fc78",
+      "contextHash": "3b582c6cf5589e0b0a9041a960bf77186ed71f39790f6da35f07d23ba66d293c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0190": {
+      "textHash": "58d3ac28ff70d30b5a145a33f9a895e9f9478dfb4d6b5e7a793abf62efd6da67",
+      "contextHash": "7e58027471b7ee6ff58d018eecb70af444e5dd01fe502aad7765faa775c0a962",
+      "speakerRef": "zhen-shiyin",
+      "emotion": {
+        "family": "sadness",
+        "variant": "helpless-father",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "hoarse",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "甄士隐；士隐承认万般无奈，无法救女的悲痛。"
+    },
+    "081-b0191": {
+      "textHash": "a4085c5839d80cf27976959202a0e84ec7d144a5a9276b69f4e0bf923e917b4c",
+      "contextHash": "e6577c441e3c44578ef18aadd37647d90e4b7e139b819b814bd736a67ae82b4c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "dream-unease",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；放轻并放慢，保留梦境的不安。"
+    },
+    "081-b0192": {
+      "textHash": "bf394f51d9c45cfac8ff5fd9d019b02e97ee3729df0549f9fa0e18c336b07a3e",
+      "contextHash": "feb0f563412073480f8d1ee48f397c527c9d8f97f2d1655bdbe6ee41817720c3",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "fear",
+        "variant": "hesitant-fright",
+        "intensity": 2
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "hesitating",
+        "trembling"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱梦醒见窗外人影，怯声试探。"
+    },
+    "081-b0193": {
+      "textHash": "1c5bd07042abc8d2caaac62ea105d8e3f67fc798f8f090228c220922f8b0be80",
+      "contextHash": "3dc94323b8c6c2a1bd451bd4c728bb5510b5b685b48c3808f3563e3e7204b6ab",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0194": {
+      "textHash": "7e04f8df488c68299ccb5fcd22df0cc351f3c70abf6a4185a1c4206345fb819f",
+      "contextHash": "3558c7461cbfe3c28680cf1a2f9ad94a05fef08ed799935fca227f26833c2f17",
+      "speakerRef": "xia-jingui",
+      "emotion": {
+        "family": "anger",
+        "variant": "cold-cruelty",
+        "intensity": 3
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "sharp",
+        "firm"
+      ],
+      "modifiers": [
+        "cold-laugh"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.99,
+      "note": "夏金桂；夏金桂冷笑施暴并谋嫁祸，恶意明确而冷酷。"
+    },
+    "081-b0195": {
+      "textHash": "81ff56fd0d88314f2a7b0833625da8177bedc6b6afa2fe2427e716e8884aefab",
+      "contextHash": "da5297f2b3d5b0e5001631882b95e12b7a937c4c628b637b7dc121add29a6b03",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "sudden-fright",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；短促收紧语气表现惊惧。"
+    },
+    "081-b0196": {
+      "textHash": "81f1cca7cecb2c16a2b770849670286bd8636feb338a5607ecb2fc105cea4358",
+      "contextHash": "6cf750cabdea7fc936a7928fa3ec8579f5c7f8a61f51271b9da458e4c57ad2f7",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "sudden-fright",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "firm",
+        "sharp"
+      ],
+      "modifiers": [
+        "walking"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；短促收紧语气表现惊惧。"
+    },
+    "081-b0197": {
+      "textHash": "a419d0ebf894a920268aabc067de2f77523add0b5a80398abca0bc4e37314636",
+      "contextHash": "51bf6e9e271457f0ac25c761aa5b0bbf78c1fbf4c06f2367156a6467b1f3f8bc",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0198": {
+      "textHash": "c411d360a8fa070fb2f5eb1ebbeeed60a85cb30a9889bdcb592b8d22b033da90",
+      "contextHash": "9fd372b624fdf0ee558a5f36fa4a5f3205e59fa7129c5f64697e5768d6c5dbb0",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0199": {
+      "textHash": "221298fef1fb9186d47ae6a8cd3bd06cebb1757f139bda4bfcbf1caac01a2cab",
+      "contextHash": "2250c34f67df917a8a145f74abc5dd055f205f56bba30aff8e4ab9ecc723c215",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "dream-unease",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；放轻并放慢，保留梦境的不安。"
+    },
+    "081-b0200": {
+      "textHash": "6b165f0213dd70262b33f8ecdf7a3e612c52d8d6d95fa5bfb626f14b82ddf20d",
+      "contextHash": "b6605078fdccca922fe81ed521e21baa024bd1aa52c38fb24aa07b534a72c46c",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "sadness",
+        "variant": "recognition-plea",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱确认母女身份，含泪呼唤母亲。"
+    },
+    "081-b0201": {
+      "textHash": "da5841443068c9e7743575660d224df91f572b7a0bff7accbc0b37553e131595",
+      "contextHash": "6fc145cbf73d7bf2d414f6f0e8cfacb607290ff0792fa8d00fdf629d2cfb0e33",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0202": {
+      "textHash": "cef383865caf8ee8dd76656ab93a1180b574a09fde7d721252eab61c4cb6be80",
+      "contextHash": "362008c63d2f5ad9e8e9daeb36b39fb85637d39a018354700595f799ca3fc148",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "mixed",
+        "variant": "self-reproach",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱追述一生遭际并自悔薄命，悲怨交杂。"
+    },
+    "081-b0203": {
+      "textHash": "2cee60aea2251cdcac259f2ecb1780be33dfe774c3c0a8143a0d0e3851c2fcf3",
+      "contextHash": "355c5eaf3d40f419439f9e4215d81fa7aabc12c881ebc2519dbba1734dd9d4f4",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "dream-unease",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；放轻并放慢，保留梦境的不安。"
+    },
+    "081-b0204": {
+      "textHash": "3df81e381e152d1a8ab0cc70f3f928cd9c79d2c8d10d2e5811e328c0b92b6589",
+      "contextHash": "6f7ecdfac49dda64a9265ec4465eff8e310caaaf53317d5ffe64ee732ff5513f",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "fear",
+        "variant": "desperate-parting",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱被天神拖走仍要等父亲，恐惧与不舍迸发。"
+    },
+    "081-b0205": {
+      "textHash": "4ac8316667bc0031f58bb5e9de09109bdb735014ffe2a2c9fe0b034db3fdeac5",
+      "contextHash": "54210856518b86849899203eb6948e14a5a6730014f1b86d17f1c9d1e7b7fd01",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0206": {
+      "textHash": "066bebe690e040880cd05ce1a9e29084459b4a9fd282b6ca5b366bead25c965b",
+      "contextHash": "c9d45d7a70e4eeafada5408d0bfdb8acfef0983500c739a10a7ada5952467096",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0207": {
+      "textHash": "da33c1da7c08349f14fde70ed52bc0a46e8ab2e44323140c7e5a985921571815",
+      "contextHash": "620747b1e4fdbb2c379fd8b56717797aed4368da9e3109ca80087ae2b0c86a72",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0208": {
+      "textHash": "6b5c4208c2b51af557a62f1c2c2fa630d4c4ec6bcf007daee8f84de3c71e23a3",
+      "contextHash": "34e84d04b619ebc04ed7d4254b910e2f6a9874e0b595433e4f9f904150fa41c5",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "joy",
+        "variant": "dreamy-teasing",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "贾宝玉；宝玉梦中带笑询问玉菡夫妻近况，语气轻松。"
+    },
+    "081-b0209": {
+      "textHash": "9ed63ef730502aa5aa939c5f3f0bdcdf3029ca4d1d15e7fab6a8e79bd2d9e6a7",
+      "contextHash": "5e76a166215400dc778bafb0caef0acd742f9c78fce98404ba2afa4e99daa198",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0210": {
+      "textHash": "03bd140f0b3dbdafef8773aa51e19a42f9dbe3f2378d735ac9c3caf7f1e72ce4",
+      "contextHash": "db2fee5340c27f0c3f7c5e5053616aa12d2d4004b730620d8bcedd93b2943d57",
+      "speakerRef": "jiang-yuhan",
+      "emotion": {
+        "family": "joy",
+        "variant": "easy-reassurance",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "蒋玉菡；蒋玉菡梦中笑答和睦，平和带喜。"
+    },
+    "081-b0211": {
+      "textHash": "b724a4e7ec174f1cce696a93ae39173fd1d4693b8c94fabfebc5570ea519fec1",
+      "contextHash": "18c17b56d8a0bc02336378182b979f31c9d592e74383da1a31663c0bb89a41fd",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0212": {
+      "textHash": "a235269fd35e5b6a4cb849d2067a501df82bd85c4a37ecff9deca59ebbbaecf3",
+      "contextHash": "fbc98500b937512fb613bcd4da60c1e10b5e2e90f06f92eb9a83d6001d586c3d",
+      "speakerRef": "qiu-wen",
+      "emotion": {
+        "family": "joy",
+        "variant": "dreamy-complaint",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.66,
+      "note": "秋纹、碧痕、绮霰在梦中合说，采用秋纹卡作集体主声，保留撒娇抱怨的轻快感。"
+    },
+    "081-b0213": {
+      "textHash": "a9b66c8cfacd0b1cf61aed8b9fb3f334a4a2c5484fa0dccb6be5749b23e448fc",
+      "contextHash": "8dda0e3503055949c5099a29fd7e239c523ae9e5b1c0638619e821520080cd7a",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0214": {
+      "textHash": "4b0767bcec9eae2f1309ca5ffaf68dd92be598aa51a7afabea301c73d1bacc21",
+      "contextHash": "195ceb7d038dad9936a0173dd0833ced33a765a2232e55d3bb8d0a34ff1f2b23",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0215": {
+      "textHash": "26289fe4731b07e8b4b9f7e9aabbdc93a0448095183237e2b899be42dc9305af",
+      "contextHash": "03fab0bc155badb0e4f0b8eda476c54c448dcd71bee17ac427d48b2070b85bf5",
+      "speakerRef": "siqi",
+      "emotion": {
+        "family": "sadness",
+        "variant": "dreamy-reproach",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "司棋；司棋梦中哭诉宝玉未替她求情，带着委屈。"
+    },
+    "081-b0216": {
+      "textHash": "fea9dbae3e62784ecdb1ccd25657961394cfafa8b1e4d5e6ba740a17b07e107a",
+      "contextHash": "46a2de38e866856346da42bf38ca63c71a575b10353e70915fac42d21481ca83",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0217": {
+      "textHash": "a39a946241b1d821986b2ac2756a56304b97030cc125de9cc7bb52ffa90c9751",
+      "contextHash": "9b2b1878e12bd1228ffc3105e7c9745135203e27d8ddc9c862e4f9a25f3ab9b6",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "mixed",
+        "variant": "otherworldly-farewell",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "香菱；香菱梦中含笑说明归乡，温柔却透出死亡暗示。"
+    },
+    "081-b0218": {
+      "textHash": "b49316b39e33a6cbfc086200f53c371c0a0571c4bab98d769e97eb14a46edd96",
+      "contextHash": "5c9a75798296b2295656a78000139806cda7de0590eab3ac1590b1c915457248",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0219": {
+      "textHash": "9c4ca1782f14994bd2aa79686641fcdfa86446aaa49722b01da2108789a25fd1",
+      "contextHash": "328cf9456306b871d6359cade7383a8e4c702c5e636f7fd8640a3fa7280ae97d",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "sleepy-confusion",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "贾宝玉；宝玉尚未醒透，对副册之说茫然追问。"
+    },
+    "081-b0220": {
+      "textHash": "79782e07eab1cb5617380d1d159180ad07380cf8a5224a55c6df98feaa2d22a8",
+      "contextHash": "e7724f51ec80c97d2b3d368921c994de95e7daae79a7bbc10d838619cfef3633",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0221": {
+      "textHash": "16a8d4ab94da9ef1c50cac8e5c24048e52542590d466c1c2faa7d2e8a8a16a6d",
+      "contextHash": "2c1ef63083d2c95750ccb412358da7f47b228921dc9f15b47f95ad6a3add1450",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "mixed",
+        "variant": "mysterious-smile",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "high",
+      "energy": "medium",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.94,
+      "note": "香菱；香菱含笑解释册页满员，温柔中有不祥意味。"
+    },
+    "081-b0222": {
+      "textHash": "0bd746df6e224d3255fe374c66833b884f886804676b2f4501be37c96229e3f1",
+      "contextHash": "ba1a6f16ecb2c472adc010e1582f41acf4ca8e58537c1e102cc312a91ca4f84e",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0223": {
+      "textHash": "1408a6c5b20071814162ffe50883f0285e349042e920806bff837f3fc2ea3b89",
+      "contextHash": "2c24ba7ddcbb1b462602e7774121bf1acb167fd6b456328cdd188ada2f2dd927",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0224": {
+      "textHash": "3df81e381e152d1a8ab0cc70f3f928cd9c79d2c8d10d2e5811e328c0b92b6589",
+      "contextHash": "8480777983c30805b5ced037c478c129db79613cfb8bdb3e7e85e266d36631af",
+      "speakerRef": "xiangling",
+      "emotion": {
+        "family": "fear",
+        "variant": "desperate-cry",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "sobbing",
+        "dream-murmur"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "香菱；香菱被强行带走，哭喊要等父亲。"
+    },
+    "081-b0225": {
+      "textHash": "3299aa2d05114d56d09c80beaf8032e3df15eab8223456aed94084fafce15ef8",
+      "contextHash": "51deb7396b82cf3c55838712e08de524541417b97f75e198dbddf30583628f3a",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "fear",
+        "variant": "sudden-fright",
+        "intensity": 2
+      },
+      "pace": "urgent",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "firm"
+      ],
+      "modifiers": [
+        "trembling"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；短促收紧语气表现惊惧。"
+    },
+    "081-b0226": {
+      "textHash": "72fad6128875f0bd032b18137285c3b1beca6b023fdafefa28ed09786541ee64",
+      "contextHash": "8385f954adf3fd9b8ae0a0ca5275d1d3288903e15fbe8be53b11c2e74784d717",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "fear",
+        "variant": "panic-warning",
+        "intensity": 3
+      },
+      "pace": "urgent",
+      "pitch": "high",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "firm"
+      ],
+      "modifiers": [
+        "crying"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉惊醒后哭着报信，梦中死亡恐惧未散。"
+    },
+    "081-b0227": {
+      "textHash": "6c36b8f70fb6a662878e283352f6bfdac5216bf7a427dceb920403f34652ac50",
+      "contextHash": "4838d6c2af0daa94d1bc95be9ec29e0a777cb4b82c108884d18d007c13e41b02",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0228": {
+      "textHash": "c8acf7ba2e123f0c4389fd3b87cf8515dac18078891a689b88ba16549ce8c0a0",
+      "contextHash": "9034c2b52dbf4f6e97ac827a0180d7551c0148ff9aa444ac671713d28b77fbd4",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "joy",
+        "variant": "brief-laugh",
+        "intensity": 1
+      },
+      "pace": "fast",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "麝月；麝月发出短促嗤笑，承接对宝玉胡说的打趣。"
+    },
+    "081-b0229": {
+      "textHash": "e533823a75c6031bc2556fa45fd023064105948267a013319f07a871a4eed3ea",
+      "contextHash": "f9bf34989296e479413b4d9a39f0dfef0c3e5d322c22263e09f329103969107f",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0230": {
+      "textHash": "011accfbf1daaf1a475c65dcd9a58f8a3bb62fff9987c9b49702c79c6da91a43",
+      "contextHash": "952f2f8e3f0e5d0e8fc31e7a39ccaadc7cbbc04b3651e5c3772a5026a980791f",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "joy",
+        "variant": "playful-rebuke",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "麝月；麝月笑着斥宝玉不要平白咒人，亲昵而不重。"
+    },
+    "081-b0231": {
+      "textHash": "1f0297675590132b8a5723a3428208f119dacc772b566af1068a533aff8fe29f",
+      "contextHash": "2be19b3faa2aea3e8570e70c96b35fffef74622a7076439b01c40c29bfdba454",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "joy",
+        "variant": "warm-relief",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；略提亮语气表现短暂宽慰。"
+    },
+    "081-b0232": {
+      "textHash": "120964c25cfed42cb9b57825ded816a5f18f6e6f134ac60800c5e296df81c026",
+      "contextHash": "2fd024302c88b11b97295e7d7340faf9279414d36e63ffc32a136fd5dbeb1a34",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "anger",
+        "variant": "playful-refusal",
+        "intensity": 1
+      },
+      "pace": "fast",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "麝月；麝月故意推拒差事，带着撒娇式不耐。"
+    },
+    "081-b0233": {
+      "textHash": "10c9e1a43f0e2e5bf2e54f50fb3dbede512eb436326aec72d14625e62153e9b0",
+      "contextHash": "f9fc7f148bd6861d79c0ebbe120e44b01a2cb1f11d1b9b7ab9fa180a8274b88a",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0234": {
+      "textHash": "41e38981259e9b6bd03144d62f10c91d074292a14ccecefa8c1b5f8994331cd9",
+      "contextHash": "6f91f508067e8b22dd7e84dcc8e36b549b88def0bcfeb5a86d230fa283591463",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "calm",
+        "variant": "insistent-request",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "medium",
+      "energy": "medium",
+      "timbre": [
+        "clear",
+        "firm"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉坚持让麝月就近打听，语气认真但不失商量。"
+    },
+    "081-b0235": {
+      "textHash": "be78a02cdb5beb3be5a0d442b42496d575d3f9d118c7604d93e3230eea44b4ac",
+      "contextHash": "d422e7958279f4608fd26a75f0552bf4ae24dd6b62bf216988a9eea39656c312",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0236": {
+      "textHash": "ff462af850f078b5bc2d22f502265e8c741ae5158d879fd7d6225bcd45cce745",
+      "contextHash": "fa01a1f34d0d6551feb789fd8e830c23bed97616ec59774137cb1f8918c789da",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0237": {
+      "textHash": "ada9480b4fabb8745ed82557e832d861fb68ebf060166dfa88cdc1c45a0a37f6",
+      "contextHash": "95ccb236dbcd195d0949d9e7e40b0fa34be427e7bce4ec14d17e3eb4d49781b0",
+      "speakerRef": "sheyue",
+      "emotion": {
+        "family": "joy",
+        "variant": "triumphant-tease",
+        "intensity": 2
+      },
+      "pace": "fast",
+      "pitch": "high",
+      "energy": "light",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [
+        "laughing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "麝月；麝月查实香菱死讯后回来打趣宝玉能掐会算。"
+    },
+    "081-b0238": {
+      "textHash": "5a5dc5f3923156489e839de2dcab88af57efb656e37677343ab7117b7075a634",
+      "contextHash": "2a5396fa69f72fa5014357572ee02061a36ca0e2945bc55ec4984004e5361613",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "quiet-sorrow",
+        "intensity": 2
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；保持低缓的悲凉底色。"
+    },
+    "081-b0239": {
+      "textHash": "f37df929137d93b81700d04fb9f04f25a4a8a48e6579002bbc53e9f7169c4017",
+      "contextHash": "a86ee1a80170e4fc6c8df93717fa14de92409057153b8bae66eb7ea9a8bfc268",
+      "speakerRef": "jia-baoyu",
+      "emotion": {
+        "family": "sadness",
+        "variant": "philosophical-despair",
+        "intensity": 3
+      },
+      "pace": "broken",
+      "pitch": "medium",
+      "energy": "heavy",
+      "timbre": [
+        "breathy",
+        "soft"
+      ],
+      "modifiers": [
+        "crying",
+        "choked"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.98,
+      "note": "贾宝玉；宝玉把死亡视作脱离苦海，继而悲叹女儿命苦。"
+    },
+    "081-b0240": {
+      "textHash": "2eb198061a5595606024f61018012cf88fa67c2328da4aa55c1b3ea3ecaa5bc5",
+      "contextHash": "b26421db7b41ada368cad53598107b4b6d50318f4abdcb5d0ae08bcf18fe51f9",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "sadness",
+        "variant": "grieving-scene",
+        "intensity": 3
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "soft",
+        "breathy"
+      ],
+      "modifiers": [
+        "sobbing"
+      ],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；以沉重低缓的叙述承接悲剧。"
+    },
+    "081-b0241": {
+      "textHash": "3ca748b37e7649c0e580ce1f644a924eea42bef9a0a8f4b98216557f99bf955e",
+      "contextHash": "815cefe7e2b309f15f9dc5829427256bf40bd28f367cee16cd6ff11bd306c19e",
+      "speakerRef": "unknown-visitor",
+      "emotion": {
+        "family": "calm",
+        "variant": "neutral-call",
+        "intensity": 1
+      },
+      "pace": "medium",
+      "pitch": "low",
+      "energy": "medium",
+      "timbre": [
+        "clear"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.35,
+      "note": "未知来客；回末门外来客只问一句，身份未明，暂用公共未知来客卡。"
+    },
+    "081-b0242": {
+      "textHash": "e14e7af05373147538c78bcb1415573046b1b18628c8202fdee278b602e2265b",
+      "contextHash": "0c619ecfef823eb60669bda39bfd463881f7494d9ebfa84b5d7ee7832a88c70c",
+      "speakerRef": "$narrator",
+      "emotion": {
+        "family": "calm",
+        "variant": "solemn",
+        "intensity": 1
+      },
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "heavy",
+      "timbre": [
+        "clear",
+        "soft"
+      ],
+      "modifiers": [],
+      "reviewStatus": "ai-reviewed",
+      "confidence": 0.92,
+      "note": "旁白；压低声线收束。"
+    }
+  },
+  "annotationSetHash": "15154d5fe211a83325a7d16c11b1bf42b00b288ddd2d6764a6ade31aca7562fe"
+}

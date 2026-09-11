@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "bi-hen",
+  "label": "碧痕",
+  "tier": "C",
+  "provider": "edge",
+  "voice": "zh-CN-XiaoyiNeural",
+  "prosody": {
+    "rate": "+5%",
+    "pitch": "+0Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "+3%",
+      "pitch": "+1Hz"
+    },
+    "joy": {
+      "rate": "+9%",
+      "pitch": "+2Hz"
+    },
+    "sad": {
+      "rate": "+0%",
+      "pitch": "-2Hz"
+    },
+    "anger": {
+      "rate": "+10%",
+      "pitch": "+1Hz"
+    },
+    "fear": {
+      "rate": "+7%",
+      "pitch": "+2Hz"
+    },
+    "urgent": {
+      "rate": "+12%",
+      "pitch": "+1Hz"
+    },
+    "whisper": {
+      "rate": "+1%",
+      "pitch": "-1Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "+1%",
+      "pitch": "-2Hz"
+    }
+  },
+  "aliases": [],
+  "sharedCharacters": [],
+  "sourceCards": [],
+  "rationale": "第81回仅明确其为怡红院丫鬟并参与集体笑闹、道别；缺少独立人物卡，保持中性，靠语速与同场丫鬟区分。"
+}

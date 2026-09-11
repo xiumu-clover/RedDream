@@ -1,0 +1,114 @@
+---
+import type { BookId } from '../../lib/books/catalog';
+
+export interface AudioVariant {
+	url: string;
+	trackHash?: string;
+	bytes?: number;
+	durationSeconds?: number;
+}
+
+export interface ChapterAudioRecord {
+	defaultVariant: 'female' | 'male';
+	variants: Partial<Record<'female' | 'male', AudioVariant>>;
+}
+
+interface Props {
+	book: BookId;
+	chapterId: string;
+	record?: ChapterAudioRecord;
+}
+
+const { book, chapterId, record } = Astro.props;
+const defaultVariant = record?.defaultVariant === 'male' ? 'male' : 'female';
+const female = record?.variants?.female;
+const male = record?.variants?.male;
+const initial = record?.variants?.[defaultVariant] ?? female ?? male;
+const versionedUrl = (variant?: AudioVariant) => variant
+	? `${variant.url}${variant.url.includes('?') ? '&' : '?'}v=${encodeURIComponent((variant.trackHash || 'current').slice(0, 16))}`
+	: undefined;
+---
+
+{
+	initial && (
+		<section
+			class="chapter-audio"
+			data-chapter-audio
+			data-book={book}
+			data-default-variant={defaultVariant}
+			data-female-url={versionedUrl(female)}
+			data-male-url={versionedUrl(male)}
+			aria-labelledby={`chapter-audio-${chapterId}`}
+		>
+			<div class="chapter-audio__heading">
+				<div>
+					<p>AI 有声书</p>
+					<h2 id={`chapter-audio-${chapterId}`}>第 {Number(chapterId)} 回</h2>
+				</div>
+				<label>
+					<span>旁白</span>
+					<select data-audio-narrator aria-label="选择本回有声书旁白">
+						<option value="female" disabled={!female}>女声</option>
+						<option value="male" disabled={!male}>男声</option>
+					</select>
+				</label>
+			</div>
+			<audio controls preload="metadata" src={versionedUrl(initial)}>
+				当前浏览器不支持音频播放。
+			</audio>
+			<p class="chapter-audio__status" data-audio-status role="status" aria-live="polite"></p>
+		</section>
+	)
+}
+
+<script>
+	import { isBookId } from '../../lib/books/catalog';
+	import { loadReadingPreferences, saveReadingPreferences } from '../../lib/preferences/reading';
+
+	type NarratorVariant = 'female' | 'male';
+	const preferences = loadReadingPreferences();
+
+	document.querySelectorAll<HTMLElement>('[data-chapter-audio]').forEach((root) => {
+		const book = root.dataset.book;
+		if (!isBookId(book)) return;
+		const audio = root.querySelector<HTMLAudioElement>('audio');
+		const select = root.querySelector<HTMLSelectElement>('[data-audio-narrator]');
+		const status = root.querySelector<HTMLElement>('[data-audio-status]');
+		if (!audio || !select || !status) return;
+
+		const urlFor = (variant: NarratorVariant) => (
+			variant === 'male' ? root.dataset.maleUrl : root.dataset.femaleUrl
+		);
+		const applyVariant = (requested: NarratorVariant, announce = false) => {
+			const fallback = root.dataset.defaultVariant === 'male' ? 'male' : 'female';
+			const active = urlFor(requested) ? requested : urlFor(fallback)
+				? fallback : requested === 'male' ? 'female' : 'male';
+			const url = urlFor(active);
+			if (!url) return;
+			const currentTime = audio.currentTime;
+			const wasPlaying = !audio.paused;
+			if (audio.getAttribute('src') !== url) {
+				audio.src = url;
+				audio.load();
+				audio.addEventListener('loadedmetadata', () => {
+					if (Number.isFinite(currentTime) && currentTime > 0) {
+						audio.currentTime = Math.min(currentTime, audio.duration || currentTime);
+					}
+					if (wasPlaying) void audio.play();
+				}, { once: true });
+			}
+			select.value = active;
+			status.textContent = requested === active
+				? (announce ? `已切换为${active === 'female' ? '女声' : '男声'}旁白。` : '')
+				: `${requested === 'female' ? '女声' : '男声'}版本尚未发布，已使用${active === 'female' ? '女声' : '男声'}。`;
+		};
+
+		applyVariant(preferences[book].audioNarrator);
+		select.addEventListener('change', () => {
+			const requested = select.value === 'male' ? 'male' : 'female';
+			preferences[book] = { ...preferences[book], audioNarrator: requested };
+			saveReadingPreferences(preferences);
+			applyVariant(requested, true);
+		});
+	});
+</script>

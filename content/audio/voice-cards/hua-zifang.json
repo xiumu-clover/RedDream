@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "hua-zifang",
+  "label": "花自芳",
+  "tier": "A",
+  "provider": "edge",
+  "voice": "zh-CN-YunyangNeural",
+  "prosody": {
+    "rate": "-2%",
+    "pitch": "-1Hz",
+    "volume": "+0%"
+  },
+  "emotions": {
+    "neutral": {},
+    "warm": {
+      "rate": "-4%",
+      "pitch": "+0Hz"
+    },
+    "joy": {
+      "rate": "+2%",
+      "pitch": "+1Hz"
+    },
+    "sad": {
+      "rate": "-8%",
+      "pitch": "-3Hz"
+    },
+    "anger": {
+      "rate": "+4%",
+      "pitch": "+0Hz"
+    },
+    "fear": {
+      "rate": "+0%",
+      "pitch": "+1Hz"
+    },
+    "urgent": {
+      "rate": "+6%",
+      "pitch": "+0Hz"
+    },
+    "whisper": {
+      "rate": "-7%",
+      "pitch": "-2Hz",
+      "volume": "-25%"
+    },
+    "solemn": {
+      "rate": "-6%",
+      "pitch": "-3Hz"
+    }
+  },
+  "aliases": [
+    "花大哥",
+    "袭人之兄"
+  ],
+  "sharedCharacters": [],
+  "sourceCards": [
+    "research/character-cards/cards/花自芳.md"
+  ],
+  "rationale": "人物卡只明确其为花家成年男子，语言直接、能按礼法办事；第81回承担婚事商议对话，采用可靠男声的中性配置。"
+}
