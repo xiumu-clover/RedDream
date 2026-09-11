@@ -8,6 +8,7 @@ node_modules/
 
 # locally generated audiobook fragments and assembled tracks
 content/audio/.cache/
+content/audio.cache/
 
 # private research workspace (a separate nested Git repository)
 research/
