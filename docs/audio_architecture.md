@@ -237,3 +237,38 @@ https://audio.example.com/guiyou/081/male/<trackHash>.mp3
 ```
 
 验证远端音频可播放后，再从 `public/audio/` 移除大型 MP3。播放器不判断 URL 来自 Pages 还是 R2，因此章节页面、阅读设置、标注文件、map 和正文都无需迁移。
+
+## 10. 剧情录音的批量工作流
+
+剧情录音与章节纯旁白分开编排。当前人物对白在本机 WSL 的 CosyVoice2 上推理；Edge-TTS 旁白仍是网络服务，不是本地模型。两者都不消耗 Codex 的语言模型 token；token 来自对话中的代码分析、大量 JSON/日志回传和人工编排。
+
+为避免把这些成本带入批量生产，使用三阶段命令：
+
+```sh
+# 1. 只对齐、路由和盘点缓存；不启动 TTS / CosyVoice / Whisper
+npm run audio:scene:plan -- --chapter 081 --scene xiren-three-opera
+
+# 2. 生成本地草稿并做音频完整性/电平检查；跳过 Whisper
+npm run audio:scene:draft -- --chapter 081 --scene xiren-three-opera
+
+# 3. 定稿验收；只对新增或改变的片段运行 Whisper
+npm run audio:scene -- --chapter 081 --scene xiren-three-opera
+```
+
+默认控制台只输出数量、命中率和耗时摘要。需要排障时才设置 `AUDIO_VERBOSE=1`，避免每句模型日志进入 AI 上下文。
+
+剧情缓存分为五层：
+
+| 层 | 键 | 什么变化才失效 |
+| --- | --- | --- |
+| 原始合成 | `synthesisHash` | 合成文字、读音覆盖、音色卡/哈希、模型、速度或推理参数 |
+| 音色后处理 | `renderHash` | 原始合成或片段后处理参数 |
+| 短片段电平 | `sourceHash + level policy` | 输入 WAV 或 RMS/峰值政策 |
+| ASR 转写 | `fileHash + Whisper model/settings` | 入片音频、模型或转写参数 |
+| 验收判定 | `transcriptionHash + expectedText + rule version` | 期望文字或漏字/乱序/重复判定规则；不重新运行 Whisper |
+
+CosyVoice Python 进程在同一批作业中只加载一次模型，并且按“音色卡 WAV + 准确文本”缓存 prompt speech token、声学特征和说话人嵌入。同一张卡的几十句对白不应重复解析参考音频。对跨多场景的大批量生产，下一步应再将多个场景的 missing jobs 合并成一份作业清单，让一个常驻进程连续处理，避免每个场景重新加载模型。
+
+短旁白不再只依赖 LUFS 门限。小于数秒的音频可能被 LUFS gating 视为无效，所以每个入片 WAV 先检查 PCM RMS、峰值和有效样本比，再做短片段电平校准；最后整场才使用保守的 LUFS 处理。疑似空音频、超大增益、峰值越限或文字结构检查失败时必须停止拼接，不得把错误带入整场。
+
+当前硬件与 CosyVoice2 组合中，`inference_instruct2` 曾连续超过单句两分钟而无输出，因此正式入片仍按既定安全策略回退到 `inference_zero_shot`。情绪主要来自日常、着急、伤心等多风格音色卡、自然分句、标点、速度和保守后处理，不能宣称已经实现精确指令情绪控制。批量提升质量的优先级是：先扩充主角多风格卡并做可追溯目录，再只为 ASR/结构检查失败的句子生成少量候选，最后实现跨场景 missing-job 聚合或常驻 CosyVoice worker，避免每场重复约十几秒的模型加载。

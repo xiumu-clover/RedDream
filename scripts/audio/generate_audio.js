@@ -69,13 +69,16 @@ function normalizeChapterNumber(input, config) {
 
 async function loadConfig() {
 	const config = await readJsonIfExists(CONFIG_PATH);
+	const narratorVariants = config?.narratorProfiles && typeof config.narratorProfiles === 'object'
+		? Object.keys(config.narratorProfiles)
+		: [];
 	if (Number(config?.version) !== 1
 		|| !Number.isInteger(config?.chapterRange?.min)
 		|| !Number.isInteger(config?.chapterRange?.max)
 		|| config.chapterRange.min > config.chapterRange.max
-		|| !config.narratorProfiles?.female
-		|| !config.narratorProfiles?.male) {
-		throw new Error('content/audio/config.json 的版本、回目范围或男女旁白配置无效。');
+		|| narratorVariants.length !== 1
+		|| !config.narratorProfiles?.[config.defaultVariant]) {
+		throw new Error('content/audio/config.json 的版本、回目范围或单一旁白配置无效。');
 	}
 	return config;
 }
@@ -296,9 +299,9 @@ async function main() {
 
 	const providers = new Map();
 	const forcedProvider = process.env.TTS_PROVIDER?.trim().toLowerCase();
-	const variants = ['female', 'male'];
+	const variants = Object.keys(config.narratorProfiles);
 	const renderedByHash = new Map();
-	const variantFragments = { female: [], male: [] };
+	const variantFragments = Object.fromEntries(variants.map((variant) => [variant, []]));
 	const warningSet = new Set();
 	let synthesizedBlocks = 0;
 
@@ -373,8 +376,10 @@ async function main() {
 	await rm(pendingMapPath, { force: true });
 
 	console.log(`片段：本次调用 TTS 合成 ${synthesizedBlocks} 个，其余来自缓存。`);
-	console.log(`女声整轨：${outputs.female.localPath}`);
-	console.log(`男声整轨：${outputs.male.localPath}`);
+	for (const variant of variants) {
+		const label = config.narratorProfiles[variant].label || '旁白';
+		console.log(`${label}整轨：${outputs[variant].localPath}`);
+	}
 	if (warningSet.size > 0) {
 		console.log(`能力提示：${warningSet.size} 条细腻标注只能由 Edge 近似表达。`);
 	}

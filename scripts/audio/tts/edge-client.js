@@ -242,20 +242,20 @@ export async function synthesizeEdgeSpeech({
 			if (settled) return;
 			settled = true;
 			cleanup();
-			// Edge does not acknowledge a WebSocket close frame promptly. Dispose
-			// the transport after turn.end, while keeping a no-op error listener
-			// both before and after its close event for a delayed Windows TLS reset.
+			// Edge does not acknowledge a WebSocket close frame promptly. Keep
+			// no-op handlers on both ws and its Windows TLS transport before using
+			// ws.terminate(); delayed ECONNRESET events can otherwise arrive after
+			// a successful turn and crash a later, unrelated synthesis phase.
+			const ignoreShutdownError = () => {};
+			socket.on('error', ignoreShutdownError);
 			if (socket._socket && typeof socket._socket.on === 'function') {
 				const transport = socket._socket;
-				const ignoreShutdownError = () => {};
 				transport.on('error', ignoreShutdownError);
 				transport.once('close', () => {
 					transport.on('error', ignoreShutdownError);
 				});
-				transport.destroy();
-			} else if (socket.readyState === WebSocket.OPEN) {
-				socket.close();
 			}
+			if (socket.readyState !== WebSocket.CLOSED) socket.terminate();
 			if (error) reject(error);
 			else resolve(Buffer.concat(audioChunks));
 		}

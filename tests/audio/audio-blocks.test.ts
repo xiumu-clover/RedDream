@@ -7,6 +7,7 @@ import { compileChapter } from '../../src/lib/chapters/compiler.ts';
 import {
 	chapterToAudioCandidates,
 	hashJson,
+	normalizeVoiceAnnotation,
 	reconcileAudioBlocks,
 	resolveChapterAnnotations,
 	sha256,
@@ -31,6 +32,22 @@ function annotationFor(block: Record<string, any>, overrides: Record<string, any
 		...overrides,
 	};
 }
+
+test('正式标注保留读音覆盖和强制演绎单元', () => {
+	const normalized = normalizeVoiceAnnotation({
+		...annotationFor({ textHash: 'text', contextHash: 'context' }),
+		pronunciations: [{ text: '排揎', pinyin: 'pái xuān', replacement: '排宣' }],
+		delivery: {
+			forcedUnits: [{ text: '好你个西洋花点子哈巴狗儿！', speed: 1.16, continuous: true }],
+		},
+	}, '081-b0028');
+	assert.equal(normalized.pronunciations?.[0].replacement, '排宣');
+	assert.equal(normalized.delivery?.forcedUnits[0].continuous, true);
+	assert.notEqual(
+		voiceAnnotationHash(normalized),
+		voiceAnnotationHash({ ...normalized, pronunciations: undefined, delivery: undefined }),
+	);
+});
 
 function compileBody(source: string, sourceName: string) {
 	return chapterToAudioCandidates(compileChapter(`[T]测试回目[-]\n${source}`, { sourceName })).slice(1);
@@ -112,7 +129,7 @@ test('标注绑定 text/context hash，自动继承时更新绑定', () => {
 	assert.equal(result.document.annotationSetHash, hashJson(result.document.annotations));
 });
 
-test('男女旁白生成不同 renderHash，人物对话跨轨共用 renderHash', () => {
+test('单一旁白使用 narrator 音色卡，人物对白仍按角色卡渲染', () => {
 	const block = {
 		blockId: '081-b0001',
 		text: '测试文字。',
@@ -120,23 +137,20 @@ test('男女旁白生成不同 renderHash，人物对话跨轨共用 renderHash'
 	};
 	const config = {
 		narratorProfiles: {
-			female: { provider: 'edge', voice: 'zh-CN-XiaoxiaoNeural', rate: '+0%', pitch: '+0Hz', volume: '+0%' },
-			male: { voiceCardId: 'narrator' },
+			narrator: { voiceCardId: 'narrator' },
 		},
 	};
 	const cards = {
-		narrator: { id: 'narrator', provider: 'edge', voice: 'zh-CN-YunyangNeural', prosody: { rate: '+0%', pitch: '+0Hz', volume: '+0%' }, emotions: { neutral: {} } },
+		narrator: { id: 'narrator', provider: 'edge', voice: 'zh-CN-YunjianNeural', prosody: { rate: '+0%', pitch: '+0Hz', volume: '+0%' }, emotions: { neutral: {} } },
 		person: { id: 'person', provider: 'edge', voice: 'zh-CN-YunxiNeural', prosody: { rate: '+0%', pitch: '+0Hz', volume: '+0%' }, emotions: { neutral: {} } },
 	};
 	const narrator = annotationFor({ ...block, contextHash: 'context' });
-	const female = resolveBlockRenderSpec({ block, annotation: narrator, variant: 'female', config, cards });
-	const male = resolveBlockRenderSpec({ block, annotation: narrator, variant: 'male', config, cards });
-	assert.notEqual(female.renderHash, male.renderHash);
+	const narratorSpec = resolveBlockRenderSpec({ block, annotation: narrator, variant: 'narrator', config, cards });
+	assert.equal(narratorSpec.spec.voice, 'zh-CN-YunjianNeural');
 
 	const dialogue = { ...narrator, speakerRef: 'person' };
-	const dialogueFemale = resolveBlockRenderSpec({ block, annotation: dialogue, variant: 'female', config, cards });
-	const dialogueMale = resolveBlockRenderSpec({ block, annotation: dialogue, variant: 'male', config, cards });
-	assert.equal(dialogueFemale.renderHash, dialogueMale.renderHash);
+	const dialogueSpec = resolveBlockRenderSpec({ block, annotation: dialogue, variant: 'narrator', config, cards });
+	assert.equal(dialogueSpec.spec.voice, 'zh-CN-YunxiNeural');
 	assert.equal(voiceAnnotationHash(dialogue), voiceAnnotationHash({ ...dialogue, note: '不影响声音' }));
 });
 

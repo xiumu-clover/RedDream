@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { copyFile, mkdir, readFile, rename, rm, stat, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
-async function replaceFileAtomic(temporaryPath, destinationPath) {
+export async function replaceFileAtomic(temporaryPath, destinationPath) {
 	const backupPath = `${destinationPath}.${process.pid}.${Date.now()}.bak`;
 	let hadPrevious = false;
 	try {

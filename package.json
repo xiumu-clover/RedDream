@@ -11,10 +11,13 @@
     "preview": "astro preview",
     "astro": "astro",
     "audio:generate": "tsx scripts/audio/generate_audio.js",
+    "audio:scene": "tsx scripts/audio/generate_scene.js",
+    "audio:scene:plan": "tsx scripts/audio/generate_scene.js --plan-only",
+    "audio:scene:draft": "tsx scripts/audio/generate_scene.js --skip-whisper",
     "audio:publish": "node scripts/audio/publish_audio.js",
     "audio:voices": "node scripts/audio/generate_voice_previews.js",
     "extract:zhipi": "node --experimental-strip-types scripts/research/zhipi/extract.mjs",
-    "test": "node --experimental-strip-types --test tests/chapters/compiler.test.ts tests/chapters/collection-layout.test.ts tests/audio/chapter-text.test.ts tests/audio/audio-blocks.test.ts tests/audio/files.test.ts tests/audio/voice-cards.test.ts tests/research/zhipi-extractor.test.ts"
+    "test": "node --experimental-strip-types --test tests/chapters/compiler.test.ts tests/chapters/collection-layout.test.ts tests/audio/chapter-text.test.ts tests/audio/audio-blocks.test.ts tests/audio/files.test.ts tests/audio/voice-cards.test.ts tests/audio/scene-plan.test.ts tests/research/zhipi-extractor.test.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.7",

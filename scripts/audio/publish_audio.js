@@ -122,7 +122,13 @@ async function installAtomically(items) {
 
 async function main() {
 	const config = await readJsonIfExists(CONFIG_PATH);
-	if (Number(config?.version) !== 1 || !config.chapterRange || !Array.isArray(config.publishAllowlist)) {
+	const narratorVariants = config?.narratorProfiles && typeof config.narratorProfiles === 'object'
+		? Object.keys(config.narratorProfiles)
+		: [];
+	if (Number(config?.version) !== 1 || !config.chapterRange
+		|| !Array.isArray(config.publishAllowlist)
+		|| narratorVariants.length !== 1
+		|| !config.narratorProfiles?.[config.defaultVariant]) {
 		throw new Error('content/audio/config.json 的发布配置无效。');
 	}
 	const chapterId = normalizeChapterNumber(process.argv[2], config);
@@ -139,46 +145,36 @@ async function main() {
 
 	const map = await readJsonIfExists(join(MAP_DIRECTORY, `${chapterId}.json`));
 	if (Number(map?.version) !== 1 || map.chapter !== chapterId || !map.outputs) {
-		throw new Error(`找不到有效的 content/audio/maps/${chapterId}.json，请先生成男女整轨。`);
+		throw new Error(`找不到有效的 content/audio/maps/${chapterId}.json，请先生成旁白整轨。`);
 	}
-	const female = await verifyTrack('女声', map.outputs.female);
-	const male = await verifyTrack('男声', map.outputs.male);
+	const variant = narratorVariants[0];
+	const label = config.narratorProfiles[variant].label || '旁白';
+	const track = await verifyTrack(label, map.outputs[variant]);
 
 	console.log(`第 ${Number(chapterId)} 回发布检查通过：`);
-	console.log(`女声：${(female.bytes / 1024 / 1024).toFixed(2)} MiB，${Math.round(female.durationSeconds / 60)} 分钟，${female.trackHash.slice(0, 12)}`);
-	console.log(`男声：${(male.bytes / 1024 / 1024).toFixed(2)} MiB，${Math.round(male.durationSeconds / 60)} 分钟，${male.trackHash.slice(0, 12)}`);
+	console.log(`${label}：${(track.bytes / 1024 / 1024).toFixed(2)} MiB，${Math.round(track.durationSeconds / 60)} 分钟，${track.trackHash.slice(0, 12)}`);
 	if (checkOnly) return;
 
 	await mkdir(PUBLIC_AUDIO_DIRECTORY, { recursive: true });
 	const transaction = `${process.pid}-${Date.now()}`;
-	const femaleDestination = join(PUBLIC_AUDIO_DIRECTORY, `${chapterId}.mp3`);
-	const maleDestination = join(PUBLIC_AUDIO_DIRECTORY, `${chapterId}-male.mp3`);
-	const femaleStaged = `${femaleDestination}.${transaction}.tmp`;
-	const maleStaged = `${maleDestination}.${transaction}.tmp`;
+	const trackDestination = join(PUBLIC_AUDIO_DIRECTORY, `${chapterId}.mp3`);
+	const trackStaged = `${trackDestination}.${transaction}.tmp`;
 	const manifestStaged = `${MANIFEST_PATH}.${transaction}.tmp`;
 	try {
-		await copyFile(female.path, femaleStaged);
-		await copyFile(male.path, maleStaged);
+		await copyFile(track.path, trackStaged);
 
 		const manifest = migrateManifest(await readJsonIfExists(MANIFEST_PATH));
 		manifest.chapters[chapterId] = {
 			source: map.source,
 			sourceSpeechHash: map.sourceSpeechHash,
-			defaultVariant: config.defaultVariant || 'female',
+			defaultVariant: variant,
 			variants: {
-				female: {
+				[variant]: {
 					url: `/audio/${chapterId}.mp3`,
-					trackHash: female.trackHash,
-					fileHash: female.fileHash,
-					bytes: female.bytes,
-					durationSeconds: female.durationSeconds,
-				},
-				male: {
-					url: `/audio/${chapterId}-male.mp3`,
-					trackHash: male.trackHash,
-					fileHash: male.fileHash,
-					bytes: male.bytes,
-					durationSeconds: male.durationSeconds,
+					trackHash: track.trackHash,
+					fileHash: track.fileHash,
+					bytes: track.bytes,
+					durationSeconds: track.durationSeconds,
 				},
 			},
 			publishedAt: new Date().toISOString(),
@@ -186,19 +182,17 @@ async function main() {
 		await writeFile(manifestStaged, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
 		await installAtomically([
-			{ staged: femaleStaged, destination: femaleDestination },
-			{ staged: maleStaged, destination: maleDestination },
+			{ staged: trackStaged, destination: trackDestination },
 			{ staged: manifestStaged, destination: MANIFEST_PATH },
 		]);
 	} catch (error) {
-		await Promise.allSettled([femaleStaged, maleStaged, manifestStaged].map((path) => rm(path, { force: true })));
+		await Promise.allSettled([trackStaged, manifestStaged].map((path) => rm(path, { force: true })));
 		throw new Error(`发布失败，已尝试恢复旧文件：${error instanceof Error ? error.message : String(error)}`, {
 			cause: error,
 		});
 	}
 
-	console.log(`发布完成：${projectRelative(femaleDestination)}`);
-	console.log(`发布完成：${projectRelative(maleDestination)}`);
+	console.log(`发布完成：${projectRelative(trackDestination)}`);
 	console.log(`清单已更新：${projectRelative(MANIFEST_PATH)}`);
 }
 

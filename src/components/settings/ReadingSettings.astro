@@ -45,21 +45,6 @@ const options = [
 									/>
 								</label>
 							))}
-							{definition.hasAudio && (
-								<label class="setting-row">
-									<span>
-										<strong>有声书旁白</strong>
-										<small>选择本册有声书的默认旁白，未发布的音色会自动回退。</small>
-									</span>
-									<select
-										data-book-select-setting="audioNarrator"
-										aria-label={`${definition.title}：有声书旁白`}
-									>
-										<option value="female" selected={defaults.audioNarrator === 'female'}>女声</option>
-										<option value="male" selected={defaults.audioNarrator === 'male'}>男声</option>
-									</select>
-								</label>
-							)}
 						</div>
 
 						<footer class="settings-book__footer">
@@ -83,7 +68,7 @@ const options = [
 		type BookReadingPreferences,
 	} from '../../lib/preferences/reading';
 
-	type BooleanPreferenceKey = Exclude<keyof BookReadingPreferences, 'audioNarrator'>;
+	type BooleanPreferenceKey = keyof BookReadingPreferences;
 
 	const root = document.querySelector<HTMLElement>('[data-reading-preferences]');
 	const preferences = loadReadingPreferences();
@@ -93,8 +78,6 @@ const options = [
 			const key = input.dataset.bookSetting as BooleanPreferenceKey;
 			input.checked = preferences[book][key];
 		});
-		const narrator = card.querySelector<HTMLSelectElement>('[data-book-select-setting="audioNarrator"]');
-		if (narrator) narrator.value = preferences[book].audioNarrator;
 	};
 
 	const announceSaved = (card: HTMLElement, saved: boolean) => {
@@ -116,15 +99,6 @@ const options = [
 			preferences[book] = { ...preferences[book], [key]: input.checked };
 			announceSaved(card, saveReadingPreferences(preferences));
 		});
-
-		card.querySelector<HTMLSelectElement>('[data-book-select-setting="audioNarrator"]')
-			?.addEventListener('change', (event) => {
-				const select = event.currentTarget;
-				if (!(select instanceof HTMLSelectElement)) return;
-				const audioNarrator = select.value === 'male' ? 'male' : 'female';
-				preferences[book] = { ...preferences[book], audioNarrator };
-				announceSaved(card, saveReadingPreferences(preferences));
-			});
 
 		card.querySelector<HTMLButtonElement>('[data-reset-book]')?.addEventListener('click', () => {
 			preferences[book] = getDefaultReadingPreferences(book);

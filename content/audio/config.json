@@ -7,18 +7,10 @@
   "publishAllowlist": [
     "081"
   ],
-  "defaultVariant": "female",
+  "defaultVariant": "narrator",
   "narratorProfiles": {
-    "female": {
-      "label": "女声旁白",
-      "provider": "edge",
-      "voice": "zh-CN-XiaoxiaoNeural",
-      "rate": "-5%",
-      "pitch": "+0Hz",
-      "volume": "+0%"
-    },
-    "male": {
-      "label": "男声旁白",
+    "narrator": {
+      "label": "Yunjian 旁白",
       "provider": "edge",
       "voiceCardId": "narrator"
     }

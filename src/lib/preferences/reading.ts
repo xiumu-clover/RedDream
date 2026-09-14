@@ -6,7 +6,6 @@ export interface BookReadingPreferences {
 	showNotes: boolean;
 	compact: boolean;
 	continuous: boolean;
-	audioNarrator: 'female' | 'male';
 }
 
 export type ReadingPreferences = Record<BookId, BookReadingPreferences>;
@@ -18,7 +17,6 @@ export const DEFAULT_READING_PREFERENCES: ReadingPreferences = {
 		showNotes: true,
 		compact: false,
 		continuous: false,
-		audioNarrator: 'female',
 	},
 	guiyou: {
 		showZp: true,
@@ -26,7 +24,6 @@ export const DEFAULT_READING_PREFERENCES: ReadingPreferences = {
 		showNotes: true,
 		compact: false,
 		continuous: false,
-		audioNarrator: 'female',
 	},
 	'guiyou-original': {
 		showZp: true,
@@ -34,7 +31,6 @@ export const DEFAULT_READING_PREFERENCES: ReadingPreferences = {
 		showNotes: true,
 		compact: false,
 		continuous: false,
-		audioNarrator: 'female',
 	},
 };
 
@@ -70,9 +66,6 @@ const normalizeBookPreferences = (
 		showNotes: typeof saved.showNotes === 'boolean' ? saved.showNotes : defaults.showNotes,
 		compact: typeof saved.compact === 'boolean' ? saved.compact : defaults.compact,
 		continuous: typeof saved.continuous === 'boolean' ? saved.continuous : defaults.continuous,
-		audioNarrator: saved.audioNarrator === 'male' || saved.audioNarrator === 'female'
-			? saved.audioNarrator
-			: defaults.audioNarrator,
 	};
 };
 
@@ -98,7 +91,6 @@ const migrateLegacyPreferences = (): ReadingPreferences | undefined => {
 			showNotes: saved['hide-notes'] !== true,
 			compact: saved.compact === true,
 			continuous: saved.continuous === true,
-			audioNarrator: 'female',
 		};
 		return Object.fromEntries(
 			BOOK_IDS.map((book) => [book, book === 'guiyou-original'

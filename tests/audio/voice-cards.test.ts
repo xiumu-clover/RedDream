@@ -40,6 +40,8 @@ test('音色卡索引、字段和韵律保持一致', async () => {
 	assert.equal(index.version, 1);
 	assert.equal(index.defaultNarrator, 'narrator');
 	assert.equal(index.characters['旁白'], 'narrator');
+	const narrator = await readJson(join(cardDirectory, index.cards[index.defaultNarrator]));
+	assert.equal(narrator.voice, 'zh-CN-YunjianNeural');
 
 	const renderings = new Set<string>();
 	for (const [id, filename] of Object.entries<string>(index.cards)) {

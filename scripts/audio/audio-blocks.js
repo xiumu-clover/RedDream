@@ -425,6 +425,63 @@ export function normalizeVoiceAnnotation(annotation, blockId) {
 			|| annotation.confidence < 0 || annotation.confidence > 1)) {
 		throw new Error(`标注 ${blockId}.confidence 必须介于 0 和 1。`);
 	}
+	let pronunciations;
+	if (annotation.pronunciations !== undefined) {
+		if (!Array.isArray(annotation.pronunciations)) {
+			throw new Error(`标注 ${blockId}.pronunciations 必须是数组。`);
+		}
+		pronunciations = annotation.pronunciations.map((entry, index) => {
+			if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+				throw new Error(`标注 ${blockId}.pronunciations[${index}] 必须是对象。`);
+			}
+			for (const field of ['text', 'pinyin', 'replacement']) {
+				if (typeof entry[field] !== 'string' || !entry[field].trim()) {
+					throw new Error(`标注 ${blockId}.pronunciations[${index}].${field} 不能为空。`);
+				}
+			}
+			return {
+				text: entry.text,
+				pinyin: entry.pinyin.trim(),
+				replacement: entry.replacement,
+			};
+		});
+	}
+	let delivery;
+	if (annotation.delivery !== undefined) {
+		if (!annotation.delivery || typeof annotation.delivery !== 'object'
+			|| Array.isArray(annotation.delivery)) {
+			throw new Error(`标注 ${blockId}.delivery 必须是对象。`);
+		}
+		if (!Array.isArray(annotation.delivery.forcedUnits)
+			|| annotation.delivery.forcedUnits.length === 0) {
+			throw new Error(`标注 ${blockId}.delivery.forcedUnits 必须是非空数组。`);
+		}
+		delivery = {
+			forcedUnits: annotation.delivery.forcedUnits.map((entry, index) => {
+				if (!entry || typeof entry !== 'object' || Array.isArray(entry)
+					|| typeof entry.text !== 'string' || !entry.text) {
+					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].text 不能为空。`);
+				}
+				if (entry.speed !== undefined
+					&& (typeof entry.speed !== 'number' || entry.speed < 0.5 || entry.speed > 2)) {
+					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].speed 必须介于 0.5 和 2。`);
+				}
+				if (entry.continuous !== undefined && typeof entry.continuous !== 'boolean') {
+					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].continuous 必须是布尔值。`);
+				}
+				if (entry.instruction !== undefined
+					&& (typeof entry.instruction !== 'string' || !entry.instruction.trim())) {
+					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].instruction 不能为空。`);
+				}
+				return {
+					text: entry.text,
+					...(entry.speed === undefined ? {} : { speed: entry.speed }),
+					...(entry.continuous === undefined ? {} : { continuous: entry.continuous }),
+					...(entry.instruction === undefined ? {} : { instruction: entry.instruction.trim() }),
+				};
+			}),
+		};
+	}
 
 	return {
 		textHash: annotation.textHash,
@@ -441,13 +498,15 @@ export function normalizeVoiceAnnotation(annotation, blockId) {
 		timbre: [...new Set(annotation.timbre)],
 		modifiers: [...new Set(annotation.modifiers)],
 		reviewStatus: annotation.reviewStatus,
+		...(pronunciations === undefined ? {} : { pronunciations }),
+		...(delivery === undefined ? {} : { delivery }),
 		...(annotation.note ? { note: String(annotation.note) } : {}),
 		...(annotation.confidence !== undefined ? { confidence: annotation.confidence } : {}),
 	};
 }
 
 export function voiceAnnotationHash(annotation) {
-	return hashJson({
+	const normalized = {
 		speakerRef: annotation.speakerRef,
 		emotion: annotation.emotion,
 		pace: annotation.pace,
@@ -455,7 +514,10 @@ export function voiceAnnotationHash(annotation) {
 		energy: annotation.energy,
 		timbre: annotation.timbre,
 		modifiers: annotation.modifiers,
-	});
+	};
+	if (annotation.pronunciations !== undefined) normalized.pronunciations = annotation.pronunciations;
+	if (annotation.delivery !== undefined) normalized.delivery = annotation.delivery;
+	return hashJson(normalized);
 }
 
 export function resolveChapterAnnotations({ chapterId, blocks, document, voiceCardIds }) {
