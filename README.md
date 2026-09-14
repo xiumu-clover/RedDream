@@ -95,3 +95,14 @@ npm run astro -- dev status
 npm run astro -- dev logs
 npm run astro -- dev stop
 ```
+
+## 每日自动构建
+
+`.github/workflows/scheduled-build.yml` 每天北京时间 03:17 运行测试和 Astro 构建；验证通过后调用 Cloudflare Pages Deploy Hook，触发生产站重新构建。选择 03:17 是为了避开 GitHub Actions 每逢整点较容易出现的排队高峰，计划任务仍可能因平台负载稍有延迟。
+
+首次启用时需要完成一次私密配置：
+
+1. 在 Cloudflare 的 `Workers & Pages → reddream → Settings → Builds → Deploy hooks` 中，为 `main` 分支创建 Deploy Hook。
+2. 在 GitHub 仓库 `Settings → Secrets and variables → Actions` 中新增 Repository secret，名称必须为 `CLOUDFLARE_PAGES_DEPLOY_HOOK`，值为刚才的完整 Hook URL。
+
+Deploy Hook URL 相当于部署凭据，不得写入代码、文档或提交记录。普通 `main` 分支推送仍由 Cloudflare Git 集成自动部署；工作流只在定时运行或手动运行时调用 Hook，避免同一次推送重复部署。

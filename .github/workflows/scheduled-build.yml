@@ -8,7 +8,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 3 * * *"
+    # Avoid the top-of-hour GitHub Actions scheduling peak.
+    - cron: "17 3 * * *"
       timezone: Asia/Shanghai
   workflow_dispatch:
 
@@ -51,3 +52,15 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 14
+
+      - name: Trigger scheduled Cloudflare Pages deployment
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        env:
+          CLOUDFLARE_PAGES_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$CLOUDFLARE_PAGES_DEPLOY_HOOK" ]; then
+            echo "::error::缺少 GitHub Actions Secret：CLOUDFLARE_PAGES_DEPLOY_HOOK"
+            exit 1
+          fi
+          curl --fail-with-body --silent --show-error \
+            --request POST "$CLOUDFLARE_PAGES_DEPLOY_HOOK"

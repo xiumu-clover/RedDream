@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import test from 'node:test';
 import { compileChapter } from '../../src/lib/chapters/compiler.ts';
-import { chapterToAudioCandidates, sha256 } from '../../scripts/audio/audio-blocks.js';
+import { chapterToAudioCandidates, reconcileAudioBlocks, sha256 } from '../../scripts/audio/audio-blocks.js';
 import { normalizeLegacyNoteMarkers, stripFrontmatter } from '../../scripts/audio/chapter-text.js';
 import { replaceFileAtomic } from '../../scripts/audio/files.js';
 import {
@@ -42,10 +42,15 @@ async function loadCurrentScene() {
 	));
 	const definition = SCENE_DEFINITIONS['xiren-three-opera'];
 	const extracted = extractSceneByAnchors(candidates, definition);
-	const pendingMap = JSON.parse(await readFile(
-		join(projectRoot, 'content', 'audio', '.cache', 'pending', '081.json'),
-		'utf8',
-	));
+	// CI starts from a clean checkout and intentionally has no ignored audio cache.
+	// Rebuild the initial stable block map from the tracked chapter instead of
+	// making the test depend on content/audio/.cache/pending/081.json.
+	const reconciliation = reconcileAudioBlocks('081', candidates, undefined);
+	const pendingMap = {
+		chapter: '081',
+		nextBlockNumber: reconciliation.nextBlockNumber,
+		blocks: reconciliation.blocks,
+	};
 	const annotationDocument = JSON.parse(await readFile(
 		join(projectRoot, 'content', 'audio', 'annotations', '081.json'),
 		'utf8',
