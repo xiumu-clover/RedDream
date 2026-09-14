@@ -32,6 +32,7 @@
 | 宝玉 | grieving、shock、强烈失落 | `grieving-shock` |
 | 袭人 | neutral、warm、平静劝说 | `daily` |
 | 袭人 | defensive-indignation、rivalry、争辩或压怒 | `assertive-rivalry` |
+| 邢夫人 | neutral、calm、克制商议、主母问话 | `restrained-persuasion` |
 
 ## 宝玉
 
@@ -134,6 +135,29 @@
 - 候选文本：“你看你，你就知道胡说乱闹，让别人听见什么意思？”
 - 原声 WAV SHA-256：`abe6e2c321993137cc2adf1fe7187263318142981dd06e8da186037b1ed17c42`
 - 状态：只保留原声候选。Whisper 未稳定识别句尾“意思”，人工确认逐字稿前不生成标准卡。
+
+## 邢夫人
+
+### `restrained-persuasion-v1`：克制商议、主母问话
+
+- 标准卡：`content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/voice-card.wav`
+- 试听用标准卡：`content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/voice-card-delivery.wav`
+- 二次试听：`content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/demo-delivery.mp3`
+- 标准卡 WAV SHA-256：`48f27919ee471a8fc5f368f68497f5e6f088eaf9a98d65490c63cc8a2fa273b7`
+- 试听用 WAV SHA-256：`39bc30a04dfa72b9e103bb04dde8f59b2a8feaf1675be6a83b910124f3325774`
+- 原声：第 18 集 `00:03:34.800–00:03:39.320`
+- 原声文本：“叫你来，有一件为难的事要和你商量。”
+- 场景：邢夫人在内室与王熙凤商议贾赦欲纳鸳鸯之事；整集联系表、局部联系表和上下文均确认说话人。
+- 标准卡文本：“事情既已说到这里，就该依着规矩，一件一件办明白。”
+- 二次试听文本：“你先把缘故说清楚，若真有委屈，我自然替你作主。”
+- 声源性质：角色原声，不是代理声源；两段合成文案均为 AI 测试文案，不是演员原话。
+- 清理：16 kHz 单声道 PCM；70 Hz 高通、7600 Hz 低通、`afftdn=nr=3:nf=-55`、约 `-20 LUFS`、短淡入淡出；未做人声分离。
+- Whisper：原声完整；标准卡“一件/一见”、试听“作主/做主”为同音或字形差异，未检出漏句、重复、乱序或拖尾。
+- CAMPPlus：原声→卡 `0.820404`；卡→试听 `0.929901`；原声→试听 `0.772575`。
+- 使用建议：克制商议、家务安排、带分寸的劝说和不高声的主母问话。
+- 禁用：失控怒斥、哭喊、轻快玩笑；也不应据此覆盖今后截取到的强硬或冷厉状态卡。
+- 已知问题：参考原声约 `4.49` 秒，位于推荐时长下沿；原始合成 WAV 真峰值接近 `0 dBFS`，已另存只衰减、不压缩动态的 delivery 版本供试听。
+- 状态：待人工 A/B 试听，不自动路由。
 
 ## 艾官、荳官、葵官
 

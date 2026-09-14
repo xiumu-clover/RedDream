@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "reviewer": "project-owner",
+  "statuses": [
+    "planned",
+    "rendered",
+    "auto_passed",
+    "pending_review",
+    "approved",
+    "rejected",
+    "superseded"
+  ],
+  "approvalBinding": [
+    "targetId",
+    "blockId",
+    "unitIndex",
+    "annotationHash",
+    "voiceCardId",
+    "voiceCardFileHash",
+    "renderHash",
+    "fileHash"
+  ],
+  "gates": {
+    "dialogue": "每个当前对白实际入片单元必须由用户 approved。",
+    "narration": "旁白通过技术检查后可暂定进入场景，但仍须随整场完成人工验收。",
+    "scene": "全部当前对白 approved 且旁白技术通过后，才允许正式场景合成。",
+    "chapter": "整章仍须从头到尾人工试听并绑定最终整轨哈希。"
+  },
+  "issueTypes": {
+    "speaker": { "label": "人物不对", "route": "annotation" },
+    "text_alignment": { "label": "正文对应不对", "route": "annotation" },
+    "emotion_design": { "label": "情绪方向不对", "route": "annotation" },
+    "pronunciation_rule": { "label": "读音规则不对", "route": "annotation" },
+    "segmentation_design": { "label": "断句设计不对", "route": "annotation" },
+    "voice_identity": { "label": "音色身份不合适", "route": "voice-cards" },
+    "voice_age_texture": { "label": "年龄或质感不合适", "route": "voice-cards" },
+    "voice_drift": { "label": "声纹漂移", "route": "voice-cards" },
+    "reference_noise": { "label": "参考音底噪或污染", "route": "voice-cards" },
+    "performance": { "label": "表演力度不对", "route": "recording" },
+    "pace_execution": { "label": "语速执行不对", "route": "recording" },
+    "pause": { "label": "停顿不自然", "route": "recording" },
+    "missing_words": { "label": "漏字", "route": "recording" },
+    "repetition": { "label": "重复或回卷", "route": "recording" },
+    "tail_or_cutoff": { "label": "拖尾或截尾", "route": "recording" },
+    "level": { "label": "音量或响度问题", "route": "recording" },
+    "clipping": { "label": "爆音或削波", "route": "recording" },
+    "other": { "label": "其他，交总控判断", "route": "manager" }
+  },
+  "workOrderPolicy": {
+    "recording": "只处理 failures 中列出的目标，禁止重做其他已批准片段。",
+    "annotation": "只修改明确列出的派生语义标注，不修改小说正文。",
+    "voice-cards": "只处理明确列出的音色问题，不直接批准对白片段。"
+  }
+}

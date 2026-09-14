@@ -35,6 +35,8 @@ import {
 import { getValidCachedAudio } from './track.js';
 import { createTtsProvider } from './tts/provider.js';
 import { loadVoiceCardCatalog } from './voice-cards.js';
+import { createReviewSourceFromArtifacts } from './review-source.js';
+import { syncSceneProduction } from './review-state.js';
 
 const PROJECT_ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const CHAPTER_DIRECTORY = join(PROJECT_ROOT, 'content', 'chapters', 'guiyou');
@@ -164,7 +166,7 @@ function ensureSupportedNodeVersion() {
 
 function parseArguments(argv) {
 	const options = {};
-	const booleanOptions = new Set(['plan-only', 'skip-whisper']);
+	const booleanOptions = new Set(['plan-only', 'skip-whisper', 'draft-only']);
 	for (let index = 0; index < argv.length; index += 1) {
 		const value = argv[index];
 		if (!value.startsWith('--')) throw new Error(`无法识别参数 ${value}。`);
@@ -186,6 +188,7 @@ function parseArguments(argv) {
 		scene,
 		planOnly: options['plan-only'] === true || options['plan-only'] === 'true',
 		skipWhisper: options['skip-whisper'] === true || options['skip-whisper'] === 'true',
+		draftOnly: options['draft-only'] === true || options['draft-only'] === 'true',
 	};
 }
 
@@ -653,21 +656,7 @@ function buildDialogueRequests({ blocks, definition, voiceCards, outputDirectory
 	for (const block of blocks.filter((item) => item.kind === 'dialogue')) {
 		const baseInstruction = buildCosyVoiceInstruction(block.annotation);
 		const baseSpeed = cosyVoiceSpeed(block.annotation);
-		let unitSpecs = splitChineseDialogueWithDelivery(block.text, block.annotation.delivery);
-		if (block.blockId === '081-b0042') {
-			const difficultUnit = '如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。';
-			const difficultIndex = unitSpecs.findIndex((unit) => unit.text === difficultUnit);
-			if (difficultIndex < 0) throw new Error('袭人生僻连语的保守分句锚点已经变化。');
-			unitSpecs = [
-				...unitSpecs.slice(0, difficultIndex),
-				{ text: '如今竟敢私自偷溜进园子，' },
-				{ text: '拉云扒瞎、造污寻趁我来。' },
-				...unitSpecs.slice(difficultIndex + 1),
-			];
-			if (unitSpecs.map((unit) => unit.text).join('') !== block.text) {
-				throw new Error('袭人对白的保守分句改变了原文。');
-			}
-		}
+		const unitSpecs = splitChineseDialogueWithDelivery(block.text, block.annotation.delivery);
 		const chorus = chorusForBlock(definition, block);
 		const speakers = chorus?.voices || [block.annotation.speakerRef];
 		const units = unitSpecs.map((unitSpec, unitIndex) => {
@@ -1547,6 +1536,9 @@ function serializeBlock(block, edgeResults, blockPlans) {
 			energy: block.annotation.energy,
 			timbre: block.annotation.timbre,
 			modifiers: block.annotation.modifiers,
+			...(block.annotation.pronunciations ? { pronunciations: block.annotation.pronunciations } : {}),
+			...(block.annotation.delivery ? { delivery: block.annotation.delivery } : {}),
+			...(block.annotation.note ? { note: block.annotation.note } : {}),
 		},
 		pauseAfterMs: 0,
 	};
@@ -1713,6 +1705,7 @@ async function main() {
 		scene: sceneId,
 		planOnly,
 		skipWhisper,
+		draftOnly,
 	} = parseArguments(process.argv.slice(2));
 	const definition = SCENE_DEFINITIONS[sceneId];
 	if (!definition) throw new Error(`未知场景 ${sceneId}。可用：${Object.keys(SCENE_DEFINITIONS).join('、')}。`);
@@ -1852,6 +1845,44 @@ async function main() {
 		outputDirectory,
 		leveledPaths: leveledTimeline.pathByKey,
 	});
+	const serializedBlocks = aligned.map((block) => serializeBlock(block, edge.results, dialogue.blockPlans));
+	for (let index = 0; index < serializedBlocks.length; index += 1) {
+		serializedBlocks[index].pauseAfterMs = scenePauseAfter(aligned[index], aligned[index + 1]);
+	}
+	const serializedVoiceCards = Object.fromEntries(Object.entries(voiceCards).map(([id, card]) => [id, {
+		speakerRef: card.speakerRef,
+		styleId: card.styleId,
+		path: card.pathRelative,
+		metadataPath: card.metadataPath,
+		text: card.text,
+		fileHash: card.fileHash,
+		format: card.format,
+		generationParameters: card.generationParameters,
+		sourceType: card.sourceType,
+		disclaimer: card.disclaimer,
+	}]));
+	const reviewSourcePath = join(outputDirectory, 'review-source.json');
+	let reviewSource = await createReviewSourceFromArtifacts({
+		projectRoot: PROJECT_ROOT,
+		chapter: chapterId,
+		scene: sceneId,
+		source: { path: source, fileHash: sourceFileHash },
+		annotationSetHash: hashJson(annotationDocument.annotations),
+		blocks: serializedBlocks,
+		voiceCards: serializedVoiceCards,
+		levelReport: leveledTimeline.report,
+		whisper,
+	});
+	await writeJsonAtomic(reviewSourcePath, reviewSource);
+	let production = await syncSceneProduction({ projectRoot: PROJECT_ROOT, reviewSource });
+	if (draftOnly) {
+		console.log(`场景草稿已更新；当前待处理对白 ${production.status.counts.remainingReviewCount}。`);
+		console.log(`审核计划：${projectRelative(production.paths.plan)}`);
+		return;
+	}
+	if (!production.status.gates.formalSceneCompositionAllowed) {
+		throw new Error(`[审批门禁] ${production.status.blockers.join('；')} 请先运行 review_audio.bat 完成审核。`);
+	}
 	const losslessPath = await assembleLossless({ timeline: leveledTimeline.timeline, outputDirectory });
 	const master = await masterScene({ inputPath: losslessPath, outputDirectory });
 	const mp3Path = await encodeMp3({ inputPath: master.path, outputDirectory });
@@ -1871,10 +1902,6 @@ async function main() {
 			aligned.filter((block) => block.annotation.speakerRef === id).length,
 		]),
 	);
-	const serializedBlocks = aligned.map((block) => serializeBlock(block, edge.results, dialogue.blockPlans));
-	for (let index = 0; index < serializedBlocks.length; index += 1) {
-		serializedBlocks[index].pauseAfterMs = scenePauseAfter(aligned[index], aligned[index + 1]);
-	}
 	const allVoiceFragments = [...cosy.results.values()].map((artifact) => ({
 		voiceCardId: artifact.voiceCardId,
 		speakerRef: artifact.speakerRef,
@@ -1905,18 +1932,7 @@ async function main() {
 			bySpeaker: roleCounts,
 			cosyVoiceSynthesisUnits: dialogue.requests.length,
 		},
-		voiceCards: Object.fromEntries(Object.entries(voiceCards).map(([id, card]) => [id, {
-			speakerRef: card.speakerRef,
-			styleId: card.styleId,
-			path: card.pathRelative,
-			metadataPath: card.metadataPath,
-			text: card.text,
-			fileHash: card.fileHash,
-			format: card.format,
-			generationParameters: card.generationParameters,
-			sourceType: card.sourceType,
-			disclaimer: card.disclaimer,
-		}])),
+		voiceCards: serializedVoiceCards,
 		proxyVoiceDisclaimer: '艾官、荳官、葵官使用代理声源，并非人物或演员本人的原声。',
 		instruct2Fallback: {
 			path: 'instruct2-failure.json',
@@ -1997,12 +2013,38 @@ async function main() {
 		generatedAt: new Date().toISOString(),
 	};
 	await writeJsonAtomic(join(outputDirectory, 'scene-manifest.json'), manifest);
+	reviewSource = await createReviewSourceFromArtifacts({
+		projectRoot: PROJECT_ROOT,
+		chapter: chapterId,
+		scene: sceneId,
+		source: { path: source, fileHash: sourceFileHash },
+		annotationSetHash: hashJson(annotationDocument.annotations),
+		blocks: serializedBlocks,
+		voiceCards: serializedVoiceCards,
+		levelReport: leveledTimeline.report,
+		whisper,
+		sceneAudio: {
+			cachePath: projectRelative(mp3Path),
+			renderHash: hashJson({
+				version: FINAL_MASTER_VERSION,
+				sceneBasisHash: reviewSource.sceneBasisHash,
+				wavHash,
+				mp3Hash,
+			}),
+			fileHash: mp3Hash,
+			durationSeconds: mp3Info.durationSeconds,
+			basisHash: reviewSource.sceneBasisHash,
+		},
+	});
+	await writeJsonAtomic(reviewSourcePath, reviewSource);
+	production = await syncSceneProduction({ projectRoot: PROJECT_ROOT, reviewSource });
 
 	console.log(`场景：${sceneId}，语义块 ${aligned.length}（旁白 ${manifest.counts.narrationBlocks}、对白 ${manifest.counts.dialogueBlocks}）。`);
 	console.log(`Edge：合成 ${edge.stats.synthesisCalls}，缓存命中 ${edge.stats.cacheHits}。`);
 	console.log(`CosyVoice：作业 ${cosy.stats.jobs}，推理 ${cosy.stats.inferenceCalls}，缓存命中 ${cosy.stats.cacheHits}，耗时 ${cosy.stats.totalElapsedSeconds}s。`);
 	console.log(`WAV：${manifest.outputs.wav.durationSeconds.toFixed(2)}s，${wavHash}`);
 	console.log(`MP3：${projectRelative(mp3Path)}，${mp3Hash}`);
+	console.log(`整场试听状态：${production.status.gates.sceneApproved ? 'approved' : 'pending_review'}。`);
 }
 
 main().catch((error) => {

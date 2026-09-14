@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "scene": "xiren-three-opera",
+  "planHash": "e0893b67ae98b81a0ae716c69499936e8f7a1d897a3d717234caf232e22c0652",
+  "counts": {
+    "totalTargets": 50,
+    "dialogueTargets": 50,
+    "remainingReviewCount": 50,
+    "byStatus": {
+      "planned": 13,
+      "rendered": 0,
+      "auto_passed": 0,
+      "pending_review": 37,
+      "approved": 0,
+      "rejected": 0,
+      "superseded": 0
+    }
+  },
+  "narration": {
+    "total": 29,
+    "rendered": 28,
+    "autoPassed": 28,
+    "allAutoPassed": false,
+    "machineCheck": {
+      "count": 29,
+      "blockIds": [
+        "081-b0022",
+        "081-b0024",
+        "081-b0026",
+        "081-b0027",
+        "081-b0029",
+        "081-b0031",
+        "081-b0033",
+        "081-b0035",
+        "081-b0037",
+        "081-b0039",
+        "081-b0041",
+        "081-b0043",
+        "081-b0045",
+        "081-b0047",
+        "081-b0049",
+        "081-b0050",
+        "081-b0052",
+        "081-b0054",
+        "081-b0055",
+        "081-b0057",
+        "081-b0058",
+        "081-b0060",
+        "081-b0062",
+        "081-b0064",
+        "081-b0066",
+        "081-b0067",
+        "081-b0069",
+        "081-b0070",
+        "081-b0072"
+      ],
+      "unexpectedMarkerReadings": [],
+      "passedNoMarkupReading": true
+    }
+  },
+  "gates": {
+    "dialogueApproved": false,
+    "narrationTechnicalPassed": false,
+    "formalSceneCompositionAllowed": false,
+    "sceneApproved": false
+  },
+  "blockers": [
+    "旁白仍有未完成或过期的技术检查。",
+    "还有 50 个当前对白单元未批准。"
+  ]
+}

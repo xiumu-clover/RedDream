@@ -795,22 +795,39 @@
       "speakerRef": "kui-guan",
       "emotion": {
         "family": "sadness",
-        "variant": "tearful-explanation",
+        "variant": "tearful-grievance",
         "intensity": 2
       },
       "pace": "slow",
       "pitch": "medium",
-      "energy": "heavy",
+      "energy": "medium",
       "timbre": [
         "soft",
         "breathy"
       ],
       "modifiers": [
-        "crying"
+        "crying",
+        "choked"
       ],
+      "delivery": {
+        "forcedUnits": [
+          {
+            "text": "龄官在城外租了房子住，蔷大爷常去看他。",
+            "speed": 0.9,
+            "continuous": true,
+            "instruction": "带着泣声交代龄官近况，话要说清，不演成激烈控诉"
+          },
+          {
+            "text": "我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+            "speed": 0.88,
+            "continuous": true,
+            "instruction": "委屈加深，干娘逼婚处略哽咽，逃出来了低落收尾"
+          }
+        ]
+      },
       "reviewStatus": "ai-reviewed",
       "confidence": 0.95,
-      "note": "葵官；泣中平静交代龄官、众人和水月庵的处境，重点是委屈而非激烈控诉。"
+      "note": "葵官；哭着说明龄官及众人在水月庵的遭遇，委屈、哽咽，但仍努力把事情交代清楚。"
     },
     "081-b0037": {
       "textHash": "8dddfb9f2dc508139e9b421e95e101e7d72664a54831c9b26a54eac612d8e029",
@@ -931,6 +948,16 @@
         "sharp"
       ],
       "modifiers": [],
+      "delivery": {
+        "forcedUnits": [
+          {
+            "text": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+            "speed": 1.06,
+            "continuous": true,
+            "instruction": "整句连贯反击；造污寻趁是一个四字词，四字紧密连读，词内不得拆停"
+          }
+        ]
+      },
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
       "note": "袭人；以规矩和太太信重自辩，忍怒反击；“造污寻趁”视作一个四字词，词内连读不拆停。"
@@ -1238,9 +1265,25 @@
         "soft"
       ],
       "modifiers": [],
+      "delivery": {
+        "forcedUnits": [
+          {
+            "text": "得知了智能儿和惜春常有往来后，",
+            "speed": 0.92,
+            "continuous": true,
+            "instruction": "智能儿与惜春是两个并列人名；和字承接惜春，不在智能儿和之后错误断开"
+          },
+          {
+            "text": "便谎称簪环钗契落在了园内，",
+            "speed": 0.92,
+            "continuous": true,
+            "instruction": "谎称后轻收；簪环钗契四字作为完整名物词组连读，再自然接落在园内"
+          }
+        ]
+      },
       "reviewStatus": "ai-reviewed",
       "confidence": 0.95,
-      "note": "旁白；解释三人借智能儿入园的缘由，按因果层次平稳铺陈；“智能儿和惜春”作一组，“簪环钗契”作一词，组内连读。"
+      "note": "旁白；按因果层次解释三人入园经过。“智能儿”和“惜春”是并列人物名，“和”须自然承接惜春；“簪环钗契”作完整词组。"
     },
     "081-b0058": {
       "textHash": "150fb8cae43a101d66151dc08a8b7d0bd0b6690fa92d89bde5a0d7a9113a491c",
@@ -1352,20 +1395,42 @@
       "speakerRef": "jia-baoyu",
       "emotion": {
         "family": "mixed",
-        "variant": "weary-decision",
-        "intensity": 2
+        "variant": "wounded-dismissal",
+        "intensity": 3
       },
       "pace": "medium",
       "pitch": "low",
       "energy": "heavy",
       "timbre": [
         "firm",
-        "hoarse"
+        "hoarse",
+        "breathy"
       ],
       "modifiers": [],
+      "delivery": {
+        "forcedUnits": [
+          {
+            "text": "罢了！",
+            "speed": 0.9,
+            "instruction": "受伤后猛然截断争执，短促沉重，不作愤怒吼叫"
+          },
+          {
+            "text": "这园里一个不留，都走罢！",
+            "speed": 1,
+            "continuous": true,
+            "instruction": "情绪骤然决绝，力度抬起但声音仍压着痛意"
+          },
+          {
+            "text": "不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+            "speed": 0.88,
+            "continuous": true,
+            "instruction": "点到人名时自然停连，越说越疲惫，末句低沉落定且不可回转"
+          }
+        ]
+      },
       "reviewStatus": "ai-reviewed",
       "confidence": 0.99,
-      "note": "贾宝玉；受疑与自责后作出放尽丫鬟的决定，不是怒吼，而是疲惫、沉痛且不可回转。"
+      "note": "贾宝玉；受背叛感、自责和绝望推动，骤然决定放尽屋中众人。开头短促决绝，随后疲惫沉落，不是对众人发怒训斥。"
     },
     "081-b0064": {
       "textHash": "22f9c00835623f77044dadd9f5b76a0c2e930ddb94df6f42bc5a6c70437d2492",
@@ -1454,23 +1519,51 @@
       "contextHash": "8c9b15313984aa7d5a2342549004a21c722d12a5de1b376db6b8270c775e17be",
       "speakerRef": "jia-baoyu",
       "emotion": {
-        "family": "sadness",
-        "variant": "betrayed-sorrow",
+        "family": "mixed",
+        "variant": "restrained-anger-to-grief",
         "intensity": 3
       },
       "pace": "slow",
-      "pitch": "medium",
+      "pitch": "low",
       "energy": "heavy",
       "timbre": [
         "breathy",
-        "soft"
+        "firm"
       ],
       "modifiers": [
-        "crying"
+        "choked"
       ],
+      "delivery": {
+        "forcedUnits": [
+          {
+            "text": "我一生最恨背地道人长短。",
+            "speed": 0.9,
+            "continuous": true,
+            "instruction": "我一生最恨后略收，背地单独成意群，道人长短四字连读；克制愤懑，不喊"
+          },
+          {
+            "text": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+            "speed": 0.86,
+            "continuous": true,
+            "instruction": "由愤懑转为痛惜，晴雯处带追忆，咒他死低沉落下"
+          },
+          {
+            "text": "芳官、四儿，也是如此。",
+            "speed": 0.86,
+            "continuous": true,
+            "instruction": "低声补叙，短暂停顿中带无力感"
+          },
+          {
+            "text": "我如今又该信谁？竟没一个靠得住的了。",
+            "speed": 0.84,
+            "continuous": true,
+            "instruction": "自问时哽住，末句是失望和孤立感，不提前演成放声哭泣"
+          }
+        ]
+      },
       "reviewStatus": "ai-reviewed",
       "confidence": 0.98,
-      "note": "贾宝玉；想到晴雯等人的遭际和无人可托，悲凉自问；“背地”轻收，“道人长短”连读成意群。"
+      "note": "贾宝玉；先克制指斥背后道人长短，继而想到晴雯、芳官和四儿，由愤懑转入悲凉与无人可信的失落；正文随后才落泪，本块只到哽咽。"
     },
     "081-b0069": {
       "textHash": "1b9b8a6f6413aaeac97ed947bb4ed9bc23e7feb1dbb85975547c92e02df4f861",
@@ -5167,5 +5260,5 @@
       "note": "旁白；压低声线收束。"
     }
   },
-  "annotationSetHash": "572dc3ac2344a1d1f49de8029b125ac6add6c72a4885353eb91c45182b8b337d"
+  "annotationSetHash": "d7b46cd85ad1c5c4b7e476c7dbda1408d98f4675f39ef91c3a1a9f9ef5e4a248"
 }

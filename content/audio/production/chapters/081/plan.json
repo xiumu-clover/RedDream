@@ -1,0 +1,3958 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "scene": "xiren-three-opera",
+  "source": {
+    "path": "content/chapters/guiyou/081-惜昵近公子做良媒 讳笞罚丫鬟结恶党.md",
+    "fileHash": "dfb633cd7a811d8372579205d3a2d7be17939eef99f461cee95bf16b909a346f"
+  },
+  "annotationSetHash": "d7b46cd85ad1c5c4b7e476c7dbda1408d98f4675f39ef91c3a1a9f9ef5e4a248",
+  "narration": {
+    "total": 29,
+    "rendered": 28,
+    "autoPassed": 28,
+    "allAutoPassed": false,
+    "machineCheck": {
+      "count": 29,
+      "blockIds": [
+        "081-b0022",
+        "081-b0024",
+        "081-b0026",
+        "081-b0027",
+        "081-b0029",
+        "081-b0031",
+        "081-b0033",
+        "081-b0035",
+        "081-b0037",
+        "081-b0039",
+        "081-b0041",
+        "081-b0043",
+        "081-b0045",
+        "081-b0047",
+        "081-b0049",
+        "081-b0050",
+        "081-b0052",
+        "081-b0054",
+        "081-b0055",
+        "081-b0057",
+        "081-b0058",
+        "081-b0060",
+        "081-b0062",
+        "081-b0064",
+        "081-b0066",
+        "081-b0067",
+        "081-b0069",
+        "081-b0070",
+        "081-b0072"
+      ],
+      "unexpectedMarkerReadings": [],
+      "passedNoMarkupReading": true
+    }
+  },
+  "targets": [
+    {
+      "targetId": "dialogue:081-b0023:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0023",
+      "unitIndex": 0,
+      "blockText": "这是谁在我院里吵闹？莫不是李嬷嬷又来排揎丫头不成？",
+      "unitText": "这是谁在我院里吵闹？莫不是李嬷嬷又来排揎丫头不成？",
+      "context": {
+        "previous": {
+          "blockId": "081-b0022",
+          "text": "且说宝玉独自闷闷回怡红院来。将至门口，只见院门大开，里面一片吵嚷之声。宝玉心下纳闷，暗想："
+        },
+        "next": {
+          "blockId": "081-b0024",
+          "text": "遂轻放脚步，闪进门内一瞧，却是葵官、荳官、艾官三个，只见葵官揪住袭人衣襟，荳官拽着头发，艾官指着袭人骂不绝口。宝玉心下诧异："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "fear",
+          "variant": "quiet-suspicion",
+          "intensity": 1
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "breathy"
+        ],
+        "modifiers": [
+          "whispering"
+        ],
+        "pronunciations": [
+          {
+            "text": "排揎",
+            "pinyin": "pái xuān",
+            "replacement": "排宣"
+          }
+        ],
+        "note": "贾宝玉；暗自猜疑院中喧闹，按内心低声处理；“排揎”按 pái xuān 连读。"
+      },
+      "annotationHash": "6e8f35f0b60ade081bdd18518d630a73a6f49ac6e4c012d88fd1217b3998a707",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/51dbf073606e164e21c65d706be000c8b9c568818686a83d8e39746cfb22f486.wav",
+        "renderHash": "51dbf073606e164e21c65d706be000c8b9c568818686a83d8e39746cfb22f486",
+        "sourceRenderHash": "4cff0c00b9554c5304913225244a2d28a5438fa979ab29f2d842cd0a6e1f15fb",
+        "fileHash": "b7ae202281b37694067faa7e17537d3f63db8f469cf10d18154e7ff430382f15",
+        "durationSeconds": 6.196,
+        "levels": {
+          "durationSeconds": 6.196,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.387,
+          "activeSampleRatio": 0.5716
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.956522,
+        "lengthRatio": 1,
+        "transcript": "这是谁在我院里吵闹? 莫不是李嬷嬷又来排宣丫头不成?",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "7fadade6e7ddfb47d79d43803a55da5d85824e58b6d6db7922f24f76015caad9"
+    },
+    {
+      "targetId": "dialogue:081-b0025:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0025",
+      "unitIndex": 0,
+      "blockText": "中秋后太太已吩咐芳官等十二个一概不许留园，皆令各人干娘领出聘嫁，怎么今日又返来和袭人撕闹？",
+      "unitText": "中秋后太太已吩咐芳官等十二个一概不许留园，皆令各人干娘领出聘嫁，怎么今日又返来和袭人撕闹？",
+      "context": {
+        "previous": {
+          "blockId": "081-b0024",
+          "text": "遂轻放脚步，闪进门内一瞧，却是葵官、荳官、艾官三个，只见葵官揪住袭人衣襟，荳官拽着头发，艾官指着袭人骂不绝口。宝玉心下诧异："
+        },
+        "next": {
+          "blockId": "081-b0026",
+          "text": "忙快步进院劝架。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "calm",
+          "variant": "puzzled-question",
+          "intensity": 1
+        },
+        "pace": "medium",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "clear"
+        ],
+        "modifiers": [],
+        "note": "贾宝玉；宝玉不解三人为何返园，属于疑惑的自问。"
+      },
+      "annotationHash": "6210266692ac8e3433600f9d766bfa1cb0ab73e4c4ca613930b9e7cb45b2aabe",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/2792052081a56d78f12ad9cf1e5af56994a3b06c6e3a29799a7aa436007f299f.wav",
+        "renderHash": "2792052081a56d78f12ad9cf1e5af56994a3b06c6e3a29799a7aa436007f299f",
+        "sourceRenderHash": "ba6fba0df05514b243ce032ce166fe3ee5146c769d04636f53d1ec8c5d42acea",
+        "fileHash": "d44fa363f405711f74438f0ba22e6c6e911a8ac873eb42fc0739ad6c252df001",
+        "durationSeconds": 9.719,
+        "levels": {
+          "durationSeconds": 9.719,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.035,
+          "activeSampleRatio": 0.5968
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.785714,
+        "lengthRatio": 1,
+        "transcript": "中秋后,太太已吩咐方官等十二个,一概不许流言,接令个人干娘领出聘价。怎么今日又反来和喜人私闹?",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "e9d94f7d156c18172c12f423ec8aea1f2f385eb0e782a9d7fee40ba85ffb67a7"
+    },
+    {
+      "targetId": "dialogue:081-b0028:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0028",
+      "unitIndex": 0,
+      "blockText": "好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "unitText": "好你个西洋花点子哈巴狗儿！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0027",
+          "text": "只听艾官骂道："
+        },
+        "next": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "scathing-rage",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "好你个西洋花点子哈巴狗儿！",
+              "speed": 1.16,
+              "continuous": true,
+              "instruction": "急促、连贯地骂完，中间不断，带气势但不失控尖叫"
+            },
+            {
+              "text": "不枉李奶奶说你妆狐媚子哄人，",
+              "speed": 1.1,
+              "instruction": "在逗号处收住，不回卷、不重复末尾词语"
+            },
+            {
+              "text": "果然是个刁滑狐狸！",
+              "speed": 1.1,
+              "instruction": "承接前句继续斥骂，起字清楚，不重复前句末尾"
+            }
+          ]
+        },
+        "note": "艾官；当面辱骂并揭短，尖利逼迫、怒火外露；开头‘好你个西洋花点子哈巴狗儿’独立成一个合成单元，急促连贯、词内不停；后句在‘哄人，果然’处分开，避免模型回卷重复。"
+      },
+      "annotationHash": "35f6f2c2cd80c91f1b8cdaba502358357d56338afb537efad94eac9e9ba58c40",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/e1748ba24f4c269c210186330e786fecde169904b8f7a7250d32970489bf1905.wav",
+        "renderHash": "e1748ba24f4c269c210186330e786fecde169904b8f7a7250d32970489bf1905",
+        "sourceRenderHash": "c41044cdaa67b1443ba63eb3700d5b4c6e321cf203786618a98dc0300f5bca81",
+        "fileHash": "266aec38b0102363f319ec9b947ad46f2f04c1c86669e0f710660924ef9d8ab6",
+        "durationSeconds": 2.587,
+        "levels": {
+          "durationSeconds": 2.587,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.924,
+          "activeSampleRatio": 0.6788
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.75,
+        "lengthRatio": 1,
+        "transcript": "侯你个西洋花点子,怕把狗儿。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "2a75394c6e9cd624d7eb13ae7adf31b6898433d79c126c6bcb8ac7bb560eef85"
+    },
+    {
+      "targetId": "dialogue:081-b0028:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0028",
+      "unitIndex": 1,
+      "blockText": "好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "unitText": "不枉李奶奶说你妆狐媚子哄人，",
+      "context": {
+        "previous": {
+          "blockId": "081-b0027",
+          "text": "只听艾官骂道："
+        },
+        "next": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "scathing-rage",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "好你个西洋花点子哈巴狗儿！",
+              "speed": 1.16,
+              "continuous": true,
+              "instruction": "急促、连贯地骂完，中间不断，带气势但不失控尖叫"
+            },
+            {
+              "text": "不枉李奶奶说你妆狐媚子哄人，",
+              "speed": 1.1,
+              "instruction": "在逗号处收住，不回卷、不重复末尾词语"
+            },
+            {
+              "text": "果然是个刁滑狐狸！",
+              "speed": 1.1,
+              "instruction": "承接前句继续斥骂，起字清楚，不重复前句末尾"
+            }
+          ]
+        },
+        "note": "艾官；当面辱骂并揭短，尖利逼迫、怒火外露；开头‘好你个西洋花点子哈巴狗儿’独立成一个合成单元，急促连贯、词内不停；后句在‘哄人，果然’处分开，避免模型回卷重复。"
+      },
+      "annotationHash": "35f6f2c2cd80c91f1b8cdaba502358357d56338afb537efad94eac9e9ba58c40",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/a805bb457b58716a3aeb559806c1af998110c3c0c0083c21a405933c73e696f6.wav",
+        "renderHash": "a805bb457b58716a3aeb559806c1af998110c3c0c0083c21a405933c73e696f6",
+        "sourceRenderHash": "eb018759ad5d71ca412a66be8df4cf513fff2b21b9c131ee52c8d3f452dfedc4",
+        "fileHash": "65363366958cf5fc3a5c345b0db3873f6ded65c0ba67906c54333b22c9286719",
+        "durationSeconds": 3.063,
+        "levels": {
+          "durationSeconds": 3.063,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.138,
+          "activeSampleRatio": 0.6645
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.461538,
+        "lengthRatio": 1,
+        "transcript": "布尔里乃南说你 庄狐妹子 哄人",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "c608a421616d58b6c9ff448d8f8f490da9009f760338da4386b81ccfe0343b64"
+    },
+    {
+      "targetId": "dialogue:081-b0028:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0028",
+      "unitIndex": 2,
+      "blockText": "好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "unitText": "果然是个刁滑狐狸！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0027",
+          "text": "只听艾官骂道："
+        },
+        "next": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "scathing-rage",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "好你个西洋花点子哈巴狗儿！",
+              "speed": 1.16,
+              "continuous": true,
+              "instruction": "急促、连贯地骂完，中间不断，带气势但不失控尖叫"
+            },
+            {
+              "text": "不枉李奶奶说你妆狐媚子哄人，",
+              "speed": 1.1,
+              "instruction": "在逗号处收住，不回卷、不重复末尾词语"
+            },
+            {
+              "text": "果然是个刁滑狐狸！",
+              "speed": 1.1,
+              "instruction": "承接前句继续斥骂，起字清楚，不重复前句末尾"
+            }
+          ]
+        },
+        "note": "艾官；当面辱骂并揭短，尖利逼迫、怒火外露；开头‘好你个西洋花点子哈巴狗儿’独立成一个合成单元，急促连贯、词内不停；后句在‘哄人，果然’处分开，避免模型回卷重复。"
+      },
+      "annotationHash": "35f6f2c2cd80c91f1b8cdaba502358357d56338afb537efad94eac9e9ba58c40",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/5ea45628c658d9f36145255f74e4e3a5a256b21a016d9db19344812438deac64.wav",
+        "renderHash": "5ea45628c658d9f36145255f74e4e3a5a256b21a016d9db19344812438deac64",
+        "sourceRenderHash": "fa2aafe18d9b97cd180a9c051adeef2bde424366aa57ea58877e3b9947a9dd7e",
+        "fileHash": "e0e1349dd494c6c5786bcfe8c3f6a7c34a1feeff0d8d38de72bb49dd6971e731",
+        "durationSeconds": 2.4,
+        "levels": {
+          "durationSeconds": 2.4,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.577,
+          "activeSampleRatio": 0.4997
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.75,
+        "lengthRatio": 1,
+        "transcript": "果然是个雕华狐狸。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "27451cc4a2fa9443e4da1055dfeeb4f044940e9858567855e399f88a7992657a"
+    },
+    {
+      "targetId": "dialogue:081-b0028:u04",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0028",
+      "unitIndex": 3,
+      "blockText": "好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "unitText": "别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0027",
+          "text": "只听艾官骂道："
+        },
+        "next": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "scathing-rage",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "好你个西洋花点子哈巴狗儿！",
+              "speed": 1.16,
+              "continuous": true,
+              "instruction": "急促、连贯地骂完，中间不断，带气势但不失控尖叫"
+            },
+            {
+              "text": "不枉李奶奶说你妆狐媚子哄人，",
+              "speed": 1.1,
+              "instruction": "在逗号处收住，不回卷、不重复末尾词语"
+            },
+            {
+              "text": "果然是个刁滑狐狸！",
+              "speed": 1.1,
+              "instruction": "承接前句继续斥骂，起字清楚，不重复前句末尾"
+            }
+          ]
+        },
+        "note": "艾官；当面辱骂并揭短，尖利逼迫、怒火外露；开头‘好你个西洋花点子哈巴狗儿’独立成一个合成单元，急促连贯、词内不停；后句在‘哄人，果然’处分开，避免模型回卷重复。"
+      },
+      "annotationHash": "35f6f2c2cd80c91f1b8cdaba502358357d56338afb537efad94eac9e9ba58c40",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/080b33a62253b95aa6378c76eaf3290be719805ac8dc75d766e4cf77e4f55add.wav",
+        "renderHash": "080b33a62253b95aa6378c76eaf3290be719805ac8dc75d766e4cf77e4f55add",
+        "sourceRenderHash": "0fa8805094cf3ba6f8b4d3f8d421ba7d6b0179f76b365dafd22fdef06382d07c",
+        "fileHash": "ace29906eb4892d294e8af747ba4ea5ebedc66b0ee3e4a27933c6df078a0a230",
+        "durationSeconds": 5.798,
+        "levels": {
+          "durationSeconds": 5.798,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.929,
+          "activeSampleRatio": 0.6914
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.875,
+        "lengthRatio": 1,
+        "transcript": "别打亮人人不知道呢!你和宝儿爷偷偷摸摸那点子事,方官都瞧见过,看你怎耐!",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "53c93e402cd8e918bd2ce41e47049af7c0c49993f5cb39ac97636299ba362eb5"
+    },
+    {
+      "targetId": "dialogue:081-b0028:u05",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0028",
+      "unitIndex": 4,
+      "blockText": "好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！别打量人人不知道呢，你和宝二爷偷偷摸摸那点子事芳官都瞧见过，看你怎赖！横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "unitText": "横竖我们是放出去的人了，不怕奶奶太太们再撵，今日便要闹到大家面前，把你这狐狸精的皮给揭了！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0027",
+          "text": "只听艾官骂道："
+        },
+        "next": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "scathing-rage",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "好你个西洋花点子哈巴狗儿！",
+              "speed": 1.16,
+              "continuous": true,
+              "instruction": "急促、连贯地骂完，中间不断，带气势但不失控尖叫"
+            },
+            {
+              "text": "不枉李奶奶说你妆狐媚子哄人，",
+              "speed": 1.1,
+              "instruction": "在逗号处收住，不回卷、不重复末尾词语"
+            },
+            {
+              "text": "果然是个刁滑狐狸！",
+              "speed": 1.1,
+              "instruction": "承接前句继续斥骂，起字清楚，不重复前句末尾"
+            }
+          ]
+        },
+        "note": "艾官；当面辱骂并揭短，尖利逼迫、怒火外露；开头‘好你个西洋花点子哈巴狗儿’独立成一个合成单元，急促连贯、词内不停；后句在‘哄人，果然’处分开，避免模型回卷重复。"
+      },
+      "annotationHash": "35f6f2c2cd80c91f1b8cdaba502358357d56338afb537efad94eac9e9ba58c40",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/b10b9fac37c496179e1ac6578fbb311207e76ecc85c590046e0d8336518aea26.wav",
+        "renderHash": "b10b9fac37c496179e1ac6578fbb311207e76ecc85c590046e0d8336518aea26",
+        "sourceRenderHash": "4d98559d17abb0caf7a6a556926af06fdc670b319e33b29975d8831cbba8c805",
+        "fileHash": "e79228dad43eb4244ac1a72e7273a2648ac2a845a442bf543e0fa6fd30f3d256",
+        "durationSeconds": 7.55,
+        "levels": {
+          "durationSeconds": 7.55,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.2,
+          "activeSampleRatio": 0.7053
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.864198,
+        "lengthRatio": 0.97561,
+        "transcript": "恒恕我们是放出去的人了,不怕奶奶太太们再黏。今日,被闹到大家面前,把你这狐狸精的皮给接了。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "1972bc473aa4dab3d59863dab3a5ad344905d39f10f1042812a6cc1294e94555"
+    },
+    {
+      "targetId": "dialogue:081-b0030:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0030",
+      "unitIndex": 0,
+      "blockText": "好姐姐们，且小声些！仔细叫外头听见。",
+      "unitText": "好姐姐们，且小声些！仔细叫外头听见。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0029",
+          "text": "宝玉闻言大惊，赶忙上前拉住他们三个劝道："
+        },
+        "next": {
+          "blockId": "081-b0031",
+          "text": "艾官三个回头见是宝玉，方松开手，转而扯住宝玉的袖子诉道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "fear",
+          "variant": "hushed-alarm",
+          "intensity": 1
+        },
+        "pace": "urgent",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "soft",
+          "firm"
+        ],
+        "modifiers": [
+          "whispering"
+        ],
+        "note": "贾宝玉；宝玉怕惊动外人，急切压低声音制止。"
+      },
+      "annotationHash": "c81a279acb4a5200bd958108f76a0f248fc91c151320b5dd7548eea5820b4293",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/c0f97224ddd939614c7a21fe74063acecbfba2e96ec765ea1ee7674ae3df12e4.wav",
+        "renderHash": "c0f97224ddd939614c7a21fe74063acecbfba2e96ec765ea1ee7674ae3df12e4",
+        "sourceRenderHash": "b78f321804c63359dac97973c6ac55720f568b5a2e410d07cb4683bcba12f908",
+        "fileHash": "9baceff967bf68fcd0938b2d69e77059adb0e6b80ec059228b867c420351df18",
+        "durationSeconds": 4.64,
+        "levels": {
+          "durationSeconds": 4.64,
+          "rmsDbfs": -22.188,
+          "peakDbfs": -3,
+          "activeSampleRatio": 0.442
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.8,
+        "lengthRatio": 1,
+        "transcript": "好姐姐们,切小声写,仔细教外头听见。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "bd02935086099a8a5e33d8635739a2501e5f4062359bf67aee044f024723f018"
+    },
+    {
+      "targetId": "dialogue:081-b0032:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0032",
+      "unitIndex": 0,
+      "blockText": "宝二爷回来了！快为我们伸伸冤！我们平白无辜的被撵了出去，到那苦楚的去处，遭人欺辱，日日想念园子，以泪洗面，如今想再进来也不能够了。",
+      "unitText": "宝二爷回来了！快为我们伸伸冤！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0031",
+          "text": "艾官三个回头见是宝玉，方松开手，转而扯住宝玉的袖子诉道："
+        },
+        "next": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "sadness",
+          "variant": "tearful-appeal",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "三名女戏共同诉冤，无法从合说文本区分主声；暂以艾官卡承接，降低置信度。"
+      },
+      "annotationHash": "2276c28d8f0b4f19d91243ff6b7f1f72f5e4917413e7cca11a2e1fded0228162",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/6a9f4a3f7e6e175c609f5cc476ec2f37ec449e2ff07a916e778183b0e01f0940.wav",
+        "renderHash": "6a9f4a3f7e6e175c609f5cc476ec2f37ec449e2ff07a916e778183b0e01f0940",
+        "sourceRenderHash": "6abd19375bd11255a49d2d587eefc4d9c4819a364cf77de6ce751cb7bce1cae9",
+        "fileHash": "e60d7795d81ab21bba60d8575b19efb9075d18a5739421c577c122190cbafa11",
+        "durationSeconds": 2.8,
+        "levels": {
+          "durationSeconds": 2.8,
+          "rmsDbfs": -21,
+          "peakDbfs": -6.194,
+          "activeSampleRatio": 0.704
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.615385,
+        "lengthRatio": 1,
+        "transcript": "把阿爷回来了,快为我们先先约。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "3c4c6e1a3e803eccd8f711aa1e66d551039dace90a18366fe693db8a482ac430"
+    },
+    {
+      "targetId": "dialogue:081-b0032:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0032",
+      "unitIndex": 1,
+      "blockText": "宝二爷回来了！快为我们伸伸冤！我们平白无辜的被撵了出去，到那苦楚的去处，遭人欺辱，日日想念园子，以泪洗面，如今想再进来也不能够了。",
+      "unitText": "我们平白无辜的被撵了出去，到那苦楚的去处，遭人欺辱，日日想念园子，以泪洗面，",
+      "context": {
+        "previous": {
+          "blockId": "081-b0031",
+          "text": "艾官三个回头见是宝玉，方松开手，转而扯住宝玉的袖子诉道："
+        },
+        "next": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "sadness",
+          "variant": "tearful-appeal",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "三名女戏共同诉冤，无法从合说文本区分主声；暂以艾官卡承接，降低置信度。"
+      },
+      "annotationHash": "2276c28d8f0b4f19d91243ff6b7f1f72f5e4917413e7cca11a2e1fded0228162",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/4c27b1237bce8a293a05e5782c6ba1d03343f8c408661677274cdfd294064727.wav",
+        "renderHash": "4c27b1237bce8a293a05e5782c6ba1d03343f8c408661677274cdfd294064727",
+        "sourceRenderHash": "4a5b9c83584e38106a5966bf5a6c4b91aaec37845679dba8e3989de863782a20",
+        "fileHash": "10283859687e0e39f4dfc0f3d6a55ebbd595a140c2824ba9850426db5e8a03eb",
+        "durationSeconds": 8.17,
+        "levels": {
+          "durationSeconds": 8.17,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.233,
+          "activeSampleRatio": 0.6741
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.757576,
+        "lengthRatio": 1,
+        "transcript": "我们平白无辜地被捻了出去,到那哭处的去处,造人欺辱,玉玉想念原子,以泪洗面。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "4ab3c7fd11acfce3f7a119b7745e67be01bdc7f48af9c75e62cce16d3defe7e9"
+    },
+    {
+      "targetId": "dialogue:081-b0032:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0032",
+      "unitIndex": 2,
+      "blockText": "宝二爷回来了！快为我们伸伸冤！我们平白无辜的被撵了出去，到那苦楚的去处，遭人欺辱，日日想念园子，以泪洗面，如今想再进来也不能够了。",
+      "unitText": "如今想再进来也不能够了。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0031",
+          "text": "艾官三个回头见是宝玉，方松开手，转而扯住宝玉的袖子诉道："
+        },
+        "next": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "sadness",
+          "variant": "tearful-appeal",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "三名女戏共同诉冤，无法从合说文本区分主声；暂以艾官卡承接，降低置信度。"
+      },
+      "annotationHash": "2276c28d8f0b4f19d91243ff6b7f1f72f5e4917413e7cca11a2e1fded0228162",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/0ea718680279bcfe2fcd54629deeb1b6768a16b5c26818eec0e2f7ec4bfdca73.wav",
+        "renderHash": "0ea718680279bcfe2fcd54629deeb1b6768a16b5c26818eec0e2f7ec4bfdca73",
+        "sourceRenderHash": "eea8c59ad0f9b4060d0aa25546b0fbeabcc0d1ca1d91109223d5ff30f1e92d16",
+        "fileHash": "c2213ac2d349c643580d544268091731993d24cad01418735880ee83b9995689",
+        "durationSeconds": 3.125,
+        "levels": {
+          "durationSeconds": 3.125,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.236,
+          "activeSampleRatio": 0.6404
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.818182,
+        "lengthRatio": 1,
+        "transcript": "书记,想再进来也不能够了。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "2d6c0698ec4c38a0e2a711cd6e7c5e737fbd0100e72dc70a892201e646e1740f"
+    },
+    {
+      "targetId": "dialogue:081-b0034:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0034",
+      "unitIndex": 0,
+      "blockText": "我只道再见不着你们了！便为你们死了，也心甘情愿！我知道你们的干娘定是日日给你们气受，可太太不许我去你们那里探看，我也是无可奈何，他们如今且怎么样了？",
+      "unitText": "我只道再见不着你们了！便为你们死了，也心甘情愿！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        },
+        "next": {
+          "blockId": "081-b0035",
+          "text": "葵官泣道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "sadness",
+          "variant": "grieving-compassion",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "贾宝玉；宝玉为重逢和她们受苦动情，几近以死相许。"
+      },
+      "annotationHash": "23518b53e14b043c5dd537f4cacb68771d4087484c589c9a21526c6564b3ae77",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/774e5d3c0c2350b71fdfbdf3637bf650366589b89ec0e70f160522b0bc27c0d0.wav",
+        "renderHash": "774e5d3c0c2350b71fdfbdf3637bf650366589b89ec0e70f160522b0bc27c0d0",
+        "sourceRenderHash": "86b05a27818446ab2f9b95b0dce51ebd643ecb790ebca5e219671eeb7f217779",
+        "fileHash": "42b27ab428f66cceb1dd91421a72a8ace963da818fef3ee87f000b7ecff19160",
+        "durationSeconds": 5.543,
+        "levels": {
+          "durationSeconds": 5.543,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.001,
+          "activeSampleRatio": 0.5548
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.952381,
+        "lengthRatio": 1,
+        "transcript": "我只到再见不着你们了,便为你们死了,也心甘情愿。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "7cc928e13bafce238e108d99b0679436bb200a060f7e25fb5a0566cf07fc925e"
+    },
+    {
+      "targetId": "dialogue:081-b0034:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0034",
+      "unitIndex": 1,
+      "blockText": "我只道再见不着你们了！便为你们死了，也心甘情愿！我知道你们的干娘定是日日给你们气受，可太太不许我去你们那里探看，我也是无可奈何，他们如今且怎么样了？",
+      "unitText": "我知道你们的干娘定是日日给你们气受，可太太不许我去你们那里探看，我也是无可奈何，",
+      "context": {
+        "previous": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        },
+        "next": {
+          "blockId": "081-b0035",
+          "text": "葵官泣道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "sadness",
+          "variant": "grieving-compassion",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "贾宝玉；宝玉为重逢和她们受苦动情，几近以死相许。"
+      },
+      "annotationHash": "23518b53e14b043c5dd537f4cacb68771d4087484c589c9a21526c6564b3ae77",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/bf27f0a512ffec8e56ba550038126c627351607060acd424ae31475d8092aed5.wav",
+        "renderHash": "bf27f0a512ffec8e56ba550038126c627351607060acd424ae31475d8092aed5",
+        "sourceRenderHash": "bb12e766ab42433a21d34bc32eda615f81688ab3dcb50c4bdab7e0afc84c276b",
+        "fileHash": "e55f4406b9535389e9089b159cf04b965b778a08ce29a96ef91b1b47e3976eed",
+        "durationSeconds": 9.3,
+        "levels": {
+          "durationSeconds": 9.3,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.23,
+          "activeSampleRatio": 0.5975
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.945946,
+        "lengthRatio": 1,
+        "transcript": "我知道你们的干娘,定是日日给你们棄手。可太太不许我去你们那里探看,我也是无可奈何。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "e37e4b812f7b7a20148a89aeb87995a87a49c5061eaac096075168e2c6677f94"
+    },
+    {
+      "targetId": "dialogue:081-b0034:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0034",
+      "unitIndex": 2,
+      "blockText": "我只道再见不着你们了！便为你们死了，也心甘情愿！我知道你们的干娘定是日日给你们气受，可太太不许我去你们那里探看，我也是无可奈何，他们如今且怎么样了？",
+      "unitText": "他们如今且怎么样了？",
+      "context": {
+        "previous": {
+          "blockId": "081-b0033",
+          "text": "说完三个都哭了起来。宝玉不觉眼圈也红了，道："
+        },
+        "next": {
+          "blockId": "081-b0035",
+          "text": "葵官泣道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "sadness",
+          "variant": "grieving-compassion",
+          "intensity": 3
+        },
+        "pace": "broken",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "soft"
+        ],
+        "modifiers": [
+          "crying"
+        ],
+        "note": "贾宝玉；宝玉为重逢和她们受苦动情，几近以死相许。"
+      },
+      "annotationHash": "23518b53e14b043c5dd537f4cacb68771d4087484c589c9a21526c6564b3ae77",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/ef077073f14222cef89c60fd1ec8bee60e449eba0e760785a4dec141d6a315f5.wav",
+        "renderHash": "ef077073f14222cef89c60fd1ec8bee60e449eba0e760785a4dec141d6a315f5",
+        "sourceRenderHash": "5552b096886b8f6cb0e2912846551fc54ad0bafac7d8288e196404d6c9caf8dc",
+        "fileHash": "92fc7739823802d287d4be424874d190411ae6ec5f3d3fabc1db86faf00e82ff",
+        "durationSeconds": 3.26,
+        "levels": {
+          "durationSeconds": 3.26,
+          "rmsDbfs": -21.846,
+          "peakDbfs": -3,
+          "activeSampleRatio": 0.4608
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "exact",
+        "characterSimilarity": 1,
+        "lengthRatio": 1,
+        "transcript": "他们如今且怎么样了?",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "d040ea321725be1501f3f70edb377b01eb4b1cdc7bc45b5188547666683538f9"
+    },
+    {
+      "targetId": "dialogue:081-b0036:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0036",
+      "unitIndex": 0,
+      "blockText": "龄官在城外租了房子住，蔷大爷常去看他。我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+      "unitText": "龄官在城外租了房子住，蔷大爷常去看他。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0035",
+          "text": "葵官泣道："
+        },
+        "next": {
+          "blockId": "081-b0037",
+          "text": "宝玉落泪道："
+        }
+      },
+      "speakerRef": "kui-guan",
+      "annotationSnapshot": {
+        "speakerRef": "kui-guan",
+        "emotion": {
+          "family": "sadness",
+          "variant": "tearful-grievance",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "soft",
+          "breathy"
+        ],
+        "modifiers": [
+          "crying",
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "龄官在城外租了房子住，蔷大爷常去看他。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "带着泣声交代龄官近况，话要说清，不演成激烈控诉"
+            },
+            {
+              "text": "我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+              "speed": 0.88,
+              "continuous": true,
+              "instruction": "委屈加深，干娘逼婚处略哽咽，逃出来了低落收尾"
+            }
+          ]
+        },
+        "note": "葵官；哭着说明龄官及众人在水月庵的遭遇，委屈、哽咽，但仍努力把事情交代清楚。"
+      },
+      "annotationHash": "6cf84504a7785d573cdb79e00a3981a4b73b8ad3a9f3ac05a9aeeb07aa35a8ad",
+      "voiceCard": {
+        "id": "kui-guan",
+        "styleId": "proxy-default",
+        "label": "kui-guan",
+        "cachePath": "content/audio.cache/voice-cards/kui-guan/kui-guan-voice-card.wav",
+        "fileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "text": "姐姐慢些，我把前因后果仔细说给你听。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.842105,
+        "lengthRatio": 1,
+        "transcript": "凌官在城外租了房子住。强大爷常去看他。我们几个在水月安。干娘闭着梭眉,我们便逃出来了。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "048bba174257c0e2047639d298b2eccbf730aefa4cfd3d73f6717aa5201383e4"
+    },
+    {
+      "targetId": "dialogue:081-b0036:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0036",
+      "unitIndex": 1,
+      "blockText": "龄官在城外租了房子住，蔷大爷常去看他。我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+      "unitText": "我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0035",
+          "text": "葵官泣道："
+        },
+        "next": {
+          "blockId": "081-b0037",
+          "text": "宝玉落泪道："
+        }
+      },
+      "speakerRef": "kui-guan",
+      "annotationSnapshot": {
+        "speakerRef": "kui-guan",
+        "emotion": {
+          "family": "sadness",
+          "variant": "tearful-grievance",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "soft",
+          "breathy"
+        ],
+        "modifiers": [
+          "crying",
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "龄官在城外租了房子住，蔷大爷常去看他。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "带着泣声交代龄官近况，话要说清，不演成激烈控诉"
+            },
+            {
+              "text": "我们几个在水月庵，干娘逼着说媒，我们便逃出来了。",
+              "speed": 0.88,
+              "continuous": true,
+              "instruction": "委屈加深，干娘逼婚处略哽咽，逃出来了低落收尾"
+            }
+          ]
+        },
+        "note": "葵官；哭着说明龄官及众人在水月庵的遭遇，委屈、哽咽，但仍努力把事情交代清楚。"
+      },
+      "annotationHash": "6cf84504a7785d573cdb79e00a3981a4b73b8ad3a9f3ac05a9aeeb07aa35a8ad",
+      "voiceCard": {
+        "id": "kui-guan",
+        "styleId": "proxy-default",
+        "label": "kui-guan",
+        "cachePath": "content/audio.cache/voice-cards/kui-guan/kui-guan-voice-card.wav",
+        "fileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "text": "姐姐慢些，我把前因后果仔细说给你听。"
+      },
+      "audio": null,
+      "automaticCheck": null,
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "39f686dc5dfb0bb1c767dce38af42ae019f40d444ead9dd60c8dc6339d2a6f0d"
+    },
+    {
+      "targetId": "dialogue:081-b0038:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0038",
+      "unitIndex": 0,
+      "blockText": "都是我的不是，连累你们遭了殃。太太还在那边，一会子若是听见我们吵嚷就坏了，有什么话咱且轻轻说。",
+      "unitText": "都是我的不是，连累你们遭了殃。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0037",
+          "text": "宝玉落泪道："
+        },
+        "next": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "sadness",
+          "variant": "guilty-consolation",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "soft",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "贾宝玉；宝玉自责连累众人，同时谨慎压低声量。"
+      },
+      "annotationHash": "1fcbbfbaee3196d308c181183f2234865adfd82838f2bb0bee28758d7027c2bc",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/eec56ad0cae8d01e05cdcc6c472b3f59e923191cbf482c9ce0307e2fa9fcd7af.wav",
+        "renderHash": "eec56ad0cae8d01e05cdcc6c472b3f59e923191cbf482c9ce0307e2fa9fcd7af",
+        "sourceRenderHash": "1f44232f4eb52cb6eddc7c32c9dfb0e910e54544c6aadda751137e58f70011f1",
+        "fileHash": "042cec85e10138826b795606b34788877ab3fb346d52306dbbc32d610e0ad431",
+        "durationSeconds": 4.12,
+        "levels": {
+          "durationSeconds": 4.12,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.103,
+          "activeSampleRatio": 0.4512
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.923077,
+        "lengthRatio": 1,
+        "transcript": "都是我的不是,连累你们遭了扬。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "44fab1ac780867644322c10e23506f7f04db7b2c279644877b98b683077da21b"
+    },
+    {
+      "targetId": "dialogue:081-b0038:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0038",
+      "unitIndex": 1,
+      "blockText": "都是我的不是，连累你们遭了殃。太太还在那边，一会子若是听见我们吵嚷就坏了，有什么话咱且轻轻说。",
+      "unitText": "太太还在那边，一会子若是听见我们吵嚷就坏了，有什么话咱且轻轻说。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0037",
+          "text": "宝玉落泪道："
+        },
+        "next": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "sadness",
+          "variant": "guilty-consolation",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "soft",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "贾宝玉；宝玉自责连累众人，同时谨慎压低声量。"
+      },
+      "annotationHash": "1fcbbfbaee3196d308c181183f2234865adfd82838f2bb0bee28758d7027c2bc",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/7ec27c75c96149c3a82d3cd60bf7aaef6111e4f0c77526a0e47b6ad5ed0b283c.wav",
+        "renderHash": "7ec27c75c96149c3a82d3cd60bf7aaef6111e4f0c77526a0e47b6ad5ed0b283c",
+        "sourceRenderHash": "b040330bb246acde2d724a49c3c2479126ec0f2c4aa512a3626bd63ff0d602f3",
+        "fileHash": "10314fa0e9b40c48aebc5ed9587c4d1c1ca890218cd7e45e734ef95d339ba071",
+        "durationSeconds": 7.739,
+        "levels": {
+          "durationSeconds": 7.739,
+          "rmsDbfs": -21.48,
+          "peakDbfs": -3,
+          "activeSampleRatio": 0.5333
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.862069,
+        "lengthRatio": 1,
+        "transcript": "太太还在那边，一会儿若是听见我们吵扰,就坏了。有什么话,咱且亲亲说。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "60045f3f1c3b42789f77117292029e7e15c9d241befff5955ad9351d1a8507a4"
+    },
+    {
+      "targetId": "dialogue:081-b0040:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0040",
+      "unitIndex": 0,
+      "blockText": "二爷，我们就是来讨个公道！我们这些清清白白的女孩子，被当作狐媚子撵出去，死的死，散的散！真正狐狸精反倒在这安稳自在。都是这浪蹄子两面三刀嚼舌根，为着每月多那二两银子，背地里给太太递话，讨太太欢心，犯舌乱咬才害的我们离了这园子！",
+      "unitText": "二爷，我们就是来讨个公道！我们这些清清白白的女孩子，被当作狐媚子撵出去，死的死，散的散！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        },
+        "next": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "bitter-accusation",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "荳官；荳官为被逐者讨公道，夹杂对袭人的尖锐控诉。"
+      },
+      "annotationHash": "bfe59a62b9bd9c1f23c9adfc41cfc437643b72f1f069f4b9c2d7b25dc05fe099",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/76801b4c4c91f5f2566691351162f81fda79be9091d6b0dd0ae3947997fcae8a.wav",
+        "renderHash": "76801b4c4c91f5f2566691351162f81fda79be9091d6b0dd0ae3947997fcae8a",
+        "sourceRenderHash": "fbf9d132a9611ff705ef222bf105d5fad87caff7925cd44428fd8fe98c4710f0",
+        "fileHash": "507c699814d379836777fe4db5a1da444f34ba511b071575d0e69dba569cb28a",
+        "durationSeconds": 8.46,
+        "levels": {
+          "durationSeconds": 8.46,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.539,
+          "activeSampleRatio": 0.5824
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.921053,
+        "lengthRatio": 1,
+        "transcript": "二爷,我们就是来讨个公道。我们这些亲亲白白的女孩子,被当作狐妹子撵出去,死的死,散的散。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "bb617e85612d7d5f978bf7f78da758101f202c10c2de75123b053dc69d1bc88f"
+    },
+    {
+      "targetId": "dialogue:081-b0040:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0040",
+      "unitIndex": 1,
+      "blockText": "二爷，我们就是来讨个公道！我们这些清清白白的女孩子，被当作狐媚子撵出去，死的死，散的散！真正狐狸精反倒在这安稳自在。都是这浪蹄子两面三刀嚼舌根，为着每月多那二两银子，背地里给太太递话，讨太太欢心，犯舌乱咬才害的我们离了这园子！",
+      "unitText": "真正狐狸精反倒在这安稳自在。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        },
+        "next": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "bitter-accusation",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "荳官；荳官为被逐者讨公道，夹杂对袭人的尖锐控诉。"
+      },
+      "annotationHash": "bfe59a62b9bd9c1f23c9adfc41cfc437643b72f1f069f4b9c2d7b25dc05fe099",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/e136f25048fd38dae35ce9f23e38ab207561d5994ac0f30dc255506b60b5bd2e.wav",
+        "renderHash": "e136f25048fd38dae35ce9f23e38ab207561d5994ac0f30dc255506b60b5bd2e",
+        "sourceRenderHash": "a9922a15bb4af28020d9f892db13b8e1a367304d895099f89200c9d642dd994b",
+        "fileHash": "df730776a0b7d0e8ee6a345d93370598b3a596e7f579a5ad624b2e2f30549d83",
+        "durationSeconds": 3.04,
+        "levels": {
+          "durationSeconds": 3.04,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.06,
+          "activeSampleRatio": 0.6111
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.769231,
+        "lengthRatio": 1,
+        "transcript": "真正狐狸经,反倒在这阿文自在。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "32165ac0bb9aacd451234faa205703ddc2b019457ef5727aff51ffaa012dde86"
+    },
+    {
+      "targetId": "dialogue:081-b0040:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0040",
+      "unitIndex": 2,
+      "blockText": "二爷，我们就是来讨个公道！我们这些清清白白的女孩子，被当作狐媚子撵出去，死的死，散的散！真正狐狸精反倒在这安稳自在。都是这浪蹄子两面三刀嚼舌根，为着每月多那二两银子，背地里给太太递话，讨太太欢心，犯舌乱咬才害的我们离了这园子！",
+      "unitText": "都是这浪蹄子两面三刀嚼舌根，为着每月多那二两银子，背地里给太太递话，讨太太欢心，",
+      "context": {
+        "previous": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        },
+        "next": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "bitter-accusation",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "荳官；荳官为被逐者讨公道，夹杂对袭人的尖锐控诉。"
+      },
+      "annotationHash": "bfe59a62b9bd9c1f23c9adfc41cfc437643b72f1f069f4b9c2d7b25dc05fe099",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/436e6bfac84f800f0f537232072caaa10ad2fe7deacdbe366474978af150195c.wav",
+        "renderHash": "436e6bfac84f800f0f537232072caaa10ad2fe7deacdbe366474978af150195c",
+        "sourceRenderHash": "2c35682957a22c260d8a0ad909f8b5c70f1239a5d75083da96c4b277d98281b2",
+        "fileHash": "5df9611505602c398389a4c3e35ee3cad6a554da7144abdc1ee0bb921c37658e",
+        "durationSeconds": 8.46,
+        "levels": {
+          "durationSeconds": 8.46,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.694,
+          "activeSampleRatio": 0.6285
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.805556,
+        "lengthRatio": 1,
+        "transcript": "都是这浪题子两面三刀胶舌根,为这每月多拿二两银子,被地里给太太地画,讨太太欢心。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "bc4c65edc16e6c1605e4ad8002e4068a80169c6195bf4227a2b0803e0455f6d9"
+    },
+    {
+      "targetId": "dialogue:081-b0040:u04",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0040",
+      "unitIndex": 3,
+      "blockText": "二爷，我们就是来讨个公道！我们这些清清白白的女孩子，被当作狐媚子撵出去，死的死，散的散！真正狐狸精反倒在这安稳自在。都是这浪蹄子两面三刀嚼舌根，为着每月多那二两银子，背地里给太太递话，讨太太欢心，犯舌乱咬才害的我们离了这园子！",
+      "unitText": "犯舌乱咬才害的我们离了这园子！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0039",
+          "text": "荳官道："
+        },
+        "next": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "bitter-accusation",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "荳官；荳官为被逐者讨公道，夹杂对袭人的尖锐控诉。"
+      },
+      "annotationHash": "bfe59a62b9bd9c1f23c9adfc41cfc437643b72f1f069f4b9c2d7b25dc05fe099",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/4e0e8682d99456c86ca8bc84c38b4e00c94454191b72ed6ca47275fe5f19fd7d.wav",
+        "renderHash": "4e0e8682d99456c86ca8bc84c38b4e00c94454191b72ed6ca47275fe5f19fd7d",
+        "sourceRenderHash": "64c3d91c6d25d81719d628869b70fecb1cae461effadac7a559db54da2aa232a",
+        "fileHash": "e9847913f84f5df08657f553f121bff9d6761472e2f01fb2e7bc338169833dc0",
+        "durationSeconds": 2.82,
+        "levels": {
+          "durationSeconds": 2.82,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.317,
+          "activeSampleRatio": 0.7093
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.857143,
+        "lengthRatio": 1,
+        "transcript": "犯舌乱咬才害得我们离了这原子。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "7f4a01766aab0ea96ca0459dd4c3c03bd4e243ccae86bcd765ad8929983324b5"
+    },
+    {
+      "targetId": "dialogue:081-b0042:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0042",
+      "unitIndex": 0,
+      "blockText": "我忍了大半日，你们这些不知好歹的小戏子！太太信重我，是因我素日行事稳重，不似你们成日家淘气生事。如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。你们自己心中没有半分规矩，惹得天愤人怨，被太太打发了，有不服且找太太去。",
+      "unitText": "我忍了大半日，你们这些不知好歹的小戏子！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        },
+        "next": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-indignation",
+          "intensity": 3
+        },
+        "pace": "fast",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "sharp"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+              "speed": 1.06,
+              "continuous": true,
+              "instruction": "整句连贯反击；造污寻趁是一个四字词，四字紧密连读，词内不得拆停"
+            }
+          ]
+        },
+        "note": "袭人；以规矩和太太信重自辩，忍怒反击；“造污寻趁”视作一个四字词，词内连读不拆停。"
+      },
+      "annotationHash": "85b9d2c60eddb5176e693865f5d0b1988cfc7d1b9eeab6a3fd34fea5f1424be3",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "exact",
+        "characterSimilarity": 1,
+        "lengthRatio": 1,
+        "transcript": "我忍了大半日,你们这些不知好歹的小戏子。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "76e1d5d22967e860bf1cd595d2c4731b7186574afba3381306c8406003970082"
+    },
+    {
+      "targetId": "dialogue:081-b0042:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0042",
+      "unitIndex": 1,
+      "blockText": "我忍了大半日，你们这些不知好歹的小戏子！太太信重我，是因我素日行事稳重，不似你们成日家淘气生事。如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。你们自己心中没有半分规矩，惹得天愤人怨，被太太打发了，有不服且找太太去。",
+      "unitText": "太太信重我，是因我素日行事稳重，不似你们成日家淘气生事。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        },
+        "next": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-indignation",
+          "intensity": 3
+        },
+        "pace": "fast",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "sharp"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+              "speed": 1.06,
+              "continuous": true,
+              "instruction": "整句连贯反击；造污寻趁是一个四字词，四字紧密连读，词内不得拆停"
+            }
+          ]
+        },
+        "note": "袭人；以规矩和太太信重自辩，忍怒反击；“造污寻趁”视作一个四字词，词内连读不拆停。"
+      },
+      "annotationHash": "85b9d2c60eddb5176e693865f5d0b1988cfc7d1b9eeab6a3fd34fea5f1424be3",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.92,
+        "lengthRatio": 1,
+        "transcript": "太太信中我﹐是因我素日行事稳重﹐不是你们成日家淘气生事。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "29775ce7ca728ee9a3e3389b199c8a7c4474723d99ab3bcfb3381fb8d5744d1f"
+    },
+    {
+      "targetId": "dialogue:081-b0042:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0042",
+      "unitIndex": 2,
+      "blockText": "我忍了大半日，你们这些不知好歹的小戏子！太太信重我，是因我素日行事稳重，不似你们成日家淘气生事。如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。你们自己心中没有半分规矩，惹得天愤人怨，被太太打发了，有不服且找太太去。",
+      "unitText": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        },
+        "next": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-indignation",
+          "intensity": 3
+        },
+        "pace": "fast",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "sharp"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+              "speed": 1.06,
+              "continuous": true,
+              "instruction": "整句连贯反击；造污寻趁是一个四字词，四字紧密连读，词内不得拆停"
+            }
+          ]
+        },
+        "note": "袭人；以规矩和太太信重自辩，忍怒反击；“造污寻趁”视作一个四字词，词内连读不拆停。"
+      },
+      "annotationHash": "85b9d2c60eddb5176e693865f5d0b1988cfc7d1b9eeab6a3fd34fea5f1424be3",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.545455,
+        "lengthRatio": 1,
+        "transcript": "如今竟敢私似投流,尽原子。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "d90fee094ee98a15d7c0638814d5ed2adf7cdc0b58a00ed1732b631c7c3eabc3"
+    },
+    {
+      "targetId": "dialogue:081-b0042:u04",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0042",
+      "unitIndex": 3,
+      "blockText": "我忍了大半日，你们这些不知好歹的小戏子！太太信重我，是因我素日行事稳重，不似你们成日家淘气生事。如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。你们自己心中没有半分规矩，惹得天愤人怨，被太太打发了，有不服且找太太去。",
+      "unitText": "你们自己心中没有半分规矩，惹得天愤人怨，被太太打发了，有不服且找太太去。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0041",
+          "text": "袭人听了，又气又急道："
+        },
+        "next": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-indignation",
+          "intensity": 3
+        },
+        "pace": "fast",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "sharp"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "如今竟敢私自偷溜进园子，拉云扒瞎、造污寻趁我来。",
+              "speed": 1.06,
+              "continuous": true,
+              "instruction": "整句连贯反击；造污寻趁是一个四字词，四字紧密连读，词内不得拆停"
+            }
+          ]
+        },
+        "note": "袭人；以规矩和太太信重自辩，忍怒反击；“造污寻趁”视作一个四字词，词内连读不拆停。"
+      },
+      "annotationHash": "85b9d2c60eddb5176e693865f5d0b1988cfc7d1b9eeab6a3fd34fea5f1424be3",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.6,
+        "lengthRatio": 1,
+        "transcript": "拉云八峡造屋,寻找我来。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "391f77b3c79a34e58817676d6d552f54405d9e0cf8ad4f16d111c57293977431"
+    },
+    {
+      "targetId": "dialogue:081-b0044:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0044",
+      "unitIndex": 0,
+      "blockText": "呸，你少拿太太来压我们！你瞒得过宝二爷，可瞒不过我们！你敢对着天地神佛起个誓，若你在太太跟前嚼舌根递过话，叫你口里生疔，喉咙长疮，死了投胎，下辈子托生变个哑巴畜生！",
+      "unitText": "呸，你少拿太太来压我们！你瞒得过宝二爷，可瞒不过我们！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        },
+        "next": {
+          "blockId": "081-b0045",
+          "text": "荳官拍手笑道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "oath-bound-fury",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官逼袭人起誓，咒骂强烈且步步紧逼。"
+      },
+      "annotationHash": "425993383a1d4645e617c220fc7c476275f0fda201d778a074a9c52ffedd9c23",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/999de745d665c078c47311a94645ade094887e843ef96f483880cd8c6b1ef07a.wav",
+        "renderHash": "999de745d665c078c47311a94645ade094887e843ef96f483880cd8c6b1ef07a",
+        "sourceRenderHash": "5ebd76b4afd8cdba24414561a3379c699a62ce7922ec6d2dc60438a64dd9533e",
+        "fileHash": "963abf39dd53ae85016e97f438b4c3a87bc1750c13401f77258db6203301e53d",
+        "durationSeconds": 4.644,
+        "levels": {
+          "durationSeconds": 4.644,
+          "rmsDbfs": -21,
+          "peakDbfs": -6.297,
+          "activeSampleRatio": 0.6617
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.913043,
+        "lengthRatio": 1,
+        "transcript": "佩,你少拿太太来压我们,你瞒得过宝儿爷可瞒不过我们。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "b108391d5e96a44a2b61de6eb049e4ea64f0a8c3734e78b3f5ade747a15a5c39"
+    },
+    {
+      "targetId": "dialogue:081-b0044:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0044",
+      "unitIndex": 1,
+      "blockText": "呸，你少拿太太来压我们！你瞒得过宝二爷，可瞒不过我们！你敢对着天地神佛起个誓，若你在太太跟前嚼舌根递过话，叫你口里生疔，喉咙长疮，死了投胎，下辈子托生变个哑巴畜生！",
+      "unitText": "你敢对着天地神佛起个誓，若你在太太跟前嚼舌根递过话，叫你口里生疔，喉咙长疮，死了投胎，",
+      "context": {
+        "previous": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        },
+        "next": {
+          "blockId": "081-b0045",
+          "text": "荳官拍手笑道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "oath-bound-fury",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官逼袭人起誓，咒骂强烈且步步紧逼。"
+      },
+      "annotationHash": "425993383a1d4645e617c220fc7c476275f0fda201d778a074a9c52ffedd9c23",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/1e4887298f1dba1335ddc52ac717a1b2689c5e6174712abfc4e4a68c493ce40d.wav",
+        "renderHash": "1e4887298f1dba1335ddc52ac717a1b2689c5e6174712abfc4e4a68c493ce40d",
+        "sourceRenderHash": "7e355993376213b4ab36ddff110995a08b49516a56308aa292d6099f78e6fa07",
+        "fileHash": "fe59bd828b26835c4ad09db5fa2543c1c37b184e036da8b74c1159ff663d39f7",
+        "durationSeconds": 7.421,
+        "levels": {
+          "durationSeconds": 7.421,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.665,
+          "activeSampleRatio": 0.6244
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.773333,
+        "lengthRatio": 0.973684,
+        "transcript": "你敢对着天地神佛起个誓?若你在太太跟前,脚舌根,帝国化,叫你口里生豪龙长创,死了头胎!",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "ceab6d77edfc2bcd981d9462aaaefdffcf1d909f34ddc9314ad6aaa3c6b32527"
+    },
+    {
+      "targetId": "dialogue:081-b0044:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0044",
+      "unitIndex": 2,
+      "blockText": "呸，你少拿太太来压我们！你瞒得过宝二爷，可瞒不过我们！你敢对着天地神佛起个誓，若你在太太跟前嚼舌根递过话，叫你口里生疔，喉咙长疮，死了投胎，下辈子托生变个哑巴畜生！",
+      "unitText": "下辈子托生变个哑巴畜生！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0043",
+          "text": "艾官啐道："
+        },
+        "next": {
+          "blockId": "081-b0045",
+          "text": "荳官拍手笑道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "oath-bound-fury",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官逼袭人起誓，咒骂强烈且步步紧逼。"
+      },
+      "annotationHash": "425993383a1d4645e617c220fc7c476275f0fda201d778a074a9c52ffedd9c23",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/9e60842c847bc6e3e931f132473e9b51e81eb78c70a0e8137119fe2adc79f8a6.wav",
+        "renderHash": "9e60842c847bc6e3e931f132473e9b51e81eb78c70a0e8137119fe2adc79f8a6",
+        "sourceRenderHash": "6d4119be77b7cb5583c9229140236226023a7e2aa0734a5445f8ebb7eb2e354c",
+        "fileHash": "b8c57ec34b1dc3ceb7f783cd6f1d86acffc2d96edba49cfb526992a22b5c8453",
+        "durationSeconds": 2.088,
+        "levels": {
+          "durationSeconds": 2.088,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.229,
+          "activeSampleRatio": 0.6438
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.818182,
+        "lengthRatio": 1,
+        "transcript": "下辈子脱声,变个哑巴畜生。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "f26e9b46c3871524d2c345008da39f8154632d21e5e836b4d793a67b2630dec9"
+    },
+    {
+      "targetId": "dialogue:081-b0046:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0046",
+      "unitIndex": 0,
+      "blockText": "正是！正是！你说呀！说得出口，我们掉头就走，再不来闹你！",
+      "unitText": "正是！正是！你说呀！说得出口，我们掉头就走，再不来闹你！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0045",
+          "text": "荳官拍手笑道："
+        },
+        "next": {
+          "blockId": "081-b0047",
+          "text": "袭人脸上红一阵白一阵，半晌方道："
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "taunting-challenge",
+          "intensity": 2
+        },
+        "pace": "fast",
+        "pitch": "high",
+        "energy": "medium",
+        "timbre": [
+          "sharp"
+        ],
+        "modifiers": [
+          "laughing"
+        ],
+        "note": "荳官；荳官拍手起哄，以挑衅逼袭人表态。"
+      },
+      "annotationHash": "b3765fae64668d8155a8b8f2e9f9d8326c3b036e8fc0854d9fe2f55c81950f9a",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/fa17e9562d16b9bb5f729ccbb266eeced3d5b4d8e6e5523a0c914b0f18965b85.wav",
+        "renderHash": "fa17e9562d16b9bb5f729ccbb266eeced3d5b4d8e6e5523a0c914b0f18965b85",
+        "sourceRenderHash": "88a8ad33cd0a3506197ae7b40fc0d3af84d7297e544b3c96ba074adc42a18504",
+        "fileHash": "fafbd6e7d71ec61e1166da61b377576d8b34dbab00607475ccbd74abde8ad97f",
+        "durationSeconds": 6.3,
+        "levels": {
+          "durationSeconds": 6.3,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.533,
+          "activeSampleRatio": 0.5427
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.909091,
+        "lengthRatio": 1,
+        "transcript": "正事﹐正事﹐你说呀﹐说得出口﹐我们掉头就走﹐再不来闹你。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "c2bea894bfb9e3b250c0b7a0e5d5df301a7b0ed360b9369a092f8c33eca9c101"
+    },
+    {
+      "targetId": "dialogue:081-b0048:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0048",
+      "unitIndex": 0,
+      "blockText": "我凭什么跟你们赌咒？你们也配！",
+      "unitText": "我凭什么跟你们赌咒？你们也配！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0047",
+          "text": "袭人脸上红一阵白一阵，半晌方道："
+        },
+        "next": {
+          "blockId": "081-b0049",
+          "text": "宝玉立在当地，先还只当是小丫头们怄气，及至听了艾官、荳官那几句赌咒的狠话，他本就疑心以前的私自顽话俱是袭人告诉的，今儿又见袭人目光躲闪、不敢接茬，心里忽然如被冰水浇透了一般，连带手脚都发凉了。"
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "sullen-defiance",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "袭人；袭人不肯赌咒，带着羞恼和强硬回避。"
+      },
+      "annotationHash": "aae58e29e9bd6a0ab6648bf7263aeefcc810edbe42bcf37388ed34819c5240db",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/f489705211194fd54df65ecc785b11a478487df9a752a834e46f1d9f0c63e016.wav",
+        "renderHash": "f489705211194fd54df65ecc785b11a478487df9a752a834e46f1d9f0c63e016",
+        "sourceRenderHash": "9e98c93f209b2086dfbba6abdf23acc632222e1fc667408a956dfd175e1899f5",
+        "fileHash": "deb40300d73b67dd90df3c2a5c27c0619abfe1fa526b91cca9d64b78a39a8c3b",
+        "durationSeconds": 2.385,
+        "levels": {
+          "durationSeconds": 2.385,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.074,
+          "activeSampleRatio": 0.7194
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.923077,
+        "lengthRatio": 1,
+        "transcript": "我凭什么跟你们读咒,你们也配。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "0d8e38c8ae39b85df046d02c0b623f1b8de1a215bbe4a933cba0d71063cd61e0"
+    },
+    {
+      "targetId": "dialogue:081-b0051:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0051",
+      "unitIndex": 0,
+      "blockText": "二爷你可听见了？她连个誓都不敢赌！若真没做过，怕什么？偏她说不出口！可见太太屋里那些话，都是她夜里枕头风似的递过去的！今日不把她这画皮撕下来，晴雯姐姐的冤屈谁来还？",
+      "unitText": "二爷你可听见了？她连个誓都不敢赌！若真没做过，怕什么？偏她说不出口！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0050",
+          "text": "艾官眼尖，瞧出宝玉神色不对，越发得了势，尖声道："
+        },
+        "next": {
+          "blockId": "081-b0052",
+          "text": "荳官、葵官也齐声附和："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "inciting-anger",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官趁势煽动宝玉追究，尖声指控。"
+      },
+      "annotationHash": "165b1f37989ce35a012c961f7e9870f71e1871478d5170c5e88074800819a67b",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/54c1c9e1cdae5a97ddaa63d6a1f69776813d96feed0557831fc0a92e6f136432.wav",
+        "renderHash": "54c1c9e1cdae5a97ddaa63d6a1f69776813d96feed0557831fc0a92e6f136432",
+        "sourceRenderHash": "a9badc78b40ed46a69866b5d7b9aea21f5a790fd07c6c1cc080a68ac183f7362",
+        "fileHash": "b202b63e5809a1ab72d0030edb9ef7698ae88314886fd1995443fa82fcbc48b7",
+        "durationSeconds": 6.403,
+        "levels": {
+          "durationSeconds": 6.403,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.813,
+          "activeSampleRatio": 0.6089
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.862069,
+        "lengthRatio": 1,
+        "transcript": "二爷,你可听见了,他连个事都不敢赌。若真没做过,怕什么? 骗他说不出口。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "86d8856dcbabcf504a7ec6849df5a70a0bb33ba4b2d5e0d46b9081fc3890c4c2"
+    },
+    {
+      "targetId": "dialogue:081-b0051:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0051",
+      "unitIndex": 1,
+      "blockText": "二爷你可听见了？她连个誓都不敢赌！若真没做过，怕什么？偏她说不出口！可见太太屋里那些话，都是她夜里枕头风似的递过去的！今日不把她这画皮撕下来，晴雯姐姐的冤屈谁来还？",
+      "unitText": "可见太太屋里那些话，都是她夜里枕头风似的递过去的！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0050",
+          "text": "艾官眼尖，瞧出宝玉神色不对，越发得了势，尖声道："
+        },
+        "next": {
+          "blockId": "081-b0052",
+          "text": "荳官、葵官也齐声附和："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "inciting-anger",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官趁势煽动宝玉追究，尖声指控。"
+      },
+      "annotationHash": "165b1f37989ce35a012c961f7e9870f71e1871478d5170c5e88074800819a67b",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/edd6931cad8ac224b5338d5bb72b00e94570739fc2f9e8053968427fdc4f2999.wav",
+        "renderHash": "edd6931cad8ac224b5338d5bb72b00e94570739fc2f9e8053968427fdc4f2999",
+        "sourceRenderHash": "588fae23a58a10541b2ccb7a4c203befda825d3e28c5e43dd46ad2b592bc4c05",
+        "fileHash": "03f85b772645ae389d5c333e7dd85eec509fdb99bff7c835ede31659baa96f55",
+        "durationSeconds": 3.71,
+        "levels": {
+          "durationSeconds": 3.71,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.508,
+          "activeSampleRatio": 0.7507
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.913043,
+        "lengthRatio": 1,
+        "transcript": "可见太太屋里那些话都是她夜里枕头方式的递过去的。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "12563e719876a0c7ddecb3403e11e30a4d5850494e487ad4d39fff75689ddea4"
+    },
+    {
+      "targetId": "dialogue:081-b0051:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0051",
+      "unitIndex": 2,
+      "blockText": "二爷你可听见了？她连个誓都不敢赌！若真没做过，怕什么？偏她说不出口！可见太太屋里那些话，都是她夜里枕头风似的递过去的！今日不把她这画皮撕下来，晴雯姐姐的冤屈谁来还？",
+      "unitText": "今日不把她这画皮撕下来，晴雯姐姐的冤屈谁来还？",
+      "context": {
+        "previous": {
+          "blockId": "081-b0050",
+          "text": "艾官眼尖，瞧出宝玉神色不对，越发得了势，尖声道："
+        },
+        "next": {
+          "blockId": "081-b0052",
+          "text": "荳官、葵官也齐声附和："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "inciting-anger",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官趁势煽动宝玉追究，尖声指控。"
+      },
+      "annotationHash": "165b1f37989ce35a012c961f7e9870f71e1871478d5170c5e88074800819a67b",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/f94793e3c79119c3c5c8f78ab97b2f1f947cfc50614acba844da2a1032baba7a.wav",
+        "renderHash": "f94793e3c79119c3c5c8f78ab97b2f1f947cfc50614acba844da2a1032baba7a",
+        "sourceRenderHash": "c98fae371f6a789288a3b53b2817988a85b1ab33e80ed59412495420e43d97a9",
+        "fileHash": "cc3fa5e4f9b8810f49281159ebdb6e120ef05165ce34cd7ef3c85485331f1c3f",
+        "durationSeconds": 3.619,
+        "levels": {
+          "durationSeconds": 3.619,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.351,
+          "activeSampleRatio": 0.7066
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.857143,
+        "lengthRatio": 1,
+        "transcript": "今日不把她的画皮撕下来,请问姐姐的冤屈谁来还。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "d9e341860c200ba288e3f5708a6d9b4c2a5b8af0953c05114d018458244b7eec"
+    },
+    {
+      "targetId": "dialogue:081-b0053:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0053",
+      "unitIndex": 0,
+      "blockText": "对！须得闹开，让合府都知道她是个什么心肠！",
+      "unitText": "对！须得闹开，让合府都知道她是个什么心肠！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0052",
+          "text": "荳官、葵官也齐声附和："
+        },
+        "next": {
+          "blockId": "081-b0054",
+          "text": "说罢，便又要动起手来。"
+        }
+      },
+      "speakerRef": "dou-guan",
+      "annotationSnapshot": {
+        "speakerRef": "dou-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "collective-outcry",
+          "intensity": 3
+        },
+        "pace": "urgent",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "荳官、葵官齐声附和，采用荳官卡作集体主声，降低置信度。"
+      },
+      "annotationHash": "8819675c775e773b0a5e80eb8f1ea55cfdf06f074733e35ff91d45c62a70e7d4",
+      "voiceCard": {
+        "id": "dou-guan",
+        "styleId": "proxy-default",
+        "label": "dou-guan",
+        "cachePath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+        "fileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "text": "好姐姐，你先别着急，听我慢慢把事情说明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/9a9fbb7167794bf7c4a39d572d4180c4b652b860abd646ffabfb5ab39eb2004e.wav",
+        "renderHash": "9a9fbb7167794bf7c4a39d572d4180c4b652b860abd646ffabfb5ab39eb2004e",
+        "sourceRenderHash": "b1f58eb39a88a9bece3b5db9c87d0ba6d358d99eb31d708f2140b4f96aa4d5ae",
+        "fileHash": "638542490641d002d3a5e83fbf70b90816be498c68eefb866dc9a51e616a99b7",
+        "durationSeconds": 4.28,
+        "levels": {
+          "durationSeconds": 4.28,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.891,
+          "activeSampleRatio": 0.6015
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.594595,
+        "lengthRatio": 1.055556,
+        "transcript": "对,需要点闹开,让和服都知道它是个什么形长。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "147db59e36ff93e960a53e2ad94f75652633ebf5067e3b84e2757978b085b764"
+    },
+    {
+      "targetId": "dialogue:081-b0056:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0056",
+      "unitIndex": 0,
+      "blockText": "使不得！你们这一闹，太太必问你们怎么进来的。到那时不但你们受重罚，便是放你们进园的人，也脱不得干系。",
+      "unitText": "使不得！你们这一闹，太太必问你们怎么进来的。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0055",
+          "text": "宝玉这才回过神来，见三人又要拉扯袭人，忙拦道："
+        },
+        "next": {
+          "blockId": "081-b0057",
+          "text": "这一番话却戳中了三人心底。原道是，自他们被发配到水月庵，心中积了不少不平的怨念。得知了智能儿和惜春常有往来后，便谎称簪环钗契落在了园内，几番央求，智能儿耳根软，便假借惜春之名带了他们进来，门上的婆子也不敢去问惜春求证，竟果真让三人混入园中。三人面面相觑，恐连累了智能儿，一时都没了话。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "fear",
+          "variant": "urgent-restraint",
+          "intensity": 2
+        },
+        "pace": "urgent",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "贾宝玉；宝玉急拦争斗，担心三人和智能儿一并受罚。"
+      },
+      "annotationHash": "792abcd1acd1583466f8073d813924026ed5cef3de2874dd99076a40b3938d99",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/d4a8bf5172ef79c708de514ca3a651ff7b833511cfdbf565472017682b64b92f.wav",
+        "renderHash": "d4a8bf5172ef79c708de514ca3a651ff7b833511cfdbf565472017682b64b92f",
+        "sourceRenderHash": "503a7502c81fd20edfae02b3f01cf7f62bae48dabfd2ec4349d2322286f86ddb",
+        "fileHash": "6521ec30506e14daf9adbc49ba3ea6f9d71cdd56aafbaf733fd00533cc29c226",
+        "durationSeconds": 5.44,
+        "levels": {
+          "durationSeconds": 5.44,
+          "rmsDbfs": -21.401,
+          "peakDbfs": -3,
+          "activeSampleRatio": 0.4125
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.947368,
+        "lengthRatio": 1,
+        "transcript": "时不得,你们这一闹,太太必问你们怎么进来的。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "9c45e15b6de158d3b2e7411c52b1368b0734367c62c6f971ffa17c7903cd1800"
+    },
+    {
+      "targetId": "dialogue:081-b0056:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0056",
+      "unitIndex": 1,
+      "blockText": "使不得！你们这一闹，太太必问你们怎么进来的。到那时不但你们受重罚，便是放你们进园的人，也脱不得干系。",
+      "unitText": "到那时不但你们受重罚，便是放你们进园的人，也脱不得干系。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0055",
+          "text": "宝玉这才回过神来，见三人又要拉扯袭人，忙拦道："
+        },
+        "next": {
+          "blockId": "081-b0057",
+          "text": "这一番话却戳中了三人心底。原道是，自他们被发配到水月庵，心中积了不少不平的怨念。得知了智能儿和惜春常有往来后，便谎称簪环钗契落在了园内，几番央求，智能儿耳根软，便假借惜春之名带了他们进来，门上的婆子也不敢去问惜春求证，竟果真让三人混入园中。三人面面相觑，恐连累了智能儿，一时都没了话。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "fear",
+          "variant": "urgent-restraint",
+          "intensity": 2
+        },
+        "pace": "urgent",
+        "pitch": "medium",
+        "energy": "heavy",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "贾宝玉；宝玉急拦争斗，担心三人和智能儿一并受罚。"
+      },
+      "annotationHash": "792abcd1acd1583466f8073d813924026ed5cef3de2874dd99076a40b3938d99",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/86e310a92a152fef49f511f86c15f09b1761a41e2472f1fd61a352a18f091487.wav",
+        "renderHash": "86e310a92a152fef49f511f86c15f09b1761a41e2472f1fd61a352a18f091487",
+        "sourceRenderHash": "f2dd747ba42c1b8cffd203cbdddce50ad4d1d75fbff4262175e0221cf02d4d9b",
+        "fileHash": "599766da5dbd997203b15652915fdb55d72462f16d0a3f165598f382526081cf",
+        "durationSeconds": 5.88,
+        "levels": {
+          "durationSeconds": 5.88,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.155,
+          "activeSampleRatio": 0.587
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.92,
+        "lengthRatio": 1,
+        "transcript": "当那时,不但你们受重罚,便是放你们进园的人也脱补得干系。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "1922b1876983f1d772f97b81f2d8219f02302bac3dd39c81d92213e4d55c1db3"
+    },
+    {
+      "targetId": "dialogue:081-b0059:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0059",
+      "unitIndex": 0,
+      "blockText": "你们受的委屈，我都记着，袭人的事，自会与你们一个交代。眼下还是悄无声息的走罢！倘若有心人撞见，再想走也迟了！",
+      "unitText": "你们受的委屈，我都记着，袭人的事，自会与你们一个交代。眼下还是悄无声息的走罢！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0058",
+          "text": "宝玉又央道："
+        },
+        "next": {
+          "blockId": "081-b0060",
+          "text": "艾官咬牙道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "hushed-reassurance",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "soft",
+          "firm"
+        ],
+        "modifiers": [
+          "whispering"
+        ],
+        "note": "贾宝玉；宝玉先许诺公道，再催众人悄悄离开。"
+      },
+      "annotationHash": "6fd50f695a30886ab264071130fbb7ce0d2a53a939c1d1fb421a3fa8376bc3ba",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/f3564156a52f92ef48cf97df265ea3c88b7d45388b3e66424ac81a49848a9543.wav",
+        "renderHash": "f3564156a52f92ef48cf97df265ea3c88b7d45388b3e66424ac81a49848a9543",
+        "sourceRenderHash": "675f0683d41f324f081d6d29d1c19201b6edb57bc35306469d679bdc7d66902c",
+        "fileHash": "23cda4ff602792c9e8e7024942f27f54bdffe3166be2d228c58f0601636310ff",
+        "durationSeconds": 9.776,
+        "levels": {
+          "durationSeconds": 9.776,
+          "rmsDbfs": -21.466,
+          "peakDbfs": -3,
+          "activeSampleRatio": 0.531
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.941176,
+        "lengthRatio": 1,
+        "transcript": "你们受的委屈,我都记着, 习人的事,自会与你们一个交代, 眼下还是悄无声息的走吧。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "ee2201e8868696bb1da5eeb808faf67d0b703a53e634ce2350e2b74f6a5428d9"
+    },
+    {
+      "targetId": "dialogue:081-b0059:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0059",
+      "unitIndex": 1,
+      "blockText": "你们受的委屈，我都记着，袭人的事，自会与你们一个交代。眼下还是悄无声息的走罢！倘若有心人撞见，再想走也迟了！",
+      "unitText": "倘若有心人撞见，再想走也迟了！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0058",
+          "text": "宝玉又央道："
+        },
+        "next": {
+          "blockId": "081-b0060",
+          "text": "艾官咬牙道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "hushed-reassurance",
+          "intensity": 2
+        },
+        "pace": "slow",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "soft",
+          "firm"
+        ],
+        "modifiers": [
+          "whispering"
+        ],
+        "note": "贾宝玉；宝玉先许诺公道，再催众人悄悄离开。"
+      },
+      "annotationHash": "6fd50f695a30886ab264071130fbb7ce0d2a53a939c1d1fb421a3fa8376bc3ba",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/9d5d12ab9145851c38d8745e592e539a431464edd70410ad532c38577d9f8f12.wav",
+        "renderHash": "9d5d12ab9145851c38d8745e592e539a431464edd70410ad532c38577d9f8f12",
+        "sourceRenderHash": "e6251979e0487b8d461b3717351c9a34b8fb4ef7fa85b5487e86e4cb33f4bede",
+        "fileHash": "4301d064fd2ba5c46f82d42e5b13e0ebb4754c83c4b6af700739f68fd7edffcc",
+        "durationSeconds": 3.888,
+        "levels": {
+          "durationSeconds": 3.888,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.36,
+          "activeSampleRatio": 0.5695
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.846154,
+        "lengthRatio": 1,
+        "transcript": "倘若有心人壮见,再想早也迟了。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "6dbd539355927e9543ed311269fae87215f2ccb42b24f35b4f08eff3104c8a27"
+    },
+    {
+      "targetId": "dialogue:081-b0061:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0061",
+      "unitIndex": 0,
+      "blockText": "罢了！看在宝二爷分上，此事且算了。只劝宝二爷一句，切莫把这个两面三刀的耳报神留在身边！",
+      "unitText": "罢了！看在宝二爷分上，此事且算了。只劝宝二爷一句，切莫把这个两面三刀的耳报神留在身边！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0060",
+          "text": "艾官咬牙道："
+        },
+        "next": {
+          "blockId": "081-b0062",
+          "text": "宝玉听了艾官这话，心里又痛又愧。原来他素日心里有个呆想头：这屋里的人，无论家里外头的姑娘，全放出去，与本人父母自便。只是贪恋大家一处，迟迟未行。如今听艾官说'切莫留这耳报神'，又觉太太的心耳神意时时都在这里，自己房里说的话，一字一句都逃不过去。今日是袭人递话，明日又不知是谁。这些女孩子留在自己身边，越亲近，反越祸害了她们，自己又护不住。倒不如趁早放了，各归父母，强似在这园里提心吊胆，也免得日后撞在太太手里，再添冤屈。想到这里，心意反倒定了，遂道："
+        }
+      },
+      "speakerRef": "ai-guan",
+      "annotationSnapshot": {
+        "speakerRef": "ai-guan",
+        "emotion": {
+          "family": "anger",
+          "variant": "bitter-warning",
+          "intensity": 2
+        },
+        "pace": "medium",
+        "pitch": "high",
+        "energy": "heavy",
+        "timbre": [
+          "sharp",
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "艾官；艾官收手但仍咬牙警告宝玉提防袭人。"
+      },
+      "annotationHash": "999112b98aec783a8d2728ff8df102a799d736fadc1e28b7796affbf7ee5f6b5",
+      "voiceCard": {
+        "id": "ai-guan",
+        "styleId": "proxy-default",
+        "label": "ai-guan",
+        "cachePath": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav",
+        "fileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "text": "你先听我说，我有几句话要一件一件讲明白。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/9f9721887d6cb268fdaee52b43f977f450111cfd116637a3ff5d8d647172d4ce.wav",
+        "renderHash": "9f9721887d6cb268fdaee52b43f977f450111cfd116637a3ff5d8d647172d4ce",
+        "sourceRenderHash": "5a8e82ff33ff79cebd083f155aa7cc7ff1e151381bb99bff682a8c7285adc251",
+        "fileHash": "7926024cea9609085225a6c2dd19102617ea4e4676fe49f4215e0a03cd29b82e",
+        "durationSeconds": 7.681,
+        "levels": {
+          "durationSeconds": 7.681,
+          "rmsDbfs": -21,
+          "peakDbfs": -5.155,
+          "activeSampleRatio": 0.6573
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.868421,
+        "lengthRatio": 1,
+        "transcript": "大了,看在宝儿爷分上,此事且算了,只劝宝儿爷一句,切莫把这个两面三刀的耳抱绳留在身边。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "f695e1d933cf269ab0247a1f7ac3023f8e5c2c3f64d7b96e1258cf248b9efc1d"
+    },
+    {
+      "targetId": "dialogue:081-b0063:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0063",
+      "unitIndex": 0,
+      "blockText": "罢了！这园里一个不留，都走罢！不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+      "unitText": "罢了！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0062",
+          "text": "宝玉听了艾官这话，心里又痛又愧。原来他素日心里有个呆想头：这屋里的人，无论家里外头的姑娘，全放出去，与本人父母自便。只是贪恋大家一处，迟迟未行。如今听艾官说'切莫留这耳报神'，又觉太太的心耳神意时时都在这里，自己房里说的话，一字一句都逃不过去。今日是袭人递话，明日又不知是谁。这些女孩子留在自己身边，越亲近，反越祸害了她们，自己又护不住。倒不如趁早放了，各归父母，强似在这园里提心吊胆，也免得日后撞在太太手里，再添冤屈。想到这里，心意反倒定了，遂道："
+        },
+        "next": {
+          "blockId": "081-b0064",
+          "text": "袭人听了，怔怔望着宝玉。艾官三人也愣了半晌，没曾想竟是这个结局，嘴硬道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "wounded-dismissal",
+          "intensity": 3
+        },
+        "pace": "medium",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "hoarse",
+          "breathy"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "罢了！",
+              "speed": 0.9,
+              "instruction": "受伤后猛然截断争执，短促沉重，不作愤怒吼叫"
+            },
+            {
+              "text": "这园里一个不留，都走罢！",
+              "speed": 1,
+              "continuous": true,
+              "instruction": "情绪骤然决绝，力度抬起但声音仍压着痛意"
+            },
+            {
+              "text": "不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+              "speed": 0.88,
+              "continuous": true,
+              "instruction": "点到人名时自然停连，越说越疲惫，末句低沉落定且不可回转"
+            }
+          ]
+        },
+        "note": "贾宝玉；受背叛感、自责和绝望推动，骤然决定放尽屋中众人。开头短促决绝，随后疲惫沉落，不是对众人发怒训斥。"
+      },
+      "annotationHash": "6b181224dc5fa7f60c1a1fd6ec2e86bb2f7071b2b330acd47dd5035d151ad3b3",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.764706,
+        "lengthRatio": 1,
+        "transcript": "罢了﹐这原理一个不留﹐都走吧﹐不但习人要走﹐连社乐秋闻﹐这屋里所有人都放出去吧。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "a113d845cc251d93c030b1f3121aea2aff82897eab4019f13c3ce3085a0c0d16"
+    },
+    {
+      "targetId": "dialogue:081-b0063:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0063",
+      "unitIndex": 1,
+      "blockText": "罢了！这园里一个不留，都走罢！不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+      "unitText": "这园里一个不留，都走罢！",
+      "context": {
+        "previous": {
+          "blockId": "081-b0062",
+          "text": "宝玉听了艾官这话，心里又痛又愧。原来他素日心里有个呆想头：这屋里的人，无论家里外头的姑娘，全放出去，与本人父母自便。只是贪恋大家一处，迟迟未行。如今听艾官说'切莫留这耳报神'，又觉太太的心耳神意时时都在这里，自己房里说的话，一字一句都逃不过去。今日是袭人递话，明日又不知是谁。这些女孩子留在自己身边，越亲近，反越祸害了她们，自己又护不住。倒不如趁早放了，各归父母，强似在这园里提心吊胆，也免得日后撞在太太手里，再添冤屈。想到这里，心意反倒定了，遂道："
+        },
+        "next": {
+          "blockId": "081-b0064",
+          "text": "袭人听了，怔怔望着宝玉。艾官三人也愣了半晌，没曾想竟是这个结局，嘴硬道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "wounded-dismissal",
+          "intensity": 3
+        },
+        "pace": "medium",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "hoarse",
+          "breathy"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "罢了！",
+              "speed": 0.9,
+              "instruction": "受伤后猛然截断争执，短促沉重，不作愤怒吼叫"
+            },
+            {
+              "text": "这园里一个不留，都走罢！",
+              "speed": 1,
+              "continuous": true,
+              "instruction": "情绪骤然决绝，力度抬起但声音仍压着痛意"
+            },
+            {
+              "text": "不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+              "speed": 0.88,
+              "continuous": true,
+              "instruction": "点到人名时自然停连，越说越疲惫，末句低沉落定且不可回转"
+            }
+          ]
+        },
+        "note": "贾宝玉；受背叛感、自责和绝望推动，骤然决定放尽屋中众人。开头短促决绝，随后疲惫沉落，不是对众人发怒训斥。"
+      },
+      "annotationHash": "6b181224dc5fa7f60c1a1fd6ec2e86bb2f7071b2b330acd47dd5035d151ad3b3",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": null,
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "6f3e7f470c31b801c79d6182ab71fa9d764327997caef4e48ae2395f7f3c03a3"
+    },
+    {
+      "targetId": "dialogue:081-b0063:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0063",
+      "unitIndex": 2,
+      "blockText": "罢了！这园里一个不留，都走罢！不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+      "unitText": "不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0062",
+          "text": "宝玉听了艾官这话，心里又痛又愧。原来他素日心里有个呆想头：这屋里的人，无论家里外头的姑娘，全放出去，与本人父母自便。只是贪恋大家一处，迟迟未行。如今听艾官说'切莫留这耳报神'，又觉太太的心耳神意时时都在这里，自己房里说的话，一字一句都逃不过去。今日是袭人递话，明日又不知是谁。这些女孩子留在自己身边，越亲近，反越祸害了她们，自己又护不住。倒不如趁早放了，各归父母，强似在这园里提心吊胆，也免得日后撞在太太手里，再添冤屈。想到这里，心意反倒定了，遂道："
+        },
+        "next": {
+          "blockId": "081-b0064",
+          "text": "袭人听了，怔怔望着宝玉。艾官三人也愣了半晌，没曾想竟是这个结局，嘴硬道："
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "wounded-dismissal",
+          "intensity": 3
+        },
+        "pace": "medium",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "firm",
+          "hoarse",
+          "breathy"
+        ],
+        "modifiers": [],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "罢了！",
+              "speed": 0.9,
+              "instruction": "受伤后猛然截断争执，短促沉重，不作愤怒吼叫"
+            },
+            {
+              "text": "这园里一个不留，都走罢！",
+              "speed": 1,
+              "continuous": true,
+              "instruction": "情绪骤然决绝，力度抬起但声音仍压着痛意"
+            },
+            {
+              "text": "不但袭人要走，连麝月、秋纹，这屋里所有人，都放出去罢。",
+              "speed": 0.88,
+              "continuous": true,
+              "instruction": "点到人名时自然停连，越说越疲惫，末句低沉落定且不可回转"
+            }
+          ]
+        },
+        "note": "贾宝玉；受背叛感、自责和绝望推动，骤然决定放尽屋中众人。开头短促决绝，随后疲惫沉落，不是对众人发怒训斥。"
+      },
+      "annotationHash": "6b181224dc5fa7f60c1a1fd6ec2e86bb2f7071b2b330acd47dd5035d151ad3b3",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": null,
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "ef71691ba41e095cb00552390f35e7dceca0d39ca49711075929aee5125e48d3"
+    },
+    {
+      "targetId": "dialogue:081-b0065:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0065",
+      "unitIndex": 0,
+      "blockText": "如此才算公平。宝二爷说话算话。",
+      "unitText": "如此才算公平。宝二爷说话算话。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0064",
+          "text": "袭人听了，怔怔望着宝玉。艾官三人也愣了半晌，没曾想竟是这个结局，嘴硬道："
+        },
+        "next": {
+          "blockId": "081-b0066",
+          "text": "说罢三人转身，不免心虚，快步往暖香坞去了。"
+        }
+      },
+      "speakerRef": "kui-guan",
+      "annotationSnapshot": {
+        "speakerRef": "kui-guan",
+        "emotion": {
+          "family": "mixed",
+          "variant": "forced-agreement",
+          "intensity": 1
+        },
+        "pace": "medium",
+        "pitch": "low",
+        "energy": "medium",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "三人共同回应，采用葵官卡作集体主声，语气表面嘴硬、内里心虚。"
+      },
+      "annotationHash": "cc486b0071ef76f530b1f95c97fe6a800c2d0a620436490ebec9b0118c8088ef",
+      "voiceCard": {
+        "id": "kui-guan",
+        "styleId": "proxy-default",
+        "label": "kui-guan",
+        "cachePath": "content/audio.cache/voice-cards/kui-guan/kui-guan-voice-card.wav",
+        "fileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "text": "姐姐慢些，我把前因后果仔细说给你听。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/caadaaf6a9674606f633cb5422b78baf48560a8922b87c43063b42e4c5c551b5.wav",
+        "renderHash": "caadaaf6a9674606f633cb5422b78baf48560a8922b87c43063b42e4c5c551b5",
+        "sourceRenderHash": "2218da8d69c5428353c2307e4292b2aed922b6a0d6b5f9e4600940165723aed0",
+        "fileHash": "e5d9774c2219adf61bb5507bae4aa5331e556ef0be05b5870f2e20bd8dc7caa2",
+        "durationSeconds": 3.88,
+        "levels": {
+          "durationSeconds": 3.88,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.106,
+          "activeSampleRatio": 0.5263
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.846154,
+        "lengthRatio": 1,
+        "transcript": "如此才算公平。保尔爷说话算话。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "294cf1550003bd9a2c3845972061e7cb4e92dbbce854a93f88b1710e70d8f85c"
+    },
+    {
+      "targetId": "dialogue:081-b0068:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0068",
+      "unitIndex": 0,
+      "blockText": "我一生最恨背地道人长短。可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。芳官、四儿，也是如此。我如今又该信谁？竟没一个靠得住的了。",
+      "unitText": "我一生最恨背地道人长短。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0067",
+          "text": "见三人远去，宝玉低头叹道："
+        },
+        "next": {
+          "blockId": "081-b0069",
+          "text": "说着掉下泪来。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "restrained-anger-to-grief",
+          "intensity": 3
+        },
+        "pace": "slow",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "firm"
+        ],
+        "modifiers": [
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "我一生最恨背地道人长短。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "我一生最恨后略收，背地单独成意群，道人长短四字连读；克制愤懑，不喊"
+            },
+            {
+              "text": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "由愤懑转为痛惜，晴雯处带追忆，咒他死低沉落下"
+            },
+            {
+              "text": "芳官、四儿，也是如此。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "低声补叙，短暂停顿中带无力感"
+            },
+            {
+              "text": "我如今又该信谁？竟没一个靠得住的了。",
+              "speed": 0.84,
+              "continuous": true,
+              "instruction": "自问时哽住，末句是失望和孤立感，不提前演成放声哭泣"
+            }
+          ]
+        },
+        "note": "贾宝玉；先克制指斥背后道人长短，继而想到晴雯、芳官和四儿，由愤懑转入悲凉与无人可信的失落；正文随后才落泪，本块只到哽咽。"
+      },
+      "annotationHash": "cd7e226793bd547dea3fa6d0c9cf5ea5e320f4b6721dd13dfbd686147d3a0bf8",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-required",
+        "characterSimilarity": 0.71875,
+        "lengthRatio": 1,
+        "transcript": "我医生最恨被逮到人长短,可怜情文为灵力标志所误,不知得罪了谁就咒他死。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "8097c298d9dde73d7e0fffad692a4496ce4a8590ee08b96ff7f7659f34d66d1c"
+    },
+    {
+      "targetId": "dialogue:081-b0068:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0068",
+      "unitIndex": 1,
+      "blockText": "我一生最恨背地道人长短。可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。芳官、四儿，也是如此。我如今又该信谁？竟没一个靠得住的了。",
+      "unitText": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0067",
+          "text": "见三人远去，宝玉低头叹道："
+        },
+        "next": {
+          "blockId": "081-b0069",
+          "text": "说着掉下泪来。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "restrained-anger-to-grief",
+          "intensity": 3
+        },
+        "pace": "slow",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "firm"
+        ],
+        "modifiers": [
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "我一生最恨背地道人长短。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "我一生最恨后略收，背地单独成意群，道人长短四字连读；克制愤懑，不喊"
+            },
+            {
+              "text": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "由愤懑转为痛惜，晴雯处带追忆，咒他死低沉落下"
+            },
+            {
+              "text": "芳官、四儿，也是如此。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "低声补叙，短暂停顿中带无力感"
+            },
+            {
+              "text": "我如今又该信谁？竟没一个靠得住的了。",
+              "speed": 0.84,
+              "continuous": true,
+              "instruction": "自问时哽住，末句是失望和孤立感，不提前演成放声哭泣"
+            }
+          ]
+        },
+        "note": "贾宝玉；先克制指斥背后道人长短，继而想到晴雯、芳官和四儿，由愤懑转入悲凉与无人可信的失落；正文随后才落泪，本块只到哽咽。"
+      },
+      "annotationHash": "cd7e226793bd547dea3fa6d0c9cf5ea5e320f4b6721dd13dfbd686147d3a0bf8",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.916667,
+        "lengthRatio": 1,
+        "transcript": "方关四儿,也是如此。我如今又该信谁,竟没一个靠得住的了。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "344957d75380d5a2eda3407944f8f329e4bbb891f524f168bad4f6083ac1b862"
+    },
+    {
+      "targetId": "dialogue:081-b0068:u03",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0068",
+      "unitIndex": 2,
+      "blockText": "我一生最恨背地道人长短。可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。芳官、四儿，也是如此。我如今又该信谁？竟没一个靠得住的了。",
+      "unitText": "芳官、四儿，也是如此。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0067",
+          "text": "见三人远去，宝玉低头叹道："
+        },
+        "next": {
+          "blockId": "081-b0069",
+          "text": "说着掉下泪来。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "restrained-anger-to-grief",
+          "intensity": 3
+        },
+        "pace": "slow",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "firm"
+        ],
+        "modifiers": [
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "我一生最恨背地道人长短。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "我一生最恨后略收，背地单独成意群，道人长短四字连读；克制愤懑，不喊"
+            },
+            {
+              "text": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "由愤懑转为痛惜，晴雯处带追忆，咒他死低沉落下"
+            },
+            {
+              "text": "芳官、四儿，也是如此。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "低声补叙，短暂停顿中带无力感"
+            },
+            {
+              "text": "我如今又该信谁？竟没一个靠得住的了。",
+              "speed": 0.84,
+              "continuous": true,
+              "instruction": "自问时哽住，末句是失望和孤立感，不提前演成放声哭泣"
+            }
+          ]
+        },
+        "note": "贾宝玉；先克制指斥背后道人长短，继而想到晴雯、芳官和四儿，由愤懑转入悲凉与无人可信的失落；正文随后才落泪，本块只到哽咽。"
+      },
+      "annotationHash": "cd7e226793bd547dea3fa6d0c9cf5ea5e320f4b6721dd13dfbd686147d3a0bf8",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": null,
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "4299dc000db213365b49e4009e5bf1d9bec376e5606332e7b40b91793f5bc10c"
+    },
+    {
+      "targetId": "dialogue:081-b0068:u04",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0068",
+      "unitIndex": 3,
+      "blockText": "我一生最恨背地道人长短。可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。芳官、四儿，也是如此。我如今又该信谁？竟没一个靠得住的了。",
+      "unitText": "我如今又该信谁？竟没一个靠得住的了。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0067",
+          "text": "见三人远去，宝玉低头叹道："
+        },
+        "next": {
+          "blockId": "081-b0069",
+          "text": "说着掉下泪来。"
+        }
+      },
+      "speakerRef": "jia-baoyu",
+      "annotationSnapshot": {
+        "speakerRef": "jia-baoyu",
+        "emotion": {
+          "family": "mixed",
+          "variant": "restrained-anger-to-grief",
+          "intensity": 3
+        },
+        "pace": "slow",
+        "pitch": "low",
+        "energy": "heavy",
+        "timbre": [
+          "breathy",
+          "firm"
+        ],
+        "modifiers": [
+          "choked"
+        ],
+        "delivery": {
+          "forcedUnits": [
+            {
+              "text": "我一生最恨背地道人长短。",
+              "speed": 0.9,
+              "continuous": true,
+              "instruction": "我一生最恨后略收，背地单独成意群，道人长短四字连读；克制愤懑，不喊"
+            },
+            {
+              "text": "可怜晴雯为伶俐标致所误，不知得罪了谁，就咒他死。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "由愤懑转为痛惜，晴雯处带追忆，咒他死低沉落下"
+            },
+            {
+              "text": "芳官、四儿，也是如此。",
+              "speed": 0.86,
+              "continuous": true,
+              "instruction": "低声补叙，短暂停顿中带无力感"
+            },
+            {
+              "text": "我如今又该信谁？竟没一个靠得住的了。",
+              "speed": 0.84,
+              "continuous": true,
+              "instruction": "自问时哽住，末句是失望和孤立感，不提前演成放声哭泣"
+            }
+          ]
+        },
+        "note": "贾宝玉；先克制指斥背后道人长短，继而想到晴雯、芳官和四儿，由愤懑转入悲凉与无人可信的失落；正文随后才落泪，本块只到哽咽。"
+      },
+      "annotationHash": "cd7e226793bd547dea3fa6d0c9cf5ea5e320f4b6721dd13dfbd686147d3a0bf8",
+      "voiceCard": {
+        "id": "jia-baoyu:restrained-sadness",
+        "styleId": "restrained-sadness",
+        "label": "jia-baoyu:restrained-sadness",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+        "fileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "text": "她受了这么多委屈，我心里实在放不下。"
+      },
+      "audio": null,
+      "automaticCheck": null,
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": false,
+        "autoPassed": false
+      },
+      "reviewState": "planned",
+      "reviewKey": "dc5dc92f4723fce58728da3d6853d67917e6eb7f5bf80c3962cf16f35bb80d92"
+    },
+    {
+      "targetId": "dialogue:081-b0071:u01",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0071",
+      "unitIndex": 0,
+      "blockText": "二爷也疑心是我做的？戏子嘴里无真言，他们的话你也信？我还要做针线呢，眼看天凉了，没工夫听这些混话。",
+      "unitText": "二爷也疑心是我做的？戏子嘴里无真言，他们的话你也信？",
+      "context": {
+        "previous": {
+          "blockId": "081-b0070",
+          "text": "袭人道："
+        },
+        "next": {
+          "blockId": "081-b0072",
+          "text": "说罢动了气，一面理着头发衣襟，往屋里去了。"
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-irritation",
+          "intensity": 2
+        },
+        "pace": "medium",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "袭人；袭人被疑后以忙针线搪塞，恼怒而刻意冷淡。"
+      },
+      "annotationHash": "ddc055ce87875a70ab1231b388e9e8dc45191057ecab1e513351804507609dff",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/29691d8244d7ac46f0b54f43dfc020da9148ce10f2540a1b5e66f9169b961f2a.wav",
+        "renderHash": "29691d8244d7ac46f0b54f43dfc020da9148ce10f2540a1b5e66f9169b961f2a",
+        "sourceRenderHash": "5dfea8daf78de7f11ffa70b924cd6957c5a92b8a4a33e0d201eb750f89bb81fb",
+        "fileHash": "7741bb48e7fabfec38e4a5bd15545f7efa95cf8c2ac1f8f2e1be9220e6cedeb4",
+        "durationSeconds": 4.841,
+        "levels": {
+          "durationSeconds": 4.841,
+          "rmsDbfs": -21,
+          "peakDbfs": -4.421,
+          "activeSampleRatio": 0.7131
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.826087,
+        "lengthRatio": 1,
+        "transcript": "二爷爷一行是我做的气子，嘴里无真言，他们的话你也信。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "54b54f99cb87489db4545b951d642c73ec3138c6ee8e031ea4ca5355d8cc2019"
+    },
+    {
+      "targetId": "dialogue:081-b0071:u02",
+      "kind": "dialogue_fragment",
+      "blockId": "081-b0071",
+      "unitIndex": 1,
+      "blockText": "二爷也疑心是我做的？戏子嘴里无真言，他们的话你也信？我还要做针线呢，眼看天凉了，没工夫听这些混话。",
+      "unitText": "我还要做针线呢，眼看天凉了，没工夫听这些混话。",
+      "context": {
+        "previous": {
+          "blockId": "081-b0070",
+          "text": "袭人道："
+        },
+        "next": {
+          "blockId": "081-b0072",
+          "text": "说罢动了气，一面理着头发衣襟，往屋里去了。"
+        }
+      },
+      "speakerRef": "xiren",
+      "annotationSnapshot": {
+        "speakerRef": "xiren",
+        "emotion": {
+          "family": "anger",
+          "variant": "defensive-irritation",
+          "intensity": 2
+        },
+        "pace": "medium",
+        "pitch": "medium",
+        "energy": "medium",
+        "timbre": [
+          "firm"
+        ],
+        "modifiers": [],
+        "note": "袭人；袭人被疑后以忙针线搪塞，恼怒而刻意冷淡。"
+      },
+      "annotationHash": "ddc055ce87875a70ab1231b388e9e8dc45191057ecab1e513351804507609dff",
+      "voiceCard": {
+        "id": "xiren:assertive-rivalry",
+        "styleId": "assertive-rivalry",
+        "label": "xiren:assertive-rivalry",
+        "cachePath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+        "fileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "text": "二爷，这件事须得分说明白，我绝不能由着她们胡闹。"
+      },
+      "audio": {
+        "cachePath": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/dd6d6a1114404eee17230df506e677643fa7510e4da8224826830a17c6d11b3d.wav",
+        "renderHash": "dd6d6a1114404eee17230df506e677643fa7510e4da8224826830a17c6d11b3d",
+        "sourceRenderHash": "85c6089f1d5ee7a0d9f69adb4305f69fadba0f38f3d60d83becbeb3c9851b106",
+        "fileHash": "d1c4a05f72031323f925f6d000b89bf29836e1382327043c179adef219a2fd32",
+        "durationSeconds": 3.882,
+        "levels": {
+          "durationSeconds": 3.882,
+          "rmsDbfs": -21,
+          "peakDbfs": -3.611,
+          "activeSampleRatio": 0.6966
+        }
+      },
+      "automaticCheck": {
+        "structuralPass": true,
+        "rawStatus": "review-homophone-or-minor",
+        "characterSimilarity": 0.9,
+        "lengthRatio": 1,
+        "transcript": "我还要做真线呢 眼看天凉了 没工夫听这些浑话。",
+        "note": "正文顺序和长度结构通过；原始转写差异按繁简字、同音/近音字保留，不宣称逐字一致"
+      },
+      "technicalIssues": [],
+      "milestones": {
+        "planned": true,
+        "rendered": true,
+        "autoPassed": true
+      },
+      "reviewState": "pending_review",
+      "reviewKey": "2098fc963bf2c04c77075e20b55580f4a962e8c9dadea116bbdaa157f92be359"
+    }
+  ],
+  "planHash": "e0893b67ae98b81a0ae716c69499936e8f7a1d897a3d717234caf232e22c0652"
+}

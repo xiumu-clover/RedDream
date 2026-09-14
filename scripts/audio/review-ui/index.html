@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>红楼梦 · 对白审核台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div><p class="eyebrow">红楼梦 · 本地制作工具</p><h1>对白审核台</h1></div>
+    <div id="save-state" class="save-state">正在读取…</div>
+  </header>
+  <main>
+    <section id="summary" class="summary" aria-label="制作状态"></section>
+    <section class="toolbar" aria-label="筛选">
+      <label>状态<select id="status-filter"><option value="">全部</option></select></label>
+      <label>人物<select id="speaker-filter"><option value="">全部</option></select></label>
+      <label>问题<select id="issue-filter"><option value="">全部</option></select></label>
+      <label class="check"><input id="remaining-only" type="checkbox" checked> 只看剩余项</label>
+      <button id="refresh" class="secondary">刷新计划</button>
+    </section>
+    <nav class="pager" aria-label="片段导航">
+      <button id="previous" class="secondary">← 上一条</button>
+      <span id="position">0 / 0</span>
+      <button id="next" class="secondary">下一条 →</button>
+    </nav>
+    <article id="review-card" class="review-card" hidden>
+      <div class="card-heading">
+        <div><p id="identity" class="eyebrow"></p><h2 id="speaker"></h2></div>
+        <span id="status-pill" class="pill"></span>
+      </div>
+      <section class="context"><p id="before"></p><p id="block-text" class="source-text"></p><p id="after"></p></section>
+      <section id="semantics" class="chips"></section>
+      <p id="performance-note" class="performance-note"></p>
+      <div class="audio-grid">
+        <section class="audio-panel"><h3>实际入片片段</h3><audio id="fragment-audio" controls preload="metadata"></audio><div id="fragment-meta" class="fine"></div></section>
+        <section class="audio-panel"><h3>音色卡参考</h3><audio id="voice-audio" controls preload="metadata"></audio><div id="voice-meta" class="fine"></div></section>
+      </div>
+      <section class="machine"><h3>机器参考 <span>不能替代艺术验收</span></h3><div id="machine-result"></div></section>
+      <section class="feedback">
+        <label>问题类型<select id="issue-type"><option value="">请选择（拒绝/重录必填）</option></select></label>
+        <label>备注<textarea id="note" rows="3" placeholder="可记录听感、读音位置或比较意见"></textarea></label>
+        <label>期望效果<textarea id="expected" rows="3" placeholder="拒绝或重录时必填：希望下一版怎样处理"></textarea></label>
+        <div id="route" class="route"></div>
+      </section>
+      <div class="actions">
+        <button id="approve" class="approve">通过 <kbd>A</kbd></button>
+        <button id="reject" class="reject">拒绝 <kbd>X</kbd></button>
+        <button id="rerecord" class="rerecord">重录 <kbd>R</kbd></button>
+        <button id="save-note" class="secondary">保存备注 <kbd>Ctrl+Enter</kbd></button>
+      </div>
+    </article>
+    <section id="empty" class="empty" hidden>当前筛选下没有片段。</section>
+  </main>
+  <footer>空格播放/暂停 · 左右方向键切换 · 所有决定绑定当前文件与渲染哈希</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
