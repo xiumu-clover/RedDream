@@ -700,8 +700,10 @@ function buildDialogueRequests({ blocks, definition, voiceCards, outputDirectory
 				const rawPath = join(rawDirectory, `${synthesisHash}.wav`);
 				const request = {
 					id: `${block.blockId}-u${String(unitIndex + 1).padStart(2, '0')}-${voiceCardId}`,
+					targetId: `dialogue:${block.blockId}:u${String(unitIndex + 1).padStart(2, '0')}`,
 					blockId: block.blockId,
 					unitIndex,
+					annotationHash: block.annotationHash,
 					text,
 					synthesisText,
 					instruction,
@@ -1632,6 +1634,8 @@ async function writeScenePlanPreview({
 	outputDirectory,
 	chapterId,
 	sceneId,
+	source,
+	sourceFileHash,
 }) {
 	const narration = [];
 	for (const block of aligned.filter((item) => item.kind === 'narration')) {
@@ -1659,14 +1663,20 @@ async function writeScenePlanPreview({
 	for (const request of dialogue.requests) {
 		dialogueUnits.push({
 			id: request.id,
+			targetId: request.targetId,
 			blockId: request.blockId,
 			unitIndex: request.unitIndex,
 			text: request.text,
 			synthesisText: request.synthesisText,
+			speakerRef: request.speakerRef,
+			annotationHash: request.annotationHash,
 			voiceCardId: request.voiceCardId,
+			voiceCardPath: request.voiceCard.pathRelative,
 			voiceCardFileHash: request.voiceCard.fileHash,
+			voiceCardText: request.voiceCard.text,
 			instruction: request.instruction,
 			speed: request.speed,
+			pronunciations: request.pronunciations,
 			synthesisHash: request.synthesisHash,
 			renderHash: request.renderHash,
 			cached: Boolean(await getCachedWav(request.path, request.renderHash)),
@@ -1674,8 +1684,11 @@ async function writeScenePlanPreview({
 	}
 	const preview = {
 		version: 1,
+		planVersion: SCENE_PLAN_VERSION,
+		dialogueSplitterVersion: DIALOGUE_SPLITTER_VERSION,
 		chapter: chapterId,
 		scene: sceneId,
+		source: { path: source, fileHash: sourceFileHash },
 		planOnly: true,
 		noSynthesisPerformed: true,
 		counts: {
@@ -1690,6 +1703,21 @@ async function writeScenePlanPreview({
 			fileHash: card.fileHash,
 			text: card.text,
 		}])),
+		dialogueBlocks: aligned.flatMap((block, index) => block.kind === 'dialogue' ? [{
+			blockId: block.blockId,
+			text: block.text,
+			speakerRef: block.annotation.speakerRef,
+			annotationHash: block.annotationHash,
+			annotationSnapshot: block.annotation,
+			context: {
+				previous: index > 0
+					? { blockId: aligned[index - 1].blockId, text: aligned[index - 1].text }
+					: null,
+				next: index + 1 < aligned.length
+					? { blockId: aligned[index + 1].blockId, text: aligned[index + 1].text }
+					: null,
+			},
+		}] : []),
 		narration,
 		dialogueUnits,
 		createdAt: new Date().toISOString(),
@@ -1775,6 +1803,8 @@ async function main() {
 			outputDirectory,
 			chapterId,
 			sceneId,
+			source,
+			sourceFileHash,
 		});
 		console.log(
 			`计划已写入 scene-plan.json；旁白缓存 ${preview.counts.narrationCacheHits}/${preview.counts.narrationBlocks}，`
@@ -1881,7 +1911,7 @@ async function main() {
 		return;
 	}
 	if (!production.status.gates.formalSceneCompositionAllowed) {
-		throw new Error(`[审批门禁] ${production.status.blockers.join('；')} 请先运行 review_audio.bat 完成审核。`);
+		throw new Error(`[审批门禁] ${production.status.blockers.join('；')} 请先完成云评审并运行 npm run audio:review:pull。`);
 	}
 	const losslessPath = await assembleLossless({ timeline: leveledTimeline.timeline, outputDirectory });
 	const master = await masterScene({ inputPath: losslessPath, outputDirectory });

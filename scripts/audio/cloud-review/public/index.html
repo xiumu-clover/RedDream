@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2e9">
+  <title>红楼梦 · 对白评审</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">红楼梦 · 云评审</p>
+      <h1>对白评审</h1>
+    </div>
+    <div class="progress"><strong id="progress">—</strong><span id="remaining">正在读取</span></div>
+  </header>
+
+  <main>
+    <article id="card" hidden>
+      <div class="identity">
+        <span id="chapter"></span>
+        <strong id="speaker"></strong>
+      </div>
+      <p id="before" class="context"></p>
+      <p id="text" class="source"></p>
+      <p id="after" class="context"></p>
+      <audio id="audio" controls preload="metadata"></audio>
+      <p id="duration" class="duration"></p>
+    </article>
+
+    <section id="empty" class="empty" hidden>
+      <strong>当前可试听项目已经处理完毕</strong>
+      <p id="empty-detail"></p>
+    </section>
+
+    <section id="error" class="error" hidden>
+      <strong>暂时无法读取评审队列</strong>
+      <p id="error-message"></p>
+      <button id="retry" type="button">重新加载</button>
+    </section>
+  </main>
+
+  <nav id="actions" class="actions" hidden aria-label="评审操作">
+    <button id="rerecord" class="rerecord" type="button">重录</button>
+    <button id="approve" class="approve" type="button">通过</button>
+  </nav>
+
+  <dialog id="rerecord-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <strong>重录意见</strong>
+        <button id="cancel" class="plain" value="cancel" type="submit" aria-label="关闭">×</button>
+      </div>
+      <label for="note">简单说一下希望怎样调整</label>
+      <textarea id="note" maxlength="1000" rows="5" placeholder="例如：这句太急了，语气应更委屈。"></textarea>
+      <p id="note-error" class="note-error"></p>
+      <button id="submit-rerecord" class="submit-rerecord" value="default" type="button">提交重录</button>
+    </form>
+  </dialog>
+
+  <div id="saving" class="saving" hidden>正在保存…</div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

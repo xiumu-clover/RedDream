@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "kind": "doubao-full-chapter-demo",
+  "planHash": "444329c18b8e97750ba284b572e05116ac9edca026cef1ccc2d68154440d509f",
+  "status": "rejected",
+  "approvalPolicy": "project-owner-default-policy",
+  "wholeChapterReview": {
+    "status": "rejected",
+    "reviewer": "project-owner",
+    "reviewedAt": "2026-09-23T10:28:36.4081309+08:00",
+    "binding": {
+      "part1FileHash": "61424143d25912f6d4bb7e8e9b313508da4d1af206db74cbd9ef54edec20af88",
+      "part2FileHash": "5aa269e3a277232c5c9ef0658a8cf5bafe03ba1d3a940f81c60256f7a56dfaf3"
+    },
+    "issueType": "voice-card-routing",
+    "feedback": "林黛玉应使用已有候选音色卡；王夫人应先完成现有候选卡审核；贾迎春应先制作并批准音色卡。三人的对白不得继续使用旧 Edge 参考声作为正式整章版本。",
+    "affectedFragmentCount": 14,
+    "workOrder": "content/audio/production/work-orders/081/full-chapter/voice-cards.json"
+  },
+  "counts": {
+    "blocks": 311,
+    "fragments": 394,
+    "approved": 394,
+    "pendingReview": 0,
+    "rejected": 0
+  },
+  "outputs": [
+    {
+      "part": 1,
+      "targets": 216,
+      "firstTargetId": "narration:081-b0001:u01",
+      "lastTargetId": "poetry:081-b0147:u01",
+      "wav": {
+        "path": "content/audio/.cache/doubao/chapters/081/chapter-081-part-1-doubao-seed-audio.wav",
+        "fileHash": "4c6f55ffc929059c97a6667a8a4ca47c3a441d9806746b726aa1c85ff1009d6c",
+        "codec": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1,
+        "durationSeconds": 1567.189,
+        "bytes": 75225144
+      },
+      "mp3": {
+        "path": "content/audio/.cache/doubao/chapters/081/chapter-081-part-1-doubao-seed-audio.mp3",
+        "fileHash": "61424143d25912f6d4bb7e8e9b313508da4d1af206db74cbd9ef54edec20af88",
+        "codec": "mp3",
+        "sampleRate": 24000,
+        "channels": 1,
+        "durationSeconds": 1567.248,
+        "bytes": 25076397
+      },
+      "loudness": {
+        "input_i": "-19.17",
+        "input_tp": "-1.64",
+        "input_lra": "4.10",
+        "input_thresh": "-29.99",
+        "output_i": "-19.09",
+        "output_tp": "-2.00",
+        "output_lra": "4.10",
+        "output_thresh": "-29.93",
+        "normalization_type": "dynamic",
+        "target_offset": "0.09"
+      }
+    },
+    {
+      "part": 2,
+      "targets": 178,
+      "firstTargetId": "narration:081-b0290:u01",
+      "lastTargetId": "narration:081-b0242:u01",
+      "wav": {
+        "path": "content/audio/.cache/doubao/chapters/081/chapter-081-part-2-doubao-seed-audio.wav",
+        "fileHash": "cfdf85d3dc6b4c1ca3b3fd986a0fe40cdeb51b5c8cae1b3c11a8adcc51e37791",
+        "codec": "pcm_s16le",
+        "sampleRate": 24000,
+        "channels": 1,
+        "durationSeconds": 1324.927,
+        "bytes": 63596572
+      },
+      "mp3": {
+        "path": "content/audio/.cache/doubao/chapters/081/chapter-081-part-2-doubao-seed-audio.mp3",
+        "fileHash": "5aa269e3a277232c5c9ef0658a8cf5bafe03ba1d3a940f81c60256f7a56dfaf3",
+        "codec": "mp3",
+        "sampleRate": 24000,
+        "channels": 1,
+        "durationSeconds": 1324.992,
+        "bytes": 21200301
+      },
+      "loudness": {
+        "input_i": "-19.14",
+        "input_tp": "-1.90",
+        "input_lra": "4.40",
+        "input_thresh": "-29.79",
+        "output_i": "-19.03",
+        "output_tp": "-2.00",
+        "output_lra": "4.40",
+        "output_thresh": "-29.70",
+        "normalization_type": "dynamic",
+        "target_offset": "0.03"
+      }
+    }
+  ],
+  "manifest": "content/audio/.cache/doubao/chapters/081/chapter-manifest.json",
+  "generatedAt": "2026-09-22T12:42:06.180Z"
+}

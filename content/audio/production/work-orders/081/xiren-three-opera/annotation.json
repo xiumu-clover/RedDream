@@ -2,9 +2,9 @@
   "version": 1,
   "chapter": "081",
   "scene": "xiren-three-opera",
-  "planHash": "e0893b67ae98b81a0ae716c69499936e8f7a1d897a3d717234caf232e22c0652",
+  "planHash": "8df64c812f3b0075a191fa68253be88bf773848f8908ac02366de70834ec1bba",
   "assignedTo": "annotation",
-  "remainingReviewCount": 50,
+  "remainingReviewCount": 37,
   "instructions": "只修改明确列出的派生语义标注，不修改小说正文。",
   "failures": []
 }

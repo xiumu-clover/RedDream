@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-28",
+  "scope": "Local CosyVoice casting decisions; independent of the Edge-TTS voice-cards/index.json",
+  "assignments": {
+    "jia-yingchun": {
+      "displayName": "贾迎春",
+      "voiceCardId": "xiangling/calm-poetry-talk-v1",
+      "sourceCharacter": "香菱",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/voice-card-delivery.wav",
+      "voiceCardSha256": "9ba819af75f791624c9d0c446dbf4a866d6b68fb6622c191381dbbfb81d8d22d",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/generation.json",
+      "reviewDecision": "user-selected",
+      "note": "迎春与香菱复用同一张实际标准卡；第81回不在同一场景直接对话。新迎春 Demo 仍待用户试听，不把香菱原声描述为迎春原声。"
+    },
+    "qiu-wen": {
+      "displayName": "秋纹",
+      "voiceCardId": "jia-yingchun/resigned-calm-v1",
+      "sourceCharacter": "贾迎春",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-yingchun/resigned-calm-v1/voice-card-delivery.wav",
+      "voiceCardSha256": "2bd61b5d667d46af8d372e716f921644ed4945e888ffed3472f727822a6e1769",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-yingchun/resigned-calm-v1/generation.json",
+      "reviewDecision": "user-selected",
+      "note": "这是87版迎春原声制作的卡，作为秋纹代理声使用；保留原始人物和出处元数据，不复制或重命名音频。"
+    }
+  },
+  "reservedCards": [
+    {
+      "voiceCardId": "qiu-wen/soft-remembrance-v1",
+      "sourceCharacter": "秋纹",
+      "sourceType": "character-original",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/qiu-wen/soft-remembrance-v1/voice-card.wav",
+      "voiceCardSha256": "aa417e857632f86b6381ee3ac524e04e1d699a659fe3068ddec19fe1318feaca",
+      "status": "reserved-unassigned",
+      "note": "用户喜欢此音色，留待以后某位主要人物；尚未指定目标角色。不得继续默认作为秋纹当前声卡，也不得把源人物身份改写成未来角色。"
+    }
+  ]
+}

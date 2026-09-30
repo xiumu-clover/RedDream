@@ -41,6 +41,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--card-output", required=True, type=Path)
     parser.add_argument("--demo-output", required=True, type=Path)
     parser.add_argument("--metadata-output", required=True, type=Path)
+    parser.add_argument(
+        "--demo-only-from-card",
+        action="store_true",
+        help="Reuse an existing canonical card unchanged and synthesize only the demo.",
+    )
     parser.add_argument("--speed", type=float, default=1.0)
     parser.add_argument("--seed", type=int, default=20260909)
     parser.add_argument(
@@ -152,9 +157,20 @@ def main() -> int:
         model_dir = cosyvoice_root / model_dir
     model_dir = require_file(model_dir / "cosyvoice2.yaml", "CosyVoice2 model config").parent
     reference = require_file(args.reference, "Reference WAV")
-    card_output = prepare_output(args.card_output)
+    card_output = (
+        require_file(args.card_output, "Existing voice card WAV")
+        if args.demo_only_from_card else prepare_output(args.card_output)
+    )
     demo_output = prepare_output(args.demo_output)
     metadata_output = prepare_output(args.metadata_output)
+    if args.demo_only_from_card:
+        if reference != card_output or args.reference_text != args.card_text:
+            raise ValueError(
+                "--demo-only-from-card requires --reference and --card-output "
+                "to name the same WAV, with identical --reference-text and --card-text."
+            )
+        if demo_output == card_output or metadata_output == card_output:
+            raise ValueError("Demo outputs must not overwrite the existing voice card.")
 
     os.chdir(cosyvoice_root)
     import torch
@@ -193,21 +209,28 @@ def main() -> int:
         min_token_text_ratio=args.min_token_text_ratio,
         max_token_text_ratio=args.max_token_text_ratio,
     )
-    print("[1/2] Generating canonical voice card...", flush=True)
-    card_started = time.perf_counter()
-    card_audio = synthesize(
-        model,
-        torch,
-        args.card_text,
-        args.reference_text,
-        reference,
-        args.speed,
-        args.stream,
-        not args.disable_text_frontend,
-    )
-    torchaudio.save(str(card_output), card_audio, model.sample_rate)
-    card_elapsed = time.perf_counter() - card_started
-    print(f"[1/2] Saved {card_output} in {card_elapsed:.1f}s", flush=True)
+    if args.demo_only_from_card:
+        print("[1/2] Reusing existing canonical voice card unchanged...", flush=True)
+        card_audio, card_sample_rate = torchaudio.load(str(card_output))
+        if card_sample_rate != model.sample_rate or card_audio.numel() == 0:
+            raise ValueError("Existing voice card must be nonempty and use model sample rate.")
+        card_elapsed = None
+    else:
+        print("[1/2] Generating canonical voice card...", flush=True)
+        card_started = time.perf_counter()
+        card_audio = synthesize(
+            model,
+            torch,
+            args.card_text,
+            args.reference_text,
+            reference,
+            args.speed,
+            args.stream,
+            not args.disable_text_frontend,
+        )
+        torchaudio.save(str(card_output), card_audio, model.sample_rate)
+        card_elapsed = time.perf_counter() - card_started
+        print(f"[1/2] Saved {card_output} in {card_elapsed:.1f}s", flush=True)
 
     torch.manual_seed(args.seed + 1)
     if torch.cuda.is_available():
@@ -230,6 +253,7 @@ def main() -> int:
 
     metadata = {
         "version": 1,
+        "mode": "demo-only-from-card" if args.demo_only_from_card else "two-stage",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "engine": "CosyVoice2",
         "modelDir": str(model_dir),
@@ -246,7 +270,7 @@ def main() -> int:
             "cpu" if args.speech_tokenizer_cpu else "automatic"
         ),
         "timingsSeconds": {
-            "voiceCard": round(card_elapsed, 3),
+            "voiceCard": round(card_elapsed, 3) if card_elapsed is not None else None,
             "demo": round(demo_elapsed, 3),
         },
         "reference": {

@@ -2,37 +2,30 @@ import { join, resolve } from 'node:path';
 import { hashJson, textChangeRatio, voiceAnnotationHash } from './audio-blocks.js';
 import { resolveBlockRenderSpec } from './render-plan.js';
 
-export const SCENE_PLAN_VERSION = 'drama-scene-plan-v2';
+export const SCENE_PLAN_VERSION = 'drama-scene-plan-v3';
 export const SCENE_RENDER_VERSION = 'drama-scene-render-v1';
-export const DIALOGUE_SPLITTER_VERSION = 'zh-natural-punctuation-v1';
+export const DIALOGUE_SPLITTER_VERSION = 'zh-natural-punctuation-max30-v2';
 export const SCENE_SAMPLE_RATE = 24000;
 
 export const SCENE_DEFINITIONS = {
 	'xiren-three-opera': {
 		chapter: '081',
-		startAnchor: '且说宝玉独自闷闷回怡红院来。将至门口，只见院门大开，里面一片吵嚷之声。',
-		endAnchor: '说罢动了气，一面理着头发衣襟，往屋里去了。',
+		startAnchor: '且说宝玉闷闷的回至怡红院，将到门首，只见院门大开，里面吵嚷不休。',
+		endAnchor: '一面说，一面理好头发衣襟，带气进屋去了。',
 		chorus: {
-			'081-b0032': {
+			'081-b0246': {
 				label: '三人同诉',
 				mainVoice: 'ai-guan',
 				voices: ['ai-guan'],
 				mode: 'single-main',
 				reason: '按试听反馈，以艾官作为三人同诉的单一代表声，避免群声降低可懂度。',
 			},
-			'081-b0053': {
+			'081-b0254': {
 				label: '齐声附和',
 				mainVoice: 'dou-guan',
 				voices: ['dou-guan'],
 				mode: 'single-main',
 				reason: '按试听反馈，以荳官作为齐声附和的单一代表声，避免群声降低可懂度。',
-			},
-			'081-b0065': {
-				label: '三人回应',
-				mainVoice: 'kui-guan',
-				voices: ['kui-guan'],
-				mode: 'single-main',
-				reason: '按试听反馈，以葵官作为三人回应的单一代表声，避免群声降低可懂度。',
 			},
 		},
 	},
@@ -99,6 +92,9 @@ const VARIANT_INSTRUCTIONS = {
 	'hushed-alarm': '急切但压低声音，担心惊动外人',
 	'tearful-appeal': '含泪诉冤，委屈急切但字句清楚',
 	'grieving-compassion': '悲痛怜惜，接近落泪但保持可懂度',
+	'sorrowful-inquiry': '听闻变故心里一沉，带难过和担忧轻声求证',
+	'grieving-reflection': '回想迎春受苦与往日热闹时明显难过，悲意真切但不哭诉',
+	'grieving-lament': '为女儿家命苦而沉痛叹息，难过与苦涩清楚可闻但不拖字',
 	'weary-complaint': '含泪诉说困境，疲惫又委屈',
 	'guilty-consolation': '自责而温柔地安慰，同时压低声量',
 	'bitter-accusation': '积怨爆发，带苦涩的尖锐控诉',
@@ -115,6 +111,9 @@ const VARIANT_INSTRUCTIONS = {
 	'forced-agreement': '表面嘴硬地同意，内里发虚',
 	'betrayed-sorrow': '信任崩塌后的悲凉自问，接近落泪',
 	'defensive-irritation': '受疑后恼怒自辩，刻意显得冷淡',
+	'tearful-grievance': '抽噎着诉说委屈，仍努力把事情交代清楚',
+	'wounded-dismissal': '受伤后骤然决断，疲惫而悲凉，不是训斥众人',
+	'restrained-anger-to-grief': '由克制愤懑逐渐转入无人可信的悲凉',
 };
 
 const FAMILY_INSTRUCTIONS = {
@@ -450,7 +449,7 @@ function splitOversizedClause(clause, maxChars) {
 	return output;
 }
 
-export function splitChineseDialogue(text, maxChars = 46) {
+export function splitChineseDialogue(text, maxChars = 30) {
 	if (!Number.isInteger(maxChars) || maxChars < 10) throw new Error('对白分句上限必须是不小于 10 的整数。');
 	const clauses = text.match(/[^。！？!?；;]+[。！？!?；;]?/gu) || [];
 	const natural = clauses.flatMap((clause) => splitOversizedClause(clause, maxChars));
@@ -473,7 +472,7 @@ export function splitChineseDialogue(text, maxChars = 46) {
  * the surrounding text by the normal punctuation rules. Forced units must be
  * exact, ordered excerpts so this can never omit or reorder source dialogue.
  */
-export function splitChineseDialogueWithDelivery(text, delivery, maxChars = 46) {
+export function splitChineseDialogueWithDelivery(text, delivery, maxChars = 30) {
 	const forcedUnits = delivery?.forcedUnits || [];
 	if (forcedUnits.length === 0) {
 		return splitChineseDialogue(text, maxChars).map((unitText) => ({ text: unitText }));

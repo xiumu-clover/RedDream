@@ -1,5 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import { BOOK_IDS, type BookId } from '../books/catalog';
 import type { CompiledChapter } from './compiler';
 import { compileChapter } from './compiler';
@@ -87,4 +87,32 @@ export async function loadCompiledChapters(
 	]);
 
 	return chapters.sort(compareChapters);
+}
+
+export async function loadCompiledChapter(
+	book: BookId,
+	sourceId: string,
+): Promise<PreparedChapter | undefined> {
+	if (book === 'hongloumeng') {
+		const entry = await getEntry('hongloumengChapters', sourceId);
+		return entry ? prepareEntry(entry, {
+			book,
+			sourceRoot: 'content/chapters/hongloumeng',
+		}) : undefined;
+	}
+
+	if (book === 'guiyou') {
+		const entry = await getEntry('guiyouChapters', sourceId);
+		return entry ? prepareEntry(entry, {
+			book,
+			sourceRoot: 'content/chapters/guiyou',
+		}) : undefined;
+	}
+
+	const entry = await getEntry('guiyouOriginalChapters', sourceId);
+	return entry ? prepareEntry(entry, {
+		book,
+		sourceRoot: 'content/chapters/guiyou-original',
+		routePrefix: 'guiyou-original',
+	}) : undefined;
 }

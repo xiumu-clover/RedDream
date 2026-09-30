@@ -61,11 +61,11 @@ async function loadCurrentScene() {
 
 test('按当前正文锚点提取完整争吵场景', async () => {
 	const { extracted } = await loadCurrentScene();
-	assert.equal(extracted.blocks.length, 51);
-	assert.equal(extracted.blocks.filter(({ kind }) => kind === 'narration').length, 29);
-	assert.equal(extracted.blocks.filter(({ kind }) => kind === 'dialogue').length, 22);
-	assert.match(extracted.actualStartText, /^且说宝玉独自闷闷回怡红院来/u);
-	assert.equal(extracted.actualEndText, '说罢动了气，一面理着头发衣襟，往屋里去了。');
+	assert.equal(extracted.blocks.length, 49);
+	assert.equal(extracted.blocks.filter(({ kind }) => kind === 'narration').length, 28);
+	assert.equal(extracted.blocks.filter(({ kind }) => kind === 'dialogue').length, 21);
+	assert.match(extracted.actualStartText, /^且说宝玉闷闷的回至怡红院/u);
+	assert.equal(extracted.actualEndText, '一面说，一面理好头发衣襟，带气进屋去了。');
 });
 
 test('旧 blockId 偏移时按文本、hash 和上下文对齐，不按当前位置套标注', async () => {
@@ -80,7 +80,7 @@ test('旧 blockId 偏移时按文本、hash 和上下文对齐，不按当前位
 		annotationDocument,
 	});
 	assert.equal(aligned.filter(({ alignmentStatus }) => alignmentStatus === 'paused').length, 0);
-	assert.equal(aligned[0].order, 30);
+	assert.equal(aligned[0].order, 32);
 	assert.equal(aligned[0].blockId, '081-b0022');
 	assert.equal(aligned[0].alignmentMethod, 'current-annotation-text-hash-context');
 	assert.equal(aligned[0].annotation.speakerRef, '$narrator');
@@ -136,26 +136,26 @@ test('旁白只路由 Edge，五个角色对白只路由指定 CosyVoice 卡', a
 		aligned.filter((block) => block.annotation.speakerRef === id).length,
 	]));
 	assert.deepEqual(counts, {
-		'jia-baoyu': 9,
+		'jia-baoyu': 8,
 		xiren: 3,
-		'ai-guan': 5,
+		'ai-guan': 6,
 		'dou-guan': 3,
-		'kui-guan': 2,
+		'kui-guan': 1,
 	});
 });
 
-test('三处齐声块选择标注指定的艾官、荳官、葵官主声', async () => {
+test('当前两处群声使用单一代表声，艾官独答不再误作群声', async () => {
 	const { definition, aligned } = await loadCurrentScene();
 	for (const [blockId, mainVoice] of Object.entries({
-		'081-b0032': 'ai-guan',
-		'081-b0053': 'dou-guan',
-		'081-b0065': 'kui-guan',
+		'081-b0246': 'ai-guan',
+		'081-b0254': 'dou-guan',
 	})) {
 		const chorus = chorusForBlock(definition, aligned.find((block) => block.blockId === blockId));
 		assert.equal(chorus.mainVoice, mainVoice);
 		assert.deepEqual(chorus.voices, [mainVoice]);
 		assert.equal(chorus.mode, 'single-main');
 	}
+	assert.equal(chorusForBlock(definition, aligned.find((block) => block.blockId === '081-b0065')), undefined);
 });
 
 test('宝玉在本场统一用“有什么话咱且轻轻说”片段所用卡，袭人和三官保持各自路由', () => {
@@ -173,8 +173,8 @@ test('宝玉在本场统一用“有什么话咱且轻轻说”片段所用卡�
 });
 
 test('标注可强制艾官开头整句独立连贯合成，不改原文', () => {
-	const text = '好你个西洋花点子哈巴狗儿！不枉李奶奶说你妆狐媚子哄人，果然是个刁滑狐狸！';
-	const opening = '好你个西洋花点子哈巴狗儿！';
+	const text = '好个西洋花点子哈巴狗儿！李奶奶说你妆狐媚子哄人，果然不错。';
+	const opening = '好个西洋花点子哈巴狗儿！';
 	const units = splitChineseDialogueWithDelivery(text, {
 		forcedUnits: [{ text: opening, speed: 1.16, continuous: true }],
 	});
@@ -182,6 +182,21 @@ test('标注可强制艾官开头整句独立连贯合成，不改原文', () =>
 	assert.equal(units[0].text, opening);
 	assert.equal(units[0].delivery?.continuous, true);
 	assert.equal(units[0].delivery?.speed, 1.16);
+});
+
+test('普通对白默认不超过三十字，标注明示的连续单元可以例外', () => {
+	const text = '这是一段需要按照自然标点拆开的较长对白，因为默认合成单元不应超过三十个汉字，还要保持原文顺序。';
+	const units = splitChineseDialogueWithDelivery(text);
+	assert.equal(units.map((unit) => unit.text).join(''), text);
+	assert.equal(units.every((unit) => [...unit.text].length <= 30), true);
+
+	const forced = '这是一段经过人工标注明确要求连续说完且允许超过三十个汉字的特殊对白单元。';
+	const forcedUnits = splitChineseDialogueWithDelivery(forced, {
+		forcedUnits: [{ text: forced, continuous: true }],
+	});
+	assert.equal(forcedUnits.length, 1);
+	assert.equal(forcedUnits[0].text, forced);
+	assert.equal([...forcedUnits[0].text].length > 30, true);
 });
 
 test('合成读音覆盖不改书面原文', () => {

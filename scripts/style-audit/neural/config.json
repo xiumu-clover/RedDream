@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "model": "Qwen/Qwen3-0.6B-Base",
+  "revision": "d4667999710b99b9b0a71dd9b2d314baa5662fd3",
+  "python": "3.11",
+  "contextTokens": 512,
+  "strideTokens": 256,
+  "referenceAdapters": 2,
+  "learningRate": 0.0001,
+  "maxEpochs": 3,
+  "lora": {
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "targetModules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}

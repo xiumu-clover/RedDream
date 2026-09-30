@@ -88,6 +88,8 @@ npm run astro -- dev --background --host
 
 ```sh
 npm test
+npm run test:site
+npm run test:audio
 npm run build
 npm run extract:zhipi
 npm run astro -- dev --background
@@ -98,7 +100,7 @@ npm run astro -- dev stop
 
 ## 每日自动构建
 
-`.github/workflows/scheduled-build.yml` 每天北京时间 03:17 运行测试和 Astro 构建；验证通过后调用 Cloudflare Pages Deploy Hook，触发生产站重新构建。选择 03:17 是为了避开 GitHub Actions 每逢整点较容易出现的排队高峰，计划任务仍可能因平台负载稍有延迟。
+`.github/workflows/scheduled-build.yml` 每天北京时间 03:17 只运行网站章节测试和 Astro 构建；验证通过后调用 Cloudflare Pages Deploy Hook，触发生产站重新构建。音频测试由独立的 `.github/workflows/audio-check.yml` 在推送、PR 或手动运行时执行；其失败不会跳过正文构建或定时部署。音频生成和发布仍在本地进行。选择 03:17 是为了避开 GitHub Actions 每逢整点较容易出现的排队高峰，计划任务仍可能因平台负载稍有延迟。
 
 首次启用时需要完成一次私密配置：
 

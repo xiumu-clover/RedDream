@@ -3,10 +3,9 @@ import ChapterContent from '../../components/chapters/ChapterContent.astro';
 import AudioPlayer, { type ChapterAudioRecord } from '../../components/chapters/AudioPlayer.astro';
 import ChapterNavigation from '../../components/chapters/ChapterNavigation.astro';
 import PageShell from '../../components/layout/PageShell.astro';
-import { BOOKS, BOOK_IDS } from '../../lib/books/catalog';
-import type { PreparedChapter } from '../../lib/chapters/collection';
-import { loadCompiledChapters } from '../../lib/chapters/collection';
-import audioManifest from '../../../public/audio/manifest.json';
+import { BOOKS, type BookId } from '../../lib/books/catalog';
+import { loadCompiledChapter, loadCompiledChapters } from '../../lib/chapters/collection';
+import { loadPublishedAudioManifest } from '../../lib/chapters/audio-manifest';
 
 interface ChapterLink {
 	id: string;
@@ -15,39 +14,42 @@ interface ChapterLink {
 
 export async function getStaticPaths() {
 	const chapters = await loadCompiledChapters();
-
-	return BOOK_IDS.flatMap((book) => {
-		const bookChapters = chapters.filter((chapter) => chapter.book === book);
-		return bookChapters.map((preparedChapter, index) => ({
+	return chapters.map((preparedChapter, index, allChapters) => {
+		const bookChapters = allChapters.filter(({ book }) => book === preparedChapter.book);
+		const bookIndex = bookChapters.findIndex(({ id }) => id === preparedChapter.id);
+		return {
 			params: { id: preparedChapter.id },
 			props: {
-				preparedChapter,
-				previous: index > 0
-					? { id: bookChapters[index - 1].id, title: bookChapters[index - 1].chapter.title }
+				book: preparedChapter.book,
+				sourceId: preparedChapter.sourceId,
+				previous: bookIndex > 0
+					? { id: bookChapters[bookIndex - 1].id, title: bookChapters[bookIndex - 1].chapter.title }
 					: undefined,
-				next: index < bookChapters.length - 1
-					? { id: bookChapters[index + 1].id, title: bookChapters[index + 1].chapter.title }
+				next: bookIndex < bookChapters.length - 1
+					? { id: bookChapters[bookIndex + 1].id, title: bookChapters[bookIndex + 1].chapter.title }
 					: undefined,
 			},
-		}));
+		};
 	});
 }
 
 interface Props {
-	preparedChapter: PreparedChapter;
+	book: BookId;
+	sourceId: string;
 	previous?: ChapterLink;
 	next?: ChapterLink;
 }
 
-const { preparedChapter: { order, description, chapter, book }, previous, next } = Astro.props;
+const { book, sourceId, previous, next } = Astro.props;
+const preparedChapter = await loadCompiledChapter(book, sourceId);
+if (!preparedChapter) throw new Error(`找不到章节：${Astro.params.id ?? ''}`);
+
+const { order, description, chapter } = preparedChapter;
 const definition = BOOKS[book];
 const audioId = String(order).padStart(3, '0');
-const manifest = audioManifest as {
-	version: number;
-	chapters: Record<string, ChapterAudioRecord | undefined>;
-};
+const manifest = await loadPublishedAudioManifest();
 const audioRecord = definition.hasAudio && manifest.version === 2
-	? manifest.chapters[audioId]
+	? manifest.chapters[audioId] as ChapterAudioRecord | undefined
 	: undefined;
 ---
 

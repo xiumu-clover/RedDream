@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "scope": "full-chapter",
+  "createdAt": "2026-09-23T10:28:36.4081309+08:00",
+  "assignedTo": "voice-cards",
+  "status": "planned",
+  "blocking": true,
+  "instructions": "先处理下列三个人物音色卡。不得修改正文或语义标注，不得用本地 CosyVoice 处理旁白。现有候选卡必须人工 A/B 试听后才能批准；若不合格再返工。只在音色卡批准并记录精确 fileHash 后，才把受影响对白交给录音会话重生成。",
+  "sourceFeedback": "黛玉已有音色卡却未使用；王夫人和迎春应先完成音色卡再生成正式对白。",
+  "summary": {
+    "voiceCardsToResolve": 3,
+    "existingCandidatesPendingReview": 2,
+    "missingVoiceCards": 1,
+    "affectedDialogueFragments": 14,
+    "unaffectedFragmentsToReuse": 380
+  },
+  "tasks": [
+    {
+      "speakerRef": "lin-daiyu",
+      "label": "林黛玉",
+      "state": "candidate_pending_review",
+      "action": "人工 A/B 试听现有标准卡、原声参考和 Demo；合格则批准并登记 fileHash，不合格则返工制作。",
+      "candidatePath": "content/audio.cache/voice-cards/daiyu/daiyu-voice-card.wav",
+      "candidateFileHash": "9cb68ad1e72760a9fa840ac4a51b06c5016c3d1df3c388c4be88fda919255122",
+      "knownIssue": "制作记录明确标为候选，CAMPPlus 指标略低于试验参考值，并要求人工确认残余环境声、音乐和滤波痕迹。",
+      "affectedTargetIds": [
+        "dialogue:081-b0016:u01",
+        "dialogue:081-b0020:u01",
+        "dialogue:081-b0104:u01",
+        "dialogue:081-b0107:u01",
+        "dialogue:081-b0111:u01",
+        "dialogue:081-b0111:u02"
+      ]
+    },
+    {
+      "speakerRef": "lady-wang",
+      "label": "王夫人",
+      "state": "candidate_pending_review",
+      "action": "人工 A/B 试听现有标准卡、原声参考和 Demo；合格则批准并登记 fileHash，不合格则返工制作。",
+      "candidatePath": "content/audio.cache/voice-cards/lady-wang/lady-wang-voice-card.wav",
+      "candidateFileHash": "dec343f0392de49c9a6bef3e8024f86c09bcf9730c752a6069da15aaa6ddf07d",
+      "knownIssue": "制作记录明确标为候选，二阶段存在音色漂移风险，切点与音质仍需人工 A/B 确认。",
+      "affectedTargetIds": [
+        "dialogue:081-b0009:u01",
+        "dialogue:081-b0013:u01",
+        "dialogue:081-b0095:u01",
+        "dialogue:081-b0099:u01",
+        "dialogue:081-b0099:u02",
+        "dialogue:081-b0291:u01"
+      ]
+    },
+    {
+      "speakerRef": "jia-yingchun",
+      "label": "贾迎春",
+      "state": "missing",
+      "action": "制作可追溯的标准音色卡和二次试听 Demo，完成转写、音频完整性、说话人相似度与人工 A/B 验收后登记批准 fileHash。",
+      "affectedTargetIds": [
+        "dialogue:081-b0007:u01",
+        "dialogue:081-b0007:u02"
+      ]
+    }
+  ],
+  "downstream": {
+    "assignedTo": "recording",
+    "status": "blocked",
+    "unblockWhen": "三张音色卡均有 approved 状态和精确 fileHash",
+    "instruction": "解锁后仅重生成上述14条对白；禁止重做其余380条已缓存片段。新音色卡哈希会使旧片段审批自动 superseded。"
+  }
+}

@@ -2,14 +2,14 @@
 
 ## 1. 范围与发布原则
 
-本阶段只处理第 81–108 回。音频在本地预合成，网站只播放静态 MP3，不在浏览器请求期间调用 TTS，也不需要后端或服务密钥。
+本阶段只处理第 81–108 回。音频在本地预合成，公开阅读网站只播放静态 MP3，不在浏览器请求期间调用 TTS，也不需要后端或服务密钥。私有云评审是独立应用，不参与公开阅读页构建。
 
 - 默认 TTS provider 为 Edge-TTS；provider 契约允许以后接入 Azure 或阿里云。
 - 第 81 回是 Cloudflare Pages 试点，可发布女、男两条旁白音轨。
 - 第 82–108 回可以在本地生成与试听，但不在发布白名单中。
 - 第 1–80 回不生成音频，也不会显示播放器。
 - 生成与发布分开；`generate_audio.bat` 永远不会写入 `public/audio/`。
-- 当前不依赖 R2，也不修改现有 Cloudflare Pages 构建或定时构建流程。
+- 正式成品发布暂不依赖 R2；私有评审使用单独的 R2 Bucket 和 D1，不修改现有公开网站的 Cloudflare Pages 构建或定时构建流程。
 
 仓库目前没有根目录 `SPEC.md`。正文标记行为以 `src/lib/chapters/compiler.ts` 及其测试为准。
 
@@ -227,7 +227,7 @@ npm run audio:publish -- 81 --check
 npm run audio:publish -- 81 --yes
 ```
 
-## 9. 将来迁移到 R2
+## 9. 将正式成品迁移到 R2
 
 本地生成器保持不变。新增 R2 发布器，把整轨上传到带 `trackHash` 的版本化对象路径，然后只把 manifest 中的 `url` 改成完整 CDN URL，例如：
 
@@ -248,10 +248,10 @@ https://audio.example.com/guiyou/081/male/<trackHash>.mp3
 # 1. 只对齐、路由和盘点缓存；不启动 TTS / CosyVoice / Whisper
 npm run audio:scene:plan -- --chapter 081 --scene xiren-three-opera
 
-# 2. 生成本地草稿并做音频完整性/电平检查；跳过 Whisper
+# 2. 生成/复用片段，完成裁边、电平和 Whisper 机器检查，更新审核计划；不拼正式场景
 npm run audio:scene:draft -- --chapter 081 --scene xiren-three-opera
 
-# 3. 定稿验收；只对新增或改变的片段运行 Whisper
+# 3. 仅在当前对白全部获精确哈希审批、旁白技术通过后拼接正式场景
 npm run audio:scene -- --chapter 081 --scene xiren-three-opera
 ```
 
@@ -272,3 +272,42 @@ CosyVoice Python 进程在同一批作业中只加载一次模型，并且按“
 短旁白不再只依赖 LUFS 门限。小于数秒的音频可能被 LUFS gating 视为无效，所以每个入片 WAV 先检查 PCM RMS、峰值和有效样本比，再做短片段电平校准；最后整场才使用保守的 LUFS 处理。疑似空音频、超大增益、峰值越限或文字结构检查失败时必须停止拼接，不得把错误带入整场。
 
 当前硬件与 CosyVoice2 组合中，`inference_instruct2` 曾连续超过单句两分钟而无输出，因此正式入片仍按既定安全策略回退到 `inference_zero_shot`。情绪主要来自日常、着急、伤心等多风格音色卡、自然分句、标点、速度和保守后处理，不能宣称已经实现精确指令情绪控制。批量提升质量的优先级是：先扩充主角多风格卡并做可追溯目录，再只为 ASR/结构检查失败的句子生成少量候选，最后实现跨场景 missing-job 聚合或常驻 CosyVoice worker，避免每场重复约十几秒的模型加载。
+
+## 11. 私有云对白评审
+
+本项目不再维护本地审核服务。对白艺术审批由项目所有者通过手机访问独立的 Cloudflare Pages 私有评审应用完成；评审 API 使用仅保存在网址片段和手机浏览器中的随机令牌保护，R2 保存待审音频，D1 保存批次和决定。也可在已有 Zero Trust 的账户中改用 Cloudflare Access。评审域名、Pages 项目、R2、D1 均与公开阅读网站分离。
+
+手机界面只显示回目、人物、完整正文块、当前单元高亮、前后文、播放器和进度。固定操作只有“通过”和“重录”；“重录”要求填写一句简短意见。问题分类、哈希、机器检查和路由不增加用户操作负担。重录意见同步后先进入总控待分派，由总控判断交给录音、标注或音色卡会话。
+
+录音会话生成或更新片段后，上传当前可试听队列：
+
+```sh
+npm run audio:review:push
+```
+
+专业会话开始处理云端反馈前，同步决定并确定性更新仓库状态：
+
+```sh
+npm run audio:review:pull
+```
+
+云端只接收当前 `pending_review`、已通过机器技术检查、磁盘哈希与计划一致的真实入片文件。R2 对象以 `fileHash` 命名，因此相同文件不会重复上传。D1 的决定同时绑定 `planHash`、`reviewKey` 和唯一 `decisionId`；过期手机页面不能覆盖新批次，网络重试不会重复写入。云端决定实时保存，拉取后写入受版本管理的小型 JSON。私有部署配置见 `scripts/audio/cloud-review/README.md`。
+
+第 81 回当前场景的受版本管理状态位于：
+
+```text
+content/audio/production/
+├─ policy.json
+├─ chapters/081/
+│  ├─ plan.json
+│  ├─ approvals.json
+│  └─ status.json
+└─ work-orders/081/xiren-three-opera/
+   ├─ recording.json
+   ├─ annotation.json
+   └─ voice-cards.json
+```
+
+`approvals.json` 保存每次人工决定及历史，审批绑定 `blockId`、单元序号、标注、音色卡、渲染和实际文件哈希。绑定发生变化时旧记录转为 `superseded`。未试听始终是 `pending_review`；“重录”把当前版本记为 `rejected` 并立即生成带意见的返工项。三份工作单只列各会话需要处理的当前失败或缺失渲染，并附剩余数量，不复制通过列表。
+
+所有对白同步为 `approved` 后才能运行正式场景命令；生成的整场音频会作为新的哈希绑定审核项，仍须从头到尾人工试听。

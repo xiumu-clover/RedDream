@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "provider": "doubao",
+  "api": {
+    "kind": "unidirectional-http",
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",
+    "resourceId": "seed-tts-2.0",
+    "requestVersion": "doubao-tts2-demo-v1"
+  },
+  "audioGenerationApi": {
+    "kind": "audio-generation-http",
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+    "model": "seed-audio-1.0",
+    "requestVersion": "doubao-seed-audio-reference-demo-v1"
+  },
+  "audio": {
+    "format": "wav",
+    "sampleRate": 24000,
+    "channels": 1,
+    "targetLufs": -21,
+    "truePeakDbfs": -3
+  },
+  "voices": {
+    "ai-guan": {
+      "label": "直率英子 2.0",
+      "speaker": "zh_female_zhishuaiyingzi_uranus_bigtts"
+    },
+    "dou-guan": {
+      "label": "爽快思思 2.0",
+      "speaker": "zh_female_shuangkuaisisi_uranus_bigtts"
+    },
+    "kui-guan": {
+      "label": "清澈梓梓 2.0",
+      "speaker": "zh_female_qingchezizi_uranus_bigtts"
+    },
+    "xiren": {
+      "label": "温柔淑女 2.0",
+      "speaker": "zh_female_wenroushunv_uranus_bigtts"
+    }
+  },
+  "demo": {
+    "engine": "seed-audio-reference",
+    "chapter": "081",
+    "scene": "xiren-three-opera",
+    "sectionId": "081-xiren-three-opera-doubao-full-dialogue-v1",
+    "pauseAfterMs": 340,
+    "mp3BitrateKbps": 128,
+    "master": {
+      "targetLufs": -19,
+      "truePeakDbfs": -2,
+      "loudnessRange": 7
+    },
+    "targetOverrides": {
+      "dialogue:081-b0028:u02": {
+        "retryVersion": 2,
+        "instructionSuffix": "完整读出开头“李奶奶说你”，李奶奶后直接接说你，不得添加“的时候”等原文没有的字；“妆狐媚子”逐字清楚"
+      },
+      "dialogue:081-b0048:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "整句连贯说完，问号处只作短停顿，绝不添加语气词，也绝不添加或重复“你”字"
+      },
+      "dialogue:081-b0246:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "按人工审核意见缩短句中停顿，各意群紧密衔接，整句不要拖慢"
+      },
+      "dialogue:081-b0254:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "按人工审核意见明显增强激动和争吵感，语速更快、冲突更强，仍须吐字清楚且不要尖叫"
+      },
+      "dialogue:081-b0248:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "必须从“到底是”三个字开始完整读出，开头不得省略；短句一口气连贯说完"
+      }
+    },
+    "targetMode": "all-dialogue-units"
+  },
+  "chapterDemo": {
+    "chapter": "081",
+    "sectionId": "081-doubao-full-chapter-v1",
+    "renderVersion": "doubao-seed-audio-chapter-v1",
+    "splitAfterBlockId": "081-b0147",
+    "maxNarrationChars": 180,
+    "maxDialogueChars": 30,
+    "concurrency": 2,
+    "mp3BitrateKbps": 128,
+    "pause": {
+      "withinBlockMs": 120,
+      "narrationToDialogueMs": 220,
+      "dialogueToNarrationMs": 250,
+      "betweenBlocksMs": 210,
+      "afterPoetryMs": 650
+    },
+    "master": {
+      "targetLufs": -19,
+      "truePeakDbfs": -2,
+      "loudnessRange": 7
+    },
+    "legacyReferenceDirectory": "content/audio/.cache/legacy-edge-previews",
+    "referenceOverrides": {
+      "jia-baoyu": {
+        "id": "jia-baoyu:restrained-sadness",
+        "path": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav"
+      },
+      "xiren": {
+        "id": "xiren:assertive-rivalry",
+        "path": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav"
+      },
+      "ai-guan": {
+        "id": "ai-guan",
+        "path": "content/audio.cache/voice-cards/ai-guan/ai-guan-voice-card.wav"
+      },
+      "dou-guan": {
+        "id": "dou-guan",
+        "path": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav"
+      },
+      "kui-guan": {
+        "id": "kui-guan",
+        "path": "content/audio.cache/voice-cards/kui-guan/kui-guan-voice-card.wav"
+      },
+      "lady-xing": {
+        "id": "lady-xing:restrained-persuasion",
+        "path": "content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/voice-card-delivery.wav"
+      }
+    },
+    "targetOverrides": {
+      "narration:081-b0045:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短旁白必须只读荳官拍手道，冒号处立即结束，不得补充任何字句"
+      },
+      "narration:081-b0050:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "完整读出颜色变了便冷笑道，不得把变了或变冷重复"
+      },
+      "narration:081-b0103:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短旁白直接从黛玉笑道开始，只读这四个字，随后立即结束"
+      },
+      "dialogue:081-b0111:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "开头去也好只读一次，随后直接接宝玉是怕太太为难她们"
+      },
+      "dialogue:081-b0270:u01": {
+        "retryVersion": 3,
+        "promptMode": "strict-text",
+        "instructionSuffix": "必须直接从二爷的意思开始，不加前置语气词或其他台词，在可是后停住"
+      },
+      "dialogue:081-b0274:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "说到不愿的立即结束，不得在句尾补充任何字词"
+      },
+      "dialogue:081-b0129:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "必须直接从宝二爷开始，不得添加前置词"
+      },
+      "narration:081-b0158:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短旁白只读司棋掩面道，冒号处立即结束，不得说提示语"
+      },
+      "narration:081-b0296:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短旁白只读司棋忽抬头道，冒号处立即结束，严禁重复、解释或补充"
+      },
+      "dialogue:081-b0165:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "必须完整读出开头你们两个字，并读完整句尾来了"
+      },
+      "narration:081-b0174:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短旁白只读司棋冷笑道，冒号处立即结束，不得重复司棋或补充"
+      },
+      "dialogue:081-b0339:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "姑娘只读一次，整句只说姑娘如何晓得，问号处立即结束"
+      },
+      "dialogue:081-b0351:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "极短呼唤，只说英莲两个字，说完立即结束，不得增加回应或描述"
+      },
+      "narration:081-b0352:u01": {
+        "retryVersion": 6,
+        "fallbackProvider": "edge",
+        "fallbackVoice": "zh-CN-YunjianNeural",
+        "synthesisTextOverride": "又叫一声",
+        "instructionSuffix": "只读又叫一声四个字，说完立即结束，不得增加人名或后续内容"
+      },
+      "narration:081-b0354:u01": {
+        "retryVersion": 6,
+        "fallbackProvider": "edge",
+        "fallbackVoice": "zh-CN-YunjianNeural",
+        "synthesisTextOverride": "把她紧紧搂住。香菱也唤",
+        "instructionSuffix": "必须在香菱也唤的唤字后立即结束，不得补充被呼唤的人名或任何声音"
+      },
+      "dialogue:081-b0365:u02": {
+        "retryVersion": 2,
+        "instructionSuffix": "说到回去立即结束，不得添加后续台词"
+      },
+      "dialogue:081-b0217:u02": {
+        "retryVersion": 2,
+        "instructionSuffix": "说到回去呢立即结束，不得添加解释或其他台词"
+      },
+      "dialogue:081-b0382:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "短句只说不必登门四个字，登门清晰，说完立即结束，不得重复"
+      },
+      "narration:081-b0385:u01": {
+        "retryVersion": 2,
+        "instructionSuffix": "必须直接从麝月走进来开始，麝月只读一次，不得添加前置词"
+      }
+    }
+  }
+}

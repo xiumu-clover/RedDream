@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "provider": "cloudflare",
+  "status": "active",
+  "accountId": "b83c4a69b687c0f919925b4482dd2a88",
+  "pagesProject": "honglou-audio-review",
+  "productionUrl": "https://honglou-audio-review.pages.dev",
+  "d1": {
+    "binding": "REVIEW_DB",
+    "databaseName": "honglou-audio-review",
+    "databaseId": "13171305-b04a-498b-9693-0746f0181bba"
+  },
+  "r2": {
+    "binding": "REVIEW_AUDIO",
+    "bucketName": "honglou-audio-review",
+    "publicAccess": false
+  },
+  "reviewAuthentication": {
+    "mode": "fragment-token",
+    "secretName": "REVIEWER_TOKEN",
+    "localConfigPath": "content/audio/.cache/cloud-review/config.json"
+  },
+  "syncAuthentication": {
+    "secretName": "REVIEW_SYNC_TOKEN",
+    "localConfigPath": "content/audio/.cache/cloud-review/config.json"
+  },
+  "deployedAt": "2026-09-17T13:30:33.2777861Z"
+}

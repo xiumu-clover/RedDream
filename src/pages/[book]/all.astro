@@ -2,23 +2,14 @@
 import ChapterContent from '../../components/chapters/ChapterContent.astro';
 import PageShell from '../../components/layout/PageShell.astro';
 import { BOOKS, BOOK_IDS, type BookId } from '../../lib/books/catalog';
-import type { PreparedChapter } from '../../lib/chapters/collection';
 import { loadCompiledChapters } from '../../lib/chapters/collection';
 
 export async function getStaticPaths() {
-	const chapters = await loadCompiledChapters();
-	return BOOK_IDS.map((book) => ({
-		params: { book },
-		props: { book, chapters: chapters.filter((chapter) => chapter.book === book) },
-	}));
+	return BOOK_IDS.map((book) => ({ params: { book } }));
 }
 
-interface Props {
-	book: BookId;
-	chapters: PreparedChapter[];
-}
-
-const { book, chapters } = Astro.props;
+const book = Astro.params.book as BookId;
+const chapters = await loadCompiledChapters({ book });
 const definition = BOOKS[book];
 ---
 

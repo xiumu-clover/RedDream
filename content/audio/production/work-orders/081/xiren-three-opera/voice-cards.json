@@ -2,9 +2,9 @@
   "version": 1,
   "chapter": "081",
   "scene": "xiren-three-opera",
-  "planHash": "e0893b67ae98b81a0ae716c69499936e8f7a1d897a3d717234caf232e22c0652",
+  "planHash": "8df64c812f3b0075a191fa68253be88bf773848f8908ac02366de70834ec1bba",
   "assignedTo": "voice-cards",
-  "remainingReviewCount": 50,
+  "remainingReviewCount": 37,
   "instructions": "只处理明确列出的音色问题，不直接批准对白片段。",
   "failures": []
 }

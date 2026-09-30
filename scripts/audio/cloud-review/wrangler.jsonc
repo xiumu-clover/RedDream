@@ -1,0 +1,19 @@
+{
+	"$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+	"name": "honglou-audio-review",
+	"compatibility_date": "2026-09-17",
+	"pages_build_output_dir": "./public",
+	"d1_databases": [
+		{
+			"binding": "REVIEW_DB",
+			"database_name": "honglou-audio-review",
+			"database_id": "13171305-b04a-498b-9693-0746f0181bba"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "REVIEW_AUDIO",
+			"bucket_name": "honglou-audio-review"
+		}
+	]
+}

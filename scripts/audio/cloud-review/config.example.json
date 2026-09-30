@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://review.example.com",
+  "syncToken": "A_SEPARATE_LONG_RANDOM_SYNC_TOKEN",
+  "reviewerToken": "A_LONG_RANDOM_MOBILE_REVIEW_TOKEN",
+  "reviewUrl": "https://review.example.com/#key=A_LONG_RANDOM_MOBILE_REVIEW_TOKEN"
+}

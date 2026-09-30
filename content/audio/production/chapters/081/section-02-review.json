@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "chapter": "081",
+  "sectionId": "02",
+  "rounds": [
+    {
+      "id": "user-review-2026-09-29-01",
+      "status": "candidates-ready-for-review",
+      "notes": [
+        {
+          "targetIds": ["dialogue:081-b0028:u01", "dialogue:081-b0028:u02", "dialogue:081-b0028:u03", "dialogue:081-b0028:u04", "dialogue:081-b0028:u05", "dialogue:081-b0028:u06", "dialogue:081-b0028:u07", "dialogue:081-b0028:u08"],
+          "issue": "艾官整段语气和声线正确，但合成单元之间的停顿不自然。",
+          "action": "recorded-for-reassembly",
+          "preserveAudio": true
+        },
+        {
+          "targetIds": ["narration:081-b0029:u01"],
+          "issue": "“宝玉听了大惊”前有杂声。",
+          "action": "recorded-for-technical-repair"
+        },
+        {
+          "targetIds": ["dialogue:081-b0246:u01", "dialogue:081-b0246:u02"],
+          "issue": "两句各自表演正确，但前句偏慢、后句偏急，连接听感不一致。",
+          "action": "recorded-for-reassembly",
+          "preserveAudio": true
+        },
+        {
+          "targetIds": ["dialogue:081-b0248:u02", "dialogue:081-b0248:u03", "narration:081-b0039:u01"],
+          "issue": "“越发了不得”后停顿过长；“有话慢慢的说罢”后出现多余字音。",
+          "action": "recorded-for-technical-repair"
+        },
+        {
+          "targetIds": ["dialogue:081-b0249:u02", "dialogue:081-b0249:u03"],
+          "issue": "“真的却在这里安安稳稳”与下句之间有杂音。",
+          "action": "recorded-for-technical-repair"
+        },
+        {
+          "targetIds": ["dialogue:081-b0251:u01", "dialogue:081-b0251:u02"],
+          "issue": "“与我什么相干”后停顿略长。",
+          "action": "recorded-for-reassembly"
+        },
+        {
+          "targetIds": ["narration:081-b0043:u01", "dialogue:081-b0044:u01"],
+          "issue": "“艾官啐道”与对白之间停顿略长。",
+          "action": "recorded-for-reassembly"
+        },
+        {
+          "targetIds": ["narration:081-b0047:u01", "dialogue:081-b0048:u01"],
+          "issue": "“迟了一迟才道”与袭人对白之间停顿略长。",
+          "action": "recorded-for-reassembly"
+        },
+        {
+          "targetIds": ["dialogue:081-b0254:u01"],
+          "issue": "用户单独标出“今日索性说开，叫一家子都评评”。",
+          "action": "recorded-pending-specific-direction"
+        },
+        {
+          "targetIds": ["dialogue:081-b0257:u02", "narration:081-b0258:u01"],
+          "issue": "“岂不也受连累”与“三人听了”之间有杂音。",
+          "action": "recorded-for-technical-repair"
+        },
+        {
+          "targetIds": ["dialogue:081-b0061:u01", "dialogue:081-b0061:u02"],
+          "issue": "艾官整段语气和声线正确，但单元拼接停顿不自然。",
+          "action": "recorded-for-reassembly",
+          "preserveAudio": true
+        },
+        {
+          "targetIds": ["narration:081-b0260:u01"],
+          "issue": "“心便灰了一半”后的内部停顿过长。",
+          "action": "recorded-for-internal-pause-repair"
+        },
+        {
+          "targetIds": ["dialogue:081-b0076:u01"],
+          "issue": "宝玉音色卡不对。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-baoyu-summon-v1"
+        },
+        {
+          "targetIds": ["dialogue:081-b0083:u01"],
+          "issue": "宝玉音色卡不对；“差”必须读 chāi。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-baoyu-chunyan-v1"
+        },
+        {
+          "targetIds": ["dialogue:081-b0086:u01"],
+          "issue": "尾部出现多余字音。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-qiuwen-festival-v1"
+        },
+        {
+          "targetIds": ["dialogue:081-b0090:u01", "dialogue:081-b0090:u02", "dialogue:081-b0090:u03", "dialogue:081-b0090:u04", "dialogue:081-b0090:u05", "dialogue:081-b0090:u06"],
+          "issue": "袭人声线年龄感偏大，需恢复本节前段认可的年轻袭人声线。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-xiren-household-v1"
+        },
+        {
+          "targetIds": ["dialogue:081-b0092:u01"],
+          "issue": "尾部有噪音。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-qiuwen-strange-v1"
+        },
+        {
+          "targetIds": ["narration:081-b0093:u01"],
+          "issue": "“时常说些暮年之语”后内部停顿过长。",
+          "action": "recorded-for-internal-pause-repair"
+        },
+        {
+          "targetIds": ["narration:081-b0101:u01"],
+          "issue": "“便自回潇湘馆”后内部停顿过长。",
+          "action": "recorded-for-internal-pause-repair"
+        },
+        {
+          "targetIds": ["narration:081-b0105:u01"],
+          "issue": "“一时回馆”被重复朗读。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-narrator-return-v1"
+        },
+        {
+          "targetIds": ["dialogue:081-b0109:u02", "dialogue:081-b0109:u03"],
+          "issue": "“秋纹”与“碧痕”之间的单元拼接停顿过长。",
+          "action": "recorded-for-reassembly"
+        },
+        {
+          "targetIds": ["dialogue:081-b0111:u01", "dialogue:081-b0111:u02"],
+          "issue": "黛玉声纹漂移，需保持第一节已经批准的黛玉声线。",
+          "action": "rerecord-candidate",
+          "candidate": "review-round1-daiyu-release-v1"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "review-round1-baoyu-summon-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-baoyu-summon-v1/scene.mp3",
+          "durationSeconds": 3.888,
+          "fileHash": "72cf949055f95f6c45740461debcd55f877dcf1cde3873651f902a1cbf382ffc",
+          "status": "rejected-by-user",
+          "note": "语气偏急，第二轮放慢并减弱急迫感。"
+        },
+        {
+          "id": "review-round1-baoyu-chunyan-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-baoyu-chunyan-v1/scene.mp3",
+          "durationSeconds": 4.704,
+          "fileHash": "072f2e76ceab8b04f28b274946d3a5b437c8ec70dcb8f65a8e23edffabcc091d",
+          "status": "rejected-by-user",
+          "note": "语气偏凶，第二轮改为平静交代。"
+        },
+        {
+          "id": "review-round1-qiuwen-festival-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-qiuwen-festival-v1/scene.mp3",
+          "durationSeconds": 3.264,
+          "fileHash": "b2b6372e4bcd186f55cf9e329df7d988ef5d0edc1d68edc2504e11296533be13",
+          "status": "rejected-by-user",
+          "note": "尾部有噪音。"
+        },
+        {
+          "id": "review-round1-xiren-household-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-xiren-household-v1/scene.mp3",
+          "durationSeconds": 28.248,
+          "fileHash": "138506ed589d8d67503f4bec5dcffc8a8d2d0f6d4d7fd1bde53c73d64908908b",
+          "status": "approved-by-user"
+        },
+        {
+          "id": "review-round1-qiuwen-strange-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-qiuwen-strange-v1/scene.mp3",
+          "durationSeconds": 2.952,
+          "fileHash": "fa3a262e7874c248eee2c90e5335307d86aba886a47ee573e65a26e83a00ec18",
+          "status": "rejected-by-user",
+          "note": "整体音量过低且尾部仍有小噪音。"
+        },
+        {
+          "id": "review-round1-narrator-return-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-narrator-return-v1/scene.mp3",
+          "durationSeconds": 2.616,
+          "fileHash": "73c8a71d83df91ab833566caa7ac8985219b24fe65102de6d3639620cae0d8f0",
+          "status": "approved-by-user"
+        },
+        {
+          "id": "review-round1-daiyu-release-v1",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-daiyu-release-v1/scene.mp3",
+          "durationSeconds": 9.072,
+          "fileHash": "389cd9bca013208e7d302dce4b0b1fdeb24806fdee320e69a185243608f1ce67",
+          "status": "deferred-user-will-replace",
+          "note": "用户认为该版本不可用，并明确要求当前会话先不再处理。"
+        }
+      ]
+    },
+    {
+      "id": "user-review-2026-09-29-02",
+      "status": "candidates-ready-for-review",
+      "basedOn": "user-review-2026-09-29-01",
+      "candidates": [
+        {
+          "id": "review-round2-baoyu-summon-v2",
+          "status": "approved-by-user",
+          "note": "放慢并减弱急迫感。",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/scene.mp3",
+          "durationSeconds": 4.056,
+          "fileHash": "b0aac3ce77c69a891468a6aac22be78214a4d39ca9294cd1938cd88c9c49dd45"
+        },
+        {
+          "id": "review-round2-baoyu-chunyan-v2",
+          "status": "rejected-by-user",
+          "note": "平静交代，去除凶感；“差”读 chāi。",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-chunyan-v2/scene.mp3",
+          "durationSeconds": 5.04,
+          "fileHash": "6b99f31cee22608207696033fce55935dec5432d8018074628f26d407fd93e81",
+          "decisionNote": "“差”仍读成 chā；必须读作“拆”chāi。"
+        },
+        {
+          "id": "review-round2-qiuwen-festival-v2",
+          "status": "approved-by-user",
+          "note": "保留自然语气，清除尾部噪音。",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-festival-v2/scene.mp3",
+          "durationSeconds": 2.76,
+          "fileHash": "55de5566a09bca142025c95659e42143d087b181a61a86b4adeeee28f1312f80"
+        },
+        {
+          "id": "review-round2-qiuwen-strange-v2",
+          "status": "approved-by-user",
+          "note": "恢复正常音量并清除尾部噪音。",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-strange-v2/scene.mp3",
+          "durationSeconds": 2.448,
+          "fileHash": "0ee1173aeed0f74e8bfc5872fdf02557cb22601410bed6de158558d63ec51492"
+        }
+      ]
+    },
+    {
+      "id": "user-review-2026-09-29-03",
+      "status": "candidate-ready-for-review",
+      "basedOn": "user-review-2026-09-29-02",
+      "decisions": [
+        {"id": "review-round2-baoyu-summon-v2", "fileHash": "b0aac3ce77c69a891468a6aac22be78214a4d39ca9294cd1938cd88c9c49dd45", "decision": "approved-by-user"},
+        {"id": "review-round2-qiuwen-festival-v2", "fileHash": "55de5566a09bca142025c95659e42143d087b181a61a86b4adeeee28f1312f80", "decision": "approved-by-user"},
+        {"id": "review-round2-qiuwen-strange-v2", "fileHash": "0ee1173aeed0f74e8bfc5872fdf02557cb22601410bed6de158558d63ec51492", "decision": "approved-by-user"}
+      ],
+      "candidates": [
+        {
+          "id": "review-round3-baoyu-chunyan-v3",
+          "status": "pending-user-review",
+          "note": "书面正文保留“差”，合成文本以“拆”固定 chāi 读音。",
+          "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.mp3",
+          "durationSeconds": 5.928,
+          "fileHash": "b62f77ece7ae04f06ee5d13198cf80b72c0fc1fbf2a51efb8037fa83d301233f"
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@
       "reviewKey": "7fadade6e7ddfb47d79d43803a55da5d85824e58b6d6db7922f24f76015caad9",
       "targetId": "dialogue:081-b0023:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0023:u01",
         "kind": "dialogue_fragment",
@@ -21,14 +21,25 @@
         "fileHash": "b7ae202281b37694067faa7e17537d3f63db8f469cf10d18154e7ff430382f15"
       },
       "note": "",
-      "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-16T07:08:23.227Z",
+          "reviewer": "project-owner"
+        }
+      ],
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-16T07:08:23.227Z",
+      "statusBeforeSuperseded": "approved",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "8e585fcc6be2a19c35d0149187516d5bec33f26298b2c995a043ee3b7b66b9af"
     },
     {
       "reviewKey": "e9d94f7d156c18172c12f423ec8aea1f2f385eb0e782a9d7fee40ba85ffb67a7",
       "targetId": "dialogue:081-b0025:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0025:u01",
         "kind": "dialogue_fragment",
@@ -41,14 +52,25 @@
         "fileHash": "d44fa363f405711f74438f0ba22e6c6e911a8ac873eb42fc0739ad6c252df001"
       },
       "note": "",
-      "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-16T07:12:58.225Z",
+          "reviewer": "project-owner"
+        }
+      ],
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-16T07:12:58.225Z",
+      "statusBeforeSuperseded": "approved",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "2a75394c6e9cd624d7eb13ae7adf31b6898433d79c126c6bcb8ac7bb560eef85",
       "targetId": "dialogue:081-b0028:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0028:u01",
         "kind": "dialogue_fragment",
@@ -60,15 +82,37 @@
         "renderHash": "e1748ba24f4c269c210186330e786fecde169904b8f7a7250d32970489bf1905",
         "fileHash": "266aec38b0102363f319ec9b947ad46f2f04c1c86669e0f710660924ef9d8ab6"
       },
-      "note": "",
-      "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "note": "整体声音偏小了，然后断句不对",
+      "history": [
+        {
+          "action": "note",
+          "at": "2026-09-16T07:35:32.049Z",
+          "reviewer": "project-owner",
+          "expectedEffect": "整体声音偏小了，然后断句不对， 好（重音）你个/ 西洋花点子/哈（ha 第一声）巴狗（儿 轻声不发音）。要有骂人和攻击性"
+        },
+        {
+          "action": "rerecord",
+          "at": "2026-09-16T07:35:56.216Z",
+          "reviewer": "project-owner",
+          "issueType": "pronunciation_rule",
+          "note": "整体声音偏小了，然后断句不对",
+          "expectedEffect": "好（重音）你个/ 西洋花点子/哈（ha 第一声）巴狗（儿 轻声不发音）。要有骂人和攻击性"
+        }
+      ],
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "issueType": "pronunciation_rule",
+      "expectedEffect": "好（重音）你个/ 西洋花点子/哈（ha 第一声）巴狗（儿 轻声不发音）。要有骂人和攻击性",
+      "lastDecisionAction": "rerecord",
+      "lastDecisionAt": "2026-09-16T07:35:56.216Z",
+      "statusBeforeSuperseded": "rejected",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "e2f98f7dee7dd779f63aea7bc2928c70bbbaaf064050dd3593f124cdf27cd73a"
     },
     {
       "reviewKey": "c608a421616d58b6c9ff448d8f8f490da9009f760338da4386b81ccfe0343b64",
       "targetId": "dialogue:081-b0028:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0028:u02",
         "kind": "dialogue_fragment",
@@ -80,15 +124,31 @@
         "renderHash": "a805bb457b58716a3aeb559806c1af998110c3c0c0083c21a405933c73e696f6",
         "fileHash": "65363366958cf5fc3a5c345b0db3873f6ded65c0ba67906c54333b22c9286719"
       },
-      "note": "",
-      "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "note": "不枉 的声音糊了，听不清 不枉 ， 李奶奶说你 /妆狐媚子哄人 / 狐媚子 和 哄人之间的停顿太长太久，不连贯",
+      "history": [
+        {
+          "action": "rerecord",
+          "at": "2026-09-16T07:39:09.857Z",
+          "reviewer": "project-owner",
+          "issueType": "segmentation_design",
+          "note": "不枉 的声音糊了，听不清 不枉 ， 李奶奶说你 /妆狐媚子哄人 / 狐媚子 和 哄人之间的停顿太长太久，不连贯",
+          "expectedEffect": "不枉/李奶奶说你/妆狐媚子哄人/"
+        }
+      ],
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "issueType": "segmentation_design",
+      "expectedEffect": "不枉/李奶奶说你/妆狐媚子哄人/",
+      "lastDecisionAction": "rerecord",
+      "lastDecisionAt": "2026-09-16T07:39:09.857Z",
+      "statusBeforeSuperseded": "rejected",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "e84d3d8ff163dc624ab81a022f12d559ee9f1d0049055897a3ca0e049b86ff65"
     },
     {
       "reviewKey": "27451cc4a2fa9443e4da1055dfeeb4f044940e9858567855e399f88a7992657a",
       "targetId": "dialogue:081-b0028:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0028:u03",
         "kind": "dialogue_fragment",
@@ -102,13 +162,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "3264f6136cedb954e01b2f38616a02fa111cee610a04edbc9da1d14f706c7c53"
     },
     {
       "reviewKey": "53c93e402cd8e918bd2ce41e47049af7c0c49993f5cb39ac97636299ba362eb5",
       "targetId": "dialogue:081-b0028:u04",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0028:u04",
         "kind": "dialogue_fragment",
@@ -122,13 +185,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "3160f9f90c9404891a971bac5424544281acf9d6120af58dde439bf12f26152b"
     },
     {
       "reviewKey": "1972bc473aa4dab3d59863dab3a5ad344905d39f10f1042812a6cc1294e94555",
       "targetId": "dialogue:081-b0028:u05",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0028:u05",
         "kind": "dialogue_fragment",
@@ -142,13 +208,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "b4ab1faed7098183072fbb3e38a5ee6fab3a0e60982b76630d83d204083ea60f"
     },
     {
       "reviewKey": "bd02935086099a8a5e33d8635739a2501e5f4062359bf67aee044f024723f018",
       "targetId": "dialogue:081-b0030:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0030:u01",
         "kind": "dialogue_fragment",
@@ -162,13 +231,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "a67bddf007c5f634fd36bb0930d991c7cc760e0fb03a08714ad23862e33139d0"
     },
     {
       "reviewKey": "3c4c6e1a3e803eccd8f711aa1e66d551039dace90a18366fe693db8a482ac430",
       "targetId": "dialogue:081-b0032:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0032:u01",
         "kind": "dialogue_fragment",
@@ -182,13 +254,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "4ab3c7fd11acfce3f7a119b7745e67be01bdc7f48af9c75e62cce16d3defe7e9",
       "targetId": "dialogue:081-b0032:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0032:u02",
         "kind": "dialogue_fragment",
@@ -202,13 +277,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "2d6c0698ec4c38a0e2a711cd6e7c5e737fbd0100e72dc70a892201e646e1740f",
       "targetId": "dialogue:081-b0032:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0032:u03",
         "kind": "dialogue_fragment",
@@ -222,13 +300,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "7cc928e13bafce238e108d99b0679436bb200a060f7e25fb5a0566cf07fc925e",
       "targetId": "dialogue:081-b0034:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0034:u01",
         "kind": "dialogue_fragment",
@@ -242,13 +323,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "e37e4b812f7b7a20148a89aeb87995a87a49c5061eaac096075168e2c6677f94",
       "targetId": "dialogue:081-b0034:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0034:u02",
         "kind": "dialogue_fragment",
@@ -262,13 +346,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "d040ea321725be1501f3f70edb377b01eb4b1cdc7bc45b5188547666683538f9",
       "targetId": "dialogue:081-b0034:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0034:u03",
         "kind": "dialogue_fragment",
@@ -282,13 +369,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "048bba174257c0e2047639d298b2eccbf730aefa4cfd3d73f6717aa5201383e4",
       "targetId": "dialogue:081-b0036:u01",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0036:u01",
         "kind": "dialogue_fragment",
@@ -302,13 +392,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "08de0057b3269cb1d5848c3cd495ded1cc2932477553af654ca698abeec4f89a"
     },
     {
       "reviewKey": "39f686dc5dfb0bb1c767dce38af42ae019f40d444ead9dd60c8dc6339d2a6f0d",
       "targetId": "dialogue:081-b0036:u02",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0036:u02",
         "kind": "dialogue_fragment",
@@ -322,13 +415,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "85644c9ee8130e16fe8eab869dfca3cf767a54255cd665677436f2075969b5ed"
     },
     {
       "reviewKey": "44fab1ac780867644322c10e23506f7f04db7b2c279644877b98b683077da21b",
       "targetId": "dialogue:081-b0038:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0038:u01",
         "kind": "dialogue_fragment",
@@ -342,13 +438,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "60045f3f1c3b42789f77117292029e7e15c9d241befff5955ad9351d1a8507a4",
       "targetId": "dialogue:081-b0038:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0038:u02",
         "kind": "dialogue_fragment",
@@ -362,13 +461,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "bb617e85612d7d5f978bf7f78da758101f202c10c2de75123b053dc69d1bc88f",
       "targetId": "dialogue:081-b0040:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0040:u01",
         "kind": "dialogue_fragment",
@@ -382,13 +484,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "32165ac0bb9aacd451234faa205703ddc2b019457ef5727aff51ffaa012dde86",
       "targetId": "dialogue:081-b0040:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0040:u02",
         "kind": "dialogue_fragment",
@@ -402,13 +507,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "bc4c65edc16e6c1605e4ad8002e4068a80169c6195bf4227a2b0803e0455f6d9",
       "targetId": "dialogue:081-b0040:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0040:u03",
         "kind": "dialogue_fragment",
@@ -422,13 +530,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "7f4a01766aab0ea96ca0459dd4c3c03bd4e243ccae86bcd765ad8929983324b5",
       "targetId": "dialogue:081-b0040:u04",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0040:u04",
         "kind": "dialogue_fragment",
@@ -442,13 +553,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "76e1d5d22967e860bf1cd595d2c4731b7186574afba3381306c8406003970082",
       "targetId": "dialogue:081-b0042:u01",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0042:u01",
         "kind": "dialogue_fragment",
@@ -462,13 +576,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "29775ce7ca728ee9a3e3389b199c8a7c4474723d99ab3bcfb3381fb8d5744d1f",
       "targetId": "dialogue:081-b0042:u02",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0042:u02",
         "kind": "dialogue_fragment",
@@ -482,13 +599,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "d90fee094ee98a15d7c0638814d5ed2adf7cdc0b58a00ed1732b631c7c3eabc3",
       "targetId": "dialogue:081-b0042:u03",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0042:u03",
         "kind": "dialogue_fragment",
@@ -502,13 +622,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "391f77b3c79a34e58817676d6d552f54405d9e0cf8ad4f16d111c57293977431",
       "targetId": "dialogue:081-b0042:u04",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0042:u04",
         "kind": "dialogue_fragment",
@@ -522,13 +645,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "b108391d5e96a44a2b61de6eb049e4ea64f0a8c3734e78b3f5ade747a15a5c39",
       "targetId": "dialogue:081-b0044:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0044:u01",
         "kind": "dialogue_fragment",
@@ -542,13 +668,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "5e243094a5941550cb18c5f9c927b45b7ace6597e22f1882913b6bf1540e8f50"
     },
     {
       "reviewKey": "ceab6d77edfc2bcd981d9462aaaefdffcf1d909f34ddc9314ad6aaa3c6b32527",
       "targetId": "dialogue:081-b0044:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0044:u02",
         "kind": "dialogue_fragment",
@@ -562,13 +691,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "70ef681b8ada8a3fa65f703d780d9ff9039a6e02f3110307ab9da3fee156e658"
     },
     {
       "reviewKey": "f26e9b46c3871524d2c345008da39f8154632d21e5e836b4d793a67b2630dec9",
       "targetId": "dialogue:081-b0044:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0044:u03",
         "kind": "dialogue_fragment",
@@ -582,13 +714,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "c2bea894bfb9e3b250c0b7a0e5d5df301a7b0ed360b9369a092f8c33eca9c101",
       "targetId": "dialogue:081-b0046:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0046:u01",
         "kind": "dialogue_fragment",
@@ -602,13 +737,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "4059ab2f3312a1f15e0a8b6f061f22bdebd5ec38a746dae2f95e75fce8219a6d"
     },
     {
       "reviewKey": "0d8e38c8ae39b85df046d02c0b623f1b8de1a215bbe4a933cba0d71063cd61e0",
       "targetId": "dialogue:081-b0048:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0048:u01",
         "kind": "dialogue_fragment",
@@ -622,13 +760,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "a1c9d70ecc5076e6019090d5f00bf23db4bd4eaec84149792dab4c7f07786273"
     },
     {
       "reviewKey": "86d8856dcbabcf504a7ec6849df5a70a0bb33ba4b2d5e0d46b9081fc3890c4c2",
       "targetId": "dialogue:081-b0051:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0051:u01",
         "kind": "dialogue_fragment",
@@ -642,13 +783,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "12563e719876a0c7ddecb3403e11e30a4d5850494e487ad4d39fff75689ddea4",
       "targetId": "dialogue:081-b0051:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0051:u02",
         "kind": "dialogue_fragment",
@@ -662,13 +806,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "d9e341860c200ba288e3f5708a6d9b4c2a5b8af0953c05114d018458244b7eec",
       "targetId": "dialogue:081-b0051:u03",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0051:u03",
         "kind": "dialogue_fragment",
@@ -682,13 +829,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "147db59e36ff93e960a53e2ad94f75652633ebf5067e3b84e2757978b085b764",
       "targetId": "dialogue:081-b0053:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0053:u01",
         "kind": "dialogue_fragment",
@@ -702,13 +852,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "9c45e15b6de158d3b2e7411c52b1368b0734367c62c6f971ffa17c7903cd1800",
       "targetId": "dialogue:081-b0056:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0056:u01",
         "kind": "dialogue_fragment",
@@ -722,13 +875,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "1922b1876983f1d772f97b81f2d8219f02302bac3dd39c81d92213e4d55c1db3",
       "targetId": "dialogue:081-b0056:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0056:u02",
         "kind": "dialogue_fragment",
@@ -742,13 +898,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "ee2201e8868696bb1da5eeb808faf67d0b703a53e634ce2350e2b74f6a5428d9",
       "targetId": "dialogue:081-b0059:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0059:u01",
         "kind": "dialogue_fragment",
@@ -762,13 +921,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "02013ee84ddd6c10c7ae357c94e53c5fd2ad168550303770752ba5b9242b6e22"
     },
     {
       "reviewKey": "6dbd539355927e9543ed311269fae87215f2ccb42b24f35b4f08eff3104c8a27",
       "targetId": "dialogue:081-b0059:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0059:u02",
         "kind": "dialogue_fragment",
@@ -782,13 +944,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "2a10bf7608d992e9e390b5aa8150446118a7251da129f41129830354bc8ade5e"
     },
     {
       "reviewKey": "f695e1d933cf269ab0247a1f7ac3023f8e5c2c3f64d7b96e1258cf248b9efc1d",
       "targetId": "dialogue:081-b0061:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0061:u01",
         "kind": "dialogue_fragment",
@@ -802,13 +967,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "cfdb2c721b700e934d685679396cd73cbd0ec7c1cd9e8c1b818945a535da48da"
     },
     {
       "reviewKey": "a113d845cc251d93c030b1f3121aea2aff82897eab4019f13c3ce3085a0c0d16",
       "targetId": "dialogue:081-b0063:u01",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0063:u01",
         "kind": "dialogue_fragment",
@@ -822,13 +990,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "9028c5b3019da8a8ebfe3330cb2d1da227e5101a58bae0e09a93ebb47c9f2fa9"
     },
     {
       "reviewKey": "6f3e7f470c31b801c79d6182ab71fa9d764327997caef4e48ae2395f7f3c03a3",
       "targetId": "dialogue:081-b0063:u02",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0063:u02",
         "kind": "dialogue_fragment",
@@ -842,13 +1013,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "873ea2d6ffb7599cbd70d6cbc9d3bf8363c7bd978bbef2d3e5fe6f9cfaedb69a"
     },
     {
       "reviewKey": "ef71691ba41e095cb00552390f35e7dceca0d39ca49711075929aee5125e48d3",
       "targetId": "dialogue:081-b0063:u03",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0063:u03",
         "kind": "dialogue_fragment",
@@ -862,13 +1036,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": null
     },
     {
       "reviewKey": "294cf1550003bd9a2c3845972061e7cb4e92dbbce854a93f88b1710e70d8f85c",
       "targetId": "dialogue:081-b0065:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0065:u01",
         "kind": "dialogue_fragment",
@@ -882,13 +1059,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "bcbcb736a7fe536926711e3bb79f1fb302b63f44be5422d5828e33e441ad01d2"
     },
     {
       "reviewKey": "8097c298d9dde73d7e0fffad692a4496ce4a8590ee08b96ff7f7659f34d66d1c",
       "targetId": "dialogue:081-b0068:u01",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0068:u01",
         "kind": "dialogue_fragment",
@@ -902,13 +1082,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "ee9dc7d78f44e6a52ea1513729ebbc46ce5c590da6d4450e2256409245a9146b"
     },
     {
       "reviewKey": "344957d75380d5a2eda3407944f8f329e4bbb891f524f168bad4f6083ac1b862",
       "targetId": "dialogue:081-b0068:u02",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0068:u02",
         "kind": "dialogue_fragment",
@@ -922,13 +1105,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "a4bf180043e82b725e1ec986fb96dac8432a5af8728c3517d8ee257c101e154f"
     },
     {
       "reviewKey": "4299dc000db213365b49e4009e5bf1d9bec376e5606332e7b40b91793f5bc10c",
       "targetId": "dialogue:081-b0068:u03",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0068:u03",
         "kind": "dialogue_fragment",
@@ -942,13 +1128,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "5d9f0a916f8a66265ded9876d88db6d60d2a08ee7c90a4ccbc1d4c89c3089d5e"
     },
     {
       "reviewKey": "dc5dc92f4723fce58728da3d6853d67917e6eb7f5bf80c3962cf16f35bb80d92",
       "targetId": "dialogue:081-b0068:u04",
       "kind": "dialogue_fragment",
-      "status": "planned",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0068:u04",
         "kind": "dialogue_fragment",
@@ -962,13 +1151,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "b36804286bf43a991956a70ec14561a4c1102a22a6cc08826b8ed53088ca1ba1"
     },
     {
       "reviewKey": "54b54f99cb87489db4545b951d642c73ec3138c6ee8e031ea4ca5355d8cc2019",
       "targetId": "dialogue:081-b0071:u01",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0071:u01",
         "kind": "dialogue_fragment",
@@ -982,13 +1174,16 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "748403e42f7f319168edfb8d77ab21eb78c072ca1a5ef9ad6536034d66a65ecd"
     },
     {
       "reviewKey": "2098fc963bf2c04c77075e20b55580f4a962e8c9dadea116bbdaa157f92be359",
       "targetId": "dialogue:081-b0071:u02",
       "kind": "dialogue_fragment",
-      "status": "pending_review",
+      "status": "superseded",
       "binding": {
         "targetId": "dialogue:081-b0071:u02",
         "kind": "dialogue_fragment",
@@ -1002,7 +1197,1948 @@
       },
       "note": "",
       "history": [],
-      "createdAt": "2026-09-14T09:28:32.263Z"
+      "createdAt": "2026-09-14T09:28:32.263Z",
+      "statusBeforeSuperseded": "pending_review",
+      "supersededAt": "2026-09-19T13:57:35.289Z",
+      "supersededBy": "e8aaabbe1c207bc3e37e30ce7c882668327f5785381813baafe9269c00212143"
+    },
+    {
+      "reviewKey": "8e585fcc6be2a19c35d0149187516d5bec33f26298b2c995a043ee3b7b66b9af",
+      "targetId": "dialogue:081-b0023:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0023:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0023",
+        "unitIndex": 0,
+        "annotationHash": "4b6afff465e1ac559898f971b51ad469c5cd438db53dd7e1f03ef8e7eab851e3",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "d3ff7b01df0c2c9aed3bb1cbd4351b09983003a53b027f7a9d9df71b26f973e7"
+    },
+    {
+      "reviewKey": "e2f98f7dee7dd779f63aea7bc2928c70bbbaaf064050dd3593f124cdf27cd73a",
+      "targetId": "dialogue:081-b0028:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 0,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "3898506db908a32b2ce17778bd956678e63e105029914d78d26e201213d3b5f0",
+        "fileHash": "bc3f063e480abfd6f7c80fcb962720caefea36ddca7bcc5d514de48ccb079776"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:09:37.295Z",
+          "reviewer": "project-owner",
+          "decisionId": "0e786fc8-80bf-470c-90dc-9f54a77f078b"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:09:37.295Z"
+    },
+    {
+      "reviewKey": "e84d3d8ff163dc624ab81a022f12d559ee9f1d0049055897a3ca0e049b86ff65",
+      "targetId": "dialogue:081-b0028:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 1,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "307d662fae352fb57aeefc5927b509a87a5fa10dc7c2887ba148928c95d7994f"
+    },
+    {
+      "reviewKey": "3264f6136cedb954e01b2f38616a02fa111cee610a04edbc9da1d14f706c7c53",
+      "targetId": "dialogue:081-b0028:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 2,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "66021d8c023922518ded6c67e16aa1c7a44db8993758392afdc29b8acc53e252"
+    },
+    {
+      "reviewKey": "3160f9f90c9404891a971bac5424544281acf9d6120af58dde439bf12f26152b",
+      "targetId": "dialogue:081-b0028:u04",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u04",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 3,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "5d505c8d5c82cb3677b92cf909d13ca6525d4422efc76e6655c7c776f9220b37"
+    },
+    {
+      "reviewKey": "b4ab1faed7098183072fbb3e38a5ee6fab3a0e60982b76630d83d204083ea60f",
+      "targetId": "dialogue:081-b0028:u05",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u05",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 4,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "381de33da327cfbd82675fd24bf3218da77a3e188b60726583e2733d2442a8e0"
+    },
+    {
+      "reviewKey": "43aa758b8c2b6ebd12c180fd9e41db63c9e44cd9e5ad54bcdbb86edaff5c2cda",
+      "targetId": "dialogue:081-b0028:u06",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u06",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 5,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "4925c33e27a3a3d5a20ae24e07ec58489b178c5a40f2ba3670644ad63db65c8d"
+    },
+    {
+      "reviewKey": "da0a17bab0b6110ca24a3669da6d2fcadc17931dea74c723462729d1521950d3",
+      "targetId": "dialogue:081-b0028:u07",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u07",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 6,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "a0afc9c8a15c03653ff40ad8d83a0bd0569038f346030f2fbec4f8cb1fcd106f"
+    },
+    {
+      "reviewKey": "0b7eb2d9b593221c1b949050bb44f139558d6dd34136261fb08edf7543e43ddb",
+      "targetId": "dialogue:081-b0028:u08",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u08",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 7,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "bde1b8ba3b1abcbe67b5cbcf80b997d9d649324ef64ae60d0cba6c0e29149a19"
+    },
+    {
+      "reviewKey": "a67bddf007c5f634fd36bb0930d991c7cc760e0fb03a08714ad23862e33139d0",
+      "targetId": "dialogue:081-b0030:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0030:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0030",
+        "unitIndex": 0,
+        "annotationHash": "ebc221033e843934e72de5c34a5615f4020c19bf35f124db5f9b091a3e727c53",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "42e6debf394b25a00bcf73e7003dd7875673a9a06a7d62992ab44507dc10617f",
+        "fileHash": "5a315af456c6f3e19c221775d1877a1c04a379518543f99400cc66720ed916d3"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:09:46.244Z",
+          "reviewer": "project-owner",
+          "decisionId": "b23b23f2-faf1-4ee7-9c0e-23acaba4145f"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:09:46.244Z"
+    },
+    {
+      "reviewKey": "30cfc4b71d8a076a07033f9b7442a8cc056d256dc719483a5d6a90fddcf0a1c0",
+      "targetId": "dialogue:081-b0246:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0246:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0246",
+        "unitIndex": 0,
+        "annotationHash": "44b0e495103599000d0fa1342787bec52e187d532dec0d4e2e3acdceeb45ffe3",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "9b984f07282caff08f19fc8bd59075a06ab45fec540baadb984d93f5f91082a0",
+        "fileHash": "f12921193efb20e09068bb6c47c3180ae5e437b0a344019ede704cf0afcbd92c"
+      },
+      "note": "中间的停顿太长了，可以短一些",
+      "history": [
+        {
+          "action": "rerecord",
+          "at": "2026-09-19T14:10:26.570Z",
+          "reviewer": "project-owner",
+          "decisionId": "15061dfc-5670-474a-9e78-eb435239f193",
+          "issueType": "other",
+          "note": "中间的停顿太长了，可以短一些",
+          "expectedEffect": "中间的停顿太长了，可以短一些"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "issueType": "other",
+      "expectedEffect": "中间的停顿太长了，可以短一些",
+      "lastDecisionAction": "rerecord",
+      "lastDecisionAt": "2026-09-19T14:10:26.570Z",
+      "statusBeforeSuperseded": "rejected",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "7dcf6b137f9194dc62004482eabeba415e588e666071c14b927d50334f670b19"
+    },
+    {
+      "reviewKey": "9c71bf7778c9a61f826cce217071db4316a41f695bdb030dd2e69c264bfff118",
+      "targetId": "dialogue:081-b0246:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0246:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0246",
+        "unitIndex": 1,
+        "annotationHash": "44b0e495103599000d0fa1342787bec52e187d532dec0d4e2e3acdceeb45ffe3",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "5aa5c7f1f9e574256be7eb63a3da699fd6bf6896a05668112f8fec44d1095d04"
+    },
+    {
+      "reviewKey": "73a0569c65a04a269782f92b063bee01fcbb343464ce0cac755cb110deeba82c",
+      "targetId": "dialogue:081-b0247:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0247:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0247",
+        "unitIndex": 0,
+        "annotationHash": "c454202b1faf35a39aa4644f8cbb4e71eb8e70bec241df43b2dc7667d22abd4b",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "e4d5cf8145dfd2302677eee08340bee079a341c5bd4491c5bdfea3b263d51b2a"
+    },
+    {
+      "reviewKey": "310f67558b281b413de0104d3c86f7387f6d466aa3c03d8939558904cde4f0d9",
+      "targetId": "dialogue:081-b0247:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0247:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0247",
+        "unitIndex": 1,
+        "annotationHash": "c454202b1faf35a39aa4644f8cbb4e71eb8e70bec241df43b2dc7667d22abd4b",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "779df8ef3d87cd79ffbb23dac9c2cb07d12026fd0b65e99dcd939fe4893e8478"
+    },
+    {
+      "reviewKey": "08de0057b3269cb1d5848c3cd495ded1cc2932477553af654ca698abeec4f89a",
+      "targetId": "dialogue:081-b0036:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0036:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0036",
+        "unitIndex": 0,
+        "annotationHash": "e384d3b151577e8e15ea443969375a66a65c7093a5f95465c4affe0b6dd5cbdf",
+        "voiceCardId": "kui-guan",
+        "voiceCardFileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "renderHash": "b63eb4cadc7e73bfdbc73ea3f49ed8cf1d9ec9d4badb22de875da64c8d61bc89",
+        "fileHash": "1dea9e61a37627170deb5d30a5b9f93b76b9d123a40984bbae795df0fe4ea651"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:10:39.242Z",
+          "reviewer": "project-owner",
+          "decisionId": "8523b871-7334-48b5-937a-84f4eb8762f3"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:10:39.242Z"
+    },
+    {
+      "reviewKey": "85644c9ee8130e16fe8eab869dfca3cf767a54255cd665677436f2075969b5ed",
+      "targetId": "dialogue:081-b0036:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0036:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0036",
+        "unitIndex": 1,
+        "annotationHash": "e384d3b151577e8e15ea443969375a66a65c7093a5f95465c4affe0b6dd5cbdf",
+        "voiceCardId": "kui-guan",
+        "voiceCardFileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "5802635da8caafd3c99ce401816c0e7d7f5320cfe7f728a1e7798db02b2abbbd"
+    },
+    {
+      "reviewKey": "f5a1b2ce35d393bef1eccd25ffe6be19b3895771ade172198405af0cdf8fc15d",
+      "targetId": "dialogue:081-b0248:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 0,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "934525734eb695f31a0491970d8e3a8e31a1e71335cf7ff8f9bf085e4bde1384"
+    },
+    {
+      "reviewKey": "1ea26b2e09441eff5e8b0b70a2babfcf647825eb00f5dc8703eef7a39cecd490",
+      "targetId": "dialogue:081-b0248:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 1,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "ff4a6de3b8580106fbad495d264a929c8e17bf9191dde16f0db632eba6a3b75b"
+    },
+    {
+      "reviewKey": "080462be40401c6833bd57541812594dd1bdcd1d9dbdc1caef82a73af6cd4988",
+      "targetId": "dialogue:081-b0248:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 2,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "ecd7ac05f96291cc1ba56f376e8485d00d69ecb83d4a57af6c4766f6a2a7ca51"
+    },
+    {
+      "reviewKey": "777519a766cc502809a0f47b127af0ca581f6ff229e9b7e52ba1d2bfbe66f735",
+      "targetId": "dialogue:081-b0249:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0249:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0249",
+        "unitIndex": 0,
+        "annotationHash": "1832092d017bac3a4870636db56ea521f24604ec0dcb145777d73b917dd06b84",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "004ff9e63b273f25892ba7faacecfdbc5b305ca113858ad3aa13b3ed12fefbbf",
+        "fileHash": "3df4c25252f65aedcac30be470f6b6cbc2976fcbbc3457b7f2ef41cde483fab5"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:10:50.835Z",
+          "reviewer": "project-owner",
+          "decisionId": "51084077-3e1e-46da-9af0-fe1f919acf35"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:10:50.835Z"
+    },
+    {
+      "reviewKey": "5d2db12fea16db738d25545deb50ae1b00adbd68ef81411427b51049e5889b2b",
+      "targetId": "dialogue:081-b0249:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0249:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0249",
+        "unitIndex": 1,
+        "annotationHash": "1832092d017bac3a4870636db56ea521f24604ec0dcb145777d73b917dd06b84",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "a4f54b74038f20c038db54cbd4ca1f17c466b3c0a049f5da57986dba6df28332"
+    },
+    {
+      "reviewKey": "68a923b7ecee79b13d36f738b41cf6c478c21363d1d7dbbdea643d31131f1c31",
+      "targetId": "dialogue:081-b0249:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0249:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0249",
+        "unitIndex": 2,
+        "annotationHash": "1832092d017bac3a4870636db56ea521f24604ec0dcb145777d73b917dd06b84",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "0e1feb3599d69f6a53b06b11254f1eb07e1d10fd389982262fddedd340246a50"
+    },
+    {
+      "reviewKey": "b15548a12c860312d71d5631d5679ade3e02a13649f3321c463bc1e1ba4d13bb",
+      "targetId": "dialogue:081-b0251:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0251:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0251",
+        "unitIndex": 0,
+        "annotationHash": "780ce45449f10b196c249c3b8c9c401ce5a55de351d56bb8793acb617c39f9f0",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "8b9539066562c41ebf406810ba9622e4e46c3e37646b7024bc3b1fe470efcab4",
+        "fileHash": "16ab76fc12968b714f6f1076829060f3ebab6e2694969b11589ee68e4ef273fe"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:11:04.712Z",
+          "reviewer": "project-owner",
+          "decisionId": "9382055e-ec41-4929-b257-ebabaaea07b0"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:11:04.712Z"
+    },
+    {
+      "reviewKey": "b2ad251f6cf419d2b4270a98c8740c43bf8b2a2f8fb98b629a7953c7a71046d6",
+      "targetId": "dialogue:081-b0251:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0251:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0251",
+        "unitIndex": 1,
+        "annotationHash": "780ce45449f10b196c249c3b8c9c401ce5a55de351d56bb8793acb617c39f9f0",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "26b1c1020e2964152e574a64d6c61ee77da49b7b2d93e6d2b3200401bea545ff"
+    },
+    {
+      "reviewKey": "3b442a03029d7aa282470e5fe9f6917f3cad675288206ea67f217d2c50aacab8",
+      "targetId": "dialogue:081-b0251:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0251:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0251",
+        "unitIndex": 2,
+        "annotationHash": "780ce45449f10b196c249c3b8c9c401ce5a55de351d56bb8793acb617c39f9f0",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "32611c45bbfd08d5ed38033bb0ec01f39727c81d13fd914a262b65591a19261f"
+    },
+    {
+      "reviewKey": "5e243094a5941550cb18c5f9c927b45b7ace6597e22f1882913b6bf1540e8f50",
+      "targetId": "dialogue:081-b0044:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0044:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0044",
+        "unitIndex": 0,
+        "annotationHash": "c555f119542d1ea791bbce889432bf4d752796828cd884e93b093185ea4dfff1",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "5a8c34a876049ba193213b032155188682d97bb284dbdb640f091f234992c1aa",
+        "fileHash": "ca82893d40c13f3c030d530896cab99745fb4115731f8eb7437bd9bf48ea459c"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:11:14.557Z",
+          "reviewer": "project-owner",
+          "decisionId": "d245be1a-0af6-4149-9795-c8f0b9373728"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:11:14.557Z"
+    },
+    {
+      "reviewKey": "70ef681b8ada8a3fa65f703d780d9ff9039a6e02f3110307ab9da3fee156e658",
+      "targetId": "dialogue:081-b0044:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0044:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0044",
+        "unitIndex": 1,
+        "annotationHash": "c555f119542d1ea791bbce889432bf4d752796828cd884e93b093185ea4dfff1",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "fe59a944d9986ab66924a2b8537a878cbf4b2d6973db4909af84ffc838e57d33"
+    },
+    {
+      "reviewKey": "4059ab2f3312a1f15e0a8b6f061f22bdebd5ec38a746dae2f95e75fce8219a6d",
+      "targetId": "dialogue:081-b0046:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0046:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0046",
+        "unitIndex": 0,
+        "annotationHash": "c91318c3b499298a600704c9338c0d7dcdee08f5f6b7bc7243cab252cc77be4c",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "a24a36d37abbc4fcc031cbbcfece5ea71a9072f0d43a61276760aa07ec3c877e",
+        "fileHash": "aa60963f148305abfc166b3e9328a5fd4ca0634c2e6d746bbdc828d5c629f59f"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:11:22.773Z",
+          "reviewer": "project-owner",
+          "decisionId": "223db33e-f8cc-42bc-8475-90213d7e5c97"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:11:22.773Z"
+    },
+    {
+      "reviewKey": "a1c9d70ecc5076e6019090d5f00bf23db4bd4eaec84149792dab4c7f07786273",
+      "targetId": "dialogue:081-b0048:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0048:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0048",
+        "unitIndex": 0,
+        "annotationHash": "1a8c2ea603bf03cdd0496f67511887a8bfe773ead79f7334b6c222c8d0fff230",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "66782ca910c0de719d7f4eb3b36b2258733b5b6fd050098b1a0f814e1f46bd5c",
+        "fileHash": "fed8d78a066e8087cee64305d85f9a4ff8df7689d4968d5b5fff2ba488a09f47"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:11:32.673Z",
+          "reviewer": "project-owner",
+          "decisionId": "96ae59ac-63b8-4973-9e5c-79719809ca17"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:11:32.673Z"
+    },
+    {
+      "reviewKey": "3b1ba24dac06223113db6af47e63f30ace1bb6f18fbd2bd7ca6cad2dcfd06665",
+      "targetId": "dialogue:081-b0253:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0253:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0253",
+        "unitIndex": 0,
+        "annotationHash": "22c31e785e7d2a8c3d921809dace0b02d7c6368e3b6833168c38b47b60b16052",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "5f782617e6a190a6e4de2ed1118775e2d1df6d5369c46fa41ad47729c0475461",
+        "fileHash": "d3e85f9bf334b20ec63d7f910aa65a7be571cd9849df4e4c17472ee3d038b025"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:11:43.337Z",
+          "reviewer": "project-owner",
+          "decisionId": "daf0731e-1181-4de5-bee4-eed0ef619fde"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:11:43.337Z"
+    },
+    {
+      "reviewKey": "96a8d8cc8a8532d4cf8c9a49e1c3b9730efff0e2aa629edd434ed738ee2c95d3",
+      "targetId": "dialogue:081-b0253:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0253:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0253",
+        "unitIndex": 1,
+        "annotationHash": "22c31e785e7d2a8c3d921809dace0b02d7c6368e3b6833168c38b47b60b16052",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "67cc7e1c198a6b46b1e2da3d9094553242d26489e8ce3c28e36215fe244cf61a"
+    },
+    {
+      "reviewKey": "02c967595da7fb52c80f0d2aac7365c857e2ebc8600c384d95082b6c35d16eb1",
+      "targetId": "dialogue:081-b0253:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0253:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0253",
+        "unitIndex": 2,
+        "annotationHash": "22c31e785e7d2a8c3d921809dace0b02d7c6368e3b6833168c38b47b60b16052",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "b7ebe20931bab542ff2df2040f78c0d3dd7b44e4eafd2139e5d0c34a993b5920"
+    },
+    {
+      "reviewKey": "313a665d8c2a0ed828b5dda881699a9824b3897dea9a8834f47dbc67d90aaf9a",
+      "targetId": "dialogue:081-b0254:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0254:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0254",
+        "unitIndex": 0,
+        "annotationHash": "3f4d4d318bec9874078eea6f5e5726ec120ff303ac7b9ba2f60ec47715026c5e",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "a98458505490befe58209a13771621ccb40ac3f8edd36f94b2e39c6698fd59d4",
+        "fileHash": "6927f656cfb250a796aa0766411ff7d3924b286c86881c0b1728f3dc08f57203"
+      },
+      "note": "语气应该更激动一些啊，要吵架的感觉。这个太温和了，是要那种很激动的",
+      "history": [
+        {
+          "action": "rerecord",
+          "at": "2026-09-19T14:14:43.313Z",
+          "reviewer": "project-owner",
+          "decisionId": "ded3cbec-e68b-43d6-bae5-8d273cca4bf7",
+          "issueType": "other",
+          "note": "语气应该更激动一些啊，要吵架的感觉。这个太温和了，是要那种很激动的",
+          "expectedEffect": "语气应该更激动一些啊，要吵架的感觉。这个太温和了，是要那种很激动的"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "issueType": "other",
+      "expectedEffect": "语气应该更激动一些啊，要吵架的感觉。这个太温和了，是要那种很激动的",
+      "lastDecisionAction": "rerecord",
+      "lastDecisionAt": "2026-09-19T14:14:43.313Z",
+      "statusBeforeSuperseded": "rejected",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "1460b0414847c682c5328091e2e00cc79f89ccb72e67419891cc9807c91b0bc1"
+    },
+    {
+      "reviewKey": "e08d6c28118a936eddd43ae77334e77e4350853fa932a162230e5482545f4808",
+      "targetId": "dialogue:081-b0257:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0257:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0257",
+        "unitIndex": 0,
+        "annotationHash": "f35de5e6f3a723ac39d6ecbfd816dade31b11b83be738055b6f7333d82b664ab",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "7dabd68e67d3e11f2b32b42a709841d5e68bf511f7473f9a131267d0d57e847c"
+    },
+    {
+      "reviewKey": "4b1def47a61894092eea42302cf28d577a8cfa8d8a699ded4626643fa261ccbe",
+      "targetId": "dialogue:081-b0257:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0257:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0257",
+        "unitIndex": 1,
+        "annotationHash": "f35de5e6f3a723ac39d6ecbfd816dade31b11b83be738055b6f7333d82b664ab",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "f5c9008160ee8e7d1848ad7bfcfba1c8815b1dcf99dfc861b87ef0b85e0bc059"
+    },
+    {
+      "reviewKey": "02013ee84ddd6c10c7ae357c94e53c5fd2ad168550303770752ba5b9242b6e22",
+      "targetId": "dialogue:081-b0059:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0059:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0059",
+        "unitIndex": 0,
+        "annotationHash": "25ea0e1eba7f9feabe4f277b489101001a9bca9a5f1257bbe0fb00e55c5b1b41",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "c6493af0b8489a58cdb96f8c6e0d53096c549437c40978aa498d39985ed4e972"
+    },
+    {
+      "reviewKey": "2a10bf7608d992e9e390b5aa8150446118a7251da129f41129830354bc8ade5e",
+      "targetId": "dialogue:081-b0059:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0059:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0059",
+        "unitIndex": 1,
+        "annotationHash": "25ea0e1eba7f9feabe4f277b489101001a9bca9a5f1257bbe0fb00e55c5b1b41",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "0a34e1c7496ecddc13ed8355945e1589a758b81365353a684fa0fe3f68c0e1c5"
+    },
+    {
+      "reviewKey": "cfdb2c721b700e934d685679396cd73cbd0ec7c1cd9e8c1b818945a535da48da",
+      "targetId": "dialogue:081-b0061:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0061:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0061",
+        "unitIndex": 0,
+        "annotationHash": "593c3f46fdbb697cca40937fc19f52dcdf72fa9ac4e7f5a65fdc8cc5e4f910cc",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "d046efcfeecc0e4a257b3ece96d16c3be752e903deac556430ed7368384483b8"
+    },
+    {
+      "reviewKey": "971d41c12edcca9ef22b7f1c26bae7cb58e51629798aaa607dc7557c94ca340c",
+      "targetId": "dialogue:081-b0061:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0061:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0061",
+        "unitIndex": 1,
+        "annotationHash": "593c3f46fdbb697cca40937fc19f52dcdf72fa9ac4e7f5a65fdc8cc5e4f910cc",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "8a6cb120ed75edc3db73a90351bbf8b0a3593320792f66c705d32660f7ade7d7"
+    },
+    {
+      "reviewKey": "9028c5b3019da8a8ebfe3330cb2d1da227e5101a58bae0e09a93ebb47c9f2fa9",
+      "targetId": "dialogue:081-b0063:u01",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0063:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0063",
+        "unitIndex": 0,
+        "annotationHash": "0f04a10f0bf902475d080e0b6cf1b7a14e95ce292e1fb148f629f91d48207bfd",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "70267f4a6f504b868b9f2221fb861cb859b37e065aa15fe23ce73979e3c5a866",
+        "fileHash": "e19bbd1ab2eb1ecdc941bfa4b9491bc2b02376b9cb849f164380e6d3fa8c9ef3"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:14:53.898Z",
+          "reviewer": "project-owner",
+          "decisionId": "820928d4-348a-4ce4-a154-80c1a67f8167"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:14:53.898Z"
+    },
+    {
+      "reviewKey": "873ea2d6ffb7599cbd70d6cbc9d3bf8363c7bd978bbef2d3e5fe6f9cfaedb69a",
+      "targetId": "dialogue:081-b0063:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0063:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0063",
+        "unitIndex": 1,
+        "annotationHash": "0f04a10f0bf902475d080e0b6cf1b7a14e95ce292e1fb148f629f91d48207bfd",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "6d5a0985e7eb6c32710eac908dadf9d06a2f0aa72d667b6c101afc63f1512d45"
+    },
+    {
+      "reviewKey": "bcbcb736a7fe536926711e3bb79f1fb302b63f44be5422d5828e33e441ad01d2",
+      "targetId": "dialogue:081-b0065:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0065:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0065",
+        "unitIndex": 0,
+        "annotationHash": "9afb892459aef20e9ec1496e0294b19d1d9fb281301a72fa7fdbac15b38dfa4e",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "486d5a6ec9f6f6d689c2d1de70e97b7ac5d85969b70dcba7a5a989159f624b68"
+    },
+    {
+      "reviewKey": "ee9dc7d78f44e6a52ea1513729ebbc46ce5c590da6d4450e2256409245a9146b",
+      "targetId": "dialogue:081-b0068:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 0,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "046cdc07d84c53058bea1ab5a0078685a4be359681e6c47570d476d6db1f1bea"
+    },
+    {
+      "reviewKey": "a4bf180043e82b725e1ec986fb96dac8432a5af8728c3517d8ee257c101e154f",
+      "targetId": "dialogue:081-b0068:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 1,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "d2f8fd79bc637bbf4e1a9d8af7572b3d79e61cd955adc2a9f75a386dc6ca214e"
+    },
+    {
+      "reviewKey": "5d9f0a916f8a66265ded9876d88db6d60d2a08ee7c90a4ccbc1d4c89c3089d5e",
+      "targetId": "dialogue:081-b0068:u03",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 2,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "e18e078da50071e8f379be47191f549425d5a9dc3400ff52263549232f3c6592"
+    },
+    {
+      "reviewKey": "b36804286bf43a991956a70ec14561a4c1102a22a6cc08826b8ed53088ca1ba1",
+      "targetId": "dialogue:081-b0068:u04",
+      "kind": "dialogue_fragment",
+      "status": "approved",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u04",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 3,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "c73e50f889c11ba4b3b7c32afbc52c805fa9e0cf0dc59b712f64b9a46ecbe2bc",
+        "fileHash": "a4af748fcc3dab22d131dcb5f3c205bf13830d3d204d648daf85bb06d636f11e"
+      },
+      "note": "",
+      "history": [
+        {
+          "action": "approve",
+          "at": "2026-09-19T14:15:23.703Z",
+          "reviewer": "project-owner",
+          "decisionId": "b28f927b-0601-41fc-823d-1e9a3f1f24d0"
+        }
+      ],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "lastDecisionAction": "approve",
+      "lastDecisionAt": "2026-09-19T14:15:23.703Z"
+    },
+    {
+      "reviewKey": "748403e42f7f319168edfb8d77ab21eb78c072ca1a5ef9ad6536034d66a65ecd",
+      "targetId": "dialogue:081-b0071:u01",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0071:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0071",
+        "unitIndex": 0,
+        "annotationHash": "135430035bbdd102b918175305001ad05e479d2398be05877d00db542f0447e2",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "fc681849c010235751ba459e5a9492b8498785f7af9908b1c3029be0be3f40c7"
+    },
+    {
+      "reviewKey": "e8aaabbe1c207bc3e37e30ce7c882668327f5785381813baafe9269c00212143",
+      "targetId": "dialogue:081-b0071:u02",
+      "kind": "dialogue_fragment",
+      "status": "superseded",
+      "binding": {
+        "targetId": "dialogue:081-b0071:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0071",
+        "unitIndex": 1,
+        "annotationHash": "135430035bbdd102b918175305001ad05e479d2398be05877d00db542f0447e2",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": null,
+        "fileHash": null
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T13:57:35.289Z",
+      "statusBeforeSuperseded": "planned",
+      "supersededAt": "2026-09-19T14:37:13.931Z",
+      "supersededBy": "4f0600ec4c5a0a450d841bbb7fba06d77a5251a801316bc0f3a6b2a64058652e"
+    },
+    {
+      "reviewKey": "d3ff7b01df0c2c9aed3bb1cbd4351b09983003a53b027f7a9d9df71b26f973e7",
+      "targetId": "dialogue:081-b0023:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0023:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0023",
+        "unitIndex": 0,
+        "annotationHash": "4b6afff465e1ac559898f971b51ad469c5cd438db53dd7e1f03ef8e7eab851e3",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "e9011051a937c8021851044e92d72a94d8ad1c65be5bbc2e414938c2853652e7",
+        "fileHash": "fafb2bb94127101e2e7479317b064b3f898df5514f8c7dfaac5457dbf7713043"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "307d662fae352fb57aeefc5927b509a87a5fa10dc7c2887ba148928c95d7994f",
+      "targetId": "dialogue:081-b0028:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 1,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "ec0ff9cf9a2581f68b8d72e4e5ce81807ba33bae55f95ee0ebd18c7ac52f2b9c",
+        "fileHash": "ab127119e8aa6a20da6a63c018778dc5f0c6905df37dd158b65d73c976b3b961"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "66021d8c023922518ded6c67e16aa1c7a44db8993758392afdc29b8acc53e252",
+      "targetId": "dialogue:081-b0028:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 2,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "39e6af148cf233047d5f14e506ea0f86cd6ca3d1e3cc52f73f0396928a06d92f",
+        "fileHash": "537638675c360955c578646813b12f1939a678372766112948465703fd599ae1"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "5d505c8d5c82cb3677b92cf909d13ca6525d4422efc76e6655c7c776f9220b37",
+      "targetId": "dialogue:081-b0028:u04",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u04",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 3,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "94b4c4adaa1463072b2d5bc69ac655c0bffa4b5eee3ea6c4e85cc4f5940b83e8",
+        "fileHash": "f776c1080150742fd4299c214c05fd0ba194fd0b1a6bd333fd09060893ade5d0"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "381de33da327cfbd82675fd24bf3218da77a3e188b60726583e2733d2442a8e0",
+      "targetId": "dialogue:081-b0028:u05",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u05",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 4,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "016ee65d0b27f9c51569f1ba5222782525ed20ecd6843037c7492085b77675c5",
+        "fileHash": "4b22105b56b499829d1c5fdccebfd624e7ca608f9647403a3bc1cdfcf245a311"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "4925c33e27a3a3d5a20ae24e07ec58489b178c5a40f2ba3670644ad63db65c8d",
+      "targetId": "dialogue:081-b0028:u06",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u06",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 5,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "f8943e82c288c9713bdc9945c589c24769769a363e3ea049c343d5d1160b68a7",
+        "fileHash": "4925f5d46dfe4347db58539cd073c35d6db09c9ae88b1c7f684f80b3873c049a"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "a0afc9c8a15c03653ff40ad8d83a0bd0569038f346030f2fbec4f8cb1fcd106f",
+      "targetId": "dialogue:081-b0028:u07",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u07",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 6,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "58fe323e6e392171bf201703ca85b01313e50a895f27d5407f49b179e9c6b3fa",
+        "fileHash": "407cb0274772573a493d5b9323c29fe4f3d3b2adf32bd35773b682c461e47f3d"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "bde1b8ba3b1abcbe67b5cbcf80b997d9d649324ef64ae60d0cba6c0e29149a19",
+      "targetId": "dialogue:081-b0028:u08",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0028:u08",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0028",
+        "unitIndex": 7,
+        "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "b11445ba5f5deee63c52847bf933a23bdf47c70079de79ebb9d364cae5f6396e",
+        "fileHash": "20e17292a192393612c86184ea87dc27c0a4b3cbd08d0698c094933ed99e259f"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "7dcf6b137f9194dc62004482eabeba415e588e666071c14b927d50334f670b19",
+      "targetId": "dialogue:081-b0246:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0246:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0246",
+        "unitIndex": 0,
+        "annotationHash": "44b0e495103599000d0fa1342787bec52e187d532dec0d4e2e3acdceeb45ffe3",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "0a1e8a2c1b28acf688b3c4e633ab2dc952c51480574b2a2c4abde3e921f7cd61",
+        "fileHash": "13e570c2311f2b44ce078c04d131dd9ff435b50ea3fe9db79e01ba35347b6290"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "5aa5c7f1f9e574256be7eb63a3da699fd6bf6896a05668112f8fec44d1095d04",
+      "targetId": "dialogue:081-b0246:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0246:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0246",
+        "unitIndex": 1,
+        "annotationHash": "44b0e495103599000d0fa1342787bec52e187d532dec0d4e2e3acdceeb45ffe3",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "360f55b4d3ee85ff5beded5f66825b28f53fc5f78128ec9ce1887468bc0ef8fd",
+        "fileHash": "ff7919a6a70dc544ea17e6f3ba9d4ef5098c74b90cdb13be118e44805988e9cf"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "e4d5cf8145dfd2302677eee08340bee079a341c5bd4491c5bdfea3b263d51b2a",
+      "targetId": "dialogue:081-b0247:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0247:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0247",
+        "unitIndex": 0,
+        "annotationHash": "c454202b1faf35a39aa4644f8cbb4e71eb8e70bec241df43b2dc7667d22abd4b",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "abc927a6001c09b7d2d73813edb033d9d963bf98b3b806d58a95336d7bb858ee",
+        "fileHash": "dcbb6da5332cf8136a8c707db887f5b1b30ea5f52a2cc905f34f2e20d6173ab7"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "779df8ef3d87cd79ffbb23dac9c2cb07d12026fd0b65e99dcd939fe4893e8478",
+      "targetId": "dialogue:081-b0247:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0247:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0247",
+        "unitIndex": 1,
+        "annotationHash": "c454202b1faf35a39aa4644f8cbb4e71eb8e70bec241df43b2dc7667d22abd4b",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "b1e24e7a5ff9763af1feb0fe45ac7145e9f96f4472020f910f5ff6fb958a7316",
+        "fileHash": "3a664d64958957512302355d5bcdaf4b026703d66b3ed87d94666c429b68eb50"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "5802635da8caafd3c99ce401816c0e7d7f5320cfe7f728a1e7798db02b2abbbd",
+      "targetId": "dialogue:081-b0036:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0036:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0036",
+        "unitIndex": 1,
+        "annotationHash": "e384d3b151577e8e15ea443969375a66a65c7093a5f95465c4affe0b6dd5cbdf",
+        "voiceCardId": "kui-guan",
+        "voiceCardFileHash": "fb0989c8d0096eecc5ef8fe5325e6c3dee03f455876017d2057939fe05516131",
+        "renderHash": "e7c2fcf41dd581dc4adf7da21474c9ca861402f9b7f0743988aef2ee81bb1787",
+        "fileHash": "7c3e2082c40ddef95475a9d74c072c4d3803eb2c2ce0a1a4139caa165fbba518"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "934525734eb695f31a0491970d8e3a8e31a1e71335cf7ff8f9bf085e4bde1384",
+      "targetId": "dialogue:081-b0248:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 0,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "ea6e6e8ea19d3837d12737733e10d363de5808b10abb5e10d9e96397febf622a",
+        "fileHash": "d79b1b8488b2926d757be12435a268f46bdef6109293f5a396389e2d4d0fbab7"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "ff4a6de3b8580106fbad495d264a929c8e17bf9191dde16f0db632eba6a3b75b",
+      "targetId": "dialogue:081-b0248:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 1,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "a277b46cc79fc0ef979b554169d8f728af756526fad9f51027a80119b6c02530",
+        "fileHash": "49442afcf5d76368de7cd3dc6707bfc8916882ae0ee26755aeda7e7d2b0fbe33"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "ecd7ac05f96291cc1ba56f376e8485d00d69ecb83d4a57af6c4766f6a2a7ca51",
+      "targetId": "dialogue:081-b0248:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0248:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0248",
+        "unitIndex": 2,
+        "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "2a69fdf19b385967a36e7d08a51194b05ede6264dbb62748ac06ce462205d55f",
+        "fileHash": "2b7844bfdcbf7828f7d25c4e550007cf92e7ea6db644242caf9ab5091a7a91e8"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "a4f54b74038f20c038db54cbd4ca1f17c466b3c0a049f5da57986dba6df28332",
+      "targetId": "dialogue:081-b0249:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0249:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0249",
+        "unitIndex": 1,
+        "annotationHash": "1832092d017bac3a4870636db56ea521f24604ec0dcb145777d73b917dd06b84",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "780b0f8269970d63fcaae9e4837858a17c8ecc685841bf299dfda45f1a412c04",
+        "fileHash": "60f492f9a3f36cc0dab92ad0d8dbfcb78728819f3976dff700b7bdc7db41328f"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "0e1feb3599d69f6a53b06b11254f1eb07e1d10fd389982262fddedd340246a50",
+      "targetId": "dialogue:081-b0249:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0249:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0249",
+        "unitIndex": 2,
+        "annotationHash": "1832092d017bac3a4870636db56ea521f24604ec0dcb145777d73b917dd06b84",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "c7c9b2530d04364996ec4801e366a109a5d885412a78f1d6748a8e879535c39c",
+        "fileHash": "9e3e8ee18284cddb74ab4e12a8e5154e48438e84afeca23e39db54132655e169"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "26b1c1020e2964152e574a64d6c61ee77da49b7b2d93e6d2b3200401bea545ff",
+      "targetId": "dialogue:081-b0251:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0251:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0251",
+        "unitIndex": 1,
+        "annotationHash": "780ce45449f10b196c249c3b8c9c401ce5a55de351d56bb8793acb617c39f9f0",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "3f2f512a2de78fb70863694e437c388a3250418f4bac3fe9b084b238252bd107",
+        "fileHash": "292fba94d1b12e5dfbcc47beba51625ef485c7210598b2a1c430d924e2474196"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "32611c45bbfd08d5ed38033bb0ec01f39727c81d13fd914a262b65591a19261f",
+      "targetId": "dialogue:081-b0251:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0251:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0251",
+        "unitIndex": 2,
+        "annotationHash": "780ce45449f10b196c249c3b8c9c401ce5a55de351d56bb8793acb617c39f9f0",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "038e624119886799ab2c52d6e867642fab1f66fc22367b2e6874fab85f218abb",
+        "fileHash": "67ed1db20c025cb31cdea5b7e2d477941e2bab64d7f78f95ce9b60f602998a06"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "fe59a944d9986ab66924a2b8537a878cbf4b2d6973db4909af84ffc838e57d33",
+      "targetId": "dialogue:081-b0044:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0044:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0044",
+        "unitIndex": 1,
+        "annotationHash": "c555f119542d1ea791bbce889432bf4d752796828cd884e93b093185ea4dfff1",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "ec0012f952daed73fef42baca515f9d301e4247b35cefc5266f2303cffa16340",
+        "fileHash": "162fdd73b8f773bb3ac444d84ccc78fa1f824a33a51ccf3e2431fa0bfa8243aa"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "67cc7e1c198a6b46b1e2da3d9094553242d26489e8ce3c28e36215fe244cf61a",
+      "targetId": "dialogue:081-b0253:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0253:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0253",
+        "unitIndex": 1,
+        "annotationHash": "22c31e785e7d2a8c3d921809dace0b02d7c6368e3b6833168c38b47b60b16052",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "636619296824502b41a531568c7bf74167af52d388caff9fa567aea8bc289b65",
+        "fileHash": "dd14a876233e37dacfb9f98656ed9b5f7a7e0aba78b22ee7b92016a0d07dfea4"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "b7ebe20931bab542ff2df2040f78c0d3dd7b44e4eafd2139e5d0c34a993b5920",
+      "targetId": "dialogue:081-b0253:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0253:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0253",
+        "unitIndex": 2,
+        "annotationHash": "22c31e785e7d2a8c3d921809dace0b02d7c6368e3b6833168c38b47b60b16052",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "d92d12cacd28d07d8ee06f104839ad7f676a89d11feff005af69168af497a5d5",
+        "fileHash": "172a51a0b2db9ed33f376630b1d21cdb7c5a973403c7d5182f2267b4c7d61c14"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "1460b0414847c682c5328091e2e00cc79f89ccb72e67419891cc9807c91b0bc1",
+      "targetId": "dialogue:081-b0254:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0254:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0254",
+        "unitIndex": 0,
+        "annotationHash": "3f4d4d318bec9874078eea6f5e5726ec120ff303ac7b9ba2f60ec47715026c5e",
+        "voiceCardId": "dou-guan",
+        "voiceCardFileHash": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+        "renderHash": "4b6b4cc61af44e5a57ab086b6d2666a77dae0be2d17f0f7ec32ced8f2837a7d7",
+        "fileHash": "7dea1b1cd79e34dedf4ef35ddf940d25b587a51cfc0cca1301b15faea5f313c4"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "7dabd68e67d3e11f2b32b42a709841d5e68bf511f7473f9a131267d0d57e847c",
+      "targetId": "dialogue:081-b0257:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0257:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0257",
+        "unitIndex": 0,
+        "annotationHash": "f35de5e6f3a723ac39d6ecbfd816dade31b11b83be738055b6f7333d82b664ab",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "39714dbbf32b725baad562bc92ca15bdbb70b7ddafaf3bd09977cc146cba7947",
+        "fileHash": "6404b229738c47bc9daf24ae514a7ed637fde14e6ec5a7ef7070c96f8b89b002"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "f5c9008160ee8e7d1848ad7bfcfba1c8815b1dcf99dfc861b87ef0b85e0bc059",
+      "targetId": "dialogue:081-b0257:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0257:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0257",
+        "unitIndex": 1,
+        "annotationHash": "f35de5e6f3a723ac39d6ecbfd816dade31b11b83be738055b6f7333d82b664ab",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "405a75f5ab249bd593c9e6c8a9af8b518200d139b9709660fc0679c59572a46b",
+        "fileHash": "8719659f9486d7afb03682c25433eba353edc12e3836ce57a732f28711449992"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "c6493af0b8489a58cdb96f8c6e0d53096c549437c40978aa498d39985ed4e972",
+      "targetId": "dialogue:081-b0059:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0059:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0059",
+        "unitIndex": 0,
+        "annotationHash": "25ea0e1eba7f9feabe4f277b489101001a9bca9a5f1257bbe0fb00e55c5b1b41",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "35f205607abf2f176b5ce8de6223e2ddf86ad07b7b65ebade3b6fde6108067de",
+        "fileHash": "a469434b98e684a087266df2ef0865bcd86bdde81ddb56ec7dca9d6f2e512bb9"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "0a34e1c7496ecddc13ed8355945e1589a758b81365353a684fa0fe3f68c0e1c5",
+      "targetId": "dialogue:081-b0059:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0059:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0059",
+        "unitIndex": 1,
+        "annotationHash": "25ea0e1eba7f9feabe4f277b489101001a9bca9a5f1257bbe0fb00e55c5b1b41",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "51bd0873d8a197239f3a422edd3edfa71da198965b1aab0b49f3bdd19809d72d",
+        "fileHash": "1568187a28954c4d127212d5ba2c0a129aeb9991909e9be543cbfd5fa1d726d2"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "d046efcfeecc0e4a257b3ece96d16c3be752e903deac556430ed7368384483b8",
+      "targetId": "dialogue:081-b0061:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0061:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0061",
+        "unitIndex": 0,
+        "annotationHash": "593c3f46fdbb697cca40937fc19f52dcdf72fa9ac4e7f5a65fdc8cc5e4f910cc",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "f6f9eae69b958c8f27c1cfce44f4854ec064a74583faa17eaa47ce7b056388fc",
+        "fileHash": "ec9784c6ea281305718da6e0119ef86cddfba03331008ff1f9557dcfba3be45a"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "8a6cb120ed75edc3db73a90351bbf8b0a3593320792f66c705d32660f7ade7d7",
+      "targetId": "dialogue:081-b0061:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0061:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0061",
+        "unitIndex": 1,
+        "annotationHash": "593c3f46fdbb697cca40937fc19f52dcdf72fa9ac4e7f5a65fdc8cc5e4f910cc",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "2ed712fac41ec05bb944433d21b1f0432e77cdcad34a8317bc0c82d8e4bf3b18",
+        "fileHash": "244c76ccb621bea2f3f8b3735d6c2c84a205d3e70daf828893760b7b34669967"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "6d5a0985e7eb6c32710eac908dadf9d06a2f0aa72d667b6c101afc63f1512d45",
+      "targetId": "dialogue:081-b0063:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0063:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0063",
+        "unitIndex": 1,
+        "annotationHash": "0f04a10f0bf902475d080e0b6cf1b7a14e95ce292e1fb148f629f91d48207bfd",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "76ecc91d81a24dc2a14ff4467fd3068b7b6b77101bb002bc570cef4d92f8f8b7",
+        "fileHash": "0253003ed7a26c71928b2a15a618ff1d4d277d56c84221e0258df077d43cf103"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "486d5a6ec9f6f6d689c2d1de70e97b7ac5d85969b70dcba7a5a989159f624b68",
+      "targetId": "dialogue:081-b0065:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0065:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0065",
+        "unitIndex": 0,
+        "annotationHash": "9afb892459aef20e9ec1496e0294b19d1d9fb281301a72fa7fdbac15b38dfa4e",
+        "voiceCardId": "ai-guan",
+        "voiceCardFileHash": "e7352bcf4a9f9f15c50e54148c9bb248221b019a4d8b90feecacbe1aeed1952c",
+        "renderHash": "fb3eece112da7312deca70ae1aa74006fdc3cde186d1fd6ab814b9d576d8df39",
+        "fileHash": "032e97f23c9d5ecbab510d387f561f00aed13047d6084257ecbb73168b90a67c"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "046cdc07d84c53058bea1ab5a0078685a4be359681e6c47570d476d6db1f1bea",
+      "targetId": "dialogue:081-b0068:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 0,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "26683dc2a0254c95d5b738d819c05308366578c62fde2a86e1dd77b402d1616f",
+        "fileHash": "b2c31e6a0fdad77a5f1b61635ffb03d1b87f3d1e11bc24a908f0b2bc8bf1abbd"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "d2f8fd79bc637bbf4e1a9d8af7572b3d79e61cd955adc2a9f75a386dc6ca214e",
+      "targetId": "dialogue:081-b0068:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 1,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "669ce4ac3dab11ed7bb2a193c01d37e55f0c2935e0b6e026a0c6e1a18a9a3163",
+        "fileHash": "af8fed2c857b7201754dbf140f27c1b703795a119290a89eeea291f039a78a4c"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "e18e078da50071e8f379be47191f549425d5a9dc3400ff52263549232f3c6592",
+      "targetId": "dialogue:081-b0068:u03",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0068:u03",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0068",
+        "unitIndex": 2,
+        "annotationHash": "3107e9f784aa97ba6faa1b614c70005bb5564db3fc92247bcbbf689cfdfffd65",
+        "voiceCardId": "jia-baoyu:restrained-sadness",
+        "voiceCardFileHash": "12068181251f86f42d6a600572b72084529e0b044e434fe8e174073ff8bf1273",
+        "renderHash": "9268cd272ca11f2c2677404af597fd84a211b24ce3184d9d2f1b9ceb63bb75a2",
+        "fileHash": "dd1b8c3f1194b3105b89020669ab3c75f7fd694486ebeb7d7abba702f774053d"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "fc681849c010235751ba459e5a9492b8498785f7af9908b1c3029be0be3f40c7",
+      "targetId": "dialogue:081-b0071:u01",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0071:u01",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0071",
+        "unitIndex": 0,
+        "annotationHash": "135430035bbdd102b918175305001ad05e479d2398be05877d00db542f0447e2",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "5689e6f25a7c982e92cac6d6e6839c472111d70d3a39b23b17bac72eab9861e2",
+        "fileHash": "e68a74e1f63eece200d9db5403fdb24c781e57b203070cd100d7ac61fb3edbea"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
+    },
+    {
+      "reviewKey": "4f0600ec4c5a0a450d841bbb7fba06d77a5251a801316bc0f3a6b2a64058652e",
+      "targetId": "dialogue:081-b0071:u02",
+      "kind": "dialogue_fragment",
+      "status": "pending_review",
+      "binding": {
+        "targetId": "dialogue:081-b0071:u02",
+        "kind": "dialogue_fragment",
+        "blockId": "081-b0071",
+        "unitIndex": 1,
+        "annotationHash": "135430035bbdd102b918175305001ad05e479d2398be05877d00db542f0447e2",
+        "voiceCardId": "xiren:assertive-rivalry",
+        "voiceCardFileHash": "d4dbae20826221da63235dee337b33ddf5f8adf1d63dc35fb1cd4fac441e76b0",
+        "renderHash": "5ad829ed45496c208f37807427284b5be4baa17164810cf02233dc4a5b8ba318",
+        "fileHash": "770dc3b34c987bfc44fbbb386aa0381871c833aa603aa202c7e0e8ff6cd6eafd"
+      },
+      "note": "",
+      "history": [],
+      "createdAt": "2026-09-19T14:37:13.931Z"
     }
   ]
 }

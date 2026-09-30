@@ -1,8 +1,7 @@
-import { readFile } from 'node:fs/promises';
 import { basename, extname, join } from 'node:path';
 import { hashJson, voiceAnnotationHash } from './audio-blocks.js';
 import { pathExists, readJsonIfExists, sha256File, writeJsonAtomic } from './files.js';
-import { selectSceneVoiceCardId, splitChineseDialogueWithDelivery } from './scene-plan.js';
+import { passesWhisperStructuralReview, selectSceneVoiceCardId, splitChineseDialogueWithDelivery } from './scene-plan.js';
 
 export const REVIEW_SOURCE_VERSION = 1;
 
@@ -137,12 +136,17 @@ export async function createReviewSourceFromArtifacts({
 	const narrationReady = narrationBlocks.filter((block) => levelEntries.some((entry) => (
 		entry.kind === 'narration' && entry.blockId === block.blockId
 	))).length;
+	const narrationPassed = narrationBlocks.filter((block) => {
+		const hasAudio = levelEntries.some((entry) => entry.kind === 'narration' && entry.blockId === block.blockId);
+		const result = whisper?.results?.find((item) => item.kind === 'narration-check' && item.blockId === block.blockId);
+		return hasAudio && result && passesWhisperStructuralReview(result);
+	}).length;
 	const narration = {
 		total: narrationBlocks.length,
 		rendered: narrationReady,
-		autoPassed: whisper?.narrationSpotCheck?.passedNoMarkupReading === true ? narrationReady : 0,
+		autoPassed: whisper?.narrationSpotCheck?.passedNoMarkupReading === true ? narrationPassed : 0,
 		allAutoPassed: narrationBlocks.length > 0
-			&& narrationReady === narrationBlocks.length
+			&& narrationPassed === narrationBlocks.length
 			&& whisper?.narrationSpotCheck?.passedNoMarkupReading === true,
 		machineCheck: whisper?.narrationSpotCheck || null,
 	};
@@ -186,6 +190,135 @@ export async function createReviewSourceFromArtifacts({
 		source,
 		annotationSetHash,
 		sceneBasisHash,
+		narration,
+		targets,
+	};
+}
+
+export function createDoubaoDemoReviewSource({
+	scenePlan,
+	demoManifest,
+	whisperValidation,
+	annotationDocument,
+}) {
+	if (!scenePlan?.source?.path || !scenePlan.source.fileHash
+		|| scenePlan.chapter !== demoManifest?.chapter
+		|| scenePlan.scene !== demoManifest?.scene
+		|| !Array.isArray(scenePlan.dialogueUnits)
+		|| !Array.isArray(scenePlan.dialogueBlocks)
+		|| !Array.isArray(demoManifest.fragments)
+		|| !annotationDocument?.annotations) {
+		throw new Error('豆包审核源输入不完整或场景不一致。');
+	}
+	const blocks = new Map(scenePlan.dialogueBlocks.map((block) => [block.blockId, block]));
+	const fragments = new Map(demoManifest.fragments.map((fragment) => [fragment.targetId, fragment]));
+	const rawWhisper = new Map((whisperValidation?.results || []).map((result) => [result.id, result]));
+	const selectedWhisper = new Map((whisperValidation?.selectionReview?.results || [])
+		.map((result) => [result.id, result]));
+	const targets = scenePlan.dialogueUnits.map((unit) => {
+		const block = blocks.get(unit.blockId);
+		const annotation = annotationDocument.annotations[unit.blockId];
+		if (!block || !annotation || voiceAnnotationHash(annotation) !== unit.annotationHash) {
+			throw new Error(`豆包审核目标 ${unit.targetId} 的正文或标注绑定已经变化。`);
+		}
+		const card = scenePlan.voiceCards?.[unit.voiceCardId];
+		if (!card || card.fileHash !== unit.voiceCardFileHash) {
+			throw new Error(`豆包审核目标 ${unit.targetId} 的音色卡绑定已经变化。`);
+		}
+		const fragment = fragments.get(unit.targetId);
+		const selected = selectedWhisper.get(unit.targetId);
+		const raw = rawWhisper.get(unit.targetId);
+		const technicalIssues = [];
+		let audio = null;
+		if (fragment) {
+			if (fragment.blockId !== unit.blockId
+				|| fragment.unitIndex !== unit.unitIndex
+				|| fragment.annotationHash !== unit.annotationHash
+				|| fragment.voiceCardId !== unit.voiceCardId
+				|| fragment.voiceCardFileHash !== unit.voiceCardFileHash) {
+				throw new Error(`豆包片段 ${unit.targetId} 的审核绑定与当前计划不一致。`);
+			}
+			if (fragment.subtitleExact !== true) technicalIssues.push('豆包返回字幕未与合成文本精确一致。');
+			if (selected?.structuralPass !== true) technicalIssues.push('Whisper 结构检查未通过或尚未完成。');
+			audio = {
+				cachePath: fragment.path,
+				renderHash: fragment.synthesisHash,
+				sourceRenderHash: fragment.synthesisHash,
+				fileHash: fragment.fileHash,
+				durationSeconds: fragment.durationSeconds,
+				levels: null,
+			};
+		}
+		const rendered = Boolean(audio);
+		const autoPassed = rendered && technicalIssues.length === 0;
+		return {
+			targetId: unit.targetId,
+			kind: 'dialogue_fragment',
+			provider: 'doubao',
+			blockId: unit.blockId,
+			unitIndex: unit.unitIndex,
+			blockText: block.text,
+			unitText: unit.text,
+			context: block.context,
+			speakerRef: unit.speakerRef,
+			annotationSnapshot: block.annotationSnapshot,
+			annotationHash: unit.annotationHash,
+			voiceCard: {
+				id: unit.voiceCardId,
+				styleId: unit.voiceCardId.includes(':') ? unit.voiceCardId.split(':').at(-1) : 'default',
+				label: unit.voiceCardId,
+				cachePath: card.path,
+				fileHash: card.fileHash,
+				text: card.text,
+			},
+			audio,
+			performance: {
+				synthesisText: unit.synthesisText || unit.text,
+				instruction: unit.instruction,
+				speed: unit.speed,
+				delivery: block.annotationSnapshot?.delivery || null,
+			},
+			automaticCheck: fragment ? {
+				structuralPass: selected?.structuralPass === true,
+				rawStatus: selected?.rawStatus || raw?.status || null,
+				characterSimilarity: selected?.characterSimilarity ?? raw?.characterSimilarity ?? null,
+				lengthRatio: selected?.lengthRatio ?? raw?.lengthRatio ?? null,
+				transcript: raw?.transcript || fragment.subtitleText || null,
+				note: '豆包字幕精确匹配；Whisper 仅检查漏字、乱序、重复和异常拖尾，不代替人工表演审核。',
+			} : null,
+			technicalIssues,
+			milestones: { planned: true, rendered, autoPassed },
+			reviewState: autoPassed ? 'pending_review' : rendered ? 'rendered' : 'planned',
+		};
+	});
+	const annotationSetHash = hashJson(annotationDocument.annotations);
+	const narration = {
+		total: scenePlan.counts.narrationBlocks,
+		rendered: 0,
+		autoPassed: 0,
+		allAutoPassed: false,
+		machineCheck: null,
+	};
+	return {
+		version: REVIEW_SOURCE_VERSION,
+		chapter: scenePlan.chapter,
+		scene: scenePlan.scene,
+		source: scenePlan.source,
+		annotationSetHash,
+		sceneBasisHash: hashJson({
+			version: REVIEW_SOURCE_VERSION,
+			provider: 'doubao',
+			annotationSetHash,
+			fragments: targets.map((target) => ({
+				targetId: target.targetId,
+				annotationHash: target.annotationHash,
+				voiceCardId: target.voiceCard.id,
+				voiceCardFileHash: target.voiceCard.fileHash,
+				renderHash: target.audio?.renderHash,
+				fileHash: target.audio?.fileHash,
+			})),
+			narration,
+		}),
 		narration,
 		targets,
 	};

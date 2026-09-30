@@ -45,10 +45,21 @@ export function createPolicyDocument() {
 			'voiceCardFileHash', 'renderHash', 'fileHash',
 		],
 		gates: {
-			dialogue: '每个当前对白实际入片单元必须由用户 approved。',
-			narration: '旁白通过技术检查后可暂定进入场景，但仍须随整场完成人工验收。',
-			scene: '全部当前对白 approved 且旁白技术通过后，才允许正式场景合成。',
-			chapter: '整章仍须从头到尾人工试听并绑定最终整轨哈希。',
+			dialogue: '豆包当前哈希版本通过规定的自动技术检查后，按项目所有者授权默认 approved；用户指出问题时转为 rejected 或返工。',
+			narration: '豆包当前哈希版本通过规定的自动技术检查后，按项目所有者授权默认 approved；用户指出问题时转为 rejected 或返工。',
+			scene: '全部当前对白均为 approved 且旁白技术通过后，才允许正式场景合成。',
+			chapter: '整章当前哈希默认通过；用户在试听后只报告需改动或重录的片段，反馈必须绑定具体哈希。',
+		},
+		defaultApproval: {
+			enabled: true,
+			authorizedBy: 'project-owner',
+			authorizedAt: '2026-09-22T00:00:00+08:00',
+			providers: ['doubao'],
+			requireAutoPassed: true,
+			requireRenderHash: true,
+			requireFileHash: true,
+			source: 'project-owner-default-policy',
+			note: '新豆包语音默认通过；用户仅报告需要改动或重录的具体片段。',
 		},
 		issueTypes: ISSUE_TYPES,
 		workOrderPolicy: {
@@ -186,6 +197,31 @@ export function reconcileApprovals(plan, previous, now = new Date().toISOString(
 		record.binding = compactBinding(target);
 	}
 	return document;
+}
+
+export function applyDefaultApprovalPolicy(plan, approvals, policy, now = new Date().toISOString()) {
+	const rule = policy?.defaultApproval;
+	if (rule?.enabled !== true) return approvals;
+	const providers = new Set(Array.isArray(rule.providers) ? rule.providers : []);
+	for (const target of plan.targets) {
+		if (providers.size > 0 && !providers.has(target.provider)) continue;
+		if (rule.requireAutoPassed !== false && target.milestones?.autoPassed !== true) continue;
+		if (rule.requireRenderHash !== false && !target.audio?.renderHash) continue;
+		if (rule.requireFileHash !== false && !target.audio?.fileHash) continue;
+		const record = approvals.records.find((item) => item.reviewKey === target.reviewKey);
+		if (!record || record.status !== 'pending_review' || record.history.length > 0) continue;
+		record.status = 'approved';
+		record.lastDecisionAction = 'approve';
+		record.lastDecisionAt = now;
+		record.history.push({
+			action: 'approve',
+			at: now,
+			reviewer: rule.authorizedBy || approvals.reviewer || 'project-owner',
+			source: rule.source || 'default-approval-policy',
+			...(rule.note ? { note: rule.note } : {}),
+		});
+	}
+	return approvals;
 }
 
 function currentRecordMap(plan, approvals) {
@@ -349,7 +385,12 @@ export async function syncSceneProduction({
 	const policy = await loadPolicy(paths.policy);
 	const plan = createReviewPlan(reviewSource);
 	const previousApprovals = await readJsonIfExists(paths.approvals);
-	const approvals = reconcileApprovals(plan, previousApprovals, now);
+	const approvals = applyDefaultApprovalPolicy(
+		plan,
+		reconcileApprovals(plan, previousApprovals, now),
+		policy,
+		now,
+	);
 	const derived = deriveProductionDocuments(plan, approvals, policy);
 	const changed = {
 		plan: await writeJsonIfChanged(paths.plan, plan),
@@ -386,6 +427,7 @@ export function applyReviewAction({
 	issueType,
 	note = '',
 	expectedEffect = '',
+	decisionId,
 	now = new Date().toISOString(),
 }) {
 	if (planHash !== plan.planHash) {
@@ -405,6 +447,7 @@ export function applyReviewAction({
 	}
 	const cleanNote = String(note).trim();
 	const cleanExpected = String(expectedEffect).trim();
+	if (decisionId && record.history.some((item) => item.decisionId === decisionId)) return approvals;
 	if (cleanNote.length > 4000 || cleanExpected.length > 4000) {
 		throw new Error('备注和期望效果均不能超过 4000 个字符。');
 	}
@@ -422,6 +465,7 @@ export function applyReviewAction({
 		action,
 		at: now,
 		reviewer: approvals.reviewer || 'project-owner',
+		...(decisionId ? { decisionId } : {}),
 		...(issueType ? { issueType } : {}),
 		...(cleanNote ? { note: cleanNote } : {}),
 		...(cleanExpected ? { expectedEffect: cleanExpected } : {}),
