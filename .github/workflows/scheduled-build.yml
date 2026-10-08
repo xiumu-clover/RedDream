@@ -1,12 +1,32 @@
-name: Scheduled Astro build
+name: Website build and deploy
 
 on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/scheduled-build.yml"
+      - "astro.config.*"
+      - "content/chapters/**"
+      - "public/**"
+      - "src/**"
+      - "tests/chapters/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
   pull_request:
     branches:
       - main
+    paths:
+      - ".github/workflows/scheduled-build.yml"
+      - "astro.config.*"
+      - "content/chapters/**"
+      - "public/**"
+      - "src/**"
+      - "tests/chapters/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
   schedule:
     # Avoid the top-of-hour GitHub Actions scheduling peak.
     - cron: "17 3 * * *"
@@ -17,12 +37,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: astro-build-${{ github.workflow }}-${{ github.ref }}
+  group: website-build-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Test and build
+  website:
+    name: Test and build website
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -39,8 +59,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Test website content
+        run: >-
+          node --experimental-strip-types --test
+          tests/chapters/compiler.test.ts
+          tests/chapters/collection-layout.test.ts
 
       - name: Build Astro site
         run: npm run build
@@ -53,8 +76,8 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Trigger scheduled Cloudflare Pages deployment
-        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+      - name: Trigger Cloudflare Pages deployment
+        if: ${{ github.event_name != 'pull_request' }}
         env:
           CLOUDFLARE_PAGES_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
         run: |

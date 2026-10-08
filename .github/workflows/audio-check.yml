@@ -1,0 +1,61 @@
+name: Audio checks
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/audio-check.yml"
+      - "content/audio/**"
+      - "scripts/audio/**"
+      - "tests/audio/**"
+      - "package.json"
+      - "package-lock.json"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/audio-check.yml"
+      - "content/audio/**"
+      - "scripts/audio/**"
+      - "tests/audio/**"
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audio-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audio:
+    name: Test audio pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22.12.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test audio pipeline
+        run: >-
+          node --experimental-strip-types --test
+          tests/audio/chapter-text.test.ts
+          tests/audio/audio-blocks.test.ts
+          tests/audio/files.test.ts
+          tests/audio/voice-cards.test.ts
+          tests/audio/scene-plan.test.ts
+          tests/audio/review-state.test.ts
+          tests/audio/review-server.test.ts
