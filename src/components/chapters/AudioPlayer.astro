@@ -8,9 +8,11 @@ export interface AudioVariant {
 	durationSeconds?: number;
 }
 
+type AudioVariantName = 'narrator' | 'female' | 'male';
+
 export interface ChapterAudioRecord {
-	defaultVariant: 'narrator' | 'female' | 'male';
-	variants: Partial<Record<'narrator' | 'female' | 'male', AudioVariant>>;
+	defaultVariant: AudioVariantName;
+	variants: Partial<Record<AudioVariantName, AudioVariant>>;
 }
 
 interface Props {
@@ -20,7 +22,18 @@ interface Props {
 }
 
 const { chapterId, record } = Astro.props;
-const initial = record?.variants?.narrator;
+const variantNames: AudioVariantName[] = record
+	? [record.defaultVariant, 'narrator', 'female', 'male']
+	: [];
+const selectedVariantName = variantNames.find((name, index) => (
+	variantNames.indexOf(name) === index && record?.variants?.[name]
+));
+const initial = selectedVariantName ? record?.variants?.[selectedVariantName] : undefined;
+const variantLabel = selectedVariantName === 'female'
+	? '女声旁白'
+	: selectedVariantName === 'male'
+		? '男声旁白'
+		: 'Yunjian 旁白';
 const versionedUrl = (variant?: AudioVariant) => variant
 	? `${variant.url}${variant.url.includes('?') ? '&' : '?'}v=${encodeURIComponent((variant.trackHash || 'current').slice(0, 16))}`
 	: undefined;
@@ -37,7 +50,7 @@ const versionedUrl = (variant?: AudioVariant) => variant
 					<p>AI 有声书</p>
 					<h2 id={`chapter-audio-${chapterId}`}>第 {Number(chapterId)} 回</h2>
 				</div>
-				<p>Yunjian 旁白</p>
+				<p>{variantLabel}</p>
 			</div>
 			<audio controls preload="metadata" src={versionedUrl(initial)}>
 				当前浏览器不支持音频播放。
