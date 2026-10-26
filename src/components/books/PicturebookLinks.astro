@@ -1,0 +1,236 @@
+---
+const douyinShareText = '8.28 复制打开抖音，看看【红楼入画的作品】迎春含泪离园，宝玉一句话未说完便哽住了｜红楼梦续书... https://v.douyin.com/mYLYFm2YTOA/ Fho:/ :9pm n@Q.Xm 05/11';
+const sharePlatforms = [
+	{ name: '抖音', text: douyinShareText },
+	{ name: '小红书', text: '红楼梦续书81回①｜迎春含泪离园 第81回·第1节／共10... https://xhslink.cn/o/9zTjMaBt6tj 拷走口令，来【小红书】瞅瞅~' },
+];
+const weixinUrl = 'https://channels.weixin.qq.com/finder-preview/pages/sph?id=A1IgwWfpW6';
+const bilibiliUrl = 'https://www.bilibili.com/video/BV1VhnR6AEN4/?share_source=copy_web&vd_source=217ddba301dae05f84dadc292467279e';
+---
+
+<aside class="picturebook-links" aria-label="绘本有声书" data-picturebook-links>
+	<div class="picturebook-links__heading">
+		<h2>绘本有声书</h2>
+		<span class="picturebook-links__status">正在制作中 · 当前进度：第81回</span>
+	</div>
+	<p class="picturebook-links__intro">如果喜欢，烦请分享，谢谢！</p>
+	{sharePlatforms.map((platform) => (
+		<div class="picturebook-links__share" data-share-row data-share-text={platform.text} data-platform-name={platform.name}>
+			<div class="picturebook-links__copy-controls">
+				<button class="picturebook-links__copy-link" type="button" data-copy-share>复制打开{platform.name}</button>
+				<button class="picturebook-links__copy-button" type="button" aria-label={`复制${platform.name}分享文案`} data-copy-share>复制</button>
+			</div>
+			<textarea class="picturebook-links__fallback" aria-label={`${platform.name}分享文案，请手动复制`} readonly hidden data-share-fallback>{platform.text}</textarea>
+		</div>
+	))}
+	<div class="picturebook-links__platforms">
+		<a href={weixinUrl} target="_blank" rel="noopener noreferrer">视频号观看 <span aria-hidden="true">↗</span></a>
+		<a href={bilibiliUrl} target="_blank" rel="noopener noreferrer">B站观看 <span aria-hidden="true">↗</span></a>
+	</div>
+	<p class="picturebook-links__toast" role="status" aria-live="polite" aria-atomic="true" data-copy-status></p>
+</aside>
+
+<script>
+	document.querySelectorAll<HTMLElement>('[data-picturebook-links]').forEach((section) => {
+		const status = section.querySelector<HTMLElement>('[data-copy-status]');
+		const buttons = section.querySelectorAll<HTMLButtonElement>('[data-copy-share]');
+		const fallbacks = section.querySelectorAll<HTMLTextAreaElement>('[data-share-fallback]');
+		if (!status) return;
+		let toastTimer: number | undefined;
+
+		const showMessage = (message: string) => {
+			window.clearTimeout(toastTimer);
+			status.textContent = message;
+			toastTimer = window.setTimeout(() => { status.textContent = ''; }, 3500);
+		};
+
+		const copyWithSelection = (shareText: string) => {
+			const previousFocus = document.activeElement;
+			const textArea = document.createElement('textarea');
+			textArea.value = shareText;
+			textArea.readOnly = true;
+			textArea.style.position = 'fixed';
+			textArea.style.inset = '0 auto auto 0';
+			textArea.style.opacity = '0';
+			document.body.append(textArea);
+			try {
+				textArea.focus({ preventScroll: true });
+				textArea.select();
+				textArea.setSelectionRange(0, shareText.length);
+				if (!document.execCommand('copy')) throw new Error('Copy failed');
+			} finally {
+				textArea.remove();
+				if (previousFocus instanceof HTMLElement) previousFocus.focus({ preventScroll: true });
+			}
+		};
+
+		section.querySelectorAll<HTMLElement>('[data-share-row]').forEach((row) => {
+			const shareText = row.dataset.shareText;
+			const platformName = row.dataset.platformName;
+			const fallback = row.querySelector<HTMLTextAreaElement>('[data-share-fallback]');
+			if (!shareText || !platformName || !fallback) return;
+			row.querySelectorAll<HTMLButtonElement>('[data-copy-share]').forEach((button) => {
+				button.addEventListener('click', async () => {
+					buttons.forEach((item) => { item.disabled = true; });
+					try {
+						if (navigator.clipboard?.writeText) {
+							try {
+								await navigator.clipboard.writeText(shareText);
+							} catch {
+								copyWithSelection(shareText);
+							}
+						} else {
+							copyWithSelection(shareText);
+						}
+						fallbacks.forEach((item) => { item.hidden = true; });
+						showMessage(`复制成功，打开${platformName}即可听书`);
+					} catch {
+						fallback.hidden = false;
+						fallback.focus({ preventScroll: true });
+						fallback.select();
+						showMessage('未能自动复制，请选中或长按文案手动复制');
+					} finally {
+						buttons.forEach((item) => { item.disabled = false; });
+					}
+				});
+			});
+		});
+	});
+</script>
+
+<style>
+	.picturebook-links {
+		padding: 1.15rem 1.25rem;
+		border: 1px solid var(--border);
+		border-radius: 0.6rem;
+		background: color-mix(in srgb, var(--surface) 75%, transparent);
+		font-family: system-ui, sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.65;
+	}
+
+	.picturebook-links__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+	}
+
+	.picturebook-links__heading h2 {
+		margin: 0;
+		font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+
+	.picturebook-links__status {
+		padding: 0.1rem 0.45rem;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--accent) 8%, transparent);
+		color: var(--accent);
+		font-size: 0.68rem;
+		white-space: nowrap;
+	}
+
+	.picturebook-links__intro {
+		margin: 0.7rem 0 0.85rem;
+		color: var(--muted);
+		font-size: 0.75rem;
+	}
+
+	.picturebook-links__share + .picturebook-links__share {
+		margin-top: 0.65rem;
+	}
+
+	.picturebook-links__copy-controls,
+	.picturebook-links__platforms {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.6rem 1.2rem;
+	}
+
+	.picturebook-links__platforms {
+		margin-top: 0.75rem;
+		padding-top: 0.7rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.picturebook-links__copy-link {
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: var(--accent);
+		font: inherit;
+		text-decoration: underline;
+		text-decoration-thickness: 0.08em;
+		text-underline-offset: 0.18em;
+		cursor: pointer;
+	}
+
+	.picturebook-links__copy-button {
+		padding: 0.2rem 0.6rem;
+		border: 1px solid var(--border);
+		border-radius: 0.3rem;
+		background: var(--surface);
+		color: var(--muted);
+		font: inherit;
+		font-size: 0.72rem;
+		cursor: pointer;
+	}
+
+	.picturebook-links button:hover {
+		color: var(--accent-dark);
+	}
+
+	.picturebook-links button:focus-visible {
+		outline: 0.15rem solid var(--accent);
+		outline-offset: 0.2rem;
+	}
+
+	.picturebook-links button:disabled {
+		cursor: wait;
+	}
+
+	.picturebook-links__fallback {
+		width: 100%;
+		min-height: 7rem;
+		margin-top: 0.8rem;
+		padding: 0.6rem;
+		border: 1px solid var(--border);
+		border-radius: 0.3rem;
+		background: var(--surface);
+		color: var(--text);
+		font: inherit;
+		resize: vertical;
+	}
+
+	.picturebook-links__toast {
+		position: fixed;
+		z-index: 100;
+		bottom: 1.5rem;
+		left: 50%;
+		width: max-content;
+		max-width: calc(100vw - 2rem);
+		margin: 0;
+		padding: 0.7rem 1rem;
+		transform: translateX(-50%);
+		border-radius: 0.45rem;
+		background: var(--text);
+		color: var(--surface);
+		box-shadow: 0 0.4rem 1.4rem rgb(45 41 36 / 15%);
+		text-align: center;
+		pointer-events: none;
+	}
+
+	.picturebook-links__toast:empty {
+		opacity: 0;
+	}
+
+	@media print {
+		.picturebook-links {
+			display: none;
+		}
+	}
+</style>
