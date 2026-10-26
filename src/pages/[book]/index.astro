@@ -1,29 +1,13 @@
 ---
 import type { BookId } from '../../lib/books/catalog';
-import { BOOKS, BOOK_IDS } from '../../lib/books/catalog';
-import { loadCompiledChapters } from '../../lib/chapters/collection';
-import BookDirectory from '../../components/books/BookDirectory.astro';
-import PageShell from '../../components/layout/PageShell.astro';
+import { BOOK_IDS } from '../../lib/books/catalog';
+import BookDirectoryPage from '../../components/books/BookDirectoryPage.astro';
 
 export async function getStaticPaths() {
 	return BOOK_IDS.map((book) => ({ params: { book } }));
 }
 
 const book = Astro.params.book as BookId;
-const chapters = await loadCompiledChapters({ book });
-const definition = BOOKS[book];
-const directoryChapters = chapters.map(({ id, order, description, chapter }) => ({
-	id,
-	order,
-	title: chapter.title,
-	description,
-}));
 ---
 
-<PageShell
-	title={`${definition.title} · ${definition.range}`}
-	description={`阅读《${definition.title}》${definition.rangeDetail}。`}
-	activeSection={book}
->
-	<BookDirectory book={book} chapters={directoryChapters} />
-</PageShell>
+<BookDirectoryPage book={book} />

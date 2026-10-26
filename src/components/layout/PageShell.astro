@@ -15,7 +15,9 @@ const {
 } = Astro.props;
 
 const documentTitle = title === '红楼共读' ? title : `${title} · 红楼共读`;
-const currentSection = activeSection ?? (Astro.url.pathname === '/' ? 'home' : undefined);
+const currentSection = activeSection === 'guiyou'
+	? 'home'
+	: activeSection ?? (Astro.url.pathname === '/' ? 'home' : undefined);
 const current = (section: NonNullable<Props['activeSection']>) =>
 	currentSection === section ? 'page' : undefined;
 ---
@@ -38,7 +40,7 @@ const current = (section: NonNullable<Props['activeSection']>) =>
 				<a class="site-name" href="/">红楼共读</a>
 				<nav aria-label="主导航">
 					<a href="/" aria-current={current('home')}>首页</a>
-					{BOOK_IDS.map((book) => (
+					{BOOK_IDS.filter((book) => book !== 'guiyou').map((book) => (
 						<a href={BOOKS[book].href} aria-current={current(book)}>{BOOKS[book].title}</a>
 					))}
 					<a href="/settings/" aria-current={current('settings')}>阅读设置</a>

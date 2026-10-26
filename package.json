@@ -17,10 +17,17 @@
     "audio:doubao:demo": "tsx scripts/audio/generate_doubao_demo.js",
     "audio:doubao:chapter": "tsx scripts/audio/generate_doubao_chapter.js",
     "audio:doubao:section": "tsx scripts/audio/generate_doubao_section.js",
+    "audio:doubao:assemble-sections": "node scripts/audio/assemble_doubao_sections.js",
     "audio:review:push": "node scripts/audio/cloud-review-push.js --chapter 081 --scene xiren-three-opera",
     "audio:review:pull": "node scripts/audio/cloud-review-pull.js --chapter 081 --scene xiren-three-opera",
     "audio:publish": "node scripts/audio/publish_audio.js",
     "audio:voices": "node scripts/audio/generate_voice_previews.js",
+    "audio:source-card:scan": "node scripts/audio/source-cards.js scan",
+    "audio:source-card:extract": "node scripts/audio/source-cards.js extract",
+    "audio:source-card:handoff": "node scripts/audio/source-cards.js handoff",
+    "audio:source-card:import-legacy": "node scripts/audio/import-legacy-source-cards.js",
+    "video:picturebook": "node --experimental-strip-types scripts/video/render-picturebook.mjs",
+    "test:video": "node --experimental-strip-types --test tests/video/workspace.test.mjs",
     "style:prepare": "node --experimental-strip-types scripts/style-audit/cli.js prepare",
     "style:train": "node --experimental-strip-types scripts/style-audit/cli.js train",
     "style:audit": "node --experimental-strip-types scripts/style-audit/cli.js audit",
@@ -30,8 +37,8 @@
     "title:export": "node --experimental-strip-types scripts/style-audit/titles/cli.js export",
     "title:report": "node --experimental-strip-types scripts/style-audit/titles/cli.js report",
     "extract:zhipi": "node --experimental-strip-types scripts/research/zhipi/extract.mjs",
-    "test:site": "node --experimental-strip-types --test tests/chapters/compiler.test.ts tests/chapters/collection-layout.test.ts tests/chapters/audio-manifest.test.ts",
-    "test:audio": "node --experimental-strip-types --test tests/audio/chapter-text.test.ts tests/audio/audio-blocks.test.ts tests/audio/files.test.ts tests/audio/doubao-client.test.ts tests/audio/doubao-section.test.ts tests/audio/voice-cards.test.ts tests/audio/scene-plan.test.ts tests/audio/review-state.test.ts tests/audio/cloud-review.test.ts",
+    "test:site": "node --experimental-strip-types --test tests/chapters/compiler.test.ts tests/chapters/collection-layout.test.ts",
+    "test:audio": "node --experimental-strip-types --test tests/audio/chapter-text.test.ts tests/audio/audio-blocks.test.ts tests/audio/files.test.ts tests/audio/doubao-client.test.ts tests/audio/doubao-section.test.ts tests/audio/voice-cards.test.ts tests/audio/source-cards.test.ts tests/audio/scene-plan.test.ts tests/audio/review-state.test.ts tests/audio/cloud-review.test.ts",
     "test:tools": "node --experimental-strip-types --test tests/research/zhipi-extractor.test.ts tests/style-audit/core.test.ts tests/style-audit/pipeline.test.ts tests/style-audit/titles.test.ts",
     "test": "npm run test:site && npm run test:audio && npm run test:tools"
   },
@@ -42,6 +49,7 @@
     "rehype-slug": "^6.0.0"
   },
   "devDependencies": {
+    "js-yaml": "4.3.1",
     "tsx": "^4.23.13",
     "ws": "^8.21.3"
   }

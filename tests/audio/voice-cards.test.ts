@@ -112,3 +112,26 @@ test('第81回复用仅限不直接对话的同类配角，旁白保持独立', 
 	const ids = assignments.map(([, id]) => id);
 	assert.ok(!ids.includes(index.defaultNarrator));
 });
+
+test('不适合宝玉的 gentle-caring-v2 只保留在公共候选池', async () => {
+	const casting = await readJson(join(cardDirectory, 'cosyvoice-casting.json'));
+	const card = casting.reservedCards.find((item: { voiceCardId: string }) =>
+		item.voiceCardId === 'jia-baoyu/gentle-caring-v2');
+	assert.equal(card.status, 'public-pool-unassigned');
+	assert.deepEqual(card.disabledForCharacters, ['jia-baoyu']);
+	assert.equal(card.voiceCardSha256, '7f5083df8669938c1bfceac5ba55a4426b1f672bc223579c595edcdde89b75af');
+	const sections = await readJson(join(projectRoot, 'content/audio/production/chapters/081/sections.json'));
+	const section = sections.sections.find((item: { id: string }) => item.id === '03');
+	assert.ok(Object.values<{ id: string }>(section.voiceCards)
+		.every((item) => item.id !== 'jia-baoyu:gentle-caring-v2'));
+});
+
+test('蒋玉菡与花自芳按用户决定交换卡片但保留真实声源身份', async () => {
+	const casting = await readJson(join(cardDirectory, 'cosyvoice-casting.json'));
+	assert.equal(casting.candidates['jiang-yuhan'].voiceCardId, 'jia-yun/earnest-assistance-v1');
+	assert.equal(casting.candidates['jiang-yuhan'].sourceCharacter, '贾芸');
+	assert.equal(casting.candidates['hua-zifang'].voiceCardId, 'jiang-yuhan/natural-explanation-v2');
+	assert.equal(casting.candidates['hua-zifang'].sourceCharacter, '蒋玉菡');
+	assert.equal(casting.candidates['jiang-yuhan'].reviewDecision, 'user-selected-card-swap-2026-10-03');
+	assert.equal(casting.candidates['hua-zifang'].reviewDecision, 'user-selected-card-swap-2026-10-03');
+});

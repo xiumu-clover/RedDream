@@ -6,16 +6,32 @@
 
 后续选角变更：迎春改与香菱共用 `xiangling/calm-poetry-talk-v1`；原迎春 `jia-yingchun/resigned-calm-v1` 改作秋纹代理声；原秋纹 `qiu-wen/soft-remembrance-v1` 留作未指定主要人物的备用卡。下表“用户通过”记录的是当时试听质量决定，**不表示仍分配给原人物**。现行分配以 [cosyvoice-casting.json](cosyvoice-casting.json) 为准，迎春新 Demo 尚待审核。
 
+2026-10-02 补充：用户否决蒋玉菡 `graceful-recitation-v1`，原因是行酒令语态不适合日常对白；否决花自芳的甄士隐代理版，原因是甄士隐在第 81 回另有对白且年龄感偏大。替换版本 `jiang-yuhan/natural-explanation-v2` 和贾芸代理的花自芳 `young-brotherly-proxy-v2` 已由用户试听通过。批准绑定下表精确哈希；既有技术警告继续保留，且尚未自动写入正式章节路由。
+
+2026-10-02 后续修订：用户在第 81 回第三小节确认 `jia-baoyu/gentle-caring-v2` 不适合作为宝玉声线。该卡从宝玉路由禁用，逻辑转入公共候选池且暂不分配人物；实体文件、原声来源和历史哈希不移动、不改名。任何新角色采用前仍须单独试听批准。
+
+2026-10-03 后续修订：用户试听第 81 回第三小节后要求蒋玉菡、花自芳交换当前音色卡。蒋玉菡现使用贾芸 `earnest-assistance-v1` 代理卡；花自芳现使用蒋玉菡 `natural-explanation-v2` 代理卡。原表记录保留为历史审批证据，现行人物分配以 `cosyvoice-casting.json` 为准；交换不改变声源人物身份。
+
+2026-10-15 后续修订：用户对第 81 回后两节选角试听中的年长女眷池、年轻丫鬟池、`081-b0302` 未具名年轻丫鬟和夏金桂四项明确通过；批准分别绑定代理 Demo MP3 SHA-256 `fcd0bc02d7d58327075a72ec471d8257d85fbaea6c8696dbcd776b68f7032cbf`、`4b0a59cb5d8bf9847ce840046dedff096da957be2e96a5803a4066b175277484`、`6231c485beda7847f1fd48d6c9923e105c3262793d6a03a17a865e24b99f0f73` 和 `3c7b3eeb15bdb013e179b9f477ff7123d203f938d5168db5f1878b0dca7c8c8e`。代理身份与技术警告保留；`081-b0302` 在正式标注拆分前仍不得路由。原潘又安贾芸代理版未被选中，2026-10-16 生成的三个新候选仍待用户选择。
+
+2026-10-16 后续修订：用户在潘又安三个新代理候选中选择第 3 版，即蒋玉菡 `natural-explanation-v2` 代理声。批准绑定标准卡 WAV SHA-256 `171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7` 和试听 MP3 SHA-256 `113e8dd461b480fcc2e6684296f51b6d3bf6c989e48606cf98bb13c0c78b6aa5`；该声源不是潘又安或其演员原声，既有声纹漂移警告保留。
+
+2026-10-18 后续修订：用户确认小鹊沿用第 81 回末已经听审确定的 `unknown-visitor` 声卡。该别名底层实际为贾政 `jia-zheng/studious-reflection-v1` 代理声，不能描述为小鹊或其演员本人原声。第 82 回新提取的莲花儿代理 `xiao-que-xiao-jixiang/light-reporting-v1` 不再分配给小鹊，音频与来源元数据保留为备用候选；第 82 回“小鹊、小吉祥”共同发言如采用单一代表声，以小鹊的 `unknown-visitor` 为主声。
+
+同日，用户将第 82 回其余新补卡暂定采用：林之孝家的本人原声、贾环本人原声、贾蔷本人原声、贾蓉本人原声，以及邢岫烟←香菱、雪雁←春燕、钱槐←贾芸、贾蓁←蒋玉菡四张代理原声。这里的“暂定采用”是选角决定，不抹除 `needs-transcript-review`、低响度或风格局限，也不把代理声描述成目标人物原声；后续用户可随时要求换卡。
+
 | 人物 | 卡片 ID | 审核决定 | 试听标准卡 MP3 SHA-256 | 用户意见／使用边界 |
 | --- | --- | --- | --- | --- |
+| 蒋玉菡 | `jiang-yuhan/natural-explanation-v2` | 用户通过 | `9325906ee8d7c60b2b926db86bf1b3d45ab8ebaa20bb748a2b3e1a3757bfc1e3` | 用户明确表示新版可以；只批准正常说明风格，旧行酒令版仍为否决。声纹漂移等技术警告保留。 |
+| 花自芳 | `jia-yun/earnest-assistance-v1`（贾芸代理） | 用户通过 | `a143698781ebcfee0e8024f9f97261c6ecc9a7a19a8e58091d95d75a8cdbcf65` | 用户明确表示新版可以；批准范围是用于花自芳代理，不把该声源描述为花自芳原声，也不等于批准为贾芸正式卡。 |
 | 贾宝玉 | `jia-baoyu/restrained-sadness-v2` | 用户通过 | `54ab65a642769f2b5dcf375c0f6a128cd78e5ab11b59f41f588be01a60d9dc63` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 袭人 | `xiren/assertive-rivalry-v1` | 用户通过 | `2fc00285696e7ed5214de0d1e9ccf105447e5993f2772f3939cd20eada954236` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 春燕 | `chunyan/daily` | 用户通过 | `e02f88df1d54caa2affd1f962d4efee9127f6674a3be42f2e253ec52d628de66` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 翠缕 | `cui-lu/object-comparison-v1` | 用户通过 | `3e388e1ef0027bacbf3416763ec021a80ce4785ce03d379ea20b809912a75a5b` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 贾宝玉 | `jia-baoyu/anxious-indignant-v1` | 用户通过 | `bd366b2d373775c061aa8d64f2a91a4340f6e848b6e512b4930290284361c0c9` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
-| 贾宝玉 | `baoyu/daily` | 用户通过 | `80d0cef9495d3e43aaae002794c3c39f5d0bce71746b20411468a4b2d2e2943c` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
+| 贾宝玉 | `baoyu/daily` | **用户禁用** | `80d0cef9495d3e43aaae002794c3c39f5d0bce71746b20411468a4b2d2e2943c` | 第82回首节试听后用户明确禁用；WAV SHA-256 `e74dfcf3e088718036668b95fe921ed98c7eb32bd3a350975af19df4ba3f4877`。宝玉沿用第81回 restrained-sadness-v2，原文件仅供追溯。 |
 | 贾宝玉 | `jia-baoyu/gentle-caring-v1` | 用户通过 | `0e55c41aa3ac19ce87c1ee32500e7365d91bdc1555548231e20862e478d0805b` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
-| 贾宝玉 | `jia-baoyu/gentle-caring-v2` | 用户通过 | `4c138f02b5a688f4a7c875eb2cb909fe4ca2121eb0df890f4623250db4210f02` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
+| 公共候选池（原贾宝玉来源） | `jia-baoyu/gentle-caring-v2` | 宝玉禁用；公共池未分配 | `4c138f02b5a688f4a7c875eb2cb909fe4ca2121eb0df890f4623250db4210f02` | 用户确认该声线不适合作为宝玉；保留来源事实和文件，禁止宝玉路由。分配其他角色前须重新试听。 |
 | 贾宝玉 | `jia-baoyu/grieving-shock-v1` | 用户通过 | `d2ec7efdd38b6871e5239d6c75fcec52e4aa73c88ba7def131704f29cbbfcdca` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 贾宝玉 | `jia-baoyu/grieving-shock-v2` | 用户通过 | `5df2493f95e54f1f4e020a8cbcbd9c15a5f7ad086d9fc7a418f205e1574e877f` | 用户表示除列明的三项外，其余音色卡全部通过。机器技术警告仍照原记录保留。 |
 | 贾宝玉 | `jia-baoyu/restrained-sadness-v1` | 情绪待重定名；不能按伤心使用 | `f3c8ad77bdbeafd69b166ba3530261939710252f4720899e38fb95d6312d5346` | 用户认为听感不像难过，反而像心里有点生气；不得再作为 sadness 风格选用。保留原文件，待复核后另定风格名。 |

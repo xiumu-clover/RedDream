@@ -12,6 +12,46 @@
         "mp3FileHash": "a5acbe654fbeda5dc33e7837340fb0313a2d29d2fb29914ecbd63eea234848c5"
       },
       "note": "用户确认第一节完全审批通过；审批绑定最终取消宝玉抽泣后额外静音的版本。"
+    },
+    {
+      "sectionId": "02",
+      "status": "approved-by-user-with-daiyu-placeholder",
+      "approvedAt": "2026-10-01T18:00:00+08:00",
+      "binding": {
+        "parts": [
+          {
+            "profile": "section-02-part-1-v1",
+            "wavFileHash": "e1d7b1a13f57788cffe6032735bab9c16887b54269c58cd24c246fd345dc2ca4",
+            "mp3FileHash": "4f300f35e86888270dbb063fe53455418115e0520a51b3e317babd1354473775"
+          },
+          {
+            "profile": "section-02-part-2-v1",
+            "wavFileHash": "e51684b1b879130690102b5f197ff2b97927aefe396d9953779269c61dc869df",
+            "mp3FileHash": "2914f31580ada4ef434e13283f3d3f7820350d08931643f7e337a8f245144417"
+          }
+        ],
+        "currentSection": {
+          "planHash": "651b67a6700696dd8ece64ae0915c23d7482dc00b35716d4e3334eecb2a3ba04",
+          "wavFileHash": "0dd1ecb6f80baa00a34d743b088af1bc3e0b0db0b9dae077bc165ce57f1ab6e0",
+          "mp3FileHash": "84fe7a0bb1c25492b9085ce3162c4665f6026dca974e78a017d511979b019fd9"
+        },
+        "approvedAdjustments": [
+          {
+            "id": "baoyu-reassurance-original-base-slower-v9-approved",
+            "wavFileHash": "e4866aa548b5eae879438bbaebe18b6c35e3320aa0aca7b04b946ea637bfddba",
+            "mp3FileHash": "9a32ab069102c306a40d352de9be7597f0a42b8e9f5127170c57e21f25afecd1",
+            "tempoFactor": 0.96
+          },
+          {
+            "id": "dou-guan-narration-leading-du-fix-v1",
+            "wavFileHash": "dcfd35e22c610e3f19bd3c93fab61caf5c87bb427948d5ed431df156ba59e2d6",
+            "mp3FileHash": "b50f8caffdca8c6121f5c9e2a9a04abe52c2a388aefe0ec7345baff10ca5d3a1",
+            "repair": "trim source to 1.54-2.20 seconds"
+          }
+        ]
+      },
+      "note": "用户分别确认第二节第一、第二部分通过；黛玉两句仍保留用户自行处理的占位标记。2026-10-18 用户确认宝玉温柔劝止 v9 通过并已入片；随后指出其后的旧旁白荳官道带前导 du，已精确裁除并绑定修复哈希。",
+      "updatedAt": "2026-10-18T13:50:00+08:00"
     }
   ],
   "sections": [
@@ -45,6 +85,16 @@
         "dialogue:081-b0018:u04": {
           "retryVersion": 1,
           "instructionSuffix": "“反要受”须按 fǎn yào shòu 清楚连读，尤其“要”不能念成“而”；不要额外加字，整体仍须连贯、难过且中速略快。"
+        },
+        "dialogue:081-b0011:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持已认可的宝玉克制悲伤声线，只朗读一次“不过念着手足情分，来送送二姐姐。”；句尾“二姐姐”完整自然收住，之后保持静音，严禁杂音、字音、重复或续写。"
+        },
+        "dialogue:081-b0018:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持已认可的宝玉难过而克制的声线，只朗读一次“你也知道，二姐姐受的罪不少。”；语速中等，句内连贯，正文前后保持安静，严禁短促杂音、额外字音、重复或续写。"
         }
       },
       "pauseAfterMs": {
@@ -53,7 +103,8 @@
         "dialogue:081-b0018:u01": 85,
         "dialogue:081-b0018:u02": 85,
         "dialogue:081-b0018:u03": 85,
-        "dialogue:081-b0018:u04": 200
+        "dialogue:081-b0018:u04": 200,
+        "narration:081-b0002:u01": 150
       },
       "approvedAssembly": {
         "version": 1,
@@ -78,8 +129,8 @@
         },
         "groupOverrides": [
           {
-            "id": "baoyu-farewell-pause-v1",
-            "status": "approved-by-user-for-section-assembly",
+            "id": "baoyu-farewell-pause-v2-noise-fix",
+            "status": "user-requested-correction-validated-for-section-assembly",
             "targetIds": [
               "narration:081-b0010:u01",
               "dialogue:081-b0018:u01",
@@ -90,22 +141,43 @@
               "dialogue:081-b0244:u01"
             ],
             "bindings": [
-              { "textHash": "adfff643e52c66c6834a21ff93ed843e185302216704e0d0edb2d7ab0539387a", "annotationHash": "d3be2081d915e0fc1e239b2a815dbd77d8b9852ab00b291b80c81abb9c786fa9" },
-              { "textHash": "e68d5e7708c35693970d2cca9443f607525bd4be0e2436fc97e2ce1947b61816", "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5" },
-              { "textHash": "4136d12e0cf9c3beebb4086811958d4ec215a918e225d53d1530f59d927f9ef1", "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5" },
-              { "textHash": "2e014dd64af940bcf1b85f4dd89922416d97f132c2780e57eed1cdbd7d837d71", "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5" },
-              { "textHash": "33f9369cad4d735c1cc33ec0402f51d37da8687efe7b674c4cb15bb917a00dc6", "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5" },
-              { "textHash": "4001725afeb6aff62e2c9fb6c7af448486bb17bf9fcdfbc6e06d367302a5875c", "annotationHash": "f56cb9a31ff71b739a487204429ca934157878b41c4257955984fa416cdfb60c" },
-              { "textHash": "bd15a82dd7f4eb5f0fe882e9f651683aed85fc94f62ccb76304f82f5f73cd996", "annotationHash": "066de880024badf88823524d78f5d0b362e889d1b539fe5b7a0d6224b32b1a91" }
+              {
+                "textHash": "adfff643e52c66c6834a21ff93ed843e185302216704e0d0edb2d7ab0539387a",
+                "annotationHash": "d3be2081d915e0fc1e239b2a815dbd77d8b9852ab00b291b80c81abb9c786fa9"
+              },
+              {
+                "textHash": "e68d5e7708c35693970d2cca9443f607525bd4be0e2436fc97e2ce1947b61816",
+                "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+              },
+              {
+                "textHash": "4136d12e0cf9c3beebb4086811958d4ec215a918e225d53d1530f59d927f9ef1",
+                "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+              },
+              {
+                "textHash": "2e014dd64af940bcf1b85f4dd89922416d97f132c2780e57eed1cdbd7d837d71",
+                "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+              },
+              {
+                "textHash": "33f9369cad4d735c1cc33ec0402f51d37da8687efe7b674c4cb15bb917a00dc6",
+                "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+              },
+              {
+                "textHash": "4001725afeb6aff62e2c9fb6c7af448486bb17bf9fcdfbc6e06d367302a5875c",
+                "annotationHash": "f56cb9a31ff71b739a487204429ca934157878b41c4257955984fa416cdfb60c"
+              },
+              {
+                "textHash": "bd15a82dd7f4eb5f0fe882e9f651683aed85fc94f62ccb76304f82f5f73cd996",
+                "annotationHash": "066de880024badf88823524d78f5d0b362e889d1b539fe5b7a0d6224b32b1a91"
+              }
             ],
-            "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/tempo/695d516b376e4c8ace6ace4d1acdf8224fb78771bc3efe884afc994c49c4a044.wav",
-            "fileHash": "43f02601ed03b872715833a0e43d3ddfc6c8697a93a9c3b905e93dafcea2b543",
-            "reason": "采用已试听的宝玉整段节奏、停顿和重录末句；使用其变速后母带前拼接源，避免二次响度母带。",
+            "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v2-noise-fix/tempo/1c64d3cd14e4664c13039c15c6a49549fbe311c07b906c8467347d4a2ab544c4.wav",
+            "fileHash": "e88498bd7ae9ae998620ad6a0d213b46937c779daa7f1e3e3e55ac6655a2b52f",
+            "reason": "沿用第一节已通过的宝玉连续段，仅按用户反馈重录并替换“你也知道，二姐姐受的罪不少。”以去除短促杂音；自动字幕与 Whisper 逐字通过。使用母带前变速拼接源，避免二次响度处理。",
             "review": {
-              "manifestPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+              "manifestPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v2-noise-fix/preview-manifest.json",
               "outputKey": "wav",
-              "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
-              "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+              "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v2-noise-fix/scene.wav",
+              "outputFileHash": "1fb2dc2e5afe395c8b0f9890e1b0f3c2bebf9280573ebb4da96ecebc382731e1",
               "minimumDialoguePassed": 5
             }
           }
@@ -135,7 +207,11 @@
             "dialogue:081-b0018:u04": {
               "source": "current-section-manifest",
               "fileHash": "e525c8877a9347aac66f06ad9d6f0f34c31ea4256fe2538d01263a1e86498638",
-              "internalPauseTargetsMs": [380, 500, null],
+              "internalPauseTargetsMs": [
+                380,
+                500,
+                null
+              ],
               "reason": "按用户意见更换末句；保留旧录音中逐字准确的前两分句，在折磨后静音处接入新录句尾。",
               "suffixReplacement": {
                 "text": "倒是不嫁的好。",
@@ -202,8 +278,12 @@
         "daiyu-inquiry-v2-soft-v1": {
           "version": 1,
           "status": "rejected-by-user",
-          "targetIds": ["dialogue:081-b0016:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0016:u01"],
+          "targetIds": [
+            "dialogue:081-b0016:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0016:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0016:u01": {
               "retryVersion": 2,
@@ -213,13 +293,23 @@
           "instructionSuffix": "轻声、短句、问意细微。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 260}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
         },
         "daiyu-inquiry-context-v1": {
           "version": 1,
           "status": "superseded-by-daiyu-inquiry-context-v2-rising",
-          "targetIds": ["dialogue:081-b0016:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0016:u01"],
+          "targetIds": [
+            "dialogue:081-b0016:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0016:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0016:u01": {
               "retryVersion": 3,
@@ -229,13 +319,23 @@
           "instructionSuffix": "根据上下文自然处理情绪和问句。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 260}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
         },
         "baoyu-choke-v1": {
           "version": 1,
           "status": "rejected-by-user",
-          "targetIds": ["dialogue:081-b0005:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0005:u01"],
+          "targetIds": [
+            "dialogue:081-b0005:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0005:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0005:u01": {
               "retryVersion": 1,
@@ -245,13 +345,23 @@
           "instructionSuffix": "破折号处保留未尽之意。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 260}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
         },
         "daiyu-inquiry-context-v2-rising": {
           "version": 1,
           "status": "rejected-by-user",
-          "targetIds": ["dialogue:081-b0016:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0016:u01"],
+          "targetIds": [
+            "dialogue:081-b0016:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0016:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0016:u01": {
               "retryVersion": 4,
@@ -261,13 +371,23 @@
           "instructionSuffix": "声音轻而含蓄，句尾明确上扬。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 260}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
         },
         "baoyu-sobbing-v2": {
           "version": 1,
           "status": "rejected-by-user",
-          "targetIds": ["dialogue:081-b0005:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0005:u01"],
+          "targetIds": [
+            "dialogue:081-b0005:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0005:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0005:u01": {
               "retryVersion": 3,
@@ -277,13 +397,23 @@
           "instructionSuffix": "结尾保留两三下非语言的抽噎气声。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 140,"internalMs": 320}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 140,
+            "internalMs": 320
+          }
         },
         "daiyu-inquiry-sad-rising-v3": {
           "version": 1,
           "status": "rejected-by-user",
-          "targetIds": ["dialogue:081-b0016:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0016:u01"],
+          "targetIds": [
+            "dialogue:081-b0016:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0016:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0016:u01": {
               "retryVersion": 5,
@@ -293,13 +423,23 @@
           "instructionSuffix": "慢速、难过，尾字“了”明显升调。",
           "tempoFactor": 0.92,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 120,"internalMs": 300}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 120,
+            "internalMs": 300
+          }
         },
         "baoyu-sobbing-breath-v3": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0005:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0005:u01"],
+          "targetIds": [
+            "dialogue:081-b0005:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0005:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0005:u01": {
               "retryVersion": 4,
@@ -309,7 +449,13 @@
           "instructionSuffix": "结尾是鼻息式轻抽泣，绝不咳嗽。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -46,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 180,"internalMs": 340},
+          "silencePolicy": {
+            "thresholdDbfs": -46,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 180,
+            "internalMs": 340
+          },
           "tailRepairs": {
             "dialogue:081-b0005:u01": {
               "endSeconds": 2.9,
@@ -321,8 +467,12 @@
         "daiyu-inquiry-performance-v4": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0016:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0016:u01"],
+          "targetIds": [
+            "dialogue:081-b0016:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0016:u01"
+          ],
           "performanceReference": {
             "id": "user-reference:daiyu-inquiry-melancholy-20260929",
             "path": "content/audio/.cache/doubao/sections/081/01/references/daiyu-inquiry-melancholy.wav",
@@ -340,7 +490,159 @@
           "instructionSuffix": "音色取音频1，表演取音频2。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 120,"internalMs": 320}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 120,
+            "internalMs": 320
+          }
+        },
+        "baoyu-farewell-pause-v2-noise-fix": {
+          "version": 1,
+          "status": "draft-for-user-listening",
+          "targetIds": [
+            "narration:081-b0010:u01",
+            "dialogue:081-b0018:u01",
+            "dialogue:081-b0018:u02",
+            "dialogue:081-b0018:u03",
+            "dialogue:081-b0018:u04",
+            "narration:081-b0243:u01",
+            "dialogue:081-b0244:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0018:u01"
+          ],
+          "approvedAssembly": {
+            "version": 1,
+            "sourceOverrides": {
+              "narration:081-b0010:u01": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/ef8e6c012d4daa32b1ace2c7b02bf696e9ad7fa0a253edf6712163af60623205.wav",
+                "fileHash": "4e43f1abef82bd700b58e29f71bd66b4949f382a76e34b44b964bad0f16278c6",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "adfff643e52c66c6834a21ff93ed843e185302216704e0d0edb2d7ab0539387a",
+                  "annotationHash": "d3be2081d915e0fc1e239b2a815dbd77d8b9852ab00b291b80c81abb9c786fa9"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              },
+              "dialogue:081-b0018:u02": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/e08a6c2d4906b4e70cb3a418b6a19c762bb7ae6bb42fb26e1df2cecea3fcbebc.wav",
+                "fileHash": "3488f240eb7bd09f987e2eeb099497cc387b521c070f4800fdb4d449cf591f8b",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "4136d12e0cf9c3beebb4086811958d4ec215a918e225d53d1530f59d927f9ef1",
+                  "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              },
+              "dialogue:081-b0018:u03": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/4b111ad2ac435582691efcb0047f67d7848dd055ed9f4ca7d10d81fcaf1ae94c.wav",
+                "fileHash": "035f7c879c47a85d840aafffd097a77dd6b7c15148da8d5a91ea2dd236bb73cf",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "2e014dd64af940bcf1b85f4dd89922416d97f132c2780e57eed1cdbd7d837d71",
+                  "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              },
+              "dialogue:081-b0018:u04": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/390672878569de96409a1067c1f674780982b9eca528fb86a98b2a2804f9068b.wav",
+                "fileHash": "011fcff597ce16e9ce5f6128f2364fb38a94dded6f9e9a404773919088bae069",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "33f9369cad4d735c1cc33ec0402f51d37da8687efe7b674c4cb15bb917a00dc6",
+                  "annotationHash": "1b9962f55518a1250ca67d90d46be51e7ce4a4a1833e9465205f298f962e46e5"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              },
+              "narration:081-b0243:u01": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/144bde03095a681c255fecf84e6a445757cfe250f3f0f66bd4c3819fd9fabed1.wav",
+                "fileHash": "cddce07ebe8263ee94bb42e567e485e22bfd8c9c2e374e08eb5288e0a5c67130",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "4001725afeb6aff62e2c9fb6c7af448486bb17bf9fcdfbc6e06d367302a5875c",
+                  "annotationHash": "f56cb9a31ff71b739a487204429ca934157878b41c4257955984fa416cdfb60c"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              },
+              "dialogue:081-b0244:u01": {
+                "status": "approved-by-user-for-section-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/fragments/c4aa69bf46de7cc439bdb2b408b0803ee846ce9f69bd0b5d272ec19c1dd960c1.wav",
+                "fileHash": "d6a1709caadc8afac8b5f60e64f82f292c16a02c2d0de45a6b639463f80f1cc0",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "bd15a82dd7f4eb5f0fe882e9f651683aed85fc94f62ccb76304f82f5f73cd996",
+                  "annotationHash": "066de880024badf88823524d78f5d0b362e889d1b539fe5b7a0d6224b32b1a91"
+                },
+                "reason": "沿用第一节已通过的宝玉连续段逐单元音频；本轮只替换“你也知道……”的短促杂音。",
+                "review": {
+                  "manifestPath": "./content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/01/excerpts/baoyu-farewell-pause-v1/scene.wav",
+                  "outputFileHash": "27fc82ec08cc914dc02146bc3342ad0665c7d74f4b0c7ec6e1c510cefc12986c",
+                  "minimumDialoguePassed": 5
+                }
+              }
+            }
+          },
+          "instructionSuffix": "保持上一版已通过的整体节奏；本轮只修复“你也知道，二姐姐受的罪不少。”中的短促杂音。",
+          "tempoFactor": 0.94,
+          "pauseAfterMs": {
+            "narration:081-b0010:u01": 520,
+            "dialogue:081-b0018:u01": 520,
+            "dialogue:081-b0018:u02": 600,
+            "dialogue:081-b0018:u03": 520,
+            "dialogue:081-b0018:u04": 600,
+            "narration:081-b0243:u01": 220
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 380
+          }
         }
       },
       "normalizationOverrides": {
@@ -382,6 +684,17 @@
           "path": "content/audio/.cache/voice-cards/multistyle/lin-daiyu/quiet-rain-v2/voice-card-delivery.wav",
           "generationPath": "content/audio/.cache/voice-cards/multistyle/lin-daiyu/quiet-rain-v2/generation.json"
         }
+      },
+      "fragmentConditioning": {
+        "narration:081-b0002:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 440,
+            "trailingMs": 120,
+            "internalMs": 300
+          }
+        }
       }
     },
     {
@@ -390,9 +703,19 @@
       "startAnchor": "且说宝玉闷闷的回至怡红院",
       "endAnchor": "说着转身去了。",
       "voiceCardByBlock": {
-        "081-b0097": "jia-baoyu:daily"
+        "081-b0097": "jia-baoyu"
       },
       "targetOverrides": {
+        "dialogue:081-b0247:u02": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次当前正文，末句必须清楚问出“芳官她们如今可好”，不得误读成龄官，不得加字、删字、重复或续写。"
+        },
+        "dialogue:081-b0248:u03": {
+          "retryVersion": 3,
+          "promptMode": "strict-text",
+          "instructionSuffix": "这是宝玉压住冲突、缓声安抚，整体语速中等偏慢，沉着而不急促；只读正文一次，在末字自然结束并立即保持静音，严禁添加任何字音、语气词、重复或续写。"
+        },
         "narration:081-b0052:u01": {
           "retryVersion": 1,
           "promptMode": "strict-text",
@@ -402,18 +725,669 @@
           "retryVersion": 1,
           "promptMode": "strict-text",
           "instructionSuffix": "只朗读一次“一时回馆，仍歪在炕上看书。”，不得重复任何词句，句尾自然收住。"
+        },
+        "dialogue:081-b0028:u05": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "承接前文继续尖锐逼问，只朗读一次“看你还赖得去不成。”；开头直接从“看”字起声，严禁在前面多出“你”或任何短促字音、呼吸爆音和杂声，句末压实。"
+        },
+        "dialogue:081-b0028:u07": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次“再撵一遭也不过如此；”；“也不过如此”必须保持破罐破摔、冷硬不屑的怒意，不能突然泄气或变平，分号处干净收住。"
+        },
+        "dialogue:081-b0249:u02": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持荳官带怒意的指控，只朗读一次“真的却在这里安安稳稳。”；吐字完整，句尾干净收住，正文前后不得出现杂音、重复或续写。"
+        },
+        "dialogue:081-b0046:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次“正是，正是！只消这一句。你若说得出口，我们掉头就走。”；开头两声“正是”拍手附和、短促有力，随后带怒意和讥诮紧接挑战，整段连贯，不漏字、不加字、不重复。"
+        },
+        "dialogue:081-b0257:u02": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次“那时放你们入园的人，岂不也受连累？”；宝玉急切制止但吐字清楚，句尾问意完整，正文结束后保持静音，严禁杂音或续写。"
+        },
+        "dialogue:081-b0059:u02": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次“此刻悄悄出去要紧，若叫有心人撞见，再走便迟了。”；压低声音而坚定催促，末句“再走便迟了”完整收住，正文结束后保持静音，严禁杂音或续写。"
+        },
+        "dialogue:081-b0061:u02": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只朗读一次“只劝一句，这样两面三刀的耳报神，再不可留在身边。”；艾官咬牙警告，怒意贯穿到句末，“再不可留在身边”仍要冷硬、有力度，不能泄气或失去语气；末尾干净收住。"
+        },
+        "dialogue:081-b0086:u01": {
+          "retryVersion": 3,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持自然、轻松的秋纹声线和疑问语气；末字自然收住，正文结束后立即保持静音，绝不增加字音、语气词、呼吸爆音或其他杂声。"
+        },
+        "dialogue:081-b0092:u01": {
+          "retryVersion": 3,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持秋纹声线，略带不解，以正常、清楚、可闻的音量说话，不要气声低语；末字自然收住，正文结束后立即保持静音，绝不增加字音、语气词或其他杂声。"
         }
       },
       "normalizationOverrides": {
         "narration:081-b0052:u01": "short-safe-peak-v1",
         "dialogue:081-b0092:u01": "short-safe-peak-v1"
       },
+      "assemblyGainsDb": {
+        "narration:081-b0103:u01": 15
+      },
+      "approvedAssembly": {
+        "version": 1,
+        "sourceOverrides": {
+          "dialogue:081-b0076:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/scene.wav",
+            "fileHash": "c10b7f9e5315c961291acd70ad5eb9b6ecef9b2392d178cbab1e8d7351def7b7",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "35162fb31ada4a0bf3779dfc4b0a077bf95c0111df0dec491ff76303a5dfa051",
+              "annotationHash": "6944c57a28559d5aa8c257fd0b03fe6577fa14c5f7e1500e8c33de453d1e8ec5"
+            },
+            "reason": "采用用户已通过的宝玉召人版本；禁止回退到旧章缓存。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/scene.wav",
+              "outputFileHash": "c10b7f9e5315c961291acd70ad5eb9b6ecef9b2392d178cbab1e8d7351def7b7",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "dialogue:081-b0083:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.wav",
+            "fileHash": "01d0cbcf076238ca1593160e39970e8b044b022ea4622c804f1699eb9a352917",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "f70313ca9427e71a1adff8914942c0998283b6742792a034f570a6b064c17270",
+              "annotationHash": "9c5e527111de42a2daee20a2d4bfcbabb51befe507c67b7b51ae72775d94aa4d"
+            },
+            "reason": "采用用户已通过且将“差”以同音字“拆”固定读作 chāi 的宝玉版本；禁止回退到旧章缓存。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.wav",
+              "outputFileHash": "01d0cbcf076238ca1593160e39970e8b044b022ea4622c804f1699eb9a352917",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "dialogue:081-b0097:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-lady-wang-request-v1/scene.wav",
+            "fileHash": "9bd881c36474e9eb1f7b7dbdf938fdb801537f13a5c2a114369aa4bdaaa5e557",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "a2885f0b78b7313a853fed9d7716b925eceafffc823db9ee5fcc8501dc78a275",
+              "annotationHash": "491f7d943fe448251c8efea5b9c91f4df6efcf1d7816724b3b72c1461dd293e3"
+            },
+            "reason": "用户于 2026-10-17 明确通过该候选；采用本节统一的年轻宝玉声线，禁止回退到旧日常卡。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-lady-wang-request-v1/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-lady-wang-request-v1/scene.wav",
+              "outputFileHash": "9bd881c36474e9eb1f7b7dbdf938fdb801537f13a5c2a114369aa4bdaaa5e557",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "dialogue:081-b0046:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-childlike-agreement-v2/scene.wav",
+            "fileHash": "d6d8a61ad0929c1348f587e8b93733313e399f8f81746533d4befe7ab227667e",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "a61e74ac79b763b75a1d7c09fadc73cfe030a9ffac63c46d28abfc4474d4b247",
+              "annotationHash": "c91318c3b499298a600704c9338c0d7dcdee08f5f6b7bc7243cab252cc77be4c"
+            },
+            "reason": "用户于 2026-10-18 明确通过荳官儿童感第二版；保留稚气、轻快的拍手附和表演，不回退到成人感版本。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-childlike-agreement-v2/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-childlike-agreement-v2/scene.wav",
+              "outputFileHash": "d6d8a61ad0929c1348f587e8b93733313e399f8f81746533d4befe7ab227667e",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "narration:081-b0039:u01": {
+            "status": "user-requested-correction-validated-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-narration-leading-du-fix-v1/scene.wav",
+            "fileHash": "dcfd35e22c610e3f19bd3c93fab61caf5c87bb427948d5ed431df156ba59e2d6",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "42bf9b5ded7f1f572217fe35eef505b8fee2209723428f2bbd7689d8348845a3",
+              "annotationHash": "6cd0cd8eb34bcd9ee23b5fd1a1b6d14d63a872455ac26b089d546f615f6b8ae4"
+            },
+            "reason": "用户指出有话慢慢的说罢后多出 du。核查确认旧旁白荳官道实际为前导都、长静音、荳官道；采用精确头部裁剪版，只保留正确的三个音节。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-narration-leading-du-fix-v1/adjustment-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-dou-guan-narration-leading-du-fix-v1/scene.wav",
+              "outputFileHash": "dcfd35e22c610e3f19bd3c93fab61caf5c87bb427948d5ed431df156ba59e2d6",
+              "minimumDialoguePassed": 0
+            }
+          }
+        },
+        "groupOverrides": [
+          {
+            "id": "xiren-household-light-approved-v3",
+            "status": "approved-by-user-for-section-assembly",
+            "targetIds": [
+              "dialogue:081-b0090:u01",
+              "dialogue:081-b0090:u02",
+              "dialogue:081-b0090:u03",
+              "dialogue:081-b0090:u04",
+              "dialogue:081-b0090:u05",
+              "dialogue:081-b0090:u06"
+            ],
+            "bindings": [
+              {
+                "textHash": "1636f25a53621fee25efa3f1f967f895a23dca0a9f09ab5c730d32a769404a52",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              },
+              {
+                "textHash": "715fb4d92a0fb33dff940f0a469e04739166d256abecf6439d0f052fd995810d",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              },
+              {
+                "textHash": "f9d4a32af769d45003a6af2885cdd57f937b3ce954e7ed2d6ca3bd2196cf06e3",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              },
+              {
+                "textHash": "cc6ca9cab3a9d240a5d63011094cd084acab8e38063dd5e27d6eb0c0fc0b23d9",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              },
+              {
+                "textHash": "e409ee0672c162e663a1f3232b39db6e7c5b4eb1b02963bf574394ad81997255",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              },
+              {
+                "textHash": "a556b2f876a5277dc7a7bfbffe586f16df896f4227b748371f817ef3e3a853af",
+                "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+              }
+            ],
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+            "fileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+            "preserveReviewedAudio": true,
+            "reason": "用户于 2026-10-17 明确通过淡声慢速版，六句作为一个连续审核整体入片；禁止回退到旧章候选。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+              "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+              "minimumDialoguePassed": 6
+            }
+          },
+          {
+            "id": "ai-guan-full-rant-approved-v1",
+            "status": "approved-by-user-for-section-assembly",
+            "targetIds": [
+              "dialogue:081-b0028:u01",
+              "dialogue:081-b0028:u02",
+              "dialogue:081-b0028:u03",
+              "dialogue:081-b0028:u04",
+              "dialogue:081-b0028:u05",
+              "dialogue:081-b0028:u06",
+              "dialogue:081-b0028:u07",
+              "dialogue:081-b0028:u08"
+            ],
+            "bindings": [
+              {
+                "textHash": "b900b917256f45079e6824820ae7f87405535f3a6740b15dfff1e859c9fe7444",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "65a228a5a2056be10c7e1636ed8cceae44b2ffbf7a80a5581895f339eb872d8b",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "70fd54db3b79686f143461eee2c823cb0ca12650400deca4e2dc6bbf263fb0be",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "2a94bc42ac66a79855ec32623831d5a3955ac793b31ab1abd463c0d00e4df536",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "0808accde85b45b220700d5914335251cfbcdc78328ea41cbcea61398ba427d2",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "d45a4bc36d21c84244d36ed1dee2f2f71c54afe6ec614490742409a3a1daaa23",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "d82072f07cc29eb0466e8e81fd3ce284201778727f6d8fa81e1439a13bb81dd4",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              },
+              {
+                "textHash": "52766dbf3a8b31cfe3a2ec18c25d5775929877951f7c7d85b530c22a7f9b098d",
+                "annotationHash": "efb2e77ef019643701df497a47add2fef9c37e0d0d8c5f5ac760a8b114ed425b"
+              }
+            ],
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-ai-guan-full-rant-v1/scene.wav",
+            "fileHash": "ec6d82082fa680d8ccc92f7384ad75c8421f3655c0e838d901414a0686ede948",
+            "preserveReviewedAudio": true,
+            "reason": "用户于 2026-10-18 明确通过艾官整段斥骂换气版；以一个连续审核整体替换原八个合成单元，避免重复入片。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-ai-guan-full-rant-v1/preview-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-ai-guan-full-rant-v1/scene.wav",
+              "outputFileHash": "ec6d82082fa680d8ccc92f7384ad75c8421f3655c0e838d901414a0686ede948",
+              "minimumDialoguePassed": 1
+            }
+          },
+          {
+            "id": "baoyu-reassurance-original-base-slower-v9-approved",
+            "status": "approved-by-user-for-section-assembly",
+            "targetIds": [
+              "dialogue:081-b0248:u02",
+              "dialogue:081-b0248:u03"
+            ],
+            "bindings": [
+              {
+                "textHash": "3bbaca0a8426323274b7793780bc3572d3e00579d8c4af656aa5b07ba6f4d630",
+                "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959"
+              },
+              {
+                "textHash": "0a5a97af900596597ee8a51954eb0f5c73e8032d92b1f57f449487cbe97c7fb6",
+                "annotationHash": "96471043f2cf621fc51cd116d63d45465b656c37ab1b55b569c89a7663ea4959"
+              }
+            ],
+            "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-reassurance-original-base-slower-v9/scene.wav",
+            "fileHash": "e4866aa548b5eae879438bbaebe18b6c35e3320aa0aca7b04b946ea637bfddba",
+            "preserveReviewedAudio": true,
+            "reason": "用户于 2026-10-18 明确确认 v9 通过；以获批 v7 为底稿做 0.96 倍等音高整体减速，保留原音色、情感、字词和内部停顿关系。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-reassurance-original-base-slower-v9/adjustment-manifest.json",
+              "outputKey": "wav",
+              "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-reassurance-original-base-slower-v9/scene.wav",
+              "outputFileHash": "e4866aa548b5eae879438bbaebe18b6c35e3320aa0aca7b04b946ea637bfddba",
+              "minimumDialoguePassed": 2
+            }
+          }
+        ]
+      },
       "excerpts": {
+        "review-xiren-household-light-v3": {
+          "version": 3,
+          "status": "approved-by-user-for-section-assembly",
+          "targetIds": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0090:u01": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            },
+            "dialogue:081-b0090:u02": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            },
+            "dialogue:081-b0090:u03": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            },
+            "dialogue:081-b0090:u04": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            },
+            "dialogue:081-b0090:u05": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            },
+            "dialogue:081-b0090:u06": {
+              "retryVersion": 3,
+              "instruction": "请以袭人身份自然说话，保持本节已经确认的年轻袭人声线。语气要淡淡的、平静而克制，像心里已经有了打算，只是随口把府里情形讲明白；带一点心灰和无奈，但不要生气、争辩、悲诉、发狠或故作坚定。语速中等，音量正常，音高自然，不要压得阴沉，不要显得年长或疲惫；六个短句前后保持同一声线和同一情绪，不添加、删减、重复或续写。"
+            }
+          },
+          "instructionSuffix": "淡淡的、平静克制，略有心灰但不显露强烈情绪。",
+          "tempoFactor": 0.9,
+          "pauseAfterMs": {
+            "dialogue:081-b0090:u01": 130,
+            "dialogue:081-b0090:u02": 240,
+            "dialogue:081-b0090:u03": 240,
+            "dialogue:081-b0090:u04": 180,
+            "dialogue:081-b0090:u05": 240
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 300
+          }
+        },
+        "review-xiren-household-consistent-v2": {
+          "version": 2,
+          "status": "draft-for-user-approval",
+          "targetIds": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "performanceReference": {
+            "id": "approved-081-02:xiren-consistent-voice",
+            "path": "content/audio/.cache/doubao/demos/081/xiren-three-opera/fragments/5689e6f25a7c982e92cac6d6e6839c472111d70d3a39b23b17bac72eab9861e2.wav",
+            "fileHash": "e68a74e1f63eece200d9db5403fdb24c781e57b203070cd100d7ac61fb3edbea",
+            "sameSpeaker": true,
+            "guidance": "此前已经接受的袭人年龄感、声纹和清楚咬字；只保持人物一致性，不照搬争辩时的怒气"
+          },
+          "instructionSuffix": "沿用本节此前已经接受的年轻袭人声线，六个短句必须保持同一人物、相近音高与年龄感。这里是冷静分析府中用度并坦然表示想回家，不是吵架，也不要显得年长、疲惫或阴沉；语速自然，句间承接连贯，不添加字词。",
+          "tempoFactor": 1,
+          "pauseAfterMs": {
+            "dialogue:081-b0090:u01": 90,
+            "dialogue:081-b0090:u02": 180,
+            "dialogue:081-b0090:u03": 180,
+            "dialogue:081-b0090:u04": 130,
+            "dialogue:081-b0090:u05": 180
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 300
+          }
+        },
+        "review-baoyu-lady-wang-request-v1": {
+          "version": 1,
+          "status": "approved-by-user-for-section-assembly",
+          "targetIds": [
+            "dialogue:081-b0097:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0097:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0097:u01": {
+              "retryVersion": 1,
+              "instruction": "请只朗读一次：有几句话回太太。使用本节已确认的年轻宝玉声线。面对母亲，语气恭敬、克制，略带试探但不畏缩；自然中速，音量正常，吐字清楚，不要撒娇，不要显得年长，也不要额外加重悲伤。不得加字、删字、重复或续写。"
+            }
+          },
+          "instructionSuffix": "恭敬克制，年轻自然，与本节已确认的宝玉声线一致。",
+          "tempoFactor": 1,
+          "pauseAfterMs": {},
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 300
+          }
+        },
+        "section-02-part-1-v1": {
+          "version": 1,
+          "status": "draft-for-user-listening",
+          "targetRange": {
+            "startTargetId": "narration:081-b0022:u01",
+            "endTargetId": "narration:081-b0072:u01"
+          },
+          "instructionSuffix": "这是第二小节第一部分：三官争吵、宝玉劝止、三官离场。保持正文顺序和人物区分。",
+          "tempoFactor": 1,
+          "pauseAfterMs": {
+            "dialogue:081-b0028:u01": 90,
+            "dialogue:081-b0028:u02": 90,
+            "dialogue:081-b0028:u03": 90,
+            "dialogue:081-b0028:u04": 90,
+            "dialogue:081-b0028:u05": 90,
+            "dialogue:081-b0028:u06": 90,
+            "dialogue:081-b0028:u07": 110,
+            "dialogue:081-b0028:u08": 180,
+            "narration:081-b0029:u01": 180,
+            "dialogue:081-b0246:u01": 110,
+            "dialogue:081-b0246:u02": 220,
+            "dialogue:081-b0248:u01": 140,
+            "dialogue:081-b0248:u02": 100,
+            "dialogue:081-b0248:u03": 180,
+            "narration:081-b0039:u01": 150,
+            "dialogue:081-b0249:u01": 100,
+            "dialogue:081-b0249:u02": 100,
+            "dialogue:081-b0249:u03": 220,
+            "dialogue:081-b0251:u01": 100,
+            "dialogue:081-b0251:u02": 120,
+            "dialogue:081-b0251:u03": 220,
+            "narration:081-b0043:u01": 120,
+            "dialogue:081-b0044:u01": 180,
+            "narration:081-b0047:u01": 120,
+            "dialogue:081-b0061:u01": 100,
+            "dialogue:081-b0061:u02": 180,
+            "dialogue:081-b0063:u01": 150,
+            "narration:081-b0261:u01": 180,
+            "dialogue:081-b0065:u01": 300,
+            "narration:081-b0262:u01": 420,
+            "narration:081-b0263:u01": 180,
+            "dialogue:081-b0068:u01": 120,
+            "dialogue:081-b0068:u02": 150,
+            "dialogue:081-b0068:u03": 150,
+            "dialogue:081-b0068:u04": 280,
+            "narration:081-b0069:u01": 220,
+            "narration:081-b0070:u01": 180,
+            "dialogue:081-b0071:u01": 150
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
+        },
+        "section-02-part-2-v1": {
+          "version": 1,
+          "status": "draft-for-user-listening",
+          "targetRange": {
+            "startTargetId": "narration:081-b0073:u01",
+            "endTargetId": "narration:081-b0114:u01"
+          },
+          "instructionSuffix": "这是第二小节第二部分：宝玉召集怡红院众人、向王夫人请示放人，以及黛玉、紫鹃黄昏谈论此事。保持正文顺序和已确认的人物声线。",
+          "tempoFactor": 1,
+          "pauseAfterMs": {
+            "dialogue:081-b0109:u02": 80
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          },
+          "temporaryPlaceholders": [
+            {
+              "targetIds": [
+                "dialogue:081-b0111:u01",
+                "dialogue:081-b0111:u02"
+              ],
+              "status": "temporary-placeholder-not-approved",
+              "note": "用户将自行处理黛玉这两句；本试听暂用现有缓存占位，不得据此批准最终母版。"
+            }
+          ],
+          "approvedAssembly": {
+            "version": 1,
+            "sourceOverrides": {
+              "dialogue:081-b0076:u01": {
+                "status": "approved-by-user-for-part-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/scene.wav",
+                "fileHash": "c10b7f9e5315c961291acd70ad5eb9b6ecef9b2392d178cbab1e8d7351def7b7",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "35162fb31ada4a0bf3779dfc4b0a077bf95c0111df0dec491ff76303a5dfa051",
+                  "annotationHash": "6944c57a28559d5aa8c257fd0b03fe6577fa14c5f7e1500e8c33de453d1e8ec5"
+                },
+                "reason": "采用用户已通过的宝玉召人版本。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-baoyu-summon-v2/scene.wav",
+                  "outputFileHash": "c10b7f9e5315c961291acd70ad5eb9b6ecef9b2392d178cbab1e8d7351def7b7",
+                  "minimumDialoguePassed": 1
+                }
+              },
+              "dialogue:081-b0083:u01": {
+                "status": "approved-by-user-for-part-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.wav",
+                "fileHash": "01d0cbcf076238ca1593160e39970e8b044b022ea4622c804f1699eb9a352917",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "f70313ca9427e71a1adff8914942c0998283b6742792a034f570a6b064c17270",
+                  "annotationHash": "9c5e527111de42a2daee20a2d4bfcbabb51befe507c67b7b51ae72775d94aa4d"
+                },
+                "reason": "采用用户已通过且将“差”固定读作 chāi 的宝玉版本。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.wav",
+                  "outputFileHash": "01d0cbcf076238ca1593160e39970e8b044b022ea4622c804f1699eb9a352917",
+                  "minimumDialoguePassed": 1
+                }
+              },
+              "dialogue:081-b0086:u01": {
+                "status": "approved-by-user-for-part-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-festival-v2/scene.wav",
+                "fileHash": "87fbf420c35295860c90dfaaf761117ae5d3d6f5e92cbacc78c9540ac4dc6013",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "4a03bb791ae21270b91f7491eb58f0aabc6a22578f6aae01f0d12e4965a2d7de",
+                  "annotationHash": "189a6339ae2637f697789ce78842481d404255ca2dc12f1248a78c13064ad259"
+                },
+                "reason": "采用用户已通过且尾部干净的秋纹版本。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-festival-v2/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-festival-v2/scene.wav",
+                  "outputFileHash": "87fbf420c35295860c90dfaaf761117ae5d3d6f5e92cbacc78c9540ac4dc6013",
+                  "minimumDialoguePassed": 1
+                }
+              },
+              "dialogue:081-b0092:u01": {
+                "status": "approved-by-user-for-part-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-strange-v2/scene.wav",
+                "fileHash": "e4ac4175026215e47760ed6783a30482194d5886faac2a9c9da42ade63d9d6e6",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "05c57ba5c65960c70763755928e1cb73b18217c8b3a8190101204b3a8a3b497e",
+                  "annotationHash": "61012dc3f2ad9d3e024a0e93cf585634cb852cd279f4aaa428c2e115ea29b9cb"
+                },
+                "reason": "采用用户已通过且尾部干净的秋纹版本。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-strange-v2/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round2-qiuwen-strange-v2/scene.wav",
+                  "outputFileHash": "e4ac4175026215e47760ed6783a30482194d5886faac2a9c9da42ade63d9d6e6",
+                  "minimumDialoguePassed": 1
+                }
+              },
+              "narration:081-b0105:u01": {
+                "status": "approved-by-user-for-part-assembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-narrator-return-v1/scene.wav",
+                "fileHash": "ca615ca80cda033ab84bd9b9443a05ee362290139b110000c4fceff94b156bc5",
+                "preserveReviewedAudio": true,
+                "assemblyGainDb": 20,
+                "binding": {
+                  "textHash": "69cc8dc5198318e1215c90d934205a2bbadbbc7925b698c5f4d5cf6d3cd00fb3",
+                  "annotationHash": "abdeb99b6f052f4f2d7e0edc3f857d21d291cf1d441629a81027b10ac7c4cec9"
+                },
+                "reason": "采用用户已通过、无重复的旁白版本；仅在拼接层补偿 20 dB，修正短句源文件异常偏低的电平。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-narrator-return-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-narrator-return-v1/scene.wav",
+                  "outputFileHash": "ca615ca80cda033ab84bd9b9443a05ee362290139b110000c4fceff94b156bc5",
+                  "minimumDialoguePassed": 0
+                }
+              }
+            },
+            "groupOverrides": [
+              {
+                "id": "xiren-household-approved-v1",
+                "status": "approved-by-user-for-part-assembly",
+                "targetIds": [
+                  "dialogue:081-b0090:u01",
+                  "dialogue:081-b0090:u02",
+                  "dialogue:081-b0090:u03",
+                  "dialogue:081-b0090:u04",
+                  "dialogue:081-b0090:u05",
+                  "dialogue:081-b0090:u06"
+                ],
+                "bindings": [
+                  {
+                    "textHash": "1636f25a53621fee25efa3f1f967f895a23dca0a9f09ab5c730d32a769404a52",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  },
+                  {
+                    "textHash": "715fb4d92a0fb33dff940f0a469e04739166d256abecf6439d0f052fd995810d",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  },
+                  {
+                    "textHash": "f9d4a32af769d45003a6af2885cdd57f937b3ce954e7ed2d6ca3bd2196cf06e3",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  },
+                  {
+                    "textHash": "cc6ca9cab3a9d240a5d63011094cd084acab8e38063dd5e27d6eb0c0fc0b23d9",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  },
+                  {
+                    "textHash": "e409ee0672c162e663a1f3232b39db6e7c5b4eb1b02963bf574394ad81997255",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  },
+                  {
+                    "textHash": "a556b2f876a5277dc7a7bfbffe586f16df896f4227b748371f817ef3e3a853af",
+                    "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                  }
+                ],
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-xiren-household-v1/scene.wav",
+                "fileHash": "f2b1b63d3f125fba08c6c16938993f98cea6e2a6d2a57415d5a19544df2fa391",
+                "preserveReviewedAudio": true,
+                "reason": "采用用户整段通过的年轻袭人版本，并保留已试听的六句内部节奏。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-xiren-household-v1/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round1-xiren-household-v1/scene.wav",
+                  "outputFileHash": "f2b1b63d3f125fba08c6c16938993f98cea6e2a6d2a57415d5a19544df2fa391",
+                  "minimumDialoguePassed": 6
+                }
+              }
+            ]
+          }
+        },
         "review-round3-baoyu-chunyan-v3": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0083:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0083:u01"],
+          "targetIds": [
+            "dialogue:081-b0083:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0083:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0083:u01": {
               "retryVersion": 3,
@@ -424,13 +1398,23 @@
           "instructionSuffix": "“差”用“拆”固定读作 chāi；平静交代，不凶。",
           "tempoFactor": 0.98,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 330}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 330
+          }
         },
         "review-round2-baoyu-summon-v2": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0076:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0076:u01"],
+          "targetIds": [
+            "dialogue:081-b0076:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0076:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0076:u01": {
               "retryVersion": 2,
@@ -440,13 +1424,23 @@
           "instructionSuffix": "语速中等偏慢，不急促。",
           "tempoFactor": 0.97,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 340}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 340
+          }
         },
         "review-round2-baoyu-chunyan-v2": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0083:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0083:u01"],
+          "targetIds": [
+            "dialogue:081-b0083:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0083:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0083:u01": {
               "retryVersion": 2,
@@ -456,13 +1450,23 @@
           "instructionSuffix": "平静交代，不凶；“差”读 chāi。",
           "tempoFactor": 0.98,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 330}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 330
+          }
         },
         "review-round2-qiuwen-festival-v2": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0086:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0086:u01"],
+          "targetIds": [
+            "dialogue:081-b0086:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0086:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0086:u01": {
               "retryVersion": 2,
@@ -472,13 +1476,23 @@
           "instructionSuffix": "保留自然表演，尾部干净静音。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 70,"leadingMs": 70,"trailingMs": 60,"internalMs": 280}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 70,
+            "leadingMs": 70,
+            "trailingMs": 60,
+            "internalMs": 280
+          }
         },
         "review-round2-qiuwen-strange-v2": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0092:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0092:u01"],
+          "targetIds": [
+            "dialogue:081-b0092:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0092:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0092:u01": {
               "retryVersion": 2,
@@ -488,13 +1502,23 @@
           "instructionSuffix": "正常可闻音量，尾部干净静音。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 70,"leadingMs": 70,"trailingMs": 60,"internalMs": 280}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 70,
+            "leadingMs": 70,
+            "trailingMs": 60,
+            "internalMs": 280
+          }
         },
         "review-round1-baoyu-summon-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0076:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0076:u01"],
+          "targetIds": [
+            "dialogue:081-b0076:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0076:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0076:u01": {
               "retryVersion": 1,
@@ -504,13 +1528,23 @@
           "instructionSuffix": "保持宝玉在争吵场景中的同一声线。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 110,"internalMs": 320}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 110,
+            "internalMs": 320
+          }
         },
         "review-round1-baoyu-chunyan-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0083:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0083:u01"],
+          "targetIds": [
+            "dialogue:081-b0083:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0083:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0083:u01": {
               "retryVersion": 1,
@@ -520,13 +1554,23 @@
           "instructionSuffix": "“差”读 chāi，保持宝玉在争吵场景中的同一声线。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 110,"internalMs": 320}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 110,
+            "internalMs": 320
+          }
         },
         "review-round1-qiuwen-festival-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0086:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0086:u01"],
+          "targetIds": [
+            "dialogue:081-b0086:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0086:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0086:u01": {
               "retryVersion": 1,
@@ -536,13 +1580,33 @@
           "instructionSuffix": "句尾干净收住。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 90,"internalMs": 280}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 90,
+            "internalMs": 280
+          }
         },
         "review-round1-xiren-household-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0090:u01", "dialogue:081-b0090:u02", "dialogue:081-b0090:u03", "dialogue:081-b0090:u04", "dialogue:081-b0090:u05", "dialogue:081-b0090:u06"],
-          "verbatimSynthesisText": ["dialogue:081-b0090:u01", "dialogue:081-b0090:u02", "dialogue:081-b0090:u03", "dialogue:081-b0090:u04", "dialogue:081-b0090:u05", "dialogue:081-b0090:u06"],
+          "targetIds": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
           "instructionSuffix": "沿用本节前段已经认可的年轻袭人声线，不要出现中老年感；这段是冷静揣测府中减省用度，语气自然、清楚、有分寸，六个单元保持相近语速和音色。",
           "tempoFactor": 1,
           "pauseAfterMs": {
@@ -552,13 +1616,23 @@
             "dialogue:081-b0090:u04": 130,
             "dialogue:081-b0090:u05": 190
           },
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 70,"trailingMs": 90,"internalMs": 300}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 300
+          }
         },
         "review-round1-qiuwen-strange-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0092:u01"],
-          "verbatimSynthesisText": ["dialogue:081-b0092:u01"],
+          "targetIds": [
+            "dialogue:081-b0092:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0092:u01"
+          ],
           "targetOverrides": {
             "dialogue:081-b0092:u01": {
               "retryVersion": 1,
@@ -568,13 +1642,23 @@
           "instructionSuffix": "句尾干净收住。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 90,"internalMs": 280}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 90,
+            "internalMs": 280
+          }
         },
         "review-round1-narrator-return-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["narration:081-b0105:u01"],
-          "verbatimSynthesisText": ["narration:081-b0105:u01"],
+          "targetIds": [
+            "narration:081-b0105:u01"
+          ],
+          "verbatimSynthesisText": [
+            "narration:081-b0105:u01"
+          ],
           "targetOverrides": {
             "narration:081-b0105:u01": {
               "retryVersion": 2,
@@ -584,13 +1668,25 @@
           "instructionSuffix": "逐字朗读一次，禁止重复。",
           "tempoFactor": 1,
           "pauseAfterMs": {},
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 280}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 280
+          }
         },
         "review-round1-daiyu-release-v1": {
           "version": 1,
           "status": "draft-for-user-approval",
-          "targetIds": ["dialogue:081-b0111:u01", "dialogue:081-b0111:u02"],
-          "verbatimSynthesisText": ["dialogue:081-b0111:u01", "dialogue:081-b0111:u02"],
+          "targetIds": [
+            "dialogue:081-b0111:u01",
+            "dialogue:081-b0111:u02"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0111:u01",
+            "dialogue:081-b0111:u02"
+          ],
           "performanceReference": {
             "id": "approved-section-01:daiyu-quiet-rain",
             "path": "content/audio/.cache/doubao/sections/081/01/fragments/2a0a7adcd437941dcd86f797740aeff438291f644e0eee112476f0a272dcdbd1.wav",
@@ -603,7 +1699,421 @@
           "pauseAfterMs": {
             "dialogue:081-b0111:u01": 190
           },
-          "silencePolicy": {"thresholdDbfs": -43,"minimumGapMs": 80,"leadingMs": 80,"trailingMs": 100,"internalMs": 300}
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 300
+          }
+        },
+        "review-xiren-household-light-v4-pauses": {
+          "version": 4,
+          "status": "approved-voice-pause-adjustment",
+          "targetIds": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
+          "approvedAssembly": {
+            "version": 1,
+            "sourceOverrides": {
+              "dialogue:081-b0090:u01": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/56fe6e76cb7711d87b1e91537990908281effdce9432989e426ab992af008d6c.wav",
+                "fileHash": "730159f8daf1f3e5bec2cca29b6c2dddb54cd35fef248888cd90d18a5c4e1915",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "1636f25a53621fee25efa3f1f967f895a23dca0a9f09ab5c730d32a769404a52",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              },
+              "dialogue:081-b0090:u02": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/4b9b3657278b356f1e49efbcf783977f66b1b5a298ca9e759dcf254c0e8cd3f7.wav",
+                "fileHash": "532232fbbb050de862c470e85295bef7250d2d31793d8500d05bb358459aa357",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "715fb4d92a0fb33dff940f0a469e04739166d256abecf6439d0f052fd995810d",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              },
+              "dialogue:081-b0090:u03": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/24fe0191a0f6243bfdf36bf917432ccd8b022244a1d5ec713a4a566767c8ef4e.wav",
+                "fileHash": "7b6246156681f84ec5a7b8231cc156785fbc48898210d335b640eb7d4a09a0d5",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "f9d4a32af769d45003a6af2885cdd57f937b3ce954e7ed2d6ca3bd2196cf06e3",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              },
+              "dialogue:081-b0090:u04": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/df958b198647b4703c7dddff5d5bc760640d870c93b9a7c69bebeeb682d719b0.wav",
+                "fileHash": "dcd04ce1391e41fef91a70919fa4d370685414d212512c8e457f269bcf8d6df1",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "cc6ca9cab3a9d240a5d63011094cd084acab8e38063dd5e27d6eb0c0fc0b23d9",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              },
+              "dialogue:081-b0090:u05": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/2013d33f541e49713f9ee7d58aaf08a639712f702407015fa36e9b0fbd8c9b1e.wav",
+                "fileHash": "b18f904146ac18330588e1b6060add5bffbe38772fb36668217b2d8e0385e212",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "e409ee0672c162e663a1f3232b39db6e7c5b4eb1b02963bf574394ad81997255",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              },
+              "dialogue:081-b0090:u06": {
+                "status": "approved-by-user-for-pause-only-reassembly",
+                "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/fragments/439029c7f86b8a816613fc68969dc8df64127e4ee164c05de00d05f5b310cdfd.wav",
+                "fileHash": "4eff821afb777866abc7d62dc87e710957ab3091f9b829d38193565c2bdd2d78",
+                "preserveReviewedAudio": true,
+                "binding": {
+                  "textHash": "a556b2f876a5277dc7a7bfbffe586f16df896f4227b748371f817ef3e3a853af",
+                  "annotationHash": "7771ea156a5cde3cfd5d656206c49ccd9d5f1a8f19c369b09f8d9cc64968ac75"
+                },
+                "reason": "复用用户已通过的袭人淡声慢速单句，仅调整句间停顿。",
+                "review": {
+                  "manifestPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/preview-manifest.json",
+                  "outputKey": "wav",
+                  "outputPath": "content/audio/.cache/doubao/sections/081/02/excerpts/review-xiren-household-light-v3/scene.wav",
+                  "outputFileHash": "c25c32eaf0007170d7be513a1d2c091a5f2353f2eb238407be744915ca21f647",
+                  "minimumDialoguePassed": 6
+                }
+              }
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0090:u01": 130,
+            "dialogue:081-b0090:u02": 330,
+            "dialogue:081-b0090:u03": 330,
+            "dialogue:081-b0090:u04": 180,
+            "dialogue:081-b0090:u05": 330
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 300
+          }
+        },
+        "review-ai-guan-full-rant-v1": {
+          "version": 1,
+          "status": "approved-by-user-for-section-assembly",
+          "targetIds": [
+            "dialogue:081-b0028:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0028:u01": {
+              "retryVersion": 4,
+              "synthesisText": "好个西洋花点子哈巴狗儿！李奶奶说你妆狐媚子哄人，果然不错。别当旁人都是瞎子，你和宝二爷背地里的事，芳官也曾撞见，看你还赖得去不成。横竖我们已是撵出去的人，再撵一遭也不过如此；今日索性闹到人前，揭了你这张皮。",
+              "instruction": "请以艾官身份把整段斥骂一气呵成。强烈愤怒、尖锐斥责，语速中等略快，力度重，咬字清楚，但不要失控尖叫。开头“好个西洋花点子哈巴狗儿”要急、狠、连贯；各句号保留清楚而不过长的换气停顿，逗号只作短顿；“再撵一遭也不过如此”必须带破罐破摔、冷硬不屑的怒意，尤其“也不过如此”不能泄气或变平；分号后紧接“今日索性闹到人前”，最后“揭了你这张皮”压实收住。全文只朗读一遍，不加字、不漏字、不重复、不续写；正文前后保持静音，不得出现敲击、爆音、口水音、呼吸爆音或其他杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0028:u01": 250
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 650
+          }
+        },
+        "review-dou-guan-cheerful-agreement-v1": {
+          "version": 1,
+          "status": "rejected-by-user-style-not-childlike",
+          "targetIds": [
+            "dialogue:081-b0046:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0046:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0046:u01": {
+              "retryVersion": 2,
+              "instruction": "请以荳官身份自然说话。她听见一句正中下怀的话，立刻拍手附和，眼前一亮，语气欢快、爽脆、略带得意。开头“正是，正是”两声要短促明亮，像笑着拍手叫好；“只消这一句”带抓住话柄的欣喜；“你若说得出口，我们掉头就走”仍是带一点讥讽的挑战，但不要凶狠、咬牙或沉重发怒。语速中等略快，句号停顿清楚而不过长，整段连贯、吐字清楚。只朗读正文一次，不加字、不漏字、不重复、不续写；正文前后保持静音，不得出现杂音、咳嗽或多余字音。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0046:u01": 250
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 320
+          }
+        },
+        "review-dou-guan-childlike-agreement-v2": {
+          "version": 2,
+          "status": "approved-by-user-for-section-assembly",
+          "targetIds": [
+            "dialogue:081-b0046:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0046:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0046:u01": {
+              "retryVersion": 3,
+              "instruction": "请以荳官身份自然说话。她是个年纪不大的小姑娘，刚听见一句正中下怀的话，立刻像孩子似的拍手叫好，声音稚气、轻巧、明亮，带真心高兴和一点淘气得意。开头正是、正是要像小孩子脱口而出地连声赞同，清脆、有笑意；只消这一句是抓住话柄后的欢喜；你若说得出口，我们掉头就走带孩子气的逞强和小小挑战，不要读成成年人的冷笑、沉稳讥讽或凶狠斥责。语速中等略快，气息轻快，吐字清楚；保持自然童真，不要刻意捏嗓、卖萌或尖叫。只朗读正文一次，不加字、不漏字、不重复、不续写；正文前后保持静音，不得出现杂音、咳嗽或多余字音。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0046:u01": 250
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 320
+          }
+        },
+        "review-baoyu-slowly-say-v4": {
+          "version": 4,
+          "status": "rejected-by-user-tone-and-tail-noise",
+          "targetIds": [
+            "dialogue:081-b0248:u03"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0248:u03"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0248:u03": {
+              "retryVersion": 4,
+              "instruction": "请以宝玉身份自然说话。他正在压住眼前的争吵，温和地劝众人不要再激动，以中等偏慢的语速平静说出有话慢慢的说罢。语气柔和、沉着、带安抚意味，不要急促，不要凶，不要哭腔，也不要拖得疲软。五个字要连贯自然，只朗读正文一次，不加字、不漏字、不重复、不续写；说完罢字后立即保持静音，严禁再出现都、荳、语气词、呼吸爆音或其他杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0248:u03": 180
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 380
+          }
+        },
+        "review-baoyu-slowly-say-v5": {
+          "version": 5,
+          "status": "rejected-by-user-insufficient-gentleness",
+          "targetIds": [
+            "dialogue:081-b0248:u03"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0248:u03"
+          ],
+          "performanceReference": {
+            "id": "section-081-02:baoyu-slowly-say-old-performance",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/4699c8221c9dc86b7346e737c23d27bfc1725dbe700991579b4a42a5a32f7e78.wav",
+            "fileHash": "b234b51328d54cb38fa9682a50b3dd1cce3e40ed47621485deb1dccfbe0dc6be",
+            "sameSpeaker": true,
+            "guidance": "仅参考旧版宝玉面对争吵时温和劝止、略带无奈的口吻；不要复制旧版正文后的都字音、长空白或任何尾部杂声"
+          },
+          "targetOverrides": {
+            "dialogue:081-b0248:u03": {
+              "retryVersion": 5,
+              "instruction": "请使用音频1的宝玉音色，并参考音频2前半段较自然的劝止口吻。联系上下文：众人越吵越凶，宝玉觉得越发了不得，于是带一点无奈，温声把场面压下来。只说有话慢慢的说罢。语气应是自然、柔和而有分寸的劝止，不是悲伤安慰，不是命令，也不要显得焦急；语速适中，整句连贯，不要刻意拖长慢慢二字。只朗读正文一次，不加字、不漏字、不重复、不续写；说完罢字立刻结束并保持静音，绝不能出现都、荳、语气词、咳嗽、呼吸爆音或其他尾部杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0248:u03": 180
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 80,
+            "internalMs": 180
+          }
+        },
+        "review-baoyu-reassurance-combined-v6": {
+          "version": 6,
+          "status": "rejected-by-user-worse-than-original",
+          "targetIds": [
+            "dialogue:081-b0248:u02"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0248:u02"
+          ],
+          "performanceReference": {
+            "id": "approved-context:baoyu-warning-u02",
+            "path": "content/audio/.cache/doubao/demos/081/xiren-three-opera/fragments/a277b46cc79fc0ef979b554169d8f728af756526fad9f51027a80119b6c02530.wav",
+            "fileHash": "49442afcf5d76368de7cd3dc6707bfc8916882ae0ee26755aeda7e7d2b0fbe33",
+            "sameSpeaker": true,
+            "guidance": "用户认为已经很好的前一句宝玉表演；保持其年轻、温和、略带担忧的声线与自然语气，并把情绪顺势延续到后一句"
+          },
+          "targetOverrides": {
+            "dialogue:081-b0248:u02": {
+              "retryVersion": 6,
+              "synthesisText": "太太还在那边呢，若听见这里嚷起来，越发了不得。有话慢慢的说罢。",
+              "instruction": "请使用音频1的宝玉音色，并尽量保持音频2里已经自然成立的年轻宝玉声线和前一句表演。把两句话作为同一段连续情绪一次说完：前一句带一点担忧和无奈，提醒众人太太就在附近，不能再把事情闹大；句号处自然换一口气，不要停得过长；后一句明显把声音放柔，温和地劝大家有话慢慢说，须有宝玉体贴、柔软的感觉，而不是命令、冷淡处置、焦急催促或悲伤哭诉。语速适中，慢慢二字自然，不刻意拖腔。只朗读正文一次，不加字、不漏字、不重复、不续写；末字罢之后立即结束并保持静音，严禁都、荳、语气词、咳嗽、呼吸爆音或任何尾部杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0248:u02": 180
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 80,
+            "internalMs": 650
+          }
+        },
+        "review-baoyu-reassurance-original-base-v7": {
+          "version": 7,
+          "status": "superseded-by-user-approved-slower-v9",
+          "targetIds": [
+            "dialogue:081-b0248:u02",
+            "dialogue:081-b0248:u03"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0248:u02",
+            "dialogue:081-b0248:u03"
+          ],
+          "sourceOverrides": {
+            "dialogue:081-b0248:u02": {
+              "source": "current-section-manifest",
+              "fileHash": "49442afcf5d76368de7cd3dc6707bfc8916882ae0ee26755aeda7e7d2b0fbe33"
+            }
+          },
+          "performanceReference": {
+            "id": "approved-context:baoyu-warning-u02",
+            "path": "content/audio/.cache/doubao/demos/081/xiren-three-opera/fragments/a277b46cc79fc0ef979b554169d8f728af756526fad9f51027a80119b6c02530.wav",
+            "fileHash": "49442afcf5d76368de7cd3dc6707bfc8916882ae0ee26755aeda7e7d2b0fbe33",
+            "sameSpeaker": true,
+            "guidance": "用户认可的原版宝玉表演；保持其年轻、温和、略带担忧和体贴的感觉，让后一句像同一次说话自然延续"
+          },
+          "targetOverrides": {
+            "dialogue:081-b0248:u03": {
+              "retryVersion": 7,
+              "instruction": "联系前一句语境，自然延续同一个宝玉的声音与情绪。前面他略带担忧地提醒众人不要惊动太太，这里把声音再放柔一些，温和、体贴、略带无奈地劝她们慢慢说。必须有宝玉待人的柔软感，不要像命令，不要冷淡，不要急促，也不要演成悲伤哭诉；语速适中，慢慢二字自然连贯。只朗读有话慢慢的说罢一次，不加字、不漏字、不重复、不续写；罢字后立即保持静音，严禁都、荳、语气词、咳嗽、呼吸爆音或其他尾部杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0248:u02": 260,
+            "dialogue:081-b0248:u03": 180
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 500
+          },
+          "tailRepairs": {
+            "dialogue:081-b0248:u03": {
+              "endSeconds": 1.55,
+              "fadeOutMs": 40
+            }
+          },
+          "supersededBy": "review-baoyu-reassurance-original-base-slower-v9"
+        },
+        "review-baoyu-reassurance-original-rhythm-v8": {
+          "version": 8,
+          "status": "draft-pending-user-review",
+          "targetIds": [
+            "dialogue:081-b0248:u02",
+            "dialogue:081-b0248:u03"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0248:u02",
+            "dialogue:081-b0248:u03"
+          ],
+          "sourceOverrides": {
+            "dialogue:081-b0248:u02": {
+              "source": "current-section-manifest",
+              "fileHash": "49442afcf5d76368de7cd3dc6707bfc8916882ae0ee26755aeda7e7d2b0fbe33"
+            }
+          },
+          "performanceReference": {
+            "id": "approved-legacy:baoyu-gentle-slowly-say",
+            "path": "content/audio/.cache/drama/081/xiren-three-opera/fragments/leveled/7ec27c75c96149c3a82d3cd60bf7aaef6111e4f0c77526a0e47b6ad5ed0b283c.wav",
+            "fileHash": "10314fa0e9b40c48aebc5ed9587c4d1c1ca890218cd7e45e734ef95d339ba071",
+            "sameSpeaker": true,
+            "guidance": "用户此前认可的宝玉温柔劝止表演；重点参考其中有什么话咱且轻轻说这一部分的舒缓节奏、轻声语气、柔软感和自然收尾"
+          },
+          "targetOverrides": {
+            "dialogue:081-b0248:u03": {
+              "retryVersion": 8,
+              "instruction": "请把参考音频中宝玉说有什么话咱且轻轻说时的温柔感和舒缓节奏，迁移到正文有话慢慢的说罢。声音轻而不虚，体贴、从容、略带无奈，像宝玉耐心劝人，不是命令，也不焦急。语速须接近参考音频，明显慢于上一候选；每个字自然舒展开，但不能拖腔做作，慢慢的三个字尤其要柔和连贯。只朗读正文一次，不加字、不漏字、不重复、不续写；罢字清楚收住后立即保持静音，严禁都、荳、语气词、咳嗽、呼吸爆音或任何尾部杂声。"
+            }
+          },
+          "pauseAfterMs": {
+            "dialogue:081-b0248:u02": 260,
+            "dialogue:081-b0248:u03": 180
+          },
+          "tempoFactor": 1,
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 800
+          }
         }
       },
       "narratorReference": {
@@ -703,31 +2213,1199 @@
           "path": "content/audio/.cache/voice-cards/multistyle/zi-juan/gentle-reproach-v1/voice-card-delivery.wav",
           "generationPath": "content/audio/.cache/voice-cards/multistyle/zi-juan/gentle-reproach-v1/generation.json"
         }
+      },
+      "fragmentConditioning": {
+        "narration:081-b0093:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
+        },
+        "narration:081-b0260:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1500,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 600
+          }
+        },
+        "dialogue:081-b0109:u02": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1000,
+            "leadingMs": 500,
+            "trailingMs": 120,
+            "internalMs": 350
+          }
+        },
+        "narration:081-b0031:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 360,
+            "trailingMs": 100,
+            "internalMs": 400
+          }
+        },
+        "dialogue:081-b0247:u02": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 460,
+            "trailingMs": 100,
+            "internalMs": 700
+          }
+        }
+      },
+      "pauseAfterMs": {
+        "dialogue:081-b0028:u03": 80,
+        "dialogue:081-b0247:u02": 190,
+        "dialogue:081-b0248:u02": 110,
+        "narration:081-b0060:u01": 160,
+        "dialogue:081-b0061:u01": 120,
+        "narration:081-b0100:u01": 160
       }
     },
     {
       "id": "03",
       "slug": "xiren-marriage",
       "startAnchor": "且说宝玉白日里放了春燕",
-      "endAnchor": "也并未再问。"
+      "endAnchor": "也并未再问。",
+      "voiceCardByBlock": {
+        "081-b0143": "jia-baoyu:sad"
+      },
+      "targetOverrides": {
+        "dialogue:081-b0268:u01": {
+          "retryVersion": 10,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只读到“说过的”立即结束，严禁添加“你会说话”或任何正文之外的尾词。"
+        },
+        "dialogue:081-b0265:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0268:u02": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0268:u03": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0272:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0275:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0275:u02": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0276:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0278:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0279:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0281:u01": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0281:u02": {
+          "retryVersion": 10,
+          "promptMode": "strict-text",
+          "instructionSuffix": "只读到“过得”立即结束，严禁添加“很快”或任何正文之外的尾词。"
+        },
+        "dialogue:081-b0281:u03": {
+          "retryVersion": 10
+        },
+        "dialogue:081-b0281:u04": {
+          "retryVersion": 11,
+          "promptMode": "strict-text",
+          "instructionSuffix": "必须直接、清楚地从“只是这事”开始，只读一次，严禁重复“这是”或添加其他句首。"
+        },
+        "dialogue:081-b0270:u01": {
+          "retryVersion": 20,
+          "promptMode": "strict-text",
+          "instructionSuffix": "必须直接从二爷的意思开始，不加前置语气词或其他台词，在可是后自然停住。"
+        },
+        "dialogue:081-b0274:u01": {
+          "retryVersion": 20,
+          "instructionSuffix": "说到不愿的立即结束，不得在句尾补充任何字词。"
+        },
+        "dialogue:081-b0129:u01": {
+          "retryVersion": 20,
+          "promptMode": "strict-text",
+          "instructionSuffix": "必须直接从宝二爷开始，不得添加前置词。"
+        },
+        "dialogue:081-b0267:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0277:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0280:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0283:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0283:u02": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0285:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0287:u01": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0287:u02": {
+          "retryVersion": 20
+        },
+        "dialogue:081-b0287:u03": {
+          "retryVersion": 20
+        },
+        "narration:081-b0037:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "这是紧接对白的短旁白，使用本节统一旁白声线，清楚、自然地只读一次，正文前后保持静音，不得出现敲击、爆音、口水音或其他杂声。"
+        },
+        "narration:081-b0075:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "这是承接蒋玉菡回应的短旁白，使用本节统一旁白声线，清楚、自然地只读一次，正文前后保持静音，不得出现敲击、爆音、口水音或其他杂声。"
+        }
+      },
+      "pauseAfterMs": {
+        "narration:081-b0229:u01": 80,
+        "narration:081-b0266:u01": 150,
+        "narration:081-b0128:u01": 160
+      },
+      "assemblyGainsDb": {
+        "narration:081-b0271:u01": 20
+      },
+      "approvedAssembly": {
+        "version": 1,
+        "sourceOverrides": {
+          "narration:081-b0229:u01": {
+            "status": "approved-identical-narrator-cue-reuse-for-local-draft-repair",
+            "preserveReviewedAudio": true,
+            "path": "content/audio/.cache/doubao/sections/081/03/conditioned/fragments/5a77208a70ce0314af8122b68c320a25a819fddac194b7b254285c556a4a07d7.wav",
+            "fileHash": "53d94b0bd557385bfdb52dc9b19504269a3081dae06178257c89e7a974442496",
+            "binding": {
+              "textHash": "1d381ac7daa9c965fd3769d5deecac41849546c11348b99a578cb9eefe20e205",
+              "annotationHash": "3b68cdd8365db83dfb52f0d4eed6b5c3d0831ecd60aa9f36f55b61d40727eadf"
+            },
+            "reason": "复用同一生产节内正文、旁白声线和情绪标注完全相同且未吞字的‘蒋玉菡笑道：’，替换被静音阈值误裁为 0.57 秒的版本。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/03/excerpts/review-jiang-yuhan-cue-reuse-v1/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/03/excerpts/review-jiang-yuhan-cue-reuse-v1/scene.mp3",
+              "outputFileHash": "9bb3c15aedb33f30ae75be1648d6a789e1afd72c265bff83a9c2438158ef5c8c",
+              "minimumDialoguePassed": 0
+            }
+          }
+        },
+        "groupOverrides": []
+      },
+      "fragmentConditioning": {
+        "narration:081-b0037:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
+        },
+        "narration:081-b0271:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 260
+          }
+        },
+        "narration:081-b0292:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1000,
+            "leadingMs": 250,
+            "trailingMs": 250,
+            "internalMs": 450
+          }
+        },
+        "dialogue:081-b0279:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 1000
+          },
+          "tailRepair": {
+            "endSeconds": 2.3,
+            "fadeOutMs": 30
+          }
+        },
+        "narration:081-b0122:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 1000
+          },
+          "tailRepair": {
+            "endSeconds": 1.2,
+            "fadeOutMs": 30
+          }
+        },
+        "dialogue:081-b0281:u04": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 1000
+          },
+          "tailRepair": {
+            "endSeconds": 4.15,
+            "fadeOutMs": 30
+          }
+        },
+        "dialogue:081-b0285:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 1000
+          },
+          "tailRepair": {
+            "endSeconds": 3.2,
+            "fadeOutMs": 30
+          }
+        },
+        "narration:081-b0266:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 1000
+          },
+          "tailRepair": {
+            "endSeconds": 1.1,
+            "fadeOutMs": 30
+          }
+        }
+      },
+      "narratorReference": {
+        "id": "legacy-edge:narrator",
+        "path": "content/audio/.cache/doubao/chapters/081/references/59afb4fafed1458489b044f1e6a856d4d9ae6d91626893b2672c4af16d5ddc70.wav",
+        "fileHash": "191626a0bb902e15905f336305f2b5534f553ea437dc0596ec04a287c9eb1990"
+      },
+      "voiceCards": {
+        "jia-baoyu": {
+          "approvalId": "jia-baoyu/restrained-sadness-v2",
+          "id": "jia-baoyu:restrained-sadness",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/generation.json"
+        },
+        "jia-baoyu:sad": {
+          "approvalId": "jia-baoyu/restrained-sadness-v2",
+          "id": "jia-baoyu:restrained-sadness",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/generation.json"
+        },
+        "jiang-yuhan": {
+          "approvalId": "jiang-yuhan/natural-explanation-v2",
+          "id": "jiang-yuhan:natural-explanation-source-reference-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/source-reference.mp3",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/generation.json",
+          "assetKind": "sourceReferenceMp3",
+          "proxyNote": "按用户本次指定，使用蒋玉菡 natural-explanation-v2 的原声参考 MP3；不是由标准卡二次生成的音色卡。"
+        },
+        "hua-zifang": {
+          "approvalId": "jiang-yuhan/natural-explanation-v2",
+          "id": "hua-zifang:jiang-yuhan-proxy-swapped-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/voice-card.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/generation.json",
+          "proxyNote": "按用户试听决定，花自芳改用蒋玉菡本人原声制作的卡作为代理；不是花自芳或其演员本人原声。"
+        },
+        "xiren": {
+          "approvalId": "xiren/assertive-rivalry-v1",
+          "id": "xiren:assertive-rivalry",
+          "path": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/xiren/assertive-rivalry-v1/generation.json"
+        },
+        "lady-wang": {
+          "approvalId": "lady-wang/measured-consultation-v2",
+          "id": "lady-wang:measured-consultation-v2",
+          "path": "content/audio/.cache/voice-cards/multistyle/lady-wang/measured-consultation-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/lady-wang/measured-consultation-v2/generation.json",
+          "localDraftSelection": {
+            "scope": "081:03:draft",
+            "fileHash": "67fdbed2cc38b3514d73e84987870549fd88f88aeb7bf68945b9df441c4f9d67",
+            "note": "沿用用户为第81回明确指定的王夫人 delivery 卡；当前只作为本节草稿路由。"
+          }
+        }
+      },
+      "normalizationOverrides": {
+        "narration:081-b0037:u01": "short-safe-peak-v1",
+        "narration:081-b0075:u01": "short-safe-peak-v1"
+      }
     },
     {
       "id": "04",
       "slug": "siqi-punishment",
       "startAnchor": "再说抄检大观园那日",
-      "endAnchor": "此是后话。"
+      "endAnchor": "此是后话。",
+      "narratorReference": {
+        "id": "legacy-edge:narrator",
+        "path": "content/audio/.cache/doubao/chapters/081/references/59afb4fafed1458489b044f1e6a856d4d9ae6d91626893b2672c4af16d5ddc70.wav",
+        "fileHash": "191626a0bb902e15905f336305f2b5534f553ea437dc0596ec04a287c9eb1990"
+      },
+      "voiceCards": {
+        "siqi": {
+          "approvalId": "siqi/current-candidate",
+          "id": "siqi:current-candidate",
+          "path": "content/audio.cache/voice-cards/siqi/siqi-voice-card.wav",
+          "generationPath": "content/audio.cache/voice-cards/siqi/siqi-generation.json"
+        },
+        "older-women-pool": {
+          "approvalId": "older-women-pool/jia-mu-proxy-v1-demo",
+          "id": "older-women-pool:jia-mu-proxy-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-mu/warm-praise-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/older-women-pool/jia-mu-proxy-v1-demo/proxy-assignment.json",
+          "proxyNote": "司棋母使用贾母代理声；不是司棋母或其演员原声。"
+        },
+        "young-maids-pool": {
+          "approvalId": "young-maids-pool/lianhuaer-shared-v1-demo",
+          "id": "young-maids-pool:lianhuaer-shared-v1",
+          "path": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/young-maids-pool/lianhuaer-shared-v1-demo/proxy-assignment.json",
+          "proxyNote": "王夫人丫头和莲花儿复用莲花儿底层代理声；不覆盖081-b0302。"
+        },
+        "unnamed-young-maid": {
+          "approvalId": "unnamed-young-maid/chunyan-shared-v1-demo",
+          "id": "unnamed-young-maid:chunyan-shared-v1",
+          "path": "content/audio.cache/voice-cards/chunyan/chunyan-voice-card.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/unnamed-young-maid/chunyan-shared-v1-demo/proxy-assignment.json",
+          "proxyNote": "081-b0302使用春燕代理声；不是该未具名丫头或其演员原声。"
+        },
+        "pan-youan": {
+          "approvalId": "pan-youan/jiang-yuhan-natural-v2",
+          "id": "pan-youan:jiang-yuhan-natural-v2-proxy-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/voice-card.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/pan-youan/candidates/jiang-yuhan-natural-v2/proxy-assignment.json",
+          "proxyNote": "用户选择候选3：蒋玉菡 natural-explanation-v2 代理声；不是潘又安或其演员原声。"
+        },
+        "lady-xing": {
+          "approvalId": "lady-xing/restrained-persuasion-v1",
+          "id": "lady-xing:restrained-persuasion-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/lady-xing/restrained-persuasion-v1/generation.json"
+        },
+        "zhou-rui-wife": {
+          "approvalId": "zhou-rui-wife/firm-instruction-v1",
+          "id": "zhou-rui-wife:firm-instruction-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/zhou-rui-wife/firm-instruction-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/zhou-rui-wife/firm-instruction-v1/generation.json"
+        }
+      },
+      "voiceCardByBlock": {
+        "081-b0302": "unnamed-young-maid"
+      },
+      "targetOverrides": {
+        "dialogue:081-b0299:u01": {
+          "retryVersion": 2,
+          "instructionSuffix": "句末只说还有脸来，说完自然收住，不要添加不了、不及或其他尾音。"
+        },
+        "dialogue:081-b0306:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "不要哭腔、哽咽、抽泣、鼻音或颤抖。司棋已经从受辱后的悲愤转为冷静盘算，压住情绪，语气平稳偏冷，带一点自嘲和怨恨；‘我能怎样’不是哭诉，后两句像若无其事地试探着说出报复念头。不要哭喊，不要夸张发狠，吐字清楚并自然收尾。"
+        }
+      },
+      "approvedAssembly": {
+        "version": 1,
+        "sourceOverrides": {
+          "dialogue:081-b0306:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/04/excerpts/review-siqi-cold-revenge-no-cry-v1/fragments/7073ca4b4ff83b8f779e403c796245f4c7fd7e26c3360844e5c6bb574173a9f2.wav",
+            "fileHash": "e1b3f85c189f3caf64f3e7061e74ea3e7c137044b7cf0543645584926e115816",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "77ee7e3dc77ca4b77655def67122c5f9f1c6feca7b225446fe11ef177acdf078",
+              "annotationHash": "7f1f4163749d05a2204c3bec24a74605c70a0633d21ea02f9bd16b853db78df8"
+            },
+            "reason": "用户明确批准司棋转为冷静盘算、无哭腔的版本。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/04/excerpts/review-siqi-cold-revenge-no-cry-v1/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/04/excerpts/review-siqi-cold-revenge-no-cry-v1/scene.mp3",
+              "outputFileHash": "33b9c2004a8a9f720145424ab7b115455602fa1c56ca5a92f10ebbd56b965b00",
+              "minimumDialoguePassed": 1
+            }
+          }
+        }
+      },
+      "fragmentConditioning": {
+        "narration:081-b0149:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1000,
+            "leadingMs": 260,
+            "trailingMs": 280,
+            "internalMs": 500
+          },
+          "tailRepair": {
+            "endSeconds": 33.52,
+            "fadeOutMs": 30
+          }
+        },
+        "narration:081-b0150:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -42,
+            "minimumGapMs": 10000,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          },
+          "tailRepair": {
+            "endSeconds": 1.72,
+            "fadeOutMs": 30
+          }
+        },
+        "narration:081-b0164:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -42,
+            "minimumGapMs": 10000,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          },
+          "tailRepair": {
+            "endSeconds": 2.88,
+            "fadeOutMs": 30
+          }
+        },
+        "dialogue:081-b0305:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -42,
+            "minimumGapMs": 10000,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          },
+          "tailRepair": {
+            "endSeconds": 1.72,
+            "fadeOutMs": 30
+          }
+        },
+        "dialogue:081-b0310:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -42,
+            "minimumGapMs": 10000,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          },
+          "tailRepair": {
+            "endSeconds": 4.82,
+            "fadeOutMs": 30
+          }
+        }
+      },
+      "excerpts": {
+        "review-siqi-private-betrothal-pause-v1": {
+          "version": 1,
+          "status": "draft-pending-review",
+          "targetIds": [
+            "narration:081-b0149:u01"
+          ],
+          "instructionSuffix": "本候选不重新合成旁白，只将‘众人便说她同表弟私订’之后约5.8秒的异常静音缩短到约0.5秒；其他不足1秒的自然停顿保持原样。",
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1000,
+            "leadingMs": 260,
+            "trailingMs": 280,
+            "internalMs": 500
+          }
+        },
+        "review-siqi-cold-revenge-no-cry-v1": {
+          "version": 1,
+          "status": "draft-pending-review",
+          "targetIds": [
+            "dialogue:081-b0306:u01"
+          ]
+        }
+      },
+      "pauseAfterMs": {
+        "narration:081-b0149:u01": 120
+      }
     },
     {
       "id": "05",
       "slug": "xiangling-farewell",
       "startAnchor": "话分两头。香菱自跟了宝钗",
-      "endAnchor": "再看不见一点形迹。"
+      "endAnchor": "再看不见一点形迹。",
+      "narratorReference": {
+        "id": "legacy-edge:narrator",
+        "path": "content/audio/.cache/doubao/chapters/081/references/59afb4fafed1458489b044f1e6a856d4d9ae6d91626893b2672c4af16d5ddc70.wav",
+        "fileHash": "191626a0bb902e15905f336305f2b5534f553ea437dc0596ec04a287c9eb1990"
+      },
+      "voiceCards": {
+        "zhen-shiyin": {
+          "approvalId": "zhen-shiyin/warm-encouragement-v1",
+          "id": "zhen-shiyin:warm-encouragement-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/zhen-shiyin/warm-encouragement-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/zhen-shiyin/warm-encouragement-v1/generation.json"
+        },
+        "xiangling": {
+          "approvalId": "xiangling/calm-poetry-talk-v1",
+          "id": "xiangling:calm-poetry-talk-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/generation.json"
+        },
+        "xia-jingui": {
+          "approvalId": "xia-jingui/wang-xifeng-proxy-v1-demo",
+          "id": "xia-jingui:wang-xifeng-proxy-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/wang-xifeng/practical-caution-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/xia-jingui/wang-xifeng-proxy-v1-demo/proxy-assignment.json",
+          "proxyNote": "夏金桂使用王熙凤 practical-caution-v1 代理声；不是夏金桂或其演员原声。"
+        },
+        "older-women-pool": {
+          "approvalId": "older-women-pool/jia-mu-proxy-v1-demo",
+          "id": "older-women-pool:jia-mu-proxy-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-mu/warm-praise-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/older-women-pool/jia-mu-proxy-v1-demo/proxy-assignment.json",
+          "proxyNote": "封氏使用贾母 warm-praise-v2 代理声；不是封氏或其演员原声。"
+        }
+      },
+      "targetOverrides": {
+        "narration:081-b0356:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "正文开头的逗号只表示承接前句的停顿，不读标点；从两个人哭得开始，声音清楚可懂，不要压成耳语。"
+        },
+        "dialogue:081-b0327:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "末句只说叫我一处处的寻，不要扩写成寻找你。"
+        },
+        "dialogue:081-b0316:u01": {
+          "retryVersion": 3,
+          "instructionSuffix": "这是父亲突然认出失散多年、已在生死边缘的女儿，情绪不是克制哽咽，而是压抑多年的悲痛骤然决堤。整句只朗读一遍，绝对不得回说、重说或重复任何词句。开头我那有命无运的儿要失声哭嚎出来，悲怆、撕心，儿字拖出一声痛哭般的长尾；随后为父今日才得见你仍在大哭中说出，声音发颤、带泪而吐字完整。哭嚎必须通过声调、颤音和气息表现，不得添加啊、呜或其他哭声字词，不得咳嗽。"
+        },
+        "dialogue:081-b0351:u01": {
+          "retryVersion": 2,
+          "instructionSuffix": "母亲确认眼前人就是失散多年的女儿，英莲二字必须直接哭喊出来，先是震惊，随即悲痛决堤；声音带明显哭音和破颤，像多年后终于认出女儿时失声痛哭。只说英莲，不加字，不咳嗽，不制造撞击或其他杂音。"
+        },
+        "narration:081-b0352:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "这是衔接两声呼唤的短旁白。开头逗号只表示承接，不读标点；干净、连贯地说又叫一声，不添加喘息、撞击、咳嗽或其他杂音。"
+        },
+        "dialogue:081-b0343:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "保持惊疑追问的原有情绪和声线。正文写作‘这些话从那里听来’，本次只在朗读层按用户要求说成‘这些话从哪里听来’，其中‘哪里’按 nǎ lǐ 清楚发音；其余字词、语速和问句语气不要改变。"
+        },
+        "dialogue:081-b0353:u01": {
+          "retryVersion": 2,
+          "instructionSuffix": "母亲终于寻回女儿，我的儿要接着上一声失声哭喊，悲喜交集而以悲痛为主，带明显哭嚎、抽泣和破颤，像一边大哭一边把女儿抱紧；不是平静呼唤，也不是只有轻微哽咽。只说我的儿，不添加额外字词，不咳嗽，不制造撞击或其他杂音。"
+        },
+        "dialogue:081-b0186:u05": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "保持甄士隐含泪讲述前缘的原有声线和克制悲痛，语速平稳，吐字清楚；正文前后保持静音，末字自然收住，不得出现敲击、爆音、口水音、语气词或其他杂声。"
+        },
+        "dialogue:081-b0325:u01": {
+          "retryVersion": 3,
+          "promptMode": "strict-text",
+          "instructionSuffix": "香菱从梦中惊醒，压低声音、带病弱和惊疑地轻声询问。只说外面是谁一次，四个字只出现一次；禁止回说、重复、回声或补充语气词。谁字干净自然地收住，宁可缩短尾音，也绝不能再说第二遍；句后仅保留短静音，不得出现敲击、爆音、口水音、呼吸喷麦或其他杂声。"
+        },
+        "narration:081-b0324:u01": {
+          "retryVersion": 4,
+          "promptMode": "strict-text",
+          "instructionSuffix": "“将”必须读 jiāng 第一声，是介词；“士隐”是人名，“拉走”是动作。按“将（jiāng）／士隐／拉走”理解并连续自然朗读，严禁把“将”读成 jiàng 第四声，也严禁读成“将士／隐／拉走”。其余正文保持当前旁白的梦境惊惧感、中速和清晰度。"
+        }
+      },
+      "pauseAfterMs": {
+        "narration:081-b0185:u01": 90,
+        "narration:081-b0319:u01": 60,
+        "narration:081-b0350:u01": 110,
+        "dialogue:081-b0351:u01": 90,
+        "narration:081-b0352:u01": 90,
+        "dialogue:081-b0353:u01": 100,
+        "narration:081-b0356:u01": 320,
+        "dialogue:081-b0360:u01": 260
+      },
+      "approvedAssembly": {
+        "version": 1,
+        "sourceOverrides": {
+          "dialogue:081-b0316:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/05/excerpts/review-zhen-shiyin-recognition-v3-open-wail/fragments/05774d513bf286f68e3739b40f5675688a425f78e384a3f216d29cdf36f877a0.wav",
+            "fileHash": "0118580278d5485266b29e4dd81e57eb630fec90c15e3c82fef3c129b3fe02e1",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "577f32a48e690df6b8ecf3b5b84cc82f32bc75fa652f18f0425b82b66b70694c",
+              "annotationHash": "c4ca5f086dc6c15be1d7eb676f8e0fa143a007f1ff89d39cf32085eabebd744a"
+            },
+            "reason": "用户选择甄士隐认女候选A；后续拼接固定采用此片段。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-zhen-shiyin-recognition-v3-open-wail/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-zhen-shiyin-recognition-v3-open-wail/scene.mp3",
+              "outputFileHash": "bf40eeac7193a05087a5766250f4f7a200574c46508c0036226a058406eaa7e3",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "dialogue:081-b0351:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-recognition-v2-dialogue-only/fragments/58840fc0805ba6a43b5a801c75203c80f14551b5ca7852046fd6b3a93f8765ef.wav",
+            "fileHash": "616f33fd8e9dd8d33e276fe5f51fe26c026b562cfecb9318736f9118fb8708da",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "41d232919fa99959a9050d8e69faa48c92620c7826524df2d507e1f970c09e7a",
+              "annotationHash": "56904748420267b8bdc59b99d69119a41a03ef51ce9701e07285426e2aa2e982"
+            },
+            "reason": "用户确认封氏第一声英莲通过；后续返工不得重录或改变此片段。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-recognition-v2-dialogue-only/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-recognition-v2-dialogue-only/scene.mp3",
+              "outputFileHash": "34ac7a893ae3b3e3cc3dc0b845b081e3197949895409f5f0b724e8670537ce11",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "dialogue:081-b0353:u01": {
+            "status": "approved-by-user-for-section-assembly",
+            "path": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-my-child-v6-er-a-wail/fragments/bb9f0535ac85dc0796c150785b41850dd89e36bf1b24069d29fa58367aaf4ae6.wav",
+            "fileHash": "fe6dd5d7f0d47131d5771e84e68a411232b3357958836514980ddc7b4a2d90a6",
+            "synthesisText": "我的儿啊！",
+            "preserveReviewedAudio": true,
+            "binding": {
+              "textHash": "b38784f3706eb9d4f757a99b4aa1e4096163afd78d1ab75fd437980240be5b36",
+              "annotationHash": "c722fecb78c6feeb7987caa1037c948e7b8ae6fa7ce32d2d5e2a9707ec2a9643"
+            },
+            "reason": "用户明确批准口语化哭喊‘我的儿啊’；小说正文仍为‘我的儿’，仅配音增字。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-my-child-v6-er-a-wail/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-fengshi-my-child-v6-er-a-wail/scene.mp3",
+              "outputFileHash": "c41ead8905840eba79ca1cc775d5518f52541d0c8b31a625390aed66de4dcdbf",
+              "minimumDialoguePassed": 1
+            }
+          },
+          "narration:081-b0324:u01": {
+            "status": "user-requested-correction-for-draft-section-review",
+            "preserveReviewedAudio": true,
+            "path": "content/audio/.cache/doubao/sections/081/05/excerpts/review-shiyin-jiang-first-tone-composite-v2/scene.wav",
+            "fileHash": "eda298f87338410d1c56018745620f51887473a610e266c893371e412fbe9a32",
+            "binding": {
+              "textHash": "2c668ff0aaed65548ea8c0274ee26b88a4a5e81f23cb189d852b059309638d2c",
+              "annotationHash": "df7d55019992b4ce003e2531cf71c35898b4486d5698cc793f756dac6e905c1f"
+            },
+            "reason": "按用户纠正，将读作 jiāng 第一声；合成层以同音字“姜”强制读音。只重录第一句、删除句末静音后的短促杂音，后半段保留原旁白。",
+            "review": {
+              "manifestPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-shiyin-jiang-first-tone-composite-v2/preview-manifest.json",
+              "outputKey": "mp3",
+              "outputPath": "content/audio/.cache/doubao/sections/081/05/excerpts/review-shiyin-jiang-first-tone-composite-v2/scene.mp3",
+              "outputFileHash": "27c2dcd5c6a267bd407b035958ec9ed1bb186c4ad959fc694e68d90f0ba309aa",
+              "minimumDialoguePassed": 0
+            }
+          }
+        },
+        "groupOverrides": []
+      },
+      "fragmentConditioning": {
+        "narration:081-b0185:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 180,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          }
+        },
+        "dialogue:081-b0316:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 160,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 220
+          }
+        },
+        "narration:081-b0319:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 60,
+            "trailingMs": 70,
+            "internalMs": 180
+          }
+        },
+        "dialogue:081-b0320:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 260,
+            "trailingMs": 100,
+            "internalMs": 180
+          }
+        },
+        "narration:081-b0197:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 900,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 480
+          }
+        },
+        "narration:081-b0350:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 250,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 300
+          }
+        },
+        "dialogue:081-b0351:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 120,
+            "leadingMs": 60,
+            "trailingMs": 70,
+            "internalMs": 160
+          }
+        },
+        "narration:081-b0352:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 120,
+            "leadingMs": 50,
+            "trailingMs": 60,
+            "internalMs": 160
+          }
+        },
+        "dialogue:081-b0353:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 120,
+            "leadingMs": 60,
+            "trailingMs": 70,
+            "internalMs": 180
+          }
+        },
+        "narration:081-b0354:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 60,
+            "trailingMs": 80,
+            "internalMs": 220
+          }
+        },
+        "narration:081-b0356:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 220
+          }
+        },
+        "narration:081-b0357:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 250,
+            "leadingMs": 80,
+            "trailingMs": 100,
+            "internalMs": 350
+          }
+        },
+        "dialogue:081-b0360:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 220
+          }
+        },
+        "dialogue:081-b0360:u02": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 150,
+            "leadingMs": 70,
+            "trailingMs": 90,
+            "internalMs": 220
+          }
+        },
+        "dialogue:081-b0325:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -42,
+            "minimumGapMs": 5000,
+            "leadingMs": 70,
+            "trailingMs": 80,
+            "internalMs": 260
+          },
+          "tailRepair": {
+            "endSeconds": 1.85,
+            "fadeOutMs": 40
+          }
+        }
+      },
+      "excerpts": {
+        "review-zhen-shiyin-recognition-v1": {
+          "status": "draft-pending-review",
+          "targetIds": [
+            "dialogue:081-b0316:u01",
+            "dialogue:081-b0316:u02"
+          ]
+        },
+        "review-fengshi-recognition-v1": {
+          "status": "draft-pending-review",
+          "targetRange": {
+            "startTargetId": "narration:081-b0350:u01",
+            "endTargetId": "narration:081-b0356:u01"
+          }
+        },
+        "review-zhen-shiyin-recognition-v2-wailing": {
+          "status": "draft-pending-review",
+          "targetIds": [
+            "dialogue:081-b0316:u01"
+          ],
+          "instructionSuffix": "本候选只审核甄士隐认女时失声哭嚎的悲怆，不采用克制哽咽。"
+        },
+        "review-fengshi-recognition-v2-dialogue-only": {
+          "status": "draft-pending-review",
+          "targetIds": [
+            "dialogue:081-b0351:u01",
+            "dialogue:081-b0353:u01"
+          ],
+          "pauseAfterMs": {
+            "dialogue:081-b0351:u01": 500
+          },
+          "instructionSuffix": "本候选只审核封氏自己的两声哭喊；不包含、不重录也不处理旁白和香菱。"
+        },
+        "review-zhen-shiyin-recognition-v3-open-wail": {
+          "version": 1,
+          "status": "approved-by-user",
+          "targetIds": [
+            "dialogue:081-b0316:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0316:u01": {
+              "retryVersion": 4,
+              "synthesisText": "我那有命无运的儿！为父今日才得见你。"
+            }
+          },
+          "instructionSuffix": "父亲骤然认出将死的亲生女儿，必须是放声哭嚎的悲怆。第一句张口便以胸腔发力痛哭出来，儿字破颤拖长，像撕心裂肺地呼喊；后半句仍在哭嚎中艰难说完。不是轻声哽咽，不是压抑含泪，也不是愤怒吼叫。全句只说一遍，不加字、不重复、不咳嗽。"
+        },
+        "review-zhen-shiyin-recognition-v3-collapse-wail": {
+          "version": 1,
+          "status": "rejected-by-user",
+          "targetIds": [
+            "dialogue:081-b0316:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0316:u01": {
+              "retryVersion": 6,
+              "synthesisText": "我那有命无运的儿！为父今日才得见你。"
+            }
+          },
+          "instructionSuffix": "这是多年失女之痛瞬间决堤。我那有命无运的儿先爆发成苍凉的哭嚎，儿字拉成长而破碎的哭声；转入为父今日才得见你时情绪崩塌，仍哭着说，声音颤裂而悲怆。不要克制哽咽，不要表演成喊口号。只说正文一遍，不加字、不重复、不咳嗽。"
+        },
+        "review-fengshi-my-child-v3-cry-call": {
+          "version": 1,
+          "status": "rejected-by-user",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 3,
+              "synthesisText": "我的儿！"
+            }
+          },
+          "instructionSuffix": "承接刚刚认出女儿的震惊，母亲扑上去抱住女儿，张口失声痛哭。我的带哭音冲出，儿字明显破颤并拖出悲恸哭喊；要听得出真实哭音，不是普通高声呼唤，也不是轻微哽咽。只说三个字，不加字、不咳嗽、无杂音。"
+        },
+        "review-fengshi-my-child-v3-broken-wail": {
+          "version": 1,
+          "status": "rejected-by-user",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 5,
+              "synthesisText": "我的儿！"
+            }
+          },
+          "instructionSuffix": "母亲终于找回失散多年的女儿，抱紧她后悲痛彻底决堤。以低沉而撕裂的哭嚎喊我的儿，声音从哭喊转成破碎长尾，带抽泣和颤音，但三个字必须清楚。不是平静呼唤，不是咳嗽，不添加字词或其他声音。"
+        },
+        "review-fengshi-my-child-v4-long-turn": {
+          "version": 1,
+          "status": "rejected-by-automatic-qc",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 7,
+              "synthesisText": "我的儿！"
+            }
+          },
+          "instructionSuffix": "母亲抱住失散多年的女儿后含泪痛呼。我的两个字短而带哭音；儿字必须自然拖长约一秒，拖音中有两三次细微的哭腔颤动，音高小幅先扬后落，力度由强渐弱，尾端化成含泪气息收住。变化要自然细腻，不要唱腔，不要机械抖音，不要念成儿子，不添加啊、呀等字，不咳嗽、无杂音。"
+        },
+        "review-fengshi-my-child-v4-falling-break": {
+          "version": 1,
+          "status": "rejected-by-automatic-qc",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 8,
+              "synthesisText": "我的儿！"
+            }
+          },
+          "instructionSuffix": "母亲终于认回女儿，悲喜交集地哭喊我的儿。儿字要明显拖长，开头较亮较强，随后音高缓缓下坠，拖音中间有一次自然破颤，结尾微微回提后哭着收住；必须听出拖音内的细小变化，而不是一条平直长音。保持三个字清楚，不念成儿子，不增加任何字词，不咳嗽、无杂音。"
+        },
+        "review-fengshi-my-child-v5-continuous-er": {
+          "version": 1,
+          "status": "rejected-by-user",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 9,
+              "synthesisText": "我的儿。"
+            }
+          },
+          "instructionSuffix": "母亲抱住失散多年的女儿，含着哭腔呼唤我的儿。我的两个字清楚而短；儿字只能发音一次，必须用一口连续气息自然拖长约零点八至一秒，绝不能断开、回说或再发第二个儿。拖音从稍高音缓慢滑向较低音，力度由强渐弱，中间只有很轻的哭腔颤动，尾端含泪收住。不要机械抖音，不要唱腔，不念成儿子，不增加任何字词、哭声词或咳嗽杂音。"
+        },
+        "review-fengshi-my-child-v6-er-a-wail": {
+          "version": 1,
+          "status": "approved-by-user",
+          "targetIds": [
+            "dialogue:081-b0353:u01"
+          ],
+          "verbatimSynthesisText": [
+            "dialogue:081-b0353:u01"
+          ],
+          "targetOverrides": {
+            "dialogue:081-b0353:u01": {
+              "retryVersion": 10,
+              "synthesisText": "我的儿啊！"
+            }
+          },
+          "instructionSuffix": "这是用户明确批准的配音口语化增字，小说正文不变。母亲终于认出失散多年的女儿，抱住她后悲痛彻底决堤，必须带真实而明显的哭音喊我的儿啊。我的儿三个字在哭泣中清楚说出；啊字不是普通感叹，要成为悲怆哭嚎的延音：起音较强，随后声音破颤、音高下坠、力度渐弱，像哭到气息将尽才收住。不要平静呼唤，不要朗诵腔，不要愤怒叫喊，不回说、不重复，不添加其他字词，不咳嗽、无杂音。"
+        },
+        "review-fengshi-where-heard-v1": {
+          "version": 1,
+          "status": "draft-pending-review",
+          "targetIds": [
+            "dialogue:081-b0343:u01"
+          ],
+          "instructionSuffix": "本候选只审核‘那里’改读为‘哪里’的发音修正；小说正文不变，保持原有惊疑追问情绪。"
+        },
+        "review-shiyin-word-boundary-v1": {
+          "version": 1,
+          "status": "rejected-by-automatic-pause-audit",
+          "targetIds": [
+            "narration:081-b0324:u01"
+          ],
+          "targetOverrides": {
+            "narration:081-b0324:u01": {
+              "retryVersion": 2,
+              "instruction": "请使用本节统一旁白声线，完整朗读给定正文一次。关键短语“将，士隐，拉走”中，“将”是介词，“士隐”是人名，“拉走”是动作；必须按“将／士隐／拉走”组织意群，只作自然的极短分界，严禁读成“将士／隐／拉走”。保持梦境崩塌时的惊惧感、中速、低音和清楚吐字，不增字、不漏字、不重复、不续写。"
+            }
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 500,
+            "trailingMs": 500,
+            "internalMs": 1000
+          },
+          "qualityIssue": "标点虽纠正词界，但在将、士隐、拉走之间产生约 0.84 秒的三段过长停顿，未合入成品。"
+        },
+        "review-shiyin-word-boundary-v2": {
+          "version": 2,
+          "status": "rejected-by-automatic-pause-audit",
+          "targetIds": [
+            "narration:081-b0324:u01"
+          ],
+          "targetOverrides": {
+            "narration:081-b0324:u01": {
+              "retryVersion": 3,
+              "instruction": "请使用本节统一旁白声线，完整朗读给定正文一次。关键短语“将 士隐 拉走”中，“将”是介词，“士隐”是人名，“拉走”是动作；空格只提示“将／士隐／拉走”的词界，朗读时必须作为一个短语连续自然说出，三部分之间不要故意停顿，严禁读成“将士／隐／拉走”。保持梦境崩塌时的惊惧感、中速、低音和清楚吐字，不增字、不漏字、不重复、不续写。"
+            }
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 10000,
+            "leadingMs": 500,
+            "trailingMs": 500,
+            "internalMs": 1000
+          },
+          "qualityIssue": "词界空格导致关键处约 5.13 秒静音，未合入成品。"
+        },
+        "review-shiyin-word-boundary-v3-first-sentence": {
+          "version": 3,
+          "status": "rejected-by-user-incorrect-tone",
+          "targetIds": [
+            "narration:081-b0324:u01"
+          ],
+          "targetOverrides": {
+            "narration:081-b0324:u01": {
+              "retryVersion": 4,
+              "synthesisText": "父女正在悲切，忽有一僧一道飘然而至，不由分说，推开香菱，将士隐拉走。",
+              "instruction": "请使用本节统一旁白声线，只朗读这一句一次：“父女正在悲切，忽有一僧一道飘然而至，不由分说，推开香菱，将士隐拉走。”其中“将”是介词，“士隐”是人名，“拉走”是动作；必须按“将／士隐／拉走”理解并作为一个短语连续自然说出，严禁读成“将士／隐／拉走”。保持梦境崩塌时的惊惧感、中速、低音和清楚吐字，不增字、不漏字、不重复、不续写。"
+            }
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 120,
+            "internalMs": 420
+          },
+          "qualityIssue": "“将”误读为 jiàng 第四声；正确为 jiāng 第一声，未继续采用。"
+        },
+        "review-shiyin-jiang-first-tone-v4": {
+          "version": 4,
+          "status": "selected-for-draft-section-assembly",
+          "targetIds": [
+            "narration:081-b0324:u01"
+          ],
+          "targetOverrides": {
+            "narration:081-b0324:u01": {
+              "retryVersion": 5,
+              "synthesisText": "父女正在悲切，忽有一僧一道飘然而至，不由分说，推开香菱，姜士隐拉走。",
+              "instruction": "请使用本节统一旁白声线，只朗读这一句一次。“姜”是为强制“将”的 jiāng 第一声读音；实际语义是“将士隐拉走”，即把士隐拉走。必须读 jiāng 第一声，绝不能读 jiàng 第四声；按“将（jiāng）／士隐／拉走”理解并连续自然说出，严禁读成“将士／隐／拉走”。保持梦境崩塌时的惊惧感、中速、低音和清楚吐字，不增字、不漏字、不重复、不续写。"
+            }
+          },
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 80,
+            "leadingMs": 80,
+            "trailingMs": 120,
+            "internalMs": 420
+          }
+        }
+      }
     },
     {
       "id": "06",
       "slug": "baoyu-dream",
       "startAnchor": "再说宝玉从大老爷房内丫头口中",
-      "endAnchor": "且听下回分解。"
+      "endAnchor": "且听下回分解。",
+      "narratorReference": {
+        "id": "legacy-edge:narrator",
+        "path": "content/audio/.cache/doubao/chapters/081/references/59afb4fafed1458489b044f1e6a856d4d9ae6d91626893b2672c4af16d5ddc70.wav",
+        "fileHash": "191626a0bb902e15905f336305f2b5534f553ea437dc0596ec04a287c9eb1990"
+      },
+      "voiceCards": {
+        "jia-baoyu": {
+          "approvalId": "jia-baoyu/restrained-sadness-v2",
+          "id": "jia-baoyu:restrained-sadness",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/restrained-sadness-v2/generation.json"
+        },
+        "jiang-yuhan": {
+          "approvalId": "jiang-yuhan/natural-explanation-v2",
+          "id": "jiang-yuhan:natural-explanation-source-reference-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/source-reference.mp3",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/generation.json",
+          "assetKind": "sourceReferenceMp3",
+          "proxyNote": "按用户指定，使用蒋玉菡 natural-explanation-v2 的原声参考 MP3。"
+        },
+        "qiu-wen": {
+          "approvalId": "jia-yingchun/resigned-calm-v1",
+          "id": "qiu-wen:proxy-resigned-calm",
+          "path": "content/audio/.cache/voice-cards/multistyle/jia-yingchun/resigned-calm-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-yingchun/resigned-calm-v1/generation.json",
+          "proxyNote": "沿用现行秋纹代理声。"
+        },
+        "siqi": {
+          "approvalId": "siqi/current-candidate",
+          "id": "siqi:current-candidate",
+          "path": "content/audio.cache/voice-cards/siqi/siqi-voice-card.wav",
+          "generationPath": "content/audio.cache/voice-cards/siqi/siqi-generation.json"
+        },
+        "xiangling": {
+          "approvalId": "xiangling/calm-poetry-talk-v1",
+          "id": "xiangling:calm-poetry-talk-v1",
+          "path": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/xiangling/calm-poetry-talk-v1/generation.json"
+        },
+        "sheyue": {
+          "approvalId": "she-yue/practical-light-v1",
+          "id": "sheyue:practical-light",
+          "path": "content/audio/.cache/voice-cards/multistyle/she-yue/practical-light-v1/voice-card-delivery.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/she-yue/practical-light-v1/generation.json"
+        },
+        "young-maids-pool": {
+          "approvalId": "young-maids-pool/lianhuaer-shared-v1-demo",
+          "id": "young-maids-pool:lianhuaer-shared-v1",
+          "path": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+          "generationPath": "content/audio/.cache/voice-cards/multistyle/young-maids-pool/lianhuaer-shared-v1-demo/proxy-assignment.json",
+          "proxyNote": "用户确认第81回结尾来客为丫鬟鹊儿；复用已审核的年轻丫鬟共享音色。"
+        }
+      },
+      "voiceCardByBlock": {
+        "081-b0241": "young-maids-pool"
+      },
+      "targetOverrides": {
+        "narration:081-b0209:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "清楚自然地说‘蒋玉菡笑道’，音量与相邻旁白一致，不要低声耳语，不要近静音，不添加笑声或其他字音。"
+        },
+        "narration:081-b0218:u01": {
+          "retryVersion": 1,
+          "instructionSuffix": "清楚自然地说‘宝玉茫然道’，音量与相邻旁白一致，语气略带梦中困惑，但不要低声耳语，不要近静音。"
+        },
+        "narration:081-b0376:u01": {
+          "retryVersion": 1,
+          "promptMode": "strict-text",
+          "instructionSuffix": "梦境突然转暗的短旁白，使用本节统一旁白声线，语气收紧、清楚而自然地只读一次；正文前后保持静音，末字干净收住，不得出现敲击、爆音、口水音、字音或其他杂声。"
+        }
+      },
+      "fragmentConditioning": {
+        "narration:081-b0368:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1500,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 600
+          }
+        },
+        "narration:081-b0216:u01": {
+          "silencePolicy": {
+            "thresholdDbfs": -43,
+            "minimumGapMs": 1500,
+            "leadingMs": 1000,
+            "trailingMs": 1000,
+            "internalMs": 450
+          }
+        }
+      },
+      "normalizationOverrides": {
+        "narration:081-b0376:u01": "short-safe-peak-v1"
+      }
     }
   ]
 }

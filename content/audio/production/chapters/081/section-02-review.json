@@ -8,121 +8,188 @@
       "status": "candidates-ready-for-review",
       "notes": [
         {
-          "targetIds": ["dialogue:081-b0028:u01", "dialogue:081-b0028:u02", "dialogue:081-b0028:u03", "dialogue:081-b0028:u04", "dialogue:081-b0028:u05", "dialogue:081-b0028:u06", "dialogue:081-b0028:u07", "dialogue:081-b0028:u08"],
+          "targetIds": [
+            "dialogue:081-b0028:u01",
+            "dialogue:081-b0028:u02",
+            "dialogue:081-b0028:u03",
+            "dialogue:081-b0028:u04",
+            "dialogue:081-b0028:u05",
+            "dialogue:081-b0028:u06",
+            "dialogue:081-b0028:u07",
+            "dialogue:081-b0028:u08"
+          ],
           "issue": "艾官整段语气和声线正确，但合成单元之间的停顿不自然。",
           "action": "recorded-for-reassembly",
           "preserveAudio": true
         },
         {
-          "targetIds": ["narration:081-b0029:u01"],
+          "targetIds": [
+            "narration:081-b0029:u01"
+          ],
           "issue": "“宝玉听了大惊”前有杂声。",
           "action": "recorded-for-technical-repair"
         },
         {
-          "targetIds": ["dialogue:081-b0246:u01", "dialogue:081-b0246:u02"],
+          "targetIds": [
+            "dialogue:081-b0246:u01",
+            "dialogue:081-b0246:u02"
+          ],
           "issue": "两句各自表演正确，但前句偏慢、后句偏急，连接听感不一致。",
           "action": "recorded-for-reassembly",
           "preserveAudio": true
         },
         {
-          "targetIds": ["dialogue:081-b0248:u02", "dialogue:081-b0248:u03", "narration:081-b0039:u01"],
+          "targetIds": [
+            "dialogue:081-b0248:u02",
+            "dialogue:081-b0248:u03",
+            "narration:081-b0039:u01"
+          ],
           "issue": "“越发了不得”后停顿过长；“有话慢慢的说罢”后出现多余字音。",
           "action": "recorded-for-technical-repair"
         },
         {
-          "targetIds": ["dialogue:081-b0249:u02", "dialogue:081-b0249:u03"],
+          "targetIds": [
+            "dialogue:081-b0249:u02",
+            "dialogue:081-b0249:u03"
+          ],
           "issue": "“真的却在这里安安稳稳”与下句之间有杂音。",
           "action": "recorded-for-technical-repair"
         },
         {
-          "targetIds": ["dialogue:081-b0251:u01", "dialogue:081-b0251:u02"],
+          "targetIds": [
+            "dialogue:081-b0251:u01",
+            "dialogue:081-b0251:u02"
+          ],
           "issue": "“与我什么相干”后停顿略长。",
           "action": "recorded-for-reassembly"
         },
         {
-          "targetIds": ["narration:081-b0043:u01", "dialogue:081-b0044:u01"],
+          "targetIds": [
+            "narration:081-b0043:u01",
+            "dialogue:081-b0044:u01"
+          ],
           "issue": "“艾官啐道”与对白之间停顿略长。",
           "action": "recorded-for-reassembly"
         },
         {
-          "targetIds": ["narration:081-b0047:u01", "dialogue:081-b0048:u01"],
+          "targetIds": [
+            "narration:081-b0047:u01",
+            "dialogue:081-b0048:u01"
+          ],
           "issue": "“迟了一迟才道”与袭人对白之间停顿略长。",
           "action": "recorded-for-reassembly"
         },
         {
-          "targetIds": ["dialogue:081-b0254:u01"],
+          "targetIds": [
+            "dialogue:081-b0254:u01"
+          ],
           "issue": "用户单独标出“今日索性说开，叫一家子都评评”。",
           "action": "recorded-pending-specific-direction"
         },
         {
-          "targetIds": ["dialogue:081-b0257:u02", "narration:081-b0258:u01"],
+          "targetIds": [
+            "dialogue:081-b0257:u02",
+            "narration:081-b0258:u01"
+          ],
           "issue": "“岂不也受连累”与“三人听了”之间有杂音。",
           "action": "recorded-for-technical-repair"
         },
         {
-          "targetIds": ["dialogue:081-b0061:u01", "dialogue:081-b0061:u02"],
+          "targetIds": [
+            "dialogue:081-b0061:u01",
+            "dialogue:081-b0061:u02"
+          ],
           "issue": "艾官整段语气和声线正确，但单元拼接停顿不自然。",
           "action": "recorded-for-reassembly",
           "preserveAudio": true
         },
         {
-          "targetIds": ["narration:081-b0260:u01"],
+          "targetIds": [
+            "narration:081-b0260:u01"
+          ],
           "issue": "“心便灰了一半”后的内部停顿过长。",
           "action": "recorded-for-internal-pause-repair"
         },
         {
-          "targetIds": ["dialogue:081-b0076:u01"],
+          "targetIds": [
+            "dialogue:081-b0076:u01"
+          ],
           "issue": "宝玉音色卡不对。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-baoyu-summon-v1"
         },
         {
-          "targetIds": ["dialogue:081-b0083:u01"],
+          "targetIds": [
+            "dialogue:081-b0083:u01"
+          ],
           "issue": "宝玉音色卡不对；“差”必须读 chāi。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-baoyu-chunyan-v1"
         },
         {
-          "targetIds": ["dialogue:081-b0086:u01"],
+          "targetIds": [
+            "dialogue:081-b0086:u01"
+          ],
           "issue": "尾部出现多余字音。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-qiuwen-festival-v1"
         },
         {
-          "targetIds": ["dialogue:081-b0090:u01", "dialogue:081-b0090:u02", "dialogue:081-b0090:u03", "dialogue:081-b0090:u04", "dialogue:081-b0090:u05", "dialogue:081-b0090:u06"],
+          "targetIds": [
+            "dialogue:081-b0090:u01",
+            "dialogue:081-b0090:u02",
+            "dialogue:081-b0090:u03",
+            "dialogue:081-b0090:u04",
+            "dialogue:081-b0090:u05",
+            "dialogue:081-b0090:u06"
+          ],
           "issue": "袭人声线年龄感偏大，需恢复本节前段认可的年轻袭人声线。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-xiren-household-v1"
         },
         {
-          "targetIds": ["dialogue:081-b0092:u01"],
+          "targetIds": [
+            "dialogue:081-b0092:u01"
+          ],
           "issue": "尾部有噪音。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-qiuwen-strange-v1"
         },
         {
-          "targetIds": ["narration:081-b0093:u01"],
+          "targetIds": [
+            "narration:081-b0093:u01"
+          ],
           "issue": "“时常说些暮年之语”后内部停顿过长。",
           "action": "recorded-for-internal-pause-repair"
         },
         {
-          "targetIds": ["narration:081-b0101:u01"],
+          "targetIds": [
+            "narration:081-b0101:u01"
+          ],
           "issue": "“便自回潇湘馆”后内部停顿过长。",
           "action": "recorded-for-internal-pause-repair"
         },
         {
-          "targetIds": ["narration:081-b0105:u01"],
+          "targetIds": [
+            "narration:081-b0105:u01"
+          ],
           "issue": "“一时回馆”被重复朗读。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-narrator-return-v1"
         },
         {
-          "targetIds": ["dialogue:081-b0109:u02", "dialogue:081-b0109:u03"],
+          "targetIds": [
+            "dialogue:081-b0109:u02",
+            "dialogue:081-b0109:u03"
+          ],
           "issue": "“秋纹”与“碧痕”之间的单元拼接停顿过长。",
           "action": "recorded-for-reassembly"
         },
         {
-          "targetIds": ["dialogue:081-b0111:u01", "dialogue:081-b0111:u02"],
+          "targetIds": [
+            "dialogue:081-b0111:u01",
+            "dialogue:081-b0111:u02"
+          ],
           "issue": "黛玉声纹漂移，需保持第一节已经批准的黛玉声线。",
           "action": "rerecord-candidate",
           "candidate": "review-round1-daiyu-release-v1"
@@ -227,23 +294,267 @@
     },
     {
       "id": "user-review-2026-09-29-03",
-      "status": "candidate-ready-for-review",
+      "status": "candidate-approved-and-part-assembly-planned",
       "basedOn": "user-review-2026-09-29-02",
       "decisions": [
-        {"id": "review-round2-baoyu-summon-v2", "fileHash": "b0aac3ce77c69a891468a6aac22be78214a4d39ca9294cd1938cd88c9c49dd45", "decision": "approved-by-user"},
-        {"id": "review-round2-qiuwen-festival-v2", "fileHash": "55de5566a09bca142025c95659e42143d087b181a61a86b4adeeee28f1312f80", "decision": "approved-by-user"},
-        {"id": "review-round2-qiuwen-strange-v2", "fileHash": "0ee1173aeed0f74e8bfc5872fdf02557cb22601410bed6de158558d63ec51492", "decision": "approved-by-user"}
+        {
+          "id": "review-round2-baoyu-summon-v2",
+          "fileHash": "b0aac3ce77c69a891468a6aac22be78214a4d39ca9294cd1938cd88c9c49dd45",
+          "decision": "approved-by-user"
+        },
+        {
+          "id": "review-round2-qiuwen-festival-v2",
+          "fileHash": "55de5566a09bca142025c95659e42143d087b181a61a86b4adeeee28f1312f80",
+          "decision": "approved-by-user"
+        },
+        {
+          "id": "review-round2-qiuwen-strange-v2",
+          "fileHash": "0ee1173aeed0f74e8bfc5872fdf02557cb22601410bed6de158558d63ec51492",
+          "decision": "approved-by-user"
+        }
       ],
       "candidates": [
         {
           "id": "review-round3-baoyu-chunyan-v3",
-          "status": "pending-user-review",
+          "status": "approved-by-user",
           "note": "书面正文保留“差”，合成文本以“拆”固定 chāi 读音。",
           "path": "content/audio/.cache/doubao/sections/081/02/excerpts/review-round3-baoyu-chunyan-v3/scene.mp3",
           "durationSeconds": 5.928,
           "fileHash": "b62f77ece7ae04f06ee5d13198cf80b72c0fc1fbf2a51efb8037fa83d301233f"
         }
       ]
+    },
+    {
+      "id": "assembly-2026-10-01-section-02-part-1",
+      "status": "approved-by-user",
+      "profile": "section-02-part-1-v1",
+      "range": {
+        "startTargetId": "narration:081-b0022:u01",
+        "endTargetId": "narration:081-b0072:u01"
+      },
+      "note": "只拼接第二小节第一部分；已按用户此前指出的争吵节奏、短停顿、三官离场和宝玉落泪处停顿写入 profile。整节及第二部分保持不变。",
+      "output": {
+        "wavPath": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-1-v1/scene.wav",
+        "wavFileHash": "e1d7b1a13f57788cffe6032735bab9c16887b54269c58cd24c246fd345dc2ca4",
+        "mp3Path": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-1-v1/scene.mp3",
+        "mp3FileHash": "4f300f35e86888270dbb063fe53455418115e0520a51b3e317babd1354473775",
+        "durationSeconds": 356.592,
+        "loudnessLufs": -19.07,
+        "truePeakDbfs": -2,
+        "generated": 0,
+        "cacheHits": 76,
+        "whisperChecked": 48,
+        "whisperDialoguePassed": 48,
+        "mp3Decode": "passed"
+      }
+    },
+    {
+      "id": "assembly-2026-10-01-section-02-part-2",
+      "status": "approved-by-user-with-daiyu-placeholder",
+      "profile": "section-02-part-2-v1",
+      "range": {
+        "startTargetId": "narration:081-b0073:u01",
+        "endTargetId": "narration:081-b0114:u01"
+      },
+      "note": "用户已明确审核通过第二部分。11 个单元使用已批准候选，其他单元均命中缓存；袭人六句保留为一个已审批整体。黛玉两句仍按用户先前要求保留为自行处理前的临时占位，不据此解除最终母版占位标记。",
+      "qualityAdjustments": [
+        {
+          "targetId": "narration:081-b0103:u01",
+          "assemblyGainDb": 15,
+          "reason": "修正短旁白异常偏低的电平。"
+        },
+        {
+          "targetId": "narration:081-b0105:u01",
+          "assemblyGainDb": 20,
+          "reason": "保持已批准录音内容不变，仅修正短旁白异常偏低的电平。"
+        },
+        {
+          "targetId": "dialogue:081-b0109:u02",
+          "pauseAfterMs": 80,
+          "reason": "缩短“秋纹、”与“碧痕回家去”之间的拼接停顿。"
+        }
+      ],
+      "temporaryPlaceholders": [
+        "dialogue:081-b0111:u01",
+        "dialogue:081-b0111:u02"
+      ],
+      "output": {
+        "wavPath": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-2-v1/scene.wav",
+        "wavFileHash": "e51684b1b879130690102b5f197ff2b97927aefe396d9953779269c61dc869df",
+        "mp3Path": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-2-v1/scene.mp3",
+        "mp3FileHash": "2914f31580ada4ef434e13283f3d3f7820350d08931643f7e337a8f245144417",
+        "durationSeconds": 294.36,
+        "loudnessLufs": -19.23,
+        "truePeakDbfs": -2,
+        "generated": 0,
+        "cacheHits": 47,
+        "approvedAssemblyUnits": 11,
+        "whisperChecked": 21,
+        "whisperDialoguePassed": 21,
+        "approvedGroupDialoguePassed": 6,
+        "mp3Decode": "passed"
+      }
+    },
+    {
+      "id": "assembly-2026-10-15-section-02-part-1-annotation-revision",
+      "status": "draft-requires-user-review",
+      "basedOn": "assembly-2026-10-01-section-02-part-1",
+      "profile": "section-02-part-1-v1",
+      "reason": "正文与标注已更新，旧成品审批绑定的正文、annotationHash 与文件哈希失效。",
+      "annotationChange": {
+        "blockId": "081-b0036",
+        "text": "芳官在水月庵，藕官、蕊官去了地藏庵，龄官在城外赁了屋子住，蔷大爷还常去瞧她。我们几个被各自干娘领了回去，日日被逼着说人家。",
+        "textHash": "80eadc737deb242a2922bc43b9fe77c2021fb920ce3407dcefc91541aee9d519",
+        "units": [
+          "dialogue:081-b0036:u01",
+          "dialogue:081-b0036:u02",
+          "dialogue:081-b0036:u03"
+        ]
+      },
+      "additionalChangedUnits": [
+        "narration:081-b0258:u01",
+        "narration:081-b0258:u02"
+      ],
+      "quality": {
+        "alignment": "91/91 exact",
+        "generated": 5,
+        "cacheHits": 73,
+        "providerSubtitlesExact": 5,
+        "whisperChecked": 49,
+        "whisperDialoguePassed": 49,
+        "notes": [
+          "081-b0036:u03 Whisper 逐字一致。",
+          "081-b0036:u01 与 u02 的 Whisper 差异为人物、地点专名同音识别，结构门禁通过；需以人工试听确认发音和表演。"
+        ],
+        "wavDecode": "passed",
+        "mp3Decode": "passed"
+      },
+      "output": {
+        "wavPath": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-1-v1/scene.wav",
+        "wavFileHash": "a40025a6d06331b8a3096037631c35e5f1ccfb390166d0a170943ceaaf58f11c",
+        "mp3Path": "content/audio/.cache/doubao/sections/081/02/excerpts/section-02-part-1-v1/scene.mp3",
+        "mp3FileHash": "116f2d5fa6856dcfd610c232b48468c4212e0023af17cfd95ff47e5da01b6c8b",
+        "durationSeconds": 372.144,
+        "mp3Bytes": 5954733,
+        "loudnessLufs": -19.12,
+        "truePeakDbfs": -2
+      }
+    },
+    {
+      "id": "user-review-2026-10-18-noise-pause-and-double-zhengshi",
+      "status": "draft-ready-for-user-listening",
+      "basedOn": "assembly-2026-10-15-section-02-part-1-annotation-revision",
+      "changes": {
+        "textAndAnnotation": [
+          {
+            "blockId": "081-b0046",
+            "text": "正是，正是！只消这一句。你若说得出口，我们掉头就走。",
+            "reviewStatus": "human-reviewed",
+            "note": "按用户明确要求同步小说正文、pending、正式标注和录音。"
+          }
+        ],
+        "rerecordedTargets": [
+          {
+            "targetId": "dialogue:081-b0028:u05",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/0147295a43592e15f2911b954ed99a80fde9c1c9989c425cc56934ff4f9cd2bc.wav",
+            "fileHash": "f69745786ebeac608dad8e2aa103c6548b62f2eaa9c0b25ec28a06b76e7825c1",
+            "subtitleText": "看你还赖得去不成。"
+          },
+          {
+            "targetId": "dialogue:081-b0028:u07",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/8fbf3b93402666c6cf18c234a18c6709f73bd94df90b34432ef4d6b96d277707.wav",
+            "fileHash": "781c243419e64cd498f84963cbe2ca55e3036a74ec5c9f353649565496575847",
+            "subtitleText": "再撵一遭也不过如此；"
+          },
+          {
+            "targetId": "dialogue:081-b0248:u03",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/4699c8221c9dc86b7346e737c23d27bfc1725dbe700991579b4a42a5a32f7e78.wav",
+            "fileHash": "b234b51328d54cb38fa9682a50b3dd1cce3e40ed47621485deb1dccfbe0dc6be",
+            "subtitleText": "有话慢慢的说罢。"
+          },
+          {
+            "targetId": "dialogue:081-b0249:u02",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/358064e728222b38ba96f08afc00afd107ced18779110c570c113c0cad584d3a.wav",
+            "fileHash": "82a70994016e5ce655dceda870aff6de6930d92a657732172de25630a427a196",
+            "subtitleText": "真的却在这里安安稳稳。"
+          },
+          {
+            "targetId": "dialogue:081-b0046:u01",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/19fecad3880bc49ed9223087a7580d6fe891869c99fc02f952fbf61f318e459a.wav",
+            "fileHash": "63eed19cba3857a390f8375201ce89ef78315862357cfae8000b3dc717b4e805",
+            "subtitleText": "正是，正是！只消这一句。你若说得出口，我们掉头就走。"
+          },
+          {
+            "targetId": "dialogue:081-b0257:u02",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/c03d8ad6cb151411dae40166b0b52b3acdfc025b5a66f4db1b70eaf3841fa47d.wav",
+            "fileHash": "66e51cf80a822ceca0e706117388d46a71b6a07da684325ec4a4231ad5d89f18",
+            "subtitleText": "那时放你们入园的人，岂不也受连累？"
+          },
+          {
+            "targetId": "dialogue:081-b0059:u02",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/c80c5b7a0607bf9f7ea25052dfe6c486170638470c8a1d6807e6863b2a61da5f.wav",
+            "fileHash": "d402209f91fbdc0b4a073b5a0aeb0e4e79f7b7016b97a8bf3ae9ce6e1a677b2e",
+            "subtitleText": "此刻悄悄出去要紧，若叫有心人撞见，再走便迟了。"
+          },
+          {
+            "targetId": "dialogue:081-b0061:u02",
+            "path": "content/audio/.cache/doubao/sections/081/02/fragments/de9cf1262b46dbced79156f46b19408278a913d8d4782fcb89806feb5d7c88d2.wav",
+            "fileHash": "b6e4b5209bb5ef7d84b012b2e186ecba0a257b21e52ede634b99b70ce99e4d0e",
+            "subtitleText": "只劝一句，这样两面三刀的耳报神，再不可留在身边。"
+          }
+        ],
+        "pauseOnly": [
+          {
+            "targetId": "dialogue:081-b0028:u03",
+            "pauseAfterMs": 80
+          },
+          {
+            "targetId": "dialogue:081-b0247:u02",
+            "pauseAfterMs": 190
+          },
+          {
+            "targetId": "dialogue:081-b0248:u02",
+            "pauseAfterMs": 110
+          },
+          {
+            "targetId": "narration:081-b0060:u01",
+            "pauseAfterMs": 160
+          },
+          {
+            "targetId": "dialogue:081-b0061:u01",
+            "pauseAfterMs": 120
+          }
+        ]
+      },
+      "failedAttempts": [
+        {
+          "targetId": "dialogue:081-b0248:u03",
+          "retryVersion": 2,
+          "fileHash": "9ae2031a85d4a9fb5607a0c915052d74f42b904912d564108ce6f41d78ab9ed2",
+          "issue": "Whisper 检出整句重复两次；失败样本保留，未入片。"
+        }
+      ],
+      "quality": {
+        "alignment": "91/91 exact",
+        "synthesisCallsThisRound": 9,
+        "acceptedNewFragments": 8,
+        "rejectedAttempts": 1,
+        "providerSubtitlesExact": 8,
+        "whisperChecked": 70,
+        "whisperDialoguePassed": 70,
+        "wavDecode": "passed",
+        "mp3Decode": "passed"
+      },
+      "output": {
+        "wavPath": "content/audio/.cache/doubao/sections/081/02/scene.wav",
+        "wavFileHash": "6241b40cb61997856384e01bfc5613d413308dc983e2a0890dc19563e68dea40",
+        "mp3Path": "content/audio/.cache/doubao/sections/081/02/scene.mp3",
+        "mp3FileHash": "a5e6d922eba9af418d4ae3d8520b41c0757a250bbb3d7f6c4529feba626087c3",
+        "durationSeconds": 851.376,
+        "mp3Bytes": 13622445,
+        "loudnessLufs": -19.05,
+        "truePeakDbfs": -2
+      }
     }
   ]
 }

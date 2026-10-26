@@ -1,30 +1,5 @@
 ---
-import PageShell from '../components/layout/PageShell.astro';
-import { BOOKS, BOOK_IDS } from '../lib/books/catalog';
+import BookDirectoryPage from '../components/books/BookDirectoryPage.astro';
 ---
 
-<PageShell title="红楼共读" description="前八十回《红楼梦》与两个癸酉本版本，分册对读。" activeSection="home">
-	<header class="hero hero--books">
-		<p class="eyebrow">一部红楼 · 三册对读</p>
-		<h1>从这里，选择一本书</h1>
-		<p class="lead">先读前八十回《红楼梦》，再从《癸酉本》与《癸酉本润色版》中选择后二十八回。三册各有自己的阅读设置，互不影响。</p>
-	</header>
-
-	<section class="book-shelf" aria-label="选择书册">
-		{BOOK_IDS.map((book) => {
-			const definition = BOOKS[book];
-			return (
-				<article class={`book-card book-card--${book}`}>
-					<div class="book-card__number" aria-hidden="true">{definition.homeNumber}</div>
-					<p class="book-card__range">{definition.range}</p>
-					<h2>{definition.title}</h2>
-					<p>{definition.homeDescription}</p>
-					<div class="book-card__footer">
-						<span>{definition.rangeDetail}</span>
-						<a href={definition.href}>进入本册 <span aria-hidden="true">→</span></a>
-					</div>
-				</article>
-			);
-		})}
-	</section>
-</PageShell>
+<BookDirectoryPage book="guiyou" activeSection="home" />

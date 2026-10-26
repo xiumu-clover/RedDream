@@ -12,7 +12,6 @@ export const BOOKS = {
 		continuousHref: '/hongloumeng/all/',
 		startOrder: 0,
 		endOrder: 80,
-		hasAudio: true,
 	},
 	'guiyou-original': {
 		id: 'guiyou-original',
@@ -27,7 +26,6 @@ export const BOOKS = {
 		continuousHref: '/guiyou-original/all/',
 		startOrder: 81,
 		endOrder: 108,
-		hasAudio: false,
 	},
 	guiyou: {
 		id: 'guiyou',
@@ -35,14 +33,13 @@ export const BOOKS = {
 		homeNumber: '叁',
 		range: '后二十八回 · 润色版',
 		rangeDetail: '第八十一至一百零八回',
-		description: '阅读整理、润色后的第八十一至一百零八回。',
+		description: '虽命如草芥，却又璨若星河。\n华夏的星星之火，终将燎原......',
 		homeDescription: '从惜昵近公子做良媒续读至幻中幻境展演情榜。此册为整理润色后的版本，批语默认显示。',
 		settingsBadge: '批语默认开启',
 		href: '/guiyou/',
 		continuousHref: '/guiyou/all/',
 		startOrder: 81,
 		endOrder: 108,
-		hasAudio: true,
 	},
 } as const;
 

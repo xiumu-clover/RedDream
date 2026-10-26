@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import test from 'node:test';
-import { buildExcerptTargets, buildSectionTargets, canReuseLegacy, resolveApprovedAssembly, resolveReviewSceneSources, selectSectionBlocks, synthesisSpec, verifiedReferences, withCurrentAssemblySettings } from '../../scripts/audio/generate_doubao_section.js';
+import { approvedArtifactText, buildExcerptTargets, buildSectionTargets, canReuseLegacy, resolveApprovedAssembly, resolveReviewSceneSources, selectSectionBlocks, shouldConditionArtifact, synthesisSpec, verifiedReferences, withCurrentAssemblySettings } from '../../scripts/audio/generate_doubao_section.js';
 import { hashJson } from '../../scripts/audio/audio-blocks.js';
 import { limitPcmSilence, stretchInternalPcmSilence, splicePcmSuffix, trimPcmTail } from '../../scripts/audio/wav-silence.js';
 
@@ -71,6 +71,19 @@ test('缓存音色仍采用当前小样的拼接停顿，而非旧缓存中的�
 	const current = { pauseAfterMs: 220, assemblyGainDb: 1, normalizationMode: 'short-safe-peak-v1' };
 	assert.deepEqual(withCurrentAssemblySettings(cached, current), { ...cached, ...current });
 	assert.equal(cached.pauseAfterMs, 85);
+});
+test('已批准且要求保留的音频跳过片段静音修整', () => {
+	const conditioning = { silencePolicy: { leadingMs: 60, trailingMs: 70 } };
+	assert.equal(shouldConditionArtifact({ cacheType: 'section' }, conditioning), true);
+	assert.equal(shouldConditionArtifact({ approvedAssembly: { preserveReviewedAudio: false } }, conditioning), true);
+	assert.equal(shouldConditionArtifact({ approvedAssembly: { preserveReviewedAudio: true } }, conditioning), false);
+	assert.equal(shouldConditionArtifact({ cacheType: 'section' }, null), false);
+});
+test('获批口语化入片分别保留正文和实际配音文本', () => {
+	const target = { synthesisText: '我的儿' };
+	assert.deepEqual(approvedArtifactText(target, {}), { synthesisText: '我的儿', subtitleText: '我的儿' });
+	assert.deepEqual(approvedArtifactText(target, { synthesisText: '我的儿啊！' }),
+		{ synthesisText: '我的儿啊！', subtitleText: '我的儿啊！' });
 });
 
 test('第一节重新读取当前标注的读音、强制单元、问句语气和停顿', async () => {
@@ -223,7 +236,7 @@ test('宝玉停顿小样保持正文顺序和逗号，且不改变整节目标',
 	assert.throws(() => buildExcerptTargets(targets, 'bad', { targetIds: [...section.excerpts['baoyu-farewell-pause-v1'].targetIds].reverse() }), /不按正文顺序/u);
 });
 
-test('第一节只合入两项获批宝玉改动，保留原黛玉片段', async () => {
+test('第一节合入获批宝玉改动并保留原黛玉片段', async () => {
 	const pending = JSON.parse(await readFile(join(root, 'content/audio/.cache/pending/081.json'), 'utf8'));
 	const document = JSON.parse(await readFile(join(root, 'content/audio/annotations/081.json'), 'utf8'));
 	const provider = JSON.parse(await readFile(join(root, 'content/audio/providers/doubao.json'), 'utf8'));
@@ -241,7 +254,7 @@ test('第一节只合入两项获批宝玉改动，保留原黛玉片段', async
 	assert.equal(approved.sourceByTarget.get('dialogue:081-b0005:u01').fileHash,
 		'6399a6f189fc6fe0416de131c6661f67db9d954a91d1f8be69e17de268f69067');
 	assert.equal(approved.groupByFirst.get('narration:081-b0010:u01').fileHash,
-		'43f02601ed03b872715833a0e43d3ddfc6c8697a93a9c3b905e93dafcea2b543');
+		'e88498bd7ae9ae998620ad6a0d213b46937c779daa7f1e3e3e55ac6655a2b52f');
 	const broken = structuredClone(section);
 	broken.approvedAssembly.groupOverrides[0].bindings[1].textHash = '0'.repeat(64);
 	await assert.rejects(() => resolveApprovedAssembly(targets, broken), /正文或标注不一致/u);
@@ -254,14 +267,18 @@ test('第二节按剧情阶段切换主角多风格卡，群声仍为单一代�
 	const sections = JSON.parse(await readFile(join(root, 'content/audio/production/chapters/081/sections.json'), 'utf8'));
 	const section = sections.sections[1];
 	const decisions = JSON.parse(await readFile(join(root, 'content/audio/.cache/voice-cards/review-decisions.json'), 'utf8'));
-	const references = await verifiedReferences(section, decisions);
+	// 禁用的旧备用卡必须拦截；以下路由回归仅使用移除该备用卡的内存副本，不改81回配置。
+	await assert.rejects(() => verifiedReferences(section, decisions), /jia-baoyu:daily.*没有绑定|声卡已被用户禁用/u);
+	const activeSection = structuredClone(section);
+	delete activeSection.voiceCards['jia-baoyu:daily'];
+	const references = await verifiedReferences(activeSection, decisions);
 	const targets = buildSectionTargets({ blocks: selectSectionBlocks(pending.blocks, section),
 		annotations: document.annotations, references, provider, section, segmenterVersion: pending.segmenterVersion });
 	const byBlock = (blockId: string) => targets.filter((item: { blockId: string }) => item.blockId === blockId);
 	assert.equal(byBlock('081-b0030')[0].reference.id, 'jia-baoyu:restrained-sadness');
 	assert.equal(byBlock('081-b0076')[0].reference.id, 'jia-baoyu:restrained-sadness');
 	assert.equal(byBlock('081-b0083')[0].reference.id, 'jia-baoyu:restrained-sadness');
-	assert.equal(byBlock('081-b0097')[0].reference.id, 'jia-baoyu:daily');
+	assert.equal(byBlock('081-b0097')[0].reference.id, 'jia-baoyu:restrained-sadness');
 	assert.equal(byBlock('081-b0071')[0].reference.id, 'xiren:assertive-rivalry');
 	assert.equal(byBlock('081-b0090')[0].reference.id, 'xiren:assertive-rivalry');
 	assert.equal(byBlock('081-b0254')[0].speakerRef, 'dou-guan');
@@ -269,18 +286,203 @@ test('第二节按剧情阶段切换主角多风格卡，群声仍为单一代�
 	assert.equal(byBlock('081-b0052')[0].normalizationMode, 'short-safe-peak-v1');
 	assert.equal(byBlock('081-b0052')[0].providerOverride.promptMode, 'strict-text');
 	assert.equal(byBlock('081-b0105')[0].providerOverride.promptMode, 'strict-text');
+	assert.equal(byBlock('081-b0247')[1].text,
+		'偏太太不许我去瞧，叫人怎么样呢？芳官她们如今可好？');
+	assert.equal(byBlock('081-b0247')[1].providerOverride.retryVersion, 1);
+	assert.match(byBlock('081-b0247')[1].instruction, /芳官她们如今可好/u);
+	assert.equal(byBlock('081-b0248')[2].providerOverride.retryVersion, 3);
+	assert.match(byBlock('081-b0248')[2].instruction, /语速中等偏慢/u);
+	assert.match(byBlock('081-b0248')[2].instruction, /严禁添加任何字音/u);
+	assert.equal(byBlock('081-b0046')[0].text, '正是，正是！只消这一句。你若说得出口，我们掉头就走。');
+	assert.equal(byBlock('081-b0046')[0].speakerRef, 'dou-guan');
+	assert.equal(byBlock('081-b0046')[0].providerOverride.retryVersion, 1);
+	assert.equal(byBlock('081-b0028')[2].pauseAfterMs, 80);
+	assert.equal(byBlock('081-b0247')[1].pauseAfterMs, 190);
+	assert.equal(byBlock('081-b0248')[1].pauseAfterMs, 110);
+	assert.equal(byBlock('081-b0060')[0].pauseAfterMs, 160);
+	assert.equal(byBlock('081-b0061')[0].pauseAfterMs, 120);
+	assert.equal(section.fragmentConditioning['narration:081-b0093:u01'].silencePolicy.internalMs, 260);
 	assert.equal(section.excerpts['review-round1-daiyu-release-v1'].performanceReference.sameSpeaker, true);
 	const pronunciationPreview = buildExcerptTargets(targets, 'review-round3-baoyu-chunyan-v3',
 		section.excerpts['review-round3-baoyu-chunyan-v3']);
 	assert.equal(pronunciationPreview[0].text, '春燕是我差出去了。等人到齐，叫她们候着，我回来有话说。');
 	assert.equal(pronunciationPreview[0].synthesisText, '春燕是我拆出去了。等人到齐，叫她们候着，我回来有话说。');
+	const partOne = buildExcerptTargets(targets, 'section-02-part-1-v1', section.excerpts['section-02-part-1-v1']);
+	assert.equal(partOne.length, 78);
+	assert.equal(byBlock('081-b0036').length, 3);
+	assert.equal(byBlock('081-b0036')[2].text, '我们几个被各自干娘领了回去，日日被逼着说人家。');
+	assert.equal(byBlock('081-b0036')[2].synthesisText, '我们几个被各自干娘领了回去，日日被逼着说人家。');
+	assert.equal(byBlock('081-b0258').length, 2);
+	assert.equal(partOne[0].targetId, 'narration:081-b0022:u01');
+	assert.equal(partOne.at(-1).targetId, 'narration:081-b0072:u01');
+	assert.equal(partOne.find((item: { targetId: string }) => item.targetId === 'dialogue:081-b0028:u01').pauseAfterMs, 90);
+	assert.equal(partOne.find((item: { targetId: string }) => item.targetId === 'dialogue:081-b0248:u02').pauseAfterMs, 100);
+	const partTwoProfile = section.excerpts['section-02-part-2-v1'];
+	const partTwo = buildExcerptTargets(targets, 'section-02-part-2-v1', partTwoProfile);
+	assert.equal(partTwo.length, 52);
+	assert.equal(partTwo[0].targetId, 'narration:081-b0073:u01');
+	assert.equal(partTwo.at(-1).targetId, 'narration:081-b0114:u01');
+	assert.equal(partTwo.find((item: { targetId: string }) => item.targetId === 'dialogue:081-b0109:u02').pauseAfterMs, 80);
+	assert.equal(partTwoProfile.temporaryPlaceholders[0].status, 'temporary-placeholder-not-approved');
+	const partTwoApproved = await resolveApprovedAssembly(partTwo, { approvedAssembly: partTwoProfile.approvedAssembly });
+	assert.equal(partTwoApproved.sourceByTarget.size, 5);
+	assert.equal(partTwoApproved.groupByFirst.size, 1);
+	assert.equal(partTwoApproved.coveredTargetIds.size, 11);
+	assert.equal(partTwoApproved.sourceByTarget.get('narration:081-b0105:u01').assemblyGainDb, 20);
+	assert.equal(partTwoApproved.groupByFirst.get('dialogue:081-b0090:u01').preserveReviewedAudio, true);
+	const sectionApproved = await resolveApprovedAssembly(targets, section);
+	assert.equal(sectionApproved.sourceByTarget.size, 5);
+	assert.equal(sectionApproved.groupByFirst.size, 3);
+	assert.equal(sectionApproved.coveredTargetIds.size, 21);
+	assert.equal(sectionApproved.sourceByTarget.get('narration:081-b0039:u01').fileHash,
+		'dcfd35e22c610e3f19bd3c93fab61caf5c87bb427948d5ed431df156ba59e2d6');
+	assert.match(sectionApproved.sourceByTarget.get('narration:081-b0039:u01').reason, /前导都.*长静音.*荳官道/u);
+	assert.equal(sectionApproved.groupByFirst.get('dialogue:081-b0090:u01').id,
+		'xiren-household-light-approved-v3');
+	assert.equal(sectionApproved.groupByFirst.get('dialogue:081-b0090:u01').preserveReviewedAudio, true);
+	assert.equal(sectionApproved.groupByFirst.get('dialogue:081-b0248:u02').id,
+		'baoyu-reassurance-original-base-slower-v9-approved');
+	assert.deepEqual(sectionApproved.groupByFirst.get('dialogue:081-b0248:u02').targetIds,
+		['dialogue:081-b0248:u02', 'dialogue:081-b0248:u03']);
+	assert.equal(sectionApproved.groupByFirst.get('dialogue:081-b0248:u02').path,
+		'content/audio/.cache/doubao/sections/081/02/excerpts/review-baoyu-reassurance-original-base-slower-v9/scene.wav');
+	assert.equal(sectionApproved.groupByFirst.get('dialogue:081-b0248:u02').fileHash,
+		'e4866aa548b5eae879438bbaebe18b6c35e3320aa0aca7b04b946ea637bfddba');
+	assert.equal(section.excerpts['review-baoyu-reassurance-original-base-v7'].status,
+		'superseded-by-user-approved-slower-v9');
 	assert.equal(byBlock('081-b0079')[0].reference.id, 'young-maids-pool:chunyan-proxy');
 	assert.equal(sections.sectionApprovals[0].sectionId, '01');
 	assert.equal(sections.sectionApprovals[0].binding.mp3FileHash,
 		'a5acbe654fbeda5dc33e7837340fb0313a2d29d2fb29914ecbd63eea234848c5');
 	const reviewPlan = JSON.parse(await readFile(join(root, 'content/audio/production/chapters/081/plan.json'), 'utf8'));
 	const reviewSources = await resolveReviewSceneSources(targets, reviewPlan);
-	assert.equal(reviewSources.size, 48);
+	assert.equal(reviewSources.size, 37);
+	for (const targetId of [
+		'dialogue:081-b0028:u05', 'dialogue:081-b0028:u07', 'dialogue:081-b0046:u01',
+		'dialogue:081-b0249:u02', 'dialogue:081-b0257:u02', 'dialogue:081-b0059:u02', 'dialogue:081-b0061:u02',
+	]) assert.equal(reviewSources.has(targetId), false);
+	assert.equal(reviewSources.has('dialogue:081-b0036:u01'), false);
+	assert.equal(reviewSources.has('dialogue:081-b0036:u02'), false);
 	assert.equal(reviewSources.has('dialogue:081-b0028:u01'), true);
+	assert.equal(reviewSources.has('dialogue:081-b0247:u01'), true);
+	assert.equal(reviewSources.has('dialogue:081-b0247:u02'), false);
+	assert.equal(reviewSources.has('dialogue:081-b0248:u03'), false);
 	assert.equal(reviewSources.has('dialogue:081-b0074:u01'), false);
+});
+
+test('第三节使用当前获批路由，并统一使用用户指定的宝玉音色', async () => {
+	const pending = JSON.parse(await readFile(join(root, 'content/audio/.cache/pending/081.json'), 'utf8'));
+	const document = JSON.parse(await readFile(join(root, 'content/audio/annotations/081.json'), 'utf8'));
+	const provider = JSON.parse(await readFile(join(root, 'content/audio/providers/doubao.json'), 'utf8'));
+	const sections = JSON.parse(await readFile(join(root, 'content/audio/production/chapters/081/sections.json'), 'utf8'));
+	const section = sections.sections.find((item) => item.id === '03');
+	const decisions = JSON.parse(await readFile(join(root, 'content/audio/.cache/voice-cards/review-decisions.json'), 'utf8'));
+	const references = await verifiedReferences(section, decisions);
+	const targets = buildSectionTargets({ blocks: selectSectionBlocks(pending.blocks, section),
+		annotations: document.annotations, references, provider, section, segmenterVersion: pending.segmenterVersion });
+	const byBlock = (blockId: string) => targets.filter((item: { blockId: string }) => item.blockId === blockId);
+	assert.equal(references['jiang-yuhan'].approvalId, 'jiang-yuhan/natural-explanation-v2');
+	assert.equal(references['jiang-yuhan'].fileHash, '1a6b5822379957aa6d55be6cfd815674f6e4a2e0396478f458c9fdb2a2f1d7f8');
+	assert.equal(references['jiang-yuhan'].text, '这是茜香国女王进贡的物品，夏天系着，肌肤生香，不生汗渍。');
+	assert.equal(references['jiang-yuhan'].assetKind, 'sourceReferenceMp3');
+	assert.match(references['jiang-yuhan'].proxyNote, /原声参考 MP3/u);
+	assert.equal(references['hua-zifang'].approvalId, 'jiang-yuhan/natural-explanation-v2');
+	assert.equal(references['hua-zifang'].fileHash, '171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7');
+	assert.equal(references['hua-zifang'].text, '二爷放心，我既答应了，自然不会草率。');
+	assert.match(references['hua-zifang'].proxyNote, /蒋玉菡本人原声.*代理/u);
+	assert.equal(byBlock('081-b0265')[0].reference.id, 'jia-baoyu:restrained-sadness');
+	assert.equal(byBlock('081-b0143')[0].reference.id, 'jia-baoyu:restrained-sadness');
+	assert.equal(byBlock('081-b0265')[0].reference.fileHash, byBlock('081-b0143')[0].reference.fileHash);
+	assert.equal([...new Set(targets.filter((item: { speakerRef: string }) => item.speakerRef === 'jia-baoyu')
+		.map((item: { reference: { id: string } }) => item.reference.id))].join(','), 'jia-baoyu:restrained-sadness');
+	assert.equal(section.fragmentConditioning['narration:081-b0292:u01'].silencePolicy.minimumGapMs, 1000);
+	assert.equal(section.fragmentConditioning['narration:081-b0292:u01'].silencePolicy.internalMs, 450);
+	assert.deepEqual(section.fragmentConditioning['dialogue:081-b0279:u01'].tailRepair,
+		{ endSeconds: 2.3, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['narration:081-b0122:u01'].tailRepair,
+		{ endSeconds: 1.2, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['dialogue:081-b0281:u04'].tailRepair,
+		{ endSeconds: 4.15, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['dialogue:081-b0285:u01'].tailRepair,
+		{ endSeconds: 3.2, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['narration:081-b0266:u01'].tailRepair,
+		{ endSeconds: 1.1, fadeOutMs: 30 });
+	assert.equal(byBlock('081-b0138')[0].reference.id, 'xiren:assertive-rivalry');
+	assert.equal(byBlock('081-b0291')[0].reference.id, 'lady-wang:measured-consultation-v2');
+	assert.equal(byBlock('081-b0270')[0].providerOverride.promptMode, 'strict-text');
+	assert.equal(targets.find((item: { targetId: string }) => item.targetId === 'narration:081-b0229:u01').pauseAfterMs, 80);
+	assert.equal(sections.sectionApprovals.find((item) => item.sectionId === '02').binding.parts.length, 2);
+});
+
+test('第四节使用获批角色卡，未具名丫头和潘又安按审核结果独立路由', async () => {
+	const pending = JSON.parse(await readFile(join(root, 'content/audio/.cache/pending/081.json'), 'utf8'));
+	const document = JSON.parse(await readFile(join(root, 'content/audio/annotations/081.json'), 'utf8'));
+	const provider = JSON.parse(await readFile(join(root, 'content/audio/providers/doubao.json'), 'utf8'));
+	const sections = JSON.parse(await readFile(join(root, 'content/audio/production/chapters/081/sections.json'), 'utf8'));
+	const section = sections.sections.find((item) => item.id === '04');
+	const decisions = JSON.parse(await readFile(join(root, 'content/audio/.cache/voice-cards/review-decisions.json'), 'utf8'));
+	const references = await verifiedReferences(section, decisions);
+	const blocks = selectSectionBlocks(pending.blocks, section);
+	const targets = buildSectionTargets({ blocks, annotations: document.annotations, references, provider, section,
+		segmenterVersion: pending.segmenterVersion });
+	const byBlock = (blockId: string) => targets.filter((item: { blockId: string }) => item.blockId === blockId);
+	assert.equal(blocks[0].blockId, '081-b0149');
+	assert.equal(blocks.at(-1).blockId, '081-b0313');
+	assert.equal(blocks.length, 43);
+	assert.equal(targets.length, 52);
+	assert.equal(byBlock('081-b0302')[0].speakerRef, 'young-maids-pool');
+	assert.equal(byBlock('081-b0302')[0].voiceCardRoute, 'unnamed-young-maid');
+	assert.equal(byBlock('081-b0302')[0].reference.id, 'unnamed-young-maid:chunyan-shared-v1');
+	assert.notEqual(byBlock('081-b0302')[0].reference.fileHash, byBlock('081-b0173')[0].reference.fileHash);
+	assert.equal(references['pan-youan'].approvalId, 'pan-youan/jiang-yuhan-natural-v2');
+	assert.equal(references['pan-youan'].fileHash, '171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7');
+	assert.match(references['pan-youan'].proxyNote, /候选3.*蒋玉菡.*代理声/u);
+	assert.equal(byBlock('081-b0305')[0].reference.id, 'pan-youan:jiang-yuhan-natural-v2-proxy-v1');
+	assert.equal(byBlock('081-b0310')[0].reference.id, 'pan-youan:jiang-yuhan-natural-v2-proxy-v1');
+	assert.equal(byBlock('081-b0299')[0].providerOverride.retryVersion, 2);
+	assert.match(byBlock('081-b0299')[0].instruction, /不要添加不了、不及或其他尾音/u);
+	assert.equal(byBlock('081-b0149')[0].pauseAfterMs, 120);
+	assert.deepEqual(section.fragmentConditioning['narration:081-b0149:u01'].tailRepair,
+		{ endSeconds: 33.52, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['narration:081-b0150:u01'].tailRepair,
+		{ endSeconds: 1.72, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['narration:081-b0164:u01'].tailRepair,
+		{ endSeconds: 2.88, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['dialogue:081-b0305:u01'].tailRepair,
+		{ endSeconds: 1.72, fadeOutMs: 30 });
+	assert.deepEqual(section.fragmentConditioning['dialogue:081-b0310:u01'].tailRepair,
+		{ endSeconds: 4.82, fadeOutMs: 30 });
+	assert.equal('publicOutput' in section, false);
+});
+
+test('第五节只使用获批甄士隐、香菱及两张代理卡，并保留定向重录规则', async () => {
+	const pending = JSON.parse(await readFile(join(root, 'content/audio/.cache/pending/081.json'), 'utf8'));
+	const document = JSON.parse(await readFile(join(root, 'content/audio/annotations/081.json'), 'utf8'));
+	const provider = JSON.parse(await readFile(join(root, 'content/audio/providers/doubao.json'), 'utf8'));
+	const sections = JSON.parse(await readFile(join(root, 'content/audio/production/chapters/081/sections.json'), 'utf8'));
+	const section = sections.sections.find((item) => item.id === '05');
+	const decisions = JSON.parse(await readFile(join(root, 'content/audio/.cache/voice-cards/review-decisions.json'), 'utf8'));
+	const references = await verifiedReferences(section, decisions);
+	const blocks = selectSectionBlocks(pending.blocks, section);
+	const targets = buildSectionTargets({ blocks, annotations: document.annotations, references, provider, section,
+		segmenterVersion: pending.segmenterVersion });
+	const byBlock = (blockId: string) => targets.filter((item: { blockId: string }) => item.blockId === blockId);
+	assert.equal(blocks[0].blockId, '081-b0314');
+	assert.equal(blocks.at(-1).blockId, '081-b0367');
+	assert.equal(blocks.length, 62);
+	assert.equal(targets.length, 77);
+	assert.deepEqual(Object.keys(section.voiceCards).sort(),
+		['older-women-pool', 'xia-jingui', 'xiangling', 'zhen-shiyin']);
+	assert.equal(references['zhen-shiyin'].approvalId, 'zhen-shiyin/warm-encouragement-v1');
+	assert.equal(references.xiangling.approvalId, 'xiangling/calm-poetry-talk-v1');
+	assert.equal(references['xia-jingui'].fileHash, 'b14ddeac6f9982d6825203bb1f7c3229a0966f4d42b4edfd9f3bb8893795069a');
+	assert.match(references['xia-jingui'].proxyNote, /王熙凤.*代理声/u);
+	assert.equal(references['older-women-pool'].fileHash,
+		'd6f078c5e4a8b64ea76744ab6af7352ea4daa225db7ad752566aaeeaf5ce5d66');
+	assert.match(references['older-women-pool'].proxyNote, /封氏.*贾母.*代理声/u);
+	assert.equal(byBlock('081-b0356')[0].providerOverride.retryVersion, 1);
+	assert.match(byBlock('081-b0356')[0].instruction, /不要压成耳语/u);
+	assert.equal(byBlock('081-b0327')[0].providerOverride.promptMode, 'strict-text');
+	assert.match(byBlock('081-b0327')[0].instruction, /不要扩写成寻找你/u);
+	assert.equal('publicOutput' in section, false);
 });

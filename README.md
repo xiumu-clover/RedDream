@@ -2,6 +2,8 @@
 
 一个使用 Astro 构建的章节阅读站。章节以 Markdown 文件保存，并在构建时由项目内的自定义编译器解析为正文、脂批、诗词、长赋和气泡注释。
 
+首页 `/` 直接展示“癸酉本润色版”目录，与 `/guiyou/` 共用同一页面组件。网站不再提供有声书播放器或音频试听入口；本地音频制作工具与资料继续独立保留。
+
 ## 工程结构
 
 ```text
@@ -108,3 +110,13 @@ npm run astro -- dev stop
 2. 在 GitHub 仓库 `Settings → Secrets and variables → Actions` 中新增 Repository secret，名称必须为 `CLOUDFLARE_PAGES_DEPLOY_HOOK`，值为刚才的完整 Hook URL。
 
 Deploy Hook URL 相当于部署凭据，不得写入代码、文档或提交记录。普通 `main` 分支推送仍由 Cloudflare Git 集成自动部署；工作流只在定时运行或手动运行时调用 Hook，避免同一次推送重复部署。
+
+## 发布章节正文
+
+本地编辑并保存 `content/chapters/` 下的 Markdown 后，双击根目录的 `publish_chapters.bat`。它只会暂存、提交和推送 `content/chapters/**/*.md`；如果音频、研究资料、代码或其他文件有改动，不会把它们带入章节提交。推送前脚本会检查 `origin/main` 是否有远端新提交，发现分叉时会停止，避免覆盖远端历史。
+
+推送成功后，GitHub 的 `Scheduled Astro build` 工作流会响应 `main` 分支推送并执行网站测试与 Astro 构建；Cloudflare Pages 的 Git 集成随后负责部署。也可以用命令行传入提交说明：
+
+```bat
+publish_chapters.bat "修改第82回正文"
+```

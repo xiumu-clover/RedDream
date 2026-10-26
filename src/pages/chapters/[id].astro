@@ -1,11 +1,9 @@
 ---
 import ChapterContent from '../../components/chapters/ChapterContent.astro';
-import AudioPlayer, { type ChapterAudioRecord } from '../../components/chapters/AudioPlayer.astro';
 import ChapterNavigation from '../../components/chapters/ChapterNavigation.astro';
 import PageShell from '../../components/layout/PageShell.astro';
 import { BOOKS, type BookId } from '../../lib/books/catalog';
 import { loadCompiledChapter, loadCompiledChapters } from '../../lib/chapters/collection';
-import { loadPublishedAudioManifest } from '../../lib/chapters/audio-manifest';
 
 interface ChapterLink {
 	id: string;
@@ -44,17 +42,11 @@ const { book, sourceId, previous, next } = Astro.props;
 const preparedChapter = await loadCompiledChapter(book, sourceId);
 if (!preparedChapter) throw new Error(`找不到章节：${Astro.params.id ?? ''}`);
 
-const { order, description, chapter } = preparedChapter;
+const { description, chapter } = preparedChapter;
 const definition = BOOKS[book];
-const audioId = String(order).padStart(3, '0');
-const manifest = await loadPublishedAudioManifest();
-const audioRecord = definition.hasAudio && manifest.version === 2
-	? manifest.chapters[audioId] as ChapterAudioRecord | undefined
-	: undefined;
 ---
 
 <PageShell title={chapter.title} description={description} activeSection={book}>
-	<AudioPlayer book={book} chapterId={audioId} record={audioRecord} />
 	<ChapterContent chapter={chapter} book={book} />
 	<ChapterNavigation
 		previous={previous}

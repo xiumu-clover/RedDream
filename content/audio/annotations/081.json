@@ -833,7 +833,7 @@
     },
     "081-b0033": {
       "textHash": "1f6d7be22261f66d7cdb141e6c05d0c1382a54181a10a6aea5b6b7414e85ac1a",
-      "contextHash": "b72c360cc5e03b5f055f881c31916be00bcbed1f9ca644ebcd8de639b5438624",
+      "contextHash": "4b1edfada20c98e5c35279c9ac5a0ba9e5bcafecd1374b657dc7e28edf82571c",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "sadness",
@@ -853,7 +853,7 @@
       "note": "旁白；压住悲意并保留呼吸停顿，不作泛化哭腔，演绎重心为 shared-tears。"
     },
     "081-b0247": {
-      "textHash": "f7bf4bf4c2875220d9f4aa66807e2fd7f85b33e956f448a56980b841125a20b4",
+      "textHash": "873195b8e2f2c370d035a5bbaeb53d2f1ec260a7be50adf9392354f704a359a5",
       "contextHash": "b6a786501f97cff3e31e7214b75ce554b0e387e8282f4150391bcf2367f838b9",
       "speakerRef": "jia-baoyu",
       "emotion": {
@@ -873,11 +873,11 @@
       ],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
-      "note": "贾宝玉；压住悲意并保留呼吸停顿，不作泛化哭腔，演绎重心为 tearful-concern。"
+      "note": "贾宝玉；惦念被遣散的芳官等人，压住悲意并保留呼吸停顿，不作泛化哭腔，演绎重心为 tearful-concern。"
     },
     "081-b0035": {
       "textHash": "8a62ae3231a54e702226d948f7442b330008bd49d2142df0a26cc3d4252eef92",
-      "contextHash": "54fd8841b0079e0dfe33e69b77681debae85cf703de2230162231e88c026a35c",
+      "contextHash": "b2586c976ceadc0591c0c3b327f114ef8da2a7a862eecf052773fac124505fa3",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -897,7 +897,7 @@
       "note": "旁白；按场景转折处理复合情绪，前后层次分明，演绎重心为 tense-confrontation。"
     },
     "081-b0036": {
-      "textHash": "5ad04594510630c0bfbaa5be4dd3542f49b071f6849a0b42434c8ef33be33bb3",
+      "textHash": "80eadc737deb242a2922bc43b9fe77c2021fb920ce3407dcefc91541aee9d519",
       "contextHash": "85f5de1bf86a1bd464dfe4c554e2fac847318f1c3a81c6740bfeb680aeb4e6ba",
       "speakerRef": "kui-guan",
       "emotion": {
@@ -905,7 +905,7 @@
         "variant": "tearful-grievance",
         "intensity": 2
       },
-      "pace": "slow",
+      "pace": "broken",
       "pitch": "low",
       "energy": "medium",
       "timbre": [
@@ -918,27 +918,33 @@
       ],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
-      "note": "葵官；抽噎着说明龄官及众人在水月庵的处境，委屈、哽咽，但仍努力把事情交代清楚。",
+      "note": "葵官；抽噎中逐项交代芳官、藕官、蕊官、龄官的去向，转到众人被干娘领回并日日被逼婚时委屈加深；虽哽咽仍须把地点和人名说清。",
       "delivery": {
         "forcedUnits": [
           {
-            "text": "龄官在城外赁屋子住，蔷大爷还常去瞧她。",
-            "speed": 0.9,
+            "text": "芳官在水月庵，藕官、蕊官去了地藏庵，",
+            "speed": 0.95,
             "continuous": true,
-            "instruction": "抽噎中交代龄官近况，话要说清"
+            "instruction": "抽噎中逐项交代去向，芳官、藕官、蕊官及两处庵名要说清，逗号只作短停"
           },
           {
-            "text": "我们几个仍在水月庵里，干娘又逼着说人家，这才逃了出来。",
-            "speed": 0.87,
+            "text": "龄官在城外赁了屋子住，蔷大爷还常去瞧她。",
+            "speed": 0.94,
             "continuous": true,
-            "instruction": "委屈加深，逼婚处哽咽，末尾低落"
+            "instruction": "继续交代龄官近况，含泪但不拖字"
+          },
+          {
+            "text": "我们几个被各自干娘领了回去，日日被逼着说人家。",
+            "speed": 0.92,
+            "continuous": true,
+            "instruction": "委屈明显加深，逼婚处轻微哽咽，末尾低落"
           }
         ]
       }
     },
     "081-b0041": {
       "textHash": "64e5296790552ebc9dbf6e56843fec3975781ade297ed4df5a61f1a3aa209af4",
-      "contextHash": "b0f7b4967c853a946e319cdd8a1678f2521a22011e2d4948429c61c3595f576f",
+      "contextHash": "e04651828260c90dadcdd14f38555e80cb75c441401b4155b11a891258f54078",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -1106,7 +1112,7 @@
     },
     "081-b0045": {
       "textHash": "4b4738b4f3d5eaf9f0061cd5b08827a4540cce2360260544ce587da2bc093df3",
-      "contextHash": "d42bb1a5959f84f207e305464f1573448dba2a79fad8e11e466d4457d01f7539",
+      "contextHash": "b979f95db313dad39c7fe3a35e70e841aae7ef1cfd6100200cddb284b2ca0d26",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -1126,7 +1132,7 @@
       "note": "旁白；按场景转折处理复合情绪，前后层次分明，演绎重心为 tense-confrontation。"
     },
     "081-b0046": {
-      "textHash": "c7e31d29f6a307c80d9bd5c98cb6a570dbcf4aaceb2125650dc5d7c32be08e93",
+      "textHash": "a61e74ac79b763b75a1d7c09fadc73cfe030a9ffac63c46d28abfc4474d4b247",
       "contextHash": "1b85b63a835556da5177a20d30552be31e64e0aa76e721a489b06bc102bd7766",
       "speakerRef": "dou-guan",
       "emotion": {
@@ -1142,13 +1148,13 @@
         "sharp"
       ],
       "modifiers": [],
-      "reviewStatus": "ai-reviewed",
+      "reviewStatus": "human-reviewed",
       "confidence": 0.96,
-      "note": "荳官；保持当场针对性的力度，避免无差别喊叫，演绎重心为 taunting-challenge。"
+      "note": "荳官先拍手连声附和“正是，正是！”，随即以带怒意的讥诮向袭人挑战；前两声短促有力，后文紧接而不拖沓。"
     },
     "081-b0047": {
       "textHash": "7642f56862fb48a7308072923e19213990766efc4fe8d5eb3a2d86617d32196d",
-      "contextHash": "739006dd551a716d87f6e22bc6b86e38d1e2adc35a1cd9ae5d73ea851d61b048",
+      "contextHash": "6e5480d85de0b93c8f46e66776fa851d8cc867e8e16c9f766ac5d27e5f7a94f1",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -1341,7 +1347,7 @@
     },
     "081-b0257": {
       "textHash": "426e6e8ad6c70ab340f14983ccbd3e42b83aa2a834302dfcdd71653641859269",
-      "contextHash": "dd9d6eeda2326032ca430295ec5739e51701207cebb588962d5fef8491aadcd5",
+      "contextHash": "98ee60965d7c8c86fdff54aebec910109ccfc334b10ad08967d54c44bca605e8",
       "speakerRef": "jia-baoyu",
       "emotion": {
         "family": "fear",
@@ -1358,15 +1364,15 @@
       "modifiers": [],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
-      "note": "贾宝玉；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 urgent-restraint。"
+      "note": "贾宝玉先急切制止，随即点明放她们入园的人会受连累，以现实后果压住争闹；语速紧而字句清楚，不演成惊叫。"
     },
     "081-b0258": {
-      "textHash": "e1d8dff6f91afeca038705be560dd8812fec7e16120d55a44628713ba3324405",
+      "textHash": "8dfe14359800225c5c73ff14bec8c44139c96677905e769ed79e168f6428f567",
       "contextHash": "79fb697d93d1e40d77daf2ccf129eacf38b803e767a3ff1463aafb4c9b2a43d4",
       "speakerRef": "$narrator",
       "emotion": {
-        "family": "fear",
-        "variant": "anxious-exposition",
+        "family": "mixed",
+        "variant": "cautious-exposition",
         "intensity": 1
       },
       "pace": "medium",
@@ -1379,27 +1385,27 @@
       "modifiers": [],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.97,
-      "note": "旁白；说明三人借智能儿入园的因果。“智能儿”与“惜春”是并列人物名，“簪环钗契”作为完整名物词组。",
+      "note": "旁白；先补叙智能儿私逃后重回水月庵的经过，再交代艾官等借她入园的因果，末尾转为怕牵连智能儿的迟疑。“智能儿常同惜春往来”中的两个人名须清楚，“簪环钗契”作为完整名物词组连读。",
       "delivery": {
         "forcedUnits": [
           {
-            "text": "因知智能儿常同惜春往来，",
-            "speed": 0.94,
+            "text": "恰知道了智能儿常同惜春往来，",
+            "speed": 0.96,
             "continuous": true,
-            "instruction": "智能儿与惜春是两个并列人名，常同惜春自然连读"
+            "instruction": "智能儿与惜春是两个不同人名，常同惜春自然连读，逗号短停"
           },
           {
             "text": "便托言有簪环钗契遗在园中，",
-            "speed": 0.94,
+            "speed": 0.95,
             "continuous": true,
-            "instruction": "簪环钗契作为完整名物词组连读"
+            "instruction": "簪环钗契作为完整名物词组连读，不在词中停顿"
           }
         ]
       }
     },
     "081-b0259": {
       "textHash": "acc70c041cfb94d7d4733ab60fb85a4904764bf910b952b45641d89c7b3ace91",
-      "contextHash": "5477bf78f24e2440b88bdad0b5f1cf2c5d2dcf5d550171eb1f8d3dada937c861",
+      "contextHash": "5f881c2685413401c3f3e38f6e1f4987e197a6883bf62f85be57980510e43f27",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -4886,7 +4892,7 @@
     },
     "081-b0190": {
       "textHash": "8eed7944b9ccefdcc18e2010d6554710a0a15a878cc5f5ffe8150c62dd1b7d69",
-      "contextHash": "b748c588096773cb9555cd66552804ecb864f89b15494d0eae669329c0969e85",
+      "contextHash": "e9af0b7eba940c77264aaf75fe1ab4b5e899a108b33df10e29c76c82243b69d7",
       "speakerRef": "zhen-shiyin",
       "emotion": {
         "family": "sadness",
@@ -4908,7 +4914,7 @@
       "note": "甄士隐；压住悲意并保留呼吸停顿，不作泛化哭腔，演绎重心为 helpless-father。"
     },
     "081-b0324": {
-      "textHash": "d4193b276b3f2b21effcfded2fafa67d19ec4245fd1dc1f385500010d3347af5",
+      "textHash": "2c668ff0aaed65548ea8c0274ee26b88a4a5e81f23cb189d852b059309638d2c",
       "contextHash": "0d5b1906427e90d014fbb5a19ef9e10665e5ba1f74026f1ce618b08a7856a42d",
       "speakerRef": "$narrator",
       "emotion": {
@@ -4928,11 +4934,18 @@
       ],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.97,
-      "note": "旁白；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 dream-collapse。"
+      "note": "旁白；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 dream-collapse。“将士隐拉走”按“将（jiāng，第一声）／士隐／拉走”组织词界：将为介词，士隐为人名，拉走为动作；三个词组连续说出。",
+      "pronunciations": [
+        {
+          "text": "将士隐拉走",
+          "pinyin": "jiāng shì yǐn lā zǒu",
+          "replacement": "姜士隐拉走"
+        }
+      ]
     },
     "081-b0325": {
       "textHash": "7734f62a2c153f69db32eac944d04bc72689abd9b1f7f9caf7c1a57e871abaa5",
-      "contextHash": "334002a8fcd1afc216340b1f8a1e10b445e1677f39e928c1667d9b6e2163bd25",
+      "contextHash": "aec139f51a2c1219964fc5e83231969b304648776699745a2a5a18c5792a7000",
       "speakerRef": "xiangling",
       "emotion": {
         "family": "fear",
@@ -5104,7 +5117,7 @@
     },
     "081-b0333": {
       "textHash": "d6563cca862e9113a190cd944bad967a92f3e835052f181192e0e679f10db7a5",
-      "contextHash": "44dda5db9392b6dd1c5a3553d59a36c91f7bbc12720500b8e71bba2e06e20136",
+      "contextHash": "b8fae7634f580f6d1d228c27e1ce80ed13023f64a49445d9c37cad97b869925a",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "fear",
@@ -5124,7 +5137,7 @@
       "note": "旁白；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 hurried-coverup。"
     },
     "081-b0197": {
-      "textHash": "3a0fe1fe4c9b88e63b25c1a1b863a2303f42bdb6d769393de0cbad4f7bc71d34",
+      "textHash": "0dd0e2825f9ae3bad4406a64b7bd4410c2c9511d813114d5d0bd76da8c16ee01",
       "contextHash": "4144d70f3ef162a4a03c89d3cec9a14538d9f40eeb8b1483989c14130793d47b",
       "speakerRef": "$narrator",
       "emotion": {
@@ -5142,11 +5155,11 @@
       "modifiers": [],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.97,
-      "note": "旁白；压住悲意并保留呼吸停顿，不作泛化哭腔，演绎重心为 death-discovery。"
+      "note": "旁白；文杏从隔壁闻声赶来，发现香菱已死，先惊骇、继而哭喊报信；宝钗母女赶到后转为压抑的悲痛与疑惧，不渲染惨状。"
     },
     "081-b0198": {
       "textHash": "5e6e8222f5f89e5e13b9acd8971fa0a77fb5934687879ba0ef17d92499234775",
-      "contextHash": "c8827f6673e30aa441e7c432d31a2ecf961f7df736ec8c2897e4f5fd0358d0d0",
+      "contextHash": "71064e1a8f2e82b096b6c6cc7f718a87f59aa2f76cfdb7b77fd74de00e5105a4",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -5376,7 +5389,14 @@
       "modifiers": [],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.72,
-      "note": "封氏惊疑追问来历；缺少专卡，使用年长女眷公共声线。"
+      "note": "封氏惊疑追问来历；缺少专卡，使用年长女眷公共声线。正文‘从那里听来’按用户要求在合成层读作‘从哪里听来’。",
+      "pronunciations": [
+        {
+          "text": "这些话从那里听来？",
+          "pinyin": "zhè xiē huà cóng nǎ lǐ tīng lái",
+          "replacement": "这些话从哪里听来？"
+        }
+      ]
     },
     "081-b0344": {
       "textHash": "423fffc4389c230d3a4efec42d13fe2c5cd8494498d561a67998402dca61b6da",
@@ -6218,7 +6238,7 @@
     },
     "081-b0373": {
       "textHash": "a2c8ffa7de982220321cd3d2929404d35850f94b2845f04a3d1a35ae61c0a170",
-      "contextHash": "d5ab57f0923e9450ea8ae51f7d14c979e63b50b1573f8aa5c7f7f9f08f6e8e25",
+      "contextHash": "6f60a0252b5c7875d47cfa50cb7b14f59f8ca6740d4c40a0aa262a4cd07451ce",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -6238,7 +6258,7 @@
       "note": "旁白；按场景转折处理复合情绪，前后层次分明，演绎重心为 spectral-transition。"
     },
     "081-b0217": {
-      "textHash": "5f3e93366ce96486eb982f72dcccff26148410c70baebcf5693765a551b1d59a",
+      "textHash": "66a71c9622628cf1959833842d638c9a26f4750005b69956cc035ecd949f9ea6",
       "contextHash": "eae8c3d3d77718f3365fd24c37b4bc0d2e8e7eef50395844b41c05b44980909b",
       "speakerRef": "xiangling",
       "emotion": {
@@ -6258,11 +6278,11 @@
       ],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
-      "note": "香菱；按场景转折处理复合情绪，前后层次分明，演绎重心为 otherworldly-farewell。"
+      "note": "香菱梦中现身，平静而超然地说明自己已往副册报到，并告知将随父回姑苏；带告别意味，不作阴森鬼声。"
     },
     "081-b0218": {
       "textHash": "993becd4ba0b4d4aad837bf8b69161779e51fbf93bfe7327ec768e2ac1a337cf",
-      "contextHash": "9618a105cc8ff75d13e8c40a76f987b763d1c75556aef4074f9f01eafaea0c10",
+      "contextHash": "31a2a909b8b135502ce8f33a428fad741029ab02e77f5dd42ffd01ea592ea01a",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "fear",
@@ -6284,7 +6304,7 @@
       "note": "旁白；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 dream-confusion。"
     },
     "081-b0219": {
-      "textHash": "ecf98a671e01c262ca297cb334b71f449f921bc053f63cde3dd9a80f6f9d5cf1",
+      "textHash": "de5e43704ccdad59ae5be0e4dc490cb7e62f43ada09c3403293c067ac50f497d",
       "contextHash": "bb7617d1d49957343b3086d4ec49d257ec39076bd135353c7da83bd3227b0db5",
       "speakerRef": "jia-baoyu",
       "emotion": {
@@ -6304,11 +6324,11 @@
       ],
       "reviewStatus": "ai-reviewed",
       "confidence": 0.96,
-      "note": "贾宝玉；带出惊惧或迟疑，同时确保字句清楚，演绎重心为 sleepy-confusion。"
+      "note": "贾宝玉在梦中茫然追问“副册”含义；两个问句都有真实求解的问意，轻声迷惑，不作惊叫。"
     },
     "081-b0220": {
       "textHash": "79ec887fe06a38cffdf22da919c531ba6faf05cbe692a22712824db239bdc014",
-      "contextHash": "be6c3638a0df9adf3d40fb54aaad53c79fbb502955b6b691036c2109cb096eca",
+      "contextHash": "e30da5285b8b732aa4c34ce3552169bcc45c073a0c37aed1e86a2594d5c819e1",
       "speakerRef": "$narrator",
       "emotion": {
         "family": "mixed",
@@ -6842,5 +6862,5 @@
       "note": "旁白；语意清楚克制，按前后文自然收放，演绎重心为 chapter-close。"
     }
   },
-  "annotationSetHash": "2175fe25d7f780a074bf8b3f0c3ca34346ddd7cc0550dc85b90a2a0cbaa5877c"
+  "annotationSetHash": "881182f367402f0271a574a47b50c99d4c3e6077ce85d843a7752ce58fabe39d"
 }

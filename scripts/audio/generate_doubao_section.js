@@ -129,22 +129,31 @@ export function buildSectionTargets({ blocks, annotations, references, provider,
 }
 
 export function buildExcerptTargets(targets, name, profile) {
-	if (!/^[a-z0-9-]+$/u.test(name) || !profile?.targetIds?.length) throw new Error('小样名称或片段配置无效。');
+	if (!/^[a-z0-9-]+$/u.test(name) || (!profile?.targetIds?.length && !profile?.targetRange)) throw new Error('小样名称或片段配置无效。');
+	const rangeIds = profile?.targetRange
+		? (() => {
+			const start = targets.findIndex((target) => target.targetId === profile.targetRange.startTargetId);
+			const end = targets.findIndex((target) => target.targetId === profile.targetRange.endTargetId);
+			if (start < 0 || end < start) throw new Error('小样目标范围无效。');
+			return targets.slice(start, end + 1).map((target) => target.targetId);
+		})()
+		: profile.targetIds;
+	const selectedTargetIds = rangeIds;
 	const positions = new Map(targets.map((target, index) => [target.targetId, index]));
-	const indexes = profile.targetIds.map((id) => positions.get(id));
+	const indexes = selectedTargetIds.map((id) => positions.get(id));
 	if (indexes.some((index) => index === undefined) || indexes.some((index, position) => position && index <= indexes[position - 1])) {
 		throw new Error('小样片段缺失、重复或不按正文顺序。');
 	}
 	const verbatim = new Set(profile.verbatimSynthesisText || []);
-	if ([...verbatim].some((id) => !profile.targetIds.includes(id))) throw new Error('小样逐字合成目标不在本小样中。');
+	if ([...verbatim].some((id) => !selectedTargetIds.includes(id))) throw new Error('小样逐字合成目标不在本小样中。');
 	if (Object.keys(profile.sourceOverrides || {}).some((id) => !verbatim.has(id))) throw new Error('小样源音频覆盖必须指向逐字合成目标。');
-	if (Object.keys(profile.targetOverrides || {}).some((id) => !profile.targetIds.includes(id))) throw new Error('小样重录目标不在本小样中。');
-	if (Object.keys(profile.tailRepairs || {}).some((id) => !profile.targetIds.includes(id))) throw new Error('小样尾部修整目标不在本小样中。');
+	if (Object.keys(profile.targetOverrides || {}).some((id) => !selectedTargetIds.includes(id))) throw new Error('小样重录目标不在本小样中。');
+	if (Object.keys(profile.tailRepairs || {}).some((id) => !selectedTargetIds.includes(id))) throw new Error('小样尾部修整目标不在本小样中。');
 	if (profile.performanceReference && (!profile.performanceReference.id || !profile.performanceReference.path
 		|| !/^[a-f0-9]{64}$/u.test(profile.performanceReference.fileHash || ''))) {
 		throw new Error('小样表演参考必须包含 id、相对路径和 SHA-256。');
 	}
-	return profile.targetIds.map((id) => {
+	return selectedTargetIds.map((id) => {
 		const target = targets[positions.get(id)];
 		const isVerbatim = verbatim.has(id);
 		const override = profile.targetOverrides?.[id];
@@ -183,6 +192,8 @@ export function synthesisSpec(target, provider, splitVersion) {
 		voiceCardPath: target.reference.path,
 		voiceCardFileHash: target.reference.fileHash,
 		voiceCardText: target.reference.text || null,
+		...(target.reference.assetKind && target.reference.assetKind !== 'voiceCardWav'
+			? { voiceCardAssetKind: target.reference.assetKind } : {}),
 		...(target.performanceReference ? { performanceReference: target.performanceReference } : {}),
 		instruction: target.instruction,
 		providerOverride: target.providerOverride || null,
@@ -208,6 +219,15 @@ export function canReuseLegacy(target, oldTarget, fragment) {
 export function withCurrentAssemblySettings(cached, target) {
 	return { ...cached, pauseAfterMs: target.pauseAfterMs,
 		assemblyGainDb: target.assemblyGainDb, normalizationMode: target.normalizationMode };
+}
+
+export function shouldConditionArtifact(artifact, conditioning) {
+	return Boolean(conditioning) && artifact.approvedAssembly?.preserveReviewedAudio !== true;
+}
+
+export function approvedArtifactText(target, source) {
+	const synthesisText = source.synthesisText || target.synthesisText;
+	return { synthesisText, subtitleText: synthesisText };
 }
 
 function assertAssemblyBinding(target, binding, label) {
@@ -256,7 +276,8 @@ export async function resolveApprovedAssembly(targets, section) {
 		coveredTargetIds.add(targetId);
 		sourceByTarget.set(targetId, { ...source, ...verified });
 		reviewRecords.push({ type: 'source', id: targetId, targetIds: [targetId], fileHash: source.fileHash,
-			path: source.path, reason: source.reason, review: verified.review });
+			path: source.path, synthesisText: source.synthesisText || target.synthesisText,
+			reason: source.reason, review: verified.review });
 	}
 	for (const group of config.groupOverrides || []) {
 		if (!group?.id || !group.targetIds?.length || group.targetIds.length !== group.bindings?.length) {
@@ -291,6 +312,7 @@ export async function resolveReviewSceneSources(targets, reviewPlan) {
 		const source = candidates.get(target.targetId);
 		if (!source || source.kind !== 'dialogue_fragment' || source.provider !== 'doubao'
 			|| source.unitText !== target.text || source.performance?.synthesisText !== target.synthesisText
+			|| target.providerOverride?.retryVersion !== undefined
 			|| source.annotationHash !== target.annotationHash
 			|| source.voiceCard?.id !== target.reference.id
 			|| source.voiceCard?.fileHash !== target.reference.fileHash
@@ -304,30 +326,57 @@ export async function resolveReviewSceneSources(targets, reviewPlan) {
 	return sourceByTarget;
 }
 
-function cardPromptText(metadata) {
-	return metadata?.generation?.voiceCardText || metadata?.voiceCard?.text || metadata?.texts?.voiceCard;
+function cardPromptText(metadata, assetKind = 'voiceCardWav') {
+	if (assetKind === 'sourceReferenceMp3' || assetKind === 'sourceReferenceWav') {
+		return metadata?.exactTranscript || metadata?.sourceReferenceText || metadata?.source?.exactTranscript;
+	}
+	return metadata?.generation?.voiceCardText || metadata?.voiceCardText
+		|| metadata?.voiceCard?.text || metadata?.texts?.voiceCard;
+}
+
+function metadataVoiceCardHashes(metadata, assetKind = 'voiceCardWav') {
+	const hashes = new Set();
+	if (assetKind === 'sourceReferenceMp3' && /^[a-f0-9]{64}$/u.test(metadata?.files?.sourceReferenceMp3?.sha256 || '')) {
+		hashes.add(metadata.files.sourceReferenceMp3.sha256);
+	}
+	if (assetKind === 'sourceReferenceWav' && /^[a-f0-9]{64}$/u.test(metadata?.files?.sourceReferenceWav?.sha256 || '')) {
+		hashes.add(metadata.files.sourceReferenceWav.sha256);
+	}
+	if (/^[a-f0-9]{64}$/u.test(metadata?.voiceCard?.sha256 || '')) hashes.add(metadata.voiceCard.sha256);
+	for (const [name, file] of Object.entries(metadata?.files || {})) {
+		if (/voicecard.*wav/iu.test(name) && /^[a-f0-9]{64}$/u.test(file?.sha256 || '')) hashes.add(file.sha256);
+	}
+	return hashes;
 }
 
 export async function verifiedReferences(section, decisions) {
+	const disabledCards = await readJsonIfExists(absolute('content/audio/voice-cards/disabled-cards.json'));
 	const approved = new Map(decisions.decisions.filter((item) => item.decision === 'approved-by-user').map((item) => [item.id, item]));
 	const references = {};
 	for (const [speakerRef, config] of Object.entries(section.voiceCards || {})) {
 		const decision = approved.get(config.approvalId);
-		const approvedHash = decision?.reviewedAudio?.voiceCardWavSha256;
+		const assetKind = config.assetKind || 'voiceCardWav';
+		const approvedHash = assetKind === 'sourceReferenceMp3'
+			? decision?.reviewedAudio?.sourceSha256
+			: assetKind === 'sourceReferenceWav'
+				? decision?.reviewedAudio?.sourceWavSha256
+				: decision?.reviewedAudio?.voiceCardWavSha256;
 		const localSelection = config.localDraftSelection;
 		const scopedDraftSelection = !approvedHash && localSelection?.scope === `${CHAPTER}:${section.id}:draft`;
 		if (!approvedHash && !scopedDraftSelection) throw new Error(`${speakerRef} 没有绑定 WAV 哈希的人工批准或本节草稿选卡记录。`);
 		const metadata = await readJsonIfExists(absolute(config.generationPath));
-		const text = cardPromptText(metadata);
+		const text = cardPromptText(metadata, assetKind);
 		if (!text) throw new Error(`${speakerRef} 的元数据缺少音色卡准确文本。`);
 		const fileHash = await sha256File(absolute(config.path));
+		if (disabledCards?.cards?.some(card => card.fileHash === fileHash && card.status === 'disabled-by-user')) throw new Error(`${speakerRef} 声卡已被用户禁用：${fileHash}`);
 		if (fileHash !== (approvedHash || localSelection.fileHash)) throw new Error(`${speakerRef} 的音色卡已变化，选卡记录失效。`);
-		if (scopedDraftSelection && metadata.files?.voiceCardDeliveryWav?.sha256 !== fileHash) {
+		if (scopedDraftSelection && !metadataVoiceCardHashes(metadata, assetKind).has(fileHash)) {
 			throw new Error(`${speakerRef} 本节草稿卡的元数据哈希不符。`);
 		}
 		references[speakerRef] = { id: config.id, approvalId: approvedHash ? config.approvalId : null,
 			...(scopedDraftSelection ? { selectionId: config.approvalId, selectionStatus: 'user-selected-local-draft' } : {}),
-			path: config.path, fileHash, text };
+			...(config.proxyNote ? { proxyNote: config.proxyNote } : {}), path: config.path, fileHash, text,
+			assetKind };
 	}
 	const narrator = section.narratorReference;
 	if (!narrator || await sha256File(absolute(narrator.path)) !== narrator.fileHash) {
@@ -365,7 +414,7 @@ async function probe(path) {
 	return { codec: stream.codec_name, sampleRate: Number(stream.sample_rate), channels: Number(stream.channels), durationSeconds: Number(data.format.duration), bytes: Number(data.format.size) };
 }
 
-async function validateWav(path) {
+export async function validateWav(path) {
 	const info = await probe(path);
 	if (info.codec !== 'pcm_s16le' || info.sampleRate !== 24000 || info.channels !== 1 || info.durationSeconds <= 0.15) {
 		throw new Error(`${path} 不是有效的 24 kHz 单声道 PCM16 片段。`);
@@ -406,7 +455,7 @@ function subtitleText(value) {
 	return '';
 }
 
-async function renderTarget(target, provider, client, directory, oldTarget, oldFragment) {
+export async function renderTarget(target, provider, client, directory, oldTarget, oldFragment) {
 	const spec = synthesisSpec(target, provider, target.splitVersion);
 	const synthesisHash = hashJson(spec);
 	const renderHash = hashJson({ synthesisHash, normalization: provider.audio,
@@ -472,7 +521,7 @@ async function renderTarget(target, provider, client, directory, oldTarget, oldF
 		? `请同时参考@音频1和@音频2，它们属于同一人物；以@音频1作为标准音色，以@音频2保持${performanceGuidance}。${target.instruction}正文：“${target.synthesisText}”`
 		: `请参考@音频1的说话人身份和音色；参考@音频2的${performanceGuidance}，但绝不使用@音频2的说话人音色。${target.instruction}正文：“${target.synthesisText}”`;
 	const textPrompt = target.providerOverride?.promptMode === 'strict-text'
-		? `请参考@音频1的说话人音色。必须直接朗读双引号内正文，正文前后保持静音，不说提示语，不加语气词，不续写。正文：“${target.synthesisText}”`
+		? `请参考@音频1的说话人音色。${target.instruction} 必须直接朗读双引号内正文，正文前后保持静音，不说提示语，不加语气词，不续写。正文：“${target.synthesisText}”`
 		: target.performanceReference
 			? performancePrompt
 			: `请参考@音频1的说话人身份和音色，${target.instruction}正文：“${target.synthesisText}”`;
@@ -520,7 +569,7 @@ async function whisperCheck(artifacts, directory) {
 			structuralPass: passesWhisperStructuralReview(item) })) };
 }
 
-export function pcmLevels(buffer) {
+export function pcmLevels(buffer, gainDb = 0) {
 	if (buffer.toString('ascii', 0, 4) !== 'RIFF' || buffer.toString('ascii', 8, 12) !== 'WAVE') throw new Error('不是 WAV。');
 	let position = 12;
 	let data;
@@ -542,12 +591,25 @@ export function pcmLevels(buffer) {
 			peak = Math.max(peak, Math.abs(sample));
 			squared += sample * sample;
 		}
-		windows.push(20 * Math.log10(Math.max(1e-8, Math.sqrt(squared / count))));
+		windows.push(20 * Math.log10(Math.max(1e-8, Math.sqrt(squared / count))) + gainDb);
 	}
 	const active = windows.filter((value) => value > -48).sort((a, b) => a - b);
 	return { activeRmsDbfs: active.length ? Number(active[Math.floor(active.length / 2)].toFixed(2)) : -160,
-		peakDbfs: Number((20 * Math.log10(Math.max(1e-8, peak))).toFixed(2)),
+		peakDbfs: Number((20 * Math.log10(Math.max(1e-8, peak)) + gainDb).toFixed(2)),
 		activeWindowRatio: Number((active.length / windows.length).toFixed(3)) };
+}
+
+function assemblyLevels(buffer, gainDb = 0) {
+	const source = pcmLevels(buffer);
+	const assembled = gainDb ? pcmLevels(buffer, gainDb) : source;
+	return {
+		activeRmsDbfs: assembled.activeRmsDbfs,
+		peakDbfs: assembled.peakDbfs,
+		activeWindowRatio: assembled.activeWindowRatio,
+		sourceActiveRmsDbfs: source.activeRmsDbfs,
+		sourcePeakDbfs: source.peakDbfs,
+		assemblyGainDb: gainDb,
+	};
 }
 
 async function loudness(path, master) {
@@ -600,7 +662,7 @@ async function prepareExcerptArtifact(artifact, excerptDirectory, policy, pauseT
 	return { ...artifact, ...prepared, pathAbsolute: output, trimCacheType: 'generated' };
 }
 
-async function compose(artifacts, provider, directory, options = {}) {
+export async function compose(artifacts, provider, directory, options = {}) {
 	const silence = new Map();
 	const lines = [];
 	for (let index = 0; index < artifacts.length; index += 1) {
@@ -692,10 +754,13 @@ async function compose(artifacts, provider, directory, options = {}) {
 
 async function approvedSourceArtifact(target, source) {
 	const info = await validateWav(source.sourcePath);
-	return { ...target, fileHash: source.fileHash, path: source.path, pathAbsolute: source.sourcePath,
-		durationSeconds: info.durationSeconds, subtitleText: target.synthesisText, subtitleExact: true,
+	return { ...target, ...approvedArtifactText(target, source),
+		fileHash: source.fileHash, path: source.path, pathAbsolute: source.sourcePath,
+		durationSeconds: info.durationSeconds, subtitleExact: true,
+		assemblyGainDb: source.assemblyGainDb ?? target.assemblyGainDb,
 		cacheType: 'approved-assembly-source', approvedAssembly: {
 			status: source.status, reason: source.reason, review: source.review,
+			preserveReviewedAudio: source.preserveReviewedAudio === true,
 		} };
 }
 
@@ -736,7 +801,8 @@ async function approvedGroupArtifact(targets, group) {
 		normalizationMode: null,
 		subtitleExact: true,
 		cacheType: 'approved-assembly-group',
-		approvedAssembly: { status: group.status, reason: group.reason, review: group.review },
+		approvedAssembly: { status: group.status, reason: group.reason, review: group.review,
+			preserveReviewedAudio: group.preserveReviewedAudio === true },
 	};
 }
 
@@ -784,6 +850,8 @@ async function main() {
 		const excerptTargets = buildExcerptTargets(targets, excerptName, profile);
 		const excerptDirectory = join(directory, 'excerpts', excerptName);
 		const currentSectionManifest = await readJsonIfExists(join(directory, 'scene-manifest.json'));
+		const approvedAssembly = await resolveApprovedAssembly(excerptTargets, { approvedAssembly: profile.approvedAssembly });
+		const reviewSceneSources = await resolveReviewSceneSources(excerptTargets, reviewScenePlan);
 		const sourceOverrides = new Map();
 		for (const [id, override] of Object.entries(profile.sourceOverrides || {})) {
 			const target = excerptTargets.find((item) => item.targetId === id);
@@ -797,7 +865,8 @@ async function main() {
 			sourceOverrides.set(id, { source, override });
 		}
 		const cached = new Set((await Promise.all(excerptTargets.map(async (target) => {
-			if (sourceOverrides.has(target.targetId)) return null;
+			if (sourceOverrides.has(target.targetId) || approvedAssembly.coveredTargetIds.has(target.targetId)
+				|| reviewSceneSources.has(target.targetId)) return null;
 			const synthesisHash = hashJson(synthesisSpec(target, provider, target.splitVersion));
 			const renderHash = hashJson({ synthesisHash, normalization: provider.audio,
 				...(target.normalizationMode ? { normalizationMode: target.normalizationMode } : {}) });
@@ -806,9 +875,11 @@ async function main() {
 			return metadata?.renderHash === renderHash && await pathExists(output)
 				&& metadata.fileHash === await sha256File(output) ? target.targetId : null;
 		}))).filter(Boolean));
-		const legacyCount = excerptTargets.filter((target) => !sourceOverrides.has(target.targetId) && !cached.has(target.targetId)
+		const legacyCount = excerptTargets.filter((target) => !sourceOverrides.has(target.targetId)
+			&& !approvedAssembly.coveredTargetIds.has(target.targetId)
+			&& !reviewSceneSources.has(target.targetId) && !cached.has(target.targetId)
 			&& canReuseLegacy(target, oldTargets.get(target.targetId), oldFragments.get(target.targetId))).length;
-		console.log(`第 ${sectionId} 节小样 ${excerptName}：${excerptTargets.length} 单元；正文对齐 ${alignment.length}/${blocks.length}；片段缓存 ${cached.size}，旧章候选 ${legacyCount}，核验旧入片 ${sourceOverrides.size}，待合成 ${excerptTargets.length - cached.size - legacyCount - sourceOverrides.size}。`);
+		console.log(`第 ${sectionId} 节小样 ${excerptName}：${excerptTargets.length} 单元；正文对齐 ${alignment.length}/${blocks.length}；片段缓存 ${cached.size}，获批入片 ${approvedAssembly.coveredTargetIds.size}，争吵试听复用 ${reviewSceneSources.size}，旧章候选 ${legacyCount}，核验旧入片 ${sourceOverrides.size}，待合成 ${excerptTargets.length - cached.size - legacyCount - sourceOverrides.size - approvedAssembly.coveredTargetIds.size - reviewSceneSources.size}。`);
 		if (planOnly) return;
 		await mkdir(excerptDirectory, { recursive: true });
 		const excerptPlan = { version: 1, chapter, sectionId, excerptName, status: profile.status,
@@ -821,19 +892,40 @@ async function main() {
 		const credentials = await loadDoubaoCredentials(ROOT);
 		const client = new DoubaoAudioGenerationClient({ apiKey: credentials.apiKey, endpoint: provider.audioGenerationApi.endpoint });
 		const sourceArtifacts = [];
-		for (const target of excerptTargets) {
+		for (let index = 0; index < excerptTargets.length;) {
+			const target = excerptTargets[index];
 			const verified = sourceOverrides.get(target.targetId);
-			const artifact = verified
-				? { ...verified.source, pauseAfterMs: target.pauseAfterMs, cacheType: 'verified-section-source',
-					previewSourceOverride: verified.override, pathAbsolute: absolute(verified.source.path) }
-				: await renderTarget(target, provider, client, directory, oldTargets.get(target.targetId), oldFragments.get(target.targetId));
+			const reviewSource = reviewSceneSources.get(target.targetId);
+			const group = approvedAssembly.groupByFirst.get(target.targetId);
+			let artifact;
+			if (group) {
+				artifact = await approvedGroupArtifact(excerptTargets, group);
+				index += group.targetIds.length;
+			} else if (approvedAssembly.sourceByTarget.has(target.targetId)) {
+				artifact = await approvedSourceArtifact(target, approvedAssembly.sourceByTarget.get(target.targetId));
+				index += 1;
+			} else if (verified) {
+				artifact = { ...verified.source, pauseAfterMs: target.pauseAfterMs, cacheType: 'verified-section-source',
+					previewSourceOverride: verified.override, pathAbsolute: absolute(verified.source.path) };
+				index += 1;
+			} else if (reviewSource) {
+				artifact = await reviewSceneSourceArtifact(target, reviewSource);
+				index += 1;
+			} else {
+				artifact = await renderTarget(target, provider, client, directory, oldTargets.get(target.targetId), oldFragments.get(target.targetId));
+				index += 1;
+			}
 			sourceArtifacts.push(artifact);
 			console.log(`[${sourceArtifacts.length}/${excerptTargets.length}] ${target.targetId}：${artifact.cacheType}`);
 		}
 		const artifacts = [];
-		for (const artifact of sourceArtifacts) artifacts.push(await prepareExcerptArtifact(artifact, excerptDirectory,
-			profile.silencePolicy, profile.sourceOverrides?.[artifact.targetId]?.internalPauseTargetsMs,
-			profile.sourceOverrides?.[artifact.targetId]?.suffixReplacement, profile.tailRepairs?.[artifact.targetId]));
+		for (const artifact of sourceArtifacts) {
+			artifacts.push(artifact.approvedAssembly?.preserveReviewedAudio
+				? { ...artifact, trimCacheType: 'preserved-reviewed-audio' }
+				: await prepareExcerptArtifact(artifact, excerptDirectory,
+					profile.silencePolicy, profile.sourceOverrides?.[artifact.targetId]?.internalPauseTargetsMs,
+					profile.sourceOverrides?.[artifact.targetId]?.suffixReplacement, profile.tailRepairs?.[artifact.targetId]));
+		}
 		const levels = [];
 		for (const artifact of artifacts) {
 			const level = pcmLevels(await readFile(artifact.pathAbsolute));
@@ -847,8 +939,11 @@ async function main() {
 		const manifest = { version: 1, chapter, sectionId, excerptName, status: 'draft-for-user-listening',
 			planHash: hashJson(excerptPlan), source: excerptPlan.source, profile,
 			counts: { fragments: artifacts.length, generated: sourceArtifacts.filter((item) => item.cacheType === 'generated').length,
-				cacheHits: sourceArtifacts.filter((item) => item.cacheType !== 'generated').length },
+				cacheHits: sourceArtifacts.filter((item) => item.cacheType !== 'generated').length,
+				approvedAssemblyUnits: approvedAssembly.coveredTargetIds.size,
+				reviewSceneHits: reviewSceneSources.size },
 			voiceCards: Object.fromEntries(Object.entries(references).filter(([speaker]) => speaker !== '$narrator')),
+			approvedAssembly: approvedAssembly.reviewRecords,
 			fragments: artifacts.map(({ pathAbsolute, ...item }) => item), levels, whisper, output,
 			generatedAt: new Date().toISOString() };
 		await writeJsonAtomic(join(excerptDirectory, 'preview-manifest.json'), manifest);
@@ -863,6 +958,7 @@ async function main() {
 		outputConfig: { intermediateSampleRate: 24000, mp3SampleRate: 48000,
 			mp3BitrateKbps: provider.chapterDemo.mp3BitrateKbps || 128, master: provider.chapterDemo.master },
 		approvedAssembly: section.approvedAssembly || null,
+		fragmentConditioning: section.fragmentConditioning || null,
 		reviewSceneSource: reviewSceneSources.size ? { planHash: reviewScenePlan.planHash, scene: reviewScenePlan.scene } : null,
 		blocks: blocks.length, targets: targets.map((item) => ({ ...item,
 			...(reviewSceneSources.has(item.targetId)
@@ -918,12 +1014,15 @@ async function main() {
 			artifact = await renderTarget(target, provider, client, directory, oldTargets.get(target.targetId), oldFragments.get(target.targetId));
 			index += 1;
 		}
+		const conditioning = section.fragmentConditioning?.[artifact.targetId];
+		if (shouldConditionArtifact(artifact, conditioning)) artifact = await prepareExcerptArtifact(artifact, join(directory, 'conditioned'),
+			conditioning.silencePolicy, null, null, conditioning.tailRepair);
 		artifacts.push(artifact);
 		console.log(`[${artifacts.length} 个拼接片段] ${artifact.targetId}：${artifact.cacheType}`);
 	}
 	const levels = [];
 	for (const artifact of artifacts) {
-		const level = pcmLevels(await readFile(artifact.pathAbsolute));
+		const level = assemblyLevels(await readFile(artifact.pathAbsolute), artifact.assemblyGainDb || 0);
 		levels.push({ targetId: artifact.targetId, ...level });
 		if (level.activeRmsDbfs < -43 || level.peakDbfs > -0.3 || level.activeWindowRatio < 0.12) throw new Error(`${artifact.targetId} 疑似静音、削波或严重截断。`);
 	}

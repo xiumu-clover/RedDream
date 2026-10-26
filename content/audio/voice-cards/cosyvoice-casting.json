@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-10-18",
   "scope": "Local CosyVoice casting decisions; independent of the Edge-TTS voice-cards/index.json",
   "assignments": {
     "jia-yingchun": {
@@ -24,9 +24,158 @@
       "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-yingchun/resigned-calm-v1/generation.json",
       "reviewDecision": "user-selected",
       "note": "这是87版迎春原声制作的卡，作为秋纹代理声使用；保留原始人物和出处元数据，不复制或重命名音频。"
+    },
+    "xiao-que": {
+      "displayName": "小鹊",
+      "voiceCardId": "jia-zheng/studious-reflection-v1",
+      "castingAlias": "unknown-visitor",
+      "sourceCharacter": "贾政",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-zheng/studious-reflection-v1/voice-card-delivery.wav",
+      "voiceCardSha256": "e2ebbe900aa4396752173e6b13ef1e27539a0e09804a8a396d7f7d4078dd4ff4",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/unknown-visitor/jia-zheng-proxy-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-18-from-chapter-081-ending",
+      "note": "用户确认沿用第81回末已经听审确定的 unknown-visitor 声卡作为小鹊声线。底层为贾政代理声，不得描述为小鹊或其演员本人原声。"
+    }
+  },
+  "candidates": {
+    "jiang-yuhan": {
+      "displayName": "蒋玉菡",
+      "voiceCardId": "jia-yun/earnest-assistance-v1",
+      "sourceCharacter": "贾芸",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-yun/earnest-assistance-v1/voice-card.wav",
+      "voiceCardSha256": "c116e7d54e87fbaee217ce7da8b60da7cf54888a256663850341d67f83f88a93",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/hua-zifang/jia-yun-proxy-v2-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-card-swap-2026-10-03",
+      "note": "用户试听第81回第三小节后要求与花自芳对换卡片；现以第36集贾芸原声卡作为蒋玉菡代理。不是蒋玉菡或其演员本人原声。",
+      "previousAssignment": {
+        "voiceCardId": "jiang-yuhan/natural-explanation-v2",
+        "voiceCardSha256": "171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7",
+        "status": "reassigned-to-hua-zifang-by-user"
+      },
+      "rejectedVersions": [
+        {
+          "voiceCardId": "jiang-yuhan/graceful-recitation-v1",
+          "voiceCardSha256": "f88902b7c8adc66ac5f4727429631cb75307336a7aa3a6f657571ef507078828",
+          "reviewDecision": "rejected-by-user",
+          "reason": "行酒令语态导致日常说话不自然；历史文件保留、不路由。"
+        }
+      ]
+    },
+    "hua-zifang": {
+      "displayName": "花自芳",
+      "voiceCardId": "jiang-yuhan/natural-explanation-v2",
+      "sourceCharacter": "蒋玉菡",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/voice-card.wav",
+      "voiceCardSha256": "171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/generation.json",
+      "reviewDecision": "user-selected-card-swap-2026-10-03",
+      "note": "用户试听第81回第三小节后要求与蒋玉菡对换卡片；现以蒋玉菡本人原声卡作为花自芳代理。不是花自芳或其演员本人原声。",
+      "previousAssignment": {
+        "voiceCardId": "jia-yun/earnest-assistance-v1",
+        "voiceCardSha256": "c116e7d54e87fbaee217ce7da8b60da7cf54888a256663850341d67f83f88a93",
+        "status": "reassigned-to-jiang-yuhan-by-user"
+      },
+      "rejectedVersions": [
+        {
+          "voiceCardId": "zhen-shiyin/warm-encouragement-v1",
+          "voiceCardSha256": "175882d42f0749a62b978e8017d37799419c6c724235a2e204e35732dfab7c92",
+          "reviewDecision": "rejected-by-user",
+          "reason": "甄士隐在第81回另有对白且声线年龄偏大；历史代理记录保留、不路由。"
+        }
+      ]
+    },
+    "older-women-pool": {
+      "displayName": "年长女眷池（司棋母、封氏）",
+      "voiceCardId": "jia-mu/warm-praise-v2",
+      "sourceCharacter": "贾母",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-mu/warm-praise-v2/voice-card-delivery.wav",
+      "voiceCardSha256": "d6f078c5e4a8b64ea76744ab6af7352ea4daa225db7ad752566aaeeaf5ce5d66",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/older-women-pool/jia-mu-proxy-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-15",
+      "note": "用户已试听批准；底层为贾母代理声，声纹漂移警告保留。司棋母与封氏不直接对话。"
+    },
+    "young-maids-pool": {
+      "displayName": "年轻丫鬟池（王夫人丫头、莲花儿）",
+      "voiceCardId": "dou-guan/proxy-cast",
+      "sourceCharacter": "莲花儿",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio.cache/voice-cards/dou-guan/dou-guan-voice-card.wav",
+      "voiceCardSha256": "f1335c63a76e657b9bac918268f1b699c1ea43d98b02df029d7cc1cb820131ec",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/young-maids-pool/lianhuaer-shared-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-15",
+      "note": "用户已试听批准，只覆盖王夫人丫头和莲花儿；081-b0302未具名丫头仍必须拆分标注并使用另一张卡。"
+    },
+    "unnamed-young-maid": {
+      "displayName": "未具名年轻丫鬟（081-b0302）",
+      "voiceCardId": "chunyan/daily",
+      "sourceCharacter": "春燕",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio.cache/voice-cards/chunyan/chunyan-voice-card.wav",
+      "voiceCardSha256": "0a0771ce1f7d43046d098af7664e20137ca52692aa1d8c6529917268360b16c9",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/unnamed-young-maid/chunyan-shared-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-15-blocked-by-annotation-split",
+      "note": "用户已试听批准春燕代理声；正式标注尚未从young-maids-pool拆出，拆分前仍禁止路由。"
+    },
+    "pan-youan": {
+      "displayName": "潘又安",
+      "voiceCardId": "jiang-yuhan/natural-explanation-v2",
+      "sourceCharacter": "蒋玉菡",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jiang-yuhan/natural-explanation-v2/voice-card.wav",
+      "voiceCardSha256": "171f301580c98d531c08c3bc6425f0a5de35940a9312508ffc10159d600f5be7",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/pan-youan/candidates/jiang-yuhan-natural-v2/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-16-candidate-3",
+      "note": "用户在三个候选中选择第3版。底层为蒋玉菡 natural-explanation-v2 代理声，不是潘又安或其演员原声；第81回蒋玉菡与潘又安不在同场。",
+      "previousAssignment": {
+        "voiceCardId": "jia-yun/earnest-assistance-v1",
+        "voiceCardSha256": "c116e7d54e87fbaee217ce7da8b60da7cf54888a256663850341d67f83f88a93",
+        "status": "not-selected-by-user-2026-10-15"
+      },
+      "candidateSetPath": "content/audio/.cache/voice-cards/multistyle/pan-youan/candidates/candidate-set.json",
+      "reviewedDemoPath": "content/audio/.cache/voice-cards/multistyle/pan-youan/candidates/jiang-yuhan-natural-v2/demo-delivery.mp3",
+      "reviewedDemoSha256": "113e8dd461b480fcc2e6684296f51b6d3bf6c989e48606cf98bb13c0c78b6aa5"
+    },
+    "xia-jingui": {
+      "displayName": "夏金桂",
+      "voiceCardId": "wang-xifeng/practical-caution-v1",
+      "sourceCharacter": "王熙凤",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/wang-xifeng/practical-caution-v1/voice-card-delivery.wav",
+      "voiceCardSha256": "b14ddeac6f9982d6825203bb1f7c3229a0966f4d42b4edfd9f3bb8893795069a",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/xia-jingui/wang-xifeng-proxy-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-2026-10-15",
+      "note": "用户已试听批准王熙凤代理声；与本章香菱不撞声，不得描述为夏金桂本人或演员原声。"
+    },
+    "unknown-visitor": {
+      "displayName": "未具名来客",
+      "voiceCardId": "jia-zheng/studious-reflection-v1",
+      "sourceCharacter": "贾政",
+      "sourceType": "proxy-cast",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-zheng/studious-reflection-v1/voice-card-delivery.wav",
+      "voiceCardSha256": "e2ebbe900aa4396752173e6b13ef1e27539a0e09804a8a396d7f7d4078dd4ff4",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/unknown-visitor/jia-zheng-proxy-v1-demo/proxy-assignment.json",
+      "reviewDecision": "user-selected-for-xiao-que-2026-10-18",
+      "note": "第81回末最初按来客身份未明登记；用户现确认沿用该声卡作为小鹊声线。底层仍是贾政中性成年男声代理，不改写真实声源人物。"
     }
   },
   "reservedCards": [
+    {
+      "voiceCardId": "jia-baoyu/gentle-caring-v2",
+      "sourceCharacter": "贾宝玉",
+      "sourceType": "character-original-derived-card",
+      "voiceCardPath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/gentle-caring-v2/voice-card.wav",
+      "voiceCardSha256": "7f5083df8669938c1bfceac5ba55a4426b1f672bc223579c595edcdde89b75af",
+      "generationPath": "content/audio/.cache/voice-cards/multistyle/jia-baoyu/gentle-caring-v2/generation.json",
+      "status": "public-pool-unassigned",
+      "disabledForCharacters": [
+        "jia-baoyu"
+      ],
+      "note": "用户在第81回第三小节确认该卡不适合作为宝玉声线，已从宝玉路由禁用并转入公共候选池。保留贾宝玉原声来源事实和历史文件；分配给任何其他角色前必须另行试听批准。"
+    },
     {
       "voiceCardId": "qiu-wen/soft-remembrance-v1",
       "sourceCharacter": "秋纹",
