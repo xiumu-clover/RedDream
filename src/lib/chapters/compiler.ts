@@ -156,7 +156,7 @@ function appendText(nodes: ChapterNode[], value: string, position: SourcePositio
 	nodes.push({ type: 'text', value, position: clonePosition(position) });
 }
 
-function flattenText(nodes: ChapterNode[]): string {
+function flattenText(nodes: ChapterNode[], includeNoteNumbers = true): string {
 	let output = '';
 	for (const node of nodes) {
 		switch (node.type) {
@@ -167,13 +167,13 @@ function flattenText(nodes: ChapterNode[]): string {
 				output += ' ';
 				break;
 			case 'note-reference':
-				output += node.id;
+				if (includeNoteNumbers) output += node.id;
 				break;
 			case 'image':
 				output += node.caption ?? '';
 				break;
 			case 'mark':
-				output += flattenText(node.children);
+				output += flattenText(node.children, includeNoteNumbers);
 				break;
 		}
 	}
@@ -612,6 +612,60 @@ function renderImage(node: ImageNode): string {
 	return `<figure class="chapter-image" data-chapter-image><button class="chapter-image__open" type="button" data-chapter-image-open aria-label="${accessibleName}"><img src="${url}" alt="${alt}" loading="lazy" decoding="async" /></button>${caption}</figure>`;
 }
 
+// Split render-only fragments, retaining nested styles without modifying the source AST.
+function splitFirstLine(nodes: ChapterNode[]): {
+	firstLine: ChapterNode[];
+	remaining: ChapterNode[];
+	hasBreak: boolean;
+} {
+	const firstLine: ChapterNode[] = [];
+	for (const [index, node] of nodes.entries()) {
+		if (node.type === 'hard-break') {
+			return { firstLine, remaining: nodes.slice(index + 1), hasBreak: true };
+		}
+		if (node.type === 'text' && node.value.includes('\n')) {
+			const breakIndex = node.value.indexOf('\n');
+			if (breakIndex > 0) firstLine.push({ ...node, value: node.value.slice(0, breakIndex) });
+			const remaining = nodes.slice(index + 1);
+			if (breakIndex < node.value.length - 1) {
+				remaining.unshift({ ...node, value: node.value.slice(breakIndex + 1) });
+			}
+			return { firstLine, remaining, hasBreak: true };
+		}
+		if (node.type === 'mark') {
+			const split = splitFirstLine(node.children);
+			if (split.hasBreak) {
+				if (split.firstLine.length > 0) firstLine.push({ ...node, children: split.firstLine });
+				const remaining = nodes.slice(index + 1);
+				if (split.remaining.length > 0) remaining.unshift({ ...node, children: split.remaining });
+				return { firstLine, remaining, hasBreak: true };
+			}
+		}
+		firstLine.push(node);
+	}
+	return { firstLine, remaining: [], hasBreak: false };
+}
+
+function renderSc(
+	nodes: ChapterNode[],
+	notes: Map<string, NoteDefinition>,
+	idPrefix: string,
+): string {
+	let split = splitFirstLine(nodes);
+	let leadingLines = '';
+	while (!flattenText(split.firstLine, false) && split.hasBreak) {
+		leadingLines += `${renderNodes(split.firstLine, notes, idPrefix, true, true)}<br />`;
+		split = splitFirstLine(split.remaining);
+	}
+	const firstLineText = flattenText(split.firstLine, false);
+	if (!firstLineText || /[，。；？！]$/u.test(firstLineText)) {
+		return renderNodes(nodes, notes, idPrefix, true, true);
+	}
+	const title = renderNodes(split.firstLine, notes, idPrefix, true, true);
+	const verse = renderNodes(split.remaining, notes, idPrefix, true, true);
+	return `${leadingLines}<span class="chapter-verse-title">${title}</span>${verse}`;
+}
+
 function renderNodes(
 	nodes: ChapterNode[],
 	notes: Map<string, NoteDefinition>,
@@ -642,14 +696,16 @@ function renderNodes(
 				const isMultilineMp = node.kind === 'mp' && hasProseLineBreak(node.children);
 				const childIndentMpLines = isMultilineMp
 					|| (indentMpLines && !SELF_FORMATTING_LINE_MARKS.has(node.kind));
-				let markerContent = renderNodes(
-					node.children,
-					notes,
-					idPrefix,
-					preserveLines || LINE_PRESERVING_MARKS.has(node.kind),
-					formatAttributions || node.kind !== 'title',
-					childIndentMpLines,
-				);
+				let markerContent = node.kind === 'sc'
+					? renderSc(node.children, notes, idPrefix)
+					: renderNodes(
+						node.children,
+						notes,
+						idPrefix,
+						preserveLines || LINE_PRESERVING_MARKS.has(node.kind),
+						formatAttributions || node.kind !== 'title',
+						childIndentMpLines,
+					);
 				if (isMultilineMp) {
 					markerContent = `<span class="chapter-mp-indent" aria-hidden="true"></span>${markerContent}`;
 				}
@@ -742,7 +798,10 @@ export function renderChapterHtml(compiled: CompiledChapter): RenderedChapter {
 				return `<${level} class="chapter-title chapter-title--level-${titleCount === 1 ? 'primary' : 'secondary'}">${renderNodes(mark.children, notes, idPrefix)}</${level}>`;
 			}
 			if (mark?.kind === 'sc' || mark?.kind === 'zpsc') {
-				return `<div class="chapter-verse chapter-verse--${mark.kind}">${renderNodes(mark.children, notes, idPrefix, true, true)}</div>`;
+				const content = mark.kind === 'sc'
+					? renderSc(mark.children, notes, idPrefix)
+					: renderNodes(mark.children, notes, idPrefix, true, true);
+				return `<div class="chapter-verse chapter-verse--${mark.kind}">${content}</div>`;
 			}
 			if (mark?.kind === 'fu') {
 				return `<div class="chapter-fu">${renderNodes(mark.children, notes, idPrefix, true, true)}</div>`;

@@ -85,12 +85,68 @@ test('正文单换行直接分段，硬换行和韵文逐行换行', () => {
 乙\\
 丙
 
-[sc]诗甲
-诗乙[-]`;
+[sc]诗甲，
+诗乙。[-]`;
 	const rendered = renderChapterHtml(compileChapter(source));
 
 	assert.match(rendered.bodyHtml, /<p[^>]*>甲<\/p>\n<p[^>]*>乙<br \/>丙<\/p>/);
-	assert.match(rendered.bodyHtml, /诗甲<br \/>诗乙/);
+	assert.match(rendered.bodyHtml, /诗甲，<br \/>诗乙。/);
+});
+
+test('[sc] 首行无指定结尾标点时作为诗题，后续诗行保持原样', () => {
+	const compiled = compileChapter('[T]题\n[sc]【其一】叶小鸾·明\n一缕天香暂寄尘，\n炉心微暖未成春。[-]');
+	const original = structuredClone(compiled);
+	const rendered = renderChapterHtml(compiled);
+
+	assert.match(
+		rendered.bodyHtml,
+		/<span class="chapter-verse-title">【其一】叶小鸾·明<\/span>一缕天香暂寄尘，<br \/>炉心微暖未成春。/,
+	);
+	assert.deepEqual(compiled, original, '渲染不能修改源 AST');
+	assert.deepEqual(renderChapterHtml(compiled), rendered, '重复渲染结果应相同');
+});
+
+test('[sc] 首行以 ，。；？！ 中任一标点结尾时不生成诗题', () => {
+	for (const punctuation of ['，', '。', '；', '？', '！']) {
+		const source = `[T]题\n[sc][B]第一句${punctuation}[-] \t\n第二句无标点[-]`;
+		const rendered = renderChapterHtml(compileChapter(source));
+		assert.doesNotMatch(rendered.bodyHtml, /chapter-verse-title/, punctuation);
+		assert.match(rendered.bodyHtml, /第二句无标点/);
+	}
+});
+
+test('[sc] 诗题支持硬换行、首部空行、跨行嵌套样式及 HTML 转义', () => {
+	const source = '[T]题\n[sc]\n[B]<题&目>\\\n诗甲，[-]\n诗乙。[-]';
+	const rendered = renderChapterHtml(compileChapter(source));
+	assert.match(
+		rendered.bodyHtml,
+		/<br \/><span class="chapter-verse-title"><span class="chapter-mark chapter-mark--bold">&lt;题&amp;目&gt;<\/span><\/span><span class="chapter-mark chapter-mark--bold">诗甲，<\/span><br \/>诗乙。/,
+	);
+	assert.doesNotMatch(rendered.bodyHtml, /<题&目>/);
+
+	const singleLine = renderChapterHtml(compileChapter('[T]题\n[sc]诗题[-]'));
+	assert.match(singleLine.bodyHtml, /<span class="chapter-verse-title">诗题<\/span><\/div>/);
+	const empty = renderChapterHtml(compileChapter('[T]题\n[sc]\n \n[-]'));
+	assert.doesNotMatch(empty.bodyHtml, /chapter-verse-title/);
+});
+
+test('[sc] 在批语和尾注中同样识别诗题，但不影响 [zpsc] 和 [fu]', () => {
+	const source = '[T]题\n[mp]书批[sc]批中诗题\n诗句，[-][-]\n正文[wz][sc]注中诗题\n诗句。[-][-]\n[zpsc]脂批诗首行\n诗句[-]\n[fu]赋首行\n赋文[-]';
+	const rendered = renderChapterHtml(compileChapter(source));
+	assert.match(rendered.bodyHtml, /chapter-verse-title">批中诗题<\/span>诗句，/);
+	assert.match(rendered.bodyHtml, /chapter-verse-title">注中诗题<\/span>诗句。/);
+	assert.match(rendered.endnotesHtml, /chapter-verse-title">注中诗题<\/span>诗句。/);
+	assert.equal((rendered.bodyHtml.match(/chapter-verse-title/g) ?? []).length, 2);
+});
+
+test('[sc] 忽略尾注编号来判断首行结尾标点，且不丢失注释', () => {
+	const rendered = renderChapterHtml(compileChapter('[T]题\n[sc]诗句，[wz]说明[-]\n第二句。[-]'));
+	assert.doesNotMatch(rendered.bodyHtml, /chapter-verse-title/);
+	assert.match(rendered.bodyHtml, /chapter-note__anchor/);
+	assert.match(rendered.endnotesHtml, /说明/);
+
+	const titled = renderChapterHtml(compileChapter('[T]题\n[sc]诗题[wz]题解[-]\n诗句。[-]'));
+	assert.match(titled.bodyHtml, /chapter-verse-title">诗题<span class="chapter-note"/);
 });
 
 test('转义 HTML，保留普通 Markdown 字符，并支持字面标记转义', () => {
@@ -172,7 +228,7 @@ test('尾注支持嵌套批语、诗词、长赋等内容标记', () => {
 	assert.equal(compiled.notes[0].text, '说明脂批重点诗一 诗二赋文');
 	assert.match(rendered.bodyHtml, /chapter-note__popover[^>]*>.*chapter-mark--zp/);
 	assert.match(rendered.bodyHtml, /chapter-mark--bold[^>]*>重点<\/span>/);
-	assert.match(rendered.bodyHtml, /诗一<br \/>诗二/);
+	assert.match(rendered.bodyHtml, /chapter-verse-title">诗一<\/span>诗二/);
 	assert.match(rendered.endnotesHtml, /chapter-mark--sc/);
 	assert.match(rendered.endnotesHtml, /chapter-mark--fu/);
 });

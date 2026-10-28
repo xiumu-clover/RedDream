@@ -456,7 +456,13 @@ export function normalizeVoiceAnnotation(annotation, blockId) {
 			|| annotation.delivery.forcedUnits.length === 0) {
 			throw new Error(`标注 ${blockId}.delivery.forcedUnits 必须是非空数组。`);
 		}
+		if (annotation.delivery.forceSynthesisBoundaries !== undefined
+			&& typeof annotation.delivery.forceSynthesisBoundaries !== 'boolean') {
+			throw new Error(`标注 ${blockId}.delivery.forceSynthesisBoundaries 必须是布尔值。`);
+		}
 		delivery = {
+			...(annotation.delivery.forceSynthesisBoundaries === true
+				? { forceSynthesisBoundaries: true } : {}),
 			forcedUnits: annotation.delivery.forcedUnits.map((entry, index) => {
 				if (!entry || typeof entry !== 'object' || Array.isArray(entry)
 					|| typeof entry.text !== 'string' || !entry.text) {
@@ -473,11 +479,15 @@ export function normalizeVoiceAnnotation(annotation, blockId) {
 					&& (typeof entry.instruction !== 'string' || !entry.instruction.trim())) {
 					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].instruction 不能为空。`);
 				}
+				if (entry.ssml !== undefined && (typeof entry.ssml !== 'string' || !entry.ssml.trim())) {
+					throw new Error(`标注 ${blockId}.delivery.forcedUnits[${index}].ssml 不能为空。`);
+				}
 				return {
 					text: entry.text,
 					...(entry.speed === undefined ? {} : { speed: entry.speed }),
 					...(entry.continuous === undefined ? {} : { continuous: entry.continuous }),
 					...(entry.instruction === undefined ? {} : { instruction: entry.instruction.trim() }),
+					...(entry.ssml === undefined ? {} : { ssml: entry.ssml }),
 				};
 			}),
 		};

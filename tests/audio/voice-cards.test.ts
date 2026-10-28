@@ -41,7 +41,8 @@ test('音色卡索引、字段和韵律保持一致', async () => {
 	assert.equal(index.defaultNarrator, 'narrator');
 	assert.equal(index.characters['旁白'], 'narrator');
 	const narrator = await readJson(join(cardDirectory, index.cards[index.defaultNarrator]));
-	assert.equal(narrator.voice, 'zh-CN-YunjianNeural');
+	assert.equal(narrator.provider, 'doubao-cloned-narrator');
+	assert.equal(narrator.voice, 'S_hGyWjpuf2');
 
 	const renderings = new Set<string>();
 	for (const [id, filename] of Object.entries<string>(index.cards)) {
@@ -52,8 +53,13 @@ test('音色卡索引、字段和韵律保持一致', async () => {
 		assert.equal(card.id, id);
 		assert.match(card.id, idPattern);
 		assert.ok(['A', 'B', 'C'].includes(card.tier));
-		assert.equal(card.provider, 'edge');
-		assert.match(card.voice, /^zh-CN-[A-Za-z]+Neural$/u);
+		if (id === index.defaultNarrator) {
+			assert.equal(card.provider, 'doubao-cloned-narrator');
+			assert.equal(card.voice, 'S_hGyWjpuf2');
+		} else {
+			assert.equal(card.provider, 'edge');
+			assert.match(card.voice, /^zh-CN-[A-Za-z]+Neural$/u);
+		}
 		assert.equal(typeof card.label, 'string');
 		assert.ok(card.label.length > 0);
 		assert.ok(Array.isArray(card.aliases));

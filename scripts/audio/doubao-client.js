@@ -80,44 +80,60 @@ export function extractJsonValues(text, { final = true } = {}) {
 	return { values, remainder };
 }
 
-async function readJsonStream(body) {
+async function readJsonStream(body, onValue) {
 	if (!body) throw new Error('豆包响应没有响应体。');
 	const decoder = new TextDecoder();
 	let pending = '';
-	const values = [];
 	for await (const chunk of body) {
 		pending += decoder.decode(chunk, { stream: true });
 		const parsed = extractJsonValues(pending, { final: false });
-		values.push(...parsed.values);
+		for (const value of parsed.values) onValue(value);
 		pending = parsed.remainder;
 	}
 	pending += decoder.decode();
 	const parsed = extractJsonValues(pending, { final: true });
-	values.push(...parsed.values);
-	return values;
+	for (const value of parsed.values) onValue(value);
 }
 
 function delay(milliseconds) {
 	return new Promise((resolvePromise) => setTimeout(resolvePromise, milliseconds));
 }
 
-function summarizeResponse(values) {
+function decodeBase64(value) {
+	if (typeof value !== 'string' || !value || !/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/u.test(value)) {
+		throw new DoubaoApiError('豆包响应包含无效的 base64 音频数据。');
+	}
+	return Buffer.from(value, 'base64');
+}
+
+function createResponseCollector() {
 	const audio = [];
 	const sentences = [];
+	const events = [];
 	let usage;
-	for (const value of values) {
-		if (!value || typeof value !== 'object') continue;
-		if (value.code !== undefined && value.code !== 0) {
+	let completed = false;
+	return {
+		consume(value) {
+		if (!value || typeof value !== 'object') return;
+		const code = value.code === undefined ? 0 : Number(value.code);
+		if (code !== 0 && code !== 20000000) {
 			throw new DoubaoApiError(`豆包合成失败：${value.message || `错误码 ${value.code}`}`, {
-				code: value.code,
+				code,
 			});
 		}
-		if (typeof value.data === 'string' && value.data) audio.push(Buffer.from(value.data, 'base64'));
+		if (code === 20000000) completed = true;
+		if (typeof value.data === 'string' && value.data) audio.push(decodeBase64(value.data));
 		if (value.sentence && typeof value.sentence === 'object') sentences.push(value.sentence);
 		if (value.usage && typeof value.usage === 'object') usage = value.usage;
-	}
-	if (audio.length === 0) throw new Error('豆包响应未包含音频数据。');
-	return { audio: Buffer.concat(audio), sentences, usage, responseChunks: values.length };
+		const { data, ...metadata } = value;
+		events.push(metadata);
+		},
+		finish() {
+			if (!completed) throw new DoubaoApiError('豆包响应未包含成功结束事件 20000000。');
+			if (audio.length === 0) throw new DoubaoApiError('豆包响应未包含音频数据。');
+			return { audio: Buffer.concat(audio), sentences, usage, events, responseChunks: events.length };
+		},
+	};
 }
 
 export class DoubaoTtsClient {
@@ -157,9 +173,10 @@ export class DoubaoTtsClient {
 						retryable: response.status === 429 || response.status >= 500,
 					});
 				}
-				const values = await readJsonStream(response.body);
+				const collector = createResponseCollector();
 				try {
-					return { ...summarizeResponse(values), requestId, logId, attempt };
+					await readJsonStream(response.body, (value) => collector.consume(value));
+					return { ...collector.finish(), requestId, logId, attempt };
 				} catch (error) {
 					if (error instanceof DoubaoApiError && !error.logId) error.logId = logId;
 					throw error;

@@ -4,6 +4,19 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { DoubaoAudioGenerationClient, DoubaoTtsClient, extractJsonValues, loadDoubaoCredentials, writeBufferAtomic } from '../../scripts/audio/doubao-client.js';
+import { DOUBAO_CLONED_NARRATOR } from '../../scripts/audio/tts/providers/doubao-cloned-narrator.js';
+
+test('复刻旁白参数固定为已验证的 ICL 2.0 接入基线', () => {
+	assert.deepEqual(DOUBAO_CLONED_NARRATOR, {
+		endpoint: 'https://openspeech.bytedance.com/api/v3/tts/unidirectional',
+		resourceId: 'seed-icl-2.0',
+		speaker: 'S_hGyWjpuf2',
+		model: 'seed-tts-2.0-standard',
+		audioParams: { format: 'mp3', sample_rate: 24000 },
+		additions: { tone_fidelity: true, explicit_language: 'zh-cn' },
+		requestVersion: 'doubao-icl2-cloned-narrator-v1',
+	});
+});
 
 test('豆包 Chunked JSON 可跨网络块解析且不丢音频', async () => {
 	const parsed = extractJsonValues('{"code":0,"data":"YQ=="}\n{"code":0,"data":"Yg=="}');
@@ -24,8 +37,9 @@ test('豆包客户端发送新版鉴权头并拼接音频块', async () => {
 			captured = { url, options };
 			return new Response(new ReadableStream({
 				start(controller) {
-					controller.enqueue(encoder.encode('{"code":0,"data":"YQ==","sentence":{"text":"甲"}}'));
-					controller.enqueue(encoder.encode('\n{"code":0,"data":"Yg==","usage":{"text_words":1}}'));
+					controller.enqueue(encoder.encode('{"code":0,"data":"YQ==","sentence":{"text":"甲"}}\n{"co'));
+					controller.enqueue(encoder.encode('de":0,"data":"Yg=="}\n{"code":0,"usage":{"text_words":1}}'));
+					controller.enqueue(encoder.encode('\n{"code":20000000,"message":"OK"}'));
 					controller.close();
 				},
 			}), { status: 200, headers: { 'X-Tt-Logid': 'log-1' } });
@@ -37,6 +51,26 @@ test('豆包客户端发送新版鉴权头并拼接音频块', async () => {
 	assert.equal(captured.options.headers['X-Api-Key'], 'private-test-key');
 	assert.equal(captured.options.headers['X-Api-Resource-Id'], 'seed-tts-2.0');
 	assert.equal(JSON.parse(captured.options.body).req_params.text, '甲');
+	assert.equal(result.events.at(-1).code, 20000000);
+});
+
+test('豆包客户端将 20000000 视为成功结束，但拒绝其他业务错误码', async () => {
+	const encoder = new TextEncoder();
+	const responseFor = (body) => new Response(new ReadableStream({
+		start(controller) { controller.enqueue(encoder.encode(body)); controller.close(); },
+	}), { status: 200 });
+	const success = new DoubaoTtsClient({
+		apiKey: 'private-test-key', endpoint: 'https://example.invalid/tts', resourceId: 'seed-icl-2.0',
+		maxAttempts: 1,
+		fetchImpl: async () => responseFor('{"code":0,"data":"YQ=="}{"code":20000000,"message":"OK"}'),
+	});
+	assert.equal((await success.synthesize({ text: '甲' })).audio.toString(), 'a');
+	const failure = new DoubaoTtsClient({
+		apiKey: 'private-test-key', endpoint: 'https://example.invalid/tts', resourceId: 'seed-icl-2.0',
+		maxAttempts: 1,
+		fetchImpl: async () => responseFor('{"code":45000030,"message":"requested resource not granted"}'),
+	});
+	await assert.rejects(failure.synthesize({ text: '甲' }), /requested resource not granted/u);
 });
 
 test('豆包密钥只从环境或被忽略的本地配置读取', async (context) => {

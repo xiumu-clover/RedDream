@@ -4,7 +4,7 @@
 
 本阶段只处理第 81–108 回。音频在本地预合成，公开阅读网站只播放静态 MP3，不在浏览器请求期间调用 TTS，也不需要后端或服务密钥。私有云评审是独立应用，不参与公开阅读页构建。
 
-- 默认 TTS provider 为 Edge-TTS；provider 契约允许以后接入 Azure 或阿里云。
+- 旁白统一使用豆包声音复刻 2.0 的固定预付费音色；provider 契约仍允许以后接入其他服务。
 - 第 81 回是 Cloudflare Pages 试点，可发布女、男两条旁白音轨。
 - 第 82–108 回可以在本地生成与试听，但不在发布白名单中。
 - 第 1–80 回不生成音频，也不会显示播放器。
@@ -119,7 +119,7 @@ content/audio/annotations/081.json
 }
 ```
 
-`speakerRef` 为 `$narrator` 时，女轨使用 `zh-CN-XiaoxiaoNeural`，男轨使用 `narrator` 音色卡。人物对话引用 `content/audio/voice-cards/` 中的卡片，所以相同人物片段可在男女整轨间共享缓存。
+`speakerRef` 为 `$narrator` 时统一路由到 `doubao-cloned-narrator`，固定使用 `seed-icl-2.0`、`S_hGyWjpuf2` 与 `seed-tts-2.0-standard`。人物对话继续引用 `content/audio/voice-cards/` 中的卡片；旁白和人物的合成缓存相互独立。
 
 情绪、语速、音高、力度、音质与“哭腔、冷笑、梦中呓语”等修饰会进入 `annotationHash`。Edge-TTS 对其中一部分只能用 rate、pitch、volume 近似表达；语义仍完整保存，供以后更强的 provider 使用。
 
@@ -144,6 +144,7 @@ scripts/audio/render-plan.js          标注 + 音色卡 -> provider 参数与 r
 scripts/audio/track.js                MP3 校验、片段缓存和整轨拼接
 scripts/audio/tts/provider.js         provider 工厂与统一入口
 scripts/audio/tts/providers/edge.js   Edge-TTS 适配器
+scripts/audio/tts/providers/doubao-cloned-narrator.js  豆包复刻旁白适配器
 scripts/audio/tts/edge-client.js      Edge WebSocket 客户端
 ```
 
@@ -240,7 +241,15 @@ https://audio.example.com/guiyou/081/male/<trackHash>.mp3
 
 ## 10. 剧情录音的批量工作流
 
-剧情录音与章节纯旁白分开编排。当前人物对白在本机 WSL 的 CosyVoice2 上推理；Edge-TTS 旁白仍是网络服务，不是本地模型。两者都不消耗 Codex 的语言模型 token；token 来自对话中的代码分析、大量 JSON/日志回传和人工编排。
+剧情录音与章节纯旁白分开编排。人物对白使用项目指定的人物音色流程；旁白统一通过豆包声音复刻 2.0 的 HTTP Chunked 单向接口生成。音频合成不消耗 Codex 的语言模型 token；token 来自对话中的代码分析、大量 JSON/日志回传和人工编排。
+
+### 完整句与句内节奏
+
+用户用斜杠标示的断句、组词或重音，默认表示完整句内部的表演要求，不能自动转换成两三个字一条的 TTS 请求再机械拼接。回目和诗句应以完整句为一次合成单位；长度超限、人物切换或用户明确要求独立录制时才拆分。`delivery.forcedUnits` 若用于保持整句，须保存完整原文并设置 `continuous: true`。
+
+固定 `seed-tts-2.0-standard` 旁白模型不支持自然语言表演指令。标注中的 `instruction` 是表演意图记录，不能宣称已被该模型执行。当前已实际试用的句内控制为 `delivery.forcedUnits[].ssml` 中的 `break` 标签；请求同时保留原始 `text`，开启 `disable_markdown_filter: false`，SSML 与参数共同参与合成缓存哈希。拖音标点只能作为拉音尝试，不能等同于精确音素时长控制，须经用户试听确认。
+
+SSML 请求中的停顿时长不代表输出已达到该时长。带 SSML 的旁白请求同时启用字级字幕，用返回时间戳辅助核对字词衔接和拖音；仍需结合波形与试听判断，不能仅因参数填写正确就宣称停顿或拉音已实现。
 
 为避免把这些成本带入批量生产，使用三阶段命令：
 

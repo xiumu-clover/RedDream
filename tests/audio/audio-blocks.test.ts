@@ -38,11 +38,13 @@ test('正式标注保留读音覆盖和强制演绎单元', () => {
 		...annotationFor({ textHash: 'text', contextHash: 'context' }),
 		pronunciations: [{ text: '排揎', pinyin: 'pái xuān', replacement: '排宣' }],
 		delivery: {
+			forceSynthesisBoundaries: true,
 			forcedUnits: [{ text: '好你个西洋花点子哈巴狗儿！', speed: 1.16, continuous: true }],
 		},
 	}, '081-b0028');
 	assert.equal(normalized.pronunciations?.[0].replacement, '排宣');
 	assert.equal(normalized.delivery?.forcedUnits[0].continuous, true);
+	assert.equal(normalized.delivery?.forceSynthesisBoundaries, true);
 	assert.notEqual(
 		voiceAnnotationHash(normalized),
 		voiceAnnotationHash({ ...normalized, pronunciations: undefined, delivery: undefined }),

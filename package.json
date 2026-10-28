@@ -18,6 +18,7 @@
     "audio:doubao:chapter": "tsx scripts/audio/generate_doubao_chapter.js",
     "audio:doubao:section": "tsx scripts/audio/generate_doubao_section.js",
     "audio:doubao:assemble-sections": "node scripts/audio/assemble_doubao_sections.js",
+    "audio:narrator:cloned": "python scripts/audio/tts_cloned_narrator.py",
     "audio:review:push": "node scripts/audio/cloud-review-push.js --chapter 081 --scene xiren-three-opera",
     "audio:review:pull": "node scripts/audio/cloud-review-pull.js --chapter 081 --scene xiren-three-opera",
     "audio:publish": "node scripts/audio/publish_audio.js",

@@ -2,11 +2,36 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import test from 'node:test';
-import { approvedArtifactText, buildExcerptTargets, buildSectionTargets, canReuseLegacy, resolveApprovedAssembly, resolveReviewSceneSources, selectSectionBlocks, shouldConditionArtifact, synthesisSpec, verifiedReferences, withCurrentAssemblySettings } from '../../scripts/audio/generate_doubao_section.js';
+import { approvedArtifactText, buildExcerptTargets, buildSectionTargets, canReuseLegacy, clonedNarratorSynthesisSpec, resolveApprovedAssembly, resolveReviewSceneSources, selectSectionBlocks, shouldConditionArtifact, synthesisSpec, validateClonedNarratorDuration, validateSentenceSsml, verifiedReferences, withCurrentAssemblySettings } from '../../scripts/audio/generate_doubao_section.js';
 import { hashJson } from '../../scripts/audio/audio-blocks.js';
 import { limitPcmSilence, stretchInternalPcmSilence, splicePcmSuffix, trimPcmTail } from '../../scripts/audio/wav-silence.js';
 
 const root = resolve(import.meta.dirname, '..', '..');
+
+test('整句旁白的SSML仅控制句内停顿，保留字词并参与缓存哈希', async () => {
+	const [pending, document, provider] = await Promise.all([
+		readFile(join(root, 'content/audio/.cache/pending/082.json'), 'utf8'),
+		readFile(join(root, 'content/audio/annotations/082.json'), 'utf8'),
+		readFile(join(root, 'content/audio/providers/doubao.json'), 'utf8'),
+	]).then(values => values.map(value => JSON.parse(value)));
+	const blocks = pending.blocks.slice(0, 3);
+	const targets = buildSectionTargets({ blocks, annotations: document.annotations,
+		references: { $narrator: { id: 'S_hGyWjpuf2' } }, provider, section: {}, segmenterVersion: 'test' });
+	assert.deepEqual(targets.map(target => target.text), [blocks[0].text, blocks[1].text,
+		'玉楼人静雨丝丝，素腕临笺落笔迟。\n', '十阕幽吟花自瘦，留取幽香在折枝。']);
+	const spec = clonedNarratorSynthesisSpec(targets[0], provider);
+	assert.equal(spec.model, 'seed-tts-2.0-standard');
+	assert.equal(JSON.parse(spec.additions).disable_markdown_filter, false);
+	assert.notEqual(hashJson(spec), hashJson(clonedNarratorSynthesisSpec({ ...targets[0],
+		ssml: targets[0].ssml.replace('600ms', '700ms') }, provider)));
+	assert.throws(() => validateSentenceSsml('雨丝丝', '<speak>雨丝丝请拉长</speak>'), /改变了正文/u);
+	assert.throws(() => validateSentenceSsml('雨丝丝', '<speak><prosody>雨丝丝</prosody></speak>'), /仅验证break/u);
+});
+
+test('复刻旁白拒绝与短文本明显不相称的异常长音频', () => {
+	assert.doesNotThrow(() => validateClonedNarratorDuration('第八十二回 王熙凤', 3.2));
+	assert.throws(() => validateClonedNarratorDuration('第八十二回 王熙凤', 20.04), /时长异常/u);
+});
 
 test('第81回第一节按当前正文锚点完整截取，不受旧 blockId 顺序影响', async () => {
 	const pending = JSON.parse(await readFile(join(root, 'content/audio/.cache/pending/081.json'), 'utf8'));

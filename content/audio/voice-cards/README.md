@@ -418,7 +418,25 @@ Whisper：标准卡逐字匹配；首个 Demo 的句首含混，第三个 Demo �
 - 清理：16 kHz 单声道 PCM；70 Hz 高通、7600 Hz 低通、轻度 `afftdn=nr=3:nf=-55`、响度统一及短淡入淡出；不做人声分离。只适合日常说理，不覆盖醉后或激烈场面。
 - Whisper：标准卡逐字匹配；试听开头“宝/报”“园里/原理”有近音差异，需听审是否自然。
 - CAMPPlus：原声→卡 `0.839899`，原声→试听 `0.722808`，卡→试听 `0.861011`。后两组低于本项目约 `0.75/0.90` 的候选参考线。
-- 状态：仅保留失败风险样本，优先重新截取更长、更干净的原声；不建议批准或进入正式路由。全部哈希、时长、响度、耗时及限制见同目录 `generation.json`。
+- 状态：2026-10-27 用户明确不采用；仅保留失败风险样本供追溯，不得进入正式路由。全部哈希、时长、响度、耗时及限制见同目录 `generation.json`。
+
+### `forthright-protest-v2`：直率反驳（未选备用）
+
+- 原声参考：`content/audio/.cache/source-cards/shi-xiangyun/forthright-protest-v2/1/source-reference.wav`
+- 快速试听：`content/audio/.cache/source-cards/shi-xiangyun/forthright-protest-v2/1/source-reference.mp3`
+- 来源：第 10 集 `00:22:07.840–00:22:14.860`，散席后湘云因宝玉使眼色而回话；整集时间轴、逐秒局部联系表和第 22 回上下文共同确认本人原声。
+- 准确文本：“你那些花言巧语，别来哄我。我不如你林妹妹，我不配说她。”Whisper 仅出现“花/话”“巧/调”“林/离”近音字，按画面上下文和同场原文校正。
+- 技术：7.020 秒，16 kHz 单声道 PCM，未降噪、未响度归一化，只加短淡入淡出；参考 WAV SHA-256 `950adda3eca28db860b3cc683dede88ceeb7cfd7dddc6c967da2d5b6deddbccc`。
+- 使用边界：直率、略带不满，不适合温柔安慰、低落或哭腔场景。2026-10-28 用户在 A/B 候选中选择 B；本卡未选，但保留为备用原声候选，不进入第 82 回路由。
+
+### `bright-floral-reading-v2`：明快读花签（用户选定 B）
+
+- 原声参考：`content/audio/.cache/source-cards/shi-xiangyun/bright-floral-reading-v2/1/source-reference.wav`
+- 快速试听：`content/audio/.cache/source-cards/shi-xiangyun/bright-floral-reading-v2/1/source-reference.mp3`
+- 来源：第 24 集 `00:33:21.020–00:33:28.040`，怡红院群芳夜宴中湘云抽到海棠花签后读签；整集联系表、局部联系表和花签内容共同确认本人原声。
+- 准确文本：“画的是海棠，题着‘香梦沉酣’四个字。诗句是苏东坡的。”Whisper 未稳定识别“香梦沉酣”专名，按画面花签、剧情上下文和第 63 回原文校正。
+- 技术：7.020 秒，16 kHz 单声道 PCM，未降噪、未响度归一化，只加短淡入淡出；参考 WAV SHA-256 `5d69aa2d455cca17a3843bca583d4df928cbb681c47acd98d379b52d01691634`。
+- 使用边界：明快、清晰、带轻微诵读感，不适合强烈愤怒或低沉哀悼。2026-10-28 用户明确“选 B”，已登记为史湘云替代原声参考；Whisper 专名识别警告保留，第 82 回对白仍待后续录音流程重录。
 
 ## 妙玉
 

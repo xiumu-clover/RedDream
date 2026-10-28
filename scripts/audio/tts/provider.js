@@ -3,6 +3,10 @@ const PROVIDER_LOADERS = {
 		const { EdgeTtsProvider } = await import('./providers/edge.js');
 		return EdgeTtsProvider;
 	},
+	'doubao-cloned-narrator': async () => {
+		const { DoubaoClonedNarratorProvider } = await import('./providers/doubao-cloned-narrator.js');
+		return DoubaoClonedNarratorProvider;
+	},
 };
 
 /**

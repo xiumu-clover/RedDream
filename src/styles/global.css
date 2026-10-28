@@ -716,6 +716,13 @@ h1 {
 	text-align: left;
 }
 
+.chapter-verse-title {
+	display: block;
+	text-align: center;
+	text-indent: 0;
+	break-after: avoid;
+}
+
 .chapter-attribution {
 	display: block;
 	width: 100%;

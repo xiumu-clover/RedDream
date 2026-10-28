@@ -9,6 +9,7 @@ import { chapterToAudioCandidates, hashJson, reconcileAudioBlocks, sha256, voice
 import { normalizeLegacyNoteMarkers, stripFrontmatter } from './chapter-text.js';
 import { compileChapter } from '../../src/lib/chapters/compiler.ts';
 import { DoubaoAudioGenerationClient, loadDoubaoCredentials, writeBufferAtomic } from './doubao-client.js';
+import { DOUBAO_CLONED_NARRATOR } from './tts/providers/doubao-cloned-narrator.js';
 import { pathExists, readJsonIfExists, replaceFileAtomic, sha256File, writeJsonAtomic, writeTextAtomic, copyFileAtomic } from './files.js';
 import {
 	applyPronunciationOverrides,
@@ -74,6 +75,18 @@ function instructionFor(kind, annotation, delivery, override) {
 	return `请${role}；${semantic}；只朗读给定正文，不增加、删减或改写字词。${extra ? ` ${extra}` : ''}`;
 }
 
+export function validateSentenceSsml(text, ssml) {
+	if (!/^<speak>[\s\S]*<\/speak>$/u.test(ssml)
+		|| (ssml.match(/<\/?speak>/gu) || []).length !== 2) {
+		throw new Error('整句SSML必须包含唯一的speak根元素。');
+	}
+	const spoken = ssml.slice(7, -8).replace(/<break time="(?:\d+(?:\.\d+)?)(?:ms|s)"\s*\/>/gu, '');
+	if (/[<>]/u.test(spoken)) throw new Error('复刻旁白当前仅验证break标签，不支持其他SSML控制。');
+	const words = value => value.replace(/[\s\p{P}\p{Z}]/gu, '');
+	if (words(spoken) !== words(text)) throw new Error('整句SSML改变了正文的字词或词序。');
+	return ssml;
+}
+
 export function buildSectionTargets({ blocks, annotations, references, provider, section, segmenterVersion }) {
 	const targets = [];
 	const config = provider.chapterDemo;
@@ -86,8 +99,11 @@ export function buildSectionTargets({ blocks, annotations, references, provider,
 		const reference = references[referenceKey];
 		if (!reference) throw new Error(`${block.blockId} 缺少获批的 ${referenceKey} 音色卡。`);
 		const maxChars = block.kind === 'dialogue' ? config.maxDialogueChars : config.maxNarrationChars;
-		const units = block.kind === 'dialogue'
+		const units = annotation.delivery?.forcedUnits?.length
+			&& (block.kind === 'dialogue' || annotation.delivery.forceSynthesisBoundaries === true)
 			? splitChineseDialogueWithDelivery(block.text, annotation.delivery, maxChars)
+			: block.kind === 'dialogue'
+				? splitChineseDialogueWithDelivery(block.text, annotation.delivery, maxChars)
 			: [...block.text].length > maxChars
 				? splitChineseDialogue(block.text, maxChars).map((text) => ({ text }))
 				: [{ text: block.text }];
@@ -100,6 +116,7 @@ export function buildSectionTargets({ blocks, annotations, references, provider,
 				targetId, order: targets.length + 1, blockOrder: block.order, blockId: block.blockId,
 				unitIndex, kind: block.kind, text: unit.text, synthesisText, textHash: sha256(unit.text),
 				blockTextHash: block.textHash, speakerRef: annotation.speakerRef, voiceCardRoute: referenceKey, annotation,
+				...(unit.delivery?.ssml === undefined ? {} : { ssml: validateSentenceSsml(unit.text, unit.delivery.ssml) }),
 				annotationHash: voiceAnnotationHash(annotation), reference,
 				providerOverride: override ? {
 					...(override.retryVersion === undefined ? {} : { retryVersion: override.retryVersion }),
@@ -200,6 +217,51 @@ export function synthesisSpec(target, provider, splitVersion) {
 		splitVersion,
 		audioConfig: { format: provider.audio.format, sampleRate: provider.audio.sampleRate, speechRate: 0, loudnessRate: 0, pitchRate: 0, enableSubtitle: true },
 	};
+}
+
+function clonedNarratorConfig(provider) {
+	const config = provider.clonedNarratorApi;
+	const required = DOUBAO_CLONED_NARRATOR;
+	if (!config || config.endpoint !== required.endpoint || config.resourceId !== required.resourceId
+		|| config.speaker !== required.speaker || config.model !== required.model
+		|| config.requestVersion !== required.requestVersion
+		|| hashJson(config.audioParams) !== hashJson(required.audioParams)
+		|| hashJson(config.additions) !== hashJson(required.additions)) {
+		throw new Error('豆包复刻旁白配置与固定接入基线不一致。');
+	}
+	return config;
+}
+
+export function clonedNarratorSynthesisSpec(target, provider) {
+	if (target.speakerRef !== '$narrator') throw new Error(`${target.targetId} 不是旁白片段。`);
+	const config = clonedNarratorConfig(provider);
+	return {
+		version: config.requestVersion,
+		provider: 'doubao-cloned-narrator',
+		endpoint: config.endpoint,
+		resourceId: config.resourceId,
+		speaker: config.speaker,
+		model: config.model,
+		targetId: target.targetId,
+		blockTextHash: target.blockTextHash,
+		textHash: sha256(target.text),
+		synthesisText: target.synthesisText,
+		annotationHash: target.annotationHash,
+		...(target.providerOverride?.retryVersion === undefined
+			? {} : { retryVersion: target.providerOverride.retryVersion }),
+		splitVersion: target.splitVersion,
+		audioParams: { ...config.audioParams, ...(target.ssml ? { enable_subtitle: true } : {}) },
+		...(target.ssml ? { ssml: validateSentenceSsml(target.synthesisText, target.ssml) } : {}),
+		additions: JSON.stringify({ ...config.additions, ...(target.ssml ? { disable_markdown_filter: false } : {}) }),
+	};
+}
+
+export function validateClonedNarratorDuration(text, durationSeconds) {
+	const textLength = [...String(text).replace(/\s/gu, '')].length;
+	const maximumSeconds = Math.min(120, Math.max(6, textLength * 0.8 + 3));
+	if (!Number.isFinite(durationSeconds) || durationSeconds <= 0 || durationSeconds > maximumSeconds) {
+		throw new Error(`复刻旁白时长异常：${textLength} 字生成 ${durationSeconds} 秒，上限 ${maximumSeconds.toFixed(1)} 秒。`);
+	}
 }
 
 export function canReuseLegacy(target, oldTarget, fragment) {
@@ -547,6 +609,83 @@ export async function renderTarget(target, provider, client, directory, oldTarge
 	return { ...artifact, pathAbsolute: output };
 }
 
+export async function renderClonedNarratorTarget(target, provider, client, directory) {
+	const spec = clonedNarratorSynthesisSpec(target, provider);
+	const synthesisHash = hashJson(spec);
+	const renderHash = hashJson({ synthesisHash, normalization: provider.audio,
+		...(target.normalizationMode ? { normalizationMode: target.normalizationMode } : {}) });
+	const output = join(directory, 'fragments', `${renderHash}.wav`);
+	const metadataPath = `${output}.json`;
+	const source = join(directory, 'fragments', `${synthesisHash}.source.mp3`);
+	const requestRecordPath = `${source}.request.json`;
+	const resultRecordPath = `${source}.result.json`;
+	const cached = await readJsonIfExists(metadataPath);
+	if (cached?.renderHash === renderHash && cached.provider === spec.provider
+		&& await pathExists(output) && cached.fileHash === await sha256File(output)) {
+		const info = await validateWav(output);
+		validateClonedNarratorDuration(target.synthesisText, info.durationSeconds);
+		return { ...withCurrentAssemblySettings(cached, target), pathAbsolute: output, cacheType: 'section' };
+	}
+	if (await pathExists(source)) {
+		const resultRecord = await readJsonIfExists(resultRecordPath);
+		if (resultRecord?.synthesisHash === synthesisHash
+			&& resultRecord.sourceFileHash === await sha256File(source)) {
+			await normalizeWav(source, output, provider, target.normalizationMode);
+			const info = await validateWav(output);
+			validateClonedNarratorDuration(target.synthesisText, info.durationSeconds);
+			const artifact = { ...target, synthesisHash, renderHash, provider: spec.provider,
+				providerSettings: { resourceId: spec.resourceId, speaker: spec.speaker, model: spec.model,
+					audioParams: spec.audioParams, additions: spec.additions },
+				fileHash: await sha256File(output), path: relativePath(output), durationSeconds: info.durationSeconds,
+				subtitleText: null, subtitleExact: false, cacheType: 'renormalized-cloned-narrator',
+				sourceSynthesisHash: synthesisHash, requestRecordPath: relativePath(requestRecordPath),
+				resultRecordPath: relativePath(resultRecordPath), request: resultRecord.request };
+			await writeJsonAtomic(metadataPath, artifact);
+			return { ...artifact, pathAbsolute: output };
+		}
+	}
+	const started = Date.now();
+	const requestBody = {
+		text: target.synthesisText,
+		...(spec.ssml ? { ssml: spec.ssml } : {}),
+		speaker: spec.speaker,
+		model: spec.model,
+		audio_params: spec.audioParams,
+		additions: spec.additions,
+	};
+	const response = await client.synthesize(requestBody);
+	await writeBufferAtomic(source, response.audio);
+	const sourceFileHash = await sha256File(source);
+	await writeJsonAtomic(requestRecordPath, {
+		endpoint: spec.endpoint,
+		resourceId: spec.resourceId,
+		requestBody: { req_params: requestBody },
+	});
+	await writeJsonAtomic(resultRecordPath, {
+		synthesisHash,
+		sourcePath: relativePath(source),
+		sourceFileHash,
+		bytes: response.audio.length,
+		request: { requestId: response.requestId, logId: response.logId, attempt: response.attempt },
+		usage: response.usage,
+		events: response.events,
+	});
+	await normalizeWav(source, output, provider, target.normalizationMode);
+	const info = await validateWav(output);
+	validateClonedNarratorDuration(target.synthesisText, info.durationSeconds);
+	const artifact = { ...target, synthesisHash, renderHash, provider: spec.provider,
+		providerSettings: { resourceId: spec.resourceId, speaker: spec.speaker, model: spec.model,
+			audioParams: spec.audioParams, additions: spec.additions },
+		fileHash: await sha256File(output), path: relativePath(output), durationSeconds: info.durationSeconds,
+		subtitleText: null, subtitleExact: false, cacheType: 'generated',
+		synthesisSeconds: Number(((Date.now() - started) / 1000).toFixed(2)),
+		sourceSynthesisHash: synthesisHash, sourcePath: relativePath(source), sourceFileHash,
+		requestRecordPath: relativePath(requestRecordPath), resultRecordPath: relativePath(resultRecordPath),
+		request: { requestId: response.requestId, logId: response.logId, attempt: response.attempt } };
+	await writeJsonAtomic(metadataPath, artifact);
+	return { ...artifact, pathAbsolute: output };
+}
+
 async function whisperCheck(artifacts, directory) {
 	const selected = artifacts.filter((item) => item.kind === 'dialogue'
 		|| ['081-b0001', '081-b0003', '081-b0004', '081-b0012', '081-b0010', '081-b0021'].includes(item.blockId));
@@ -752,9 +891,11 @@ export async function compose(artifacts, provider, directory, options = {}) {
 		loudness: await loudness(wav, master) };
 }
 
-async function approvedSourceArtifact(target, source) {
+export async function approvedSourceArtifact(target, source) {
 	const info = await validateWav(source.sourcePath);
 	return { ...target, ...approvedArtifactText(target, source),
+		renderHash: hashJson({ version: 'approved-assembly-source-v1', targetId: target.targetId,
+			binding: source.binding, fileHash: source.fileHash, review: source.review }),
 		fileHash: source.fileHash, path: source.path, pathAbsolute: source.sourcePath,
 		durationSeconds: info.durationSeconds, subtitleExact: true,
 		assemblyGainDb: source.assemblyGainDb ?? target.assemblyGainDb,

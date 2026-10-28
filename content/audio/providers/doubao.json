@@ -1,6 +1,22 @@
 {
   "version": 1,
   "provider": "doubao",
+  "clonedNarratorApi": {
+    "kind": "http-chunked-json",
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",
+    "resourceId": "seed-icl-2.0",
+    "speaker": "S_hGyWjpuf2",
+    "model": "seed-tts-2.0-standard",
+    "requestVersion": "doubao-icl2-cloned-narrator-v1",
+    "audioParams": {
+      "format": "mp3",
+      "sample_rate": 24000
+    },
+    "additions": {
+      "tone_fidelity": true,
+      "explicit_language": "zh-cn"
+    }
+  },
   "api": {
     "kind": "unidirectional-http",
     "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",

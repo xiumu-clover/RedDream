@@ -10,8 +10,8 @@
   "defaultVariant": "narrator",
   "narratorProfiles": {
     "narrator": {
-      "label": "Yunjian 旁白",
-      "provider": "edge",
+      "label": "豆包复刻旁白",
+      "provider": "doubao-cloned-narrator",
       "voiceCardId": "narrator"
     }
   }
