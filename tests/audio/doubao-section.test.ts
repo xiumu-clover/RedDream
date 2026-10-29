@@ -91,6 +91,25 @@ test('旧片段只有同文、同标注、同人物卡和同指令才可复用',
 	assert.equal(canReuseLegacy(current, old, { ...fragment, subtitleExact: false }), false);
 });
 
+test('对白简化指令不改语义标注，且与已审试听保持相同合成哈希', () => {
+	const block = { blockId: '082-b0087', order: 1, kind: 'dialogue', text: '二哥哥回去罢。闲了也可到我那里作客。', textHash: 'text', contextHash: 'context' };
+	const annotation = { textHash: 'text', contextHash: 'context', speakerRef: 'shi-xiangyun', emotion: { family: 'calm', variant: 'gentle-reassurance', intensity: 1 }, pace: 'medium', pitch: 'medium', energy: 'light', timbre: ['soft', 'clear'], modifiers: [] };
+	const provider = { provider: 'doubao', audioGenerationApi: { model: 'seed-audio-1.0', requestVersion: 'v1' }, audio: { format: 'wav', sampleRate: 24000 }, chapterDemo: { maxDialogueChars: 30, maxNarrationChars: 220, pause: {} } };
+	const input = { blocks: [block], annotations: { '082-b0087': annotation }, references: { 'shi-xiangyun': { id: 'xiangyun', path: 'card.wav', fileHash: 'card', text: '准确文本' } }, provider, segmenterVersion: 'test' };
+	const baseline = buildSectionTargets({ ...input, section: {} })[0];
+	const instruction = '像和熟悉的人聊天一样，带一点笑意自然说出这句话。只说正文，不增删字词。';
+	const current = buildSectionTargets({ ...input, section: { targetOverrides: { 'dialogue:082-b0087:u01': { instructionOverride: instruction } } } })[0];
+	assert.equal(current.instruction, instruction);
+	assert.equal(current.providerOverride, null);
+	const legacySuffix = buildSectionTargets({ ...input, section: { targetOverrides: { 'dialogue:082-b0087:u01': { instructionSuffix: '保持原来语气。' } } } })[0];
+	assert.deepEqual(legacySuffix.providerOverride, {}, '既有suffix-only配置保留历史缓存键');
+	assert.equal(current.annotationHash, baseline.annotationHash);
+	assert.deepEqual(current.annotation, annotation);
+	assert.equal(hashJson(synthesisSpec(current, provider, current.splitVersion)), hashJson(synthesisSpec({ ...baseline, instruction }, provider, baseline.splitVersion)));
+	assert.notEqual(hashJson(synthesisSpec(current, provider, current.splitVersion)), hashJson(synthesisSpec(baseline, provider, baseline.splitVersion)));
+	assert.throws(() => buildSectionTargets({ ...input, section: { targetOverrides: { 'dialogue:082-b0087:u01': { instructionOverride: '' } } } }), /非空/u);
+});
+
 test('缓存音色仍采用当前小样的拼接停顿，而非旧缓存中的停顿', () => {
 	const cached = { pauseAfterMs: 85, assemblyGainDb: 0, normalizationMode: null, fileHash: 'same-audio' };
 	const current = { pauseAfterMs: 220, assemblyGainDb: 1, normalizationMode: 'short-safe-peak-v1' };

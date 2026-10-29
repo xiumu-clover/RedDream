@@ -63,6 +63,12 @@ export function selectSectionBlocks(blocks, { startAnchor, endAnchor }) {
 }
 
 function instructionFor(kind, annotation, delivery, override) {
+	if (override?.instructionOverride !== undefined) {
+		if (kind !== 'dialogue' || typeof override.instructionOverride !== 'string' || !override.instructionOverride.trim()) {
+			throw new Error('instructionOverride 只允许为人物对白提供非空的录音指令。');
+		}
+		return override.instructionOverride;
+	}
 	const semantic = buildCosyVoiceInstruction(annotation)
 		.replace(/<\|endofprompt\|>/gu, '')
 		.replace(/[。；;\s]+$/gu, '');
@@ -111,6 +117,10 @@ export function buildSectionTargets({ blocks, annotations, references, provider,
 		for (const [unitIndex, unit] of units.entries()) {
 			const targetId = `${block.kind}:${block.blockId}:u${String(unitIndex + 1).padStart(2, '0')}`;
 			const override = section.targetOverrides?.[targetId] || null;
+			const providerOverride = {
+				...(override?.retryVersion === undefined ? {} : { retryVersion: override.retryVersion }),
+				...(override?.promptMode ? { promptMode: override.promptMode } : {}),
+			};
 			const synthesisText = applyPronunciationOverrides(unit.text, annotation.pronunciations);
 			const target = {
 				targetId, order: targets.length + 1, blockOrder: block.order, blockId: block.blockId,
@@ -118,10 +128,9 @@ export function buildSectionTargets({ blocks, annotations, references, provider,
 				blockTextHash: block.textHash, speakerRef: annotation.speakerRef, voiceCardRoute: referenceKey, annotation,
 				...(unit.delivery?.ssml === undefined ? {} : { ssml: validateSentenceSsml(unit.text, unit.delivery.ssml) }),
 				annotationHash: voiceAnnotationHash(annotation), reference,
-				providerOverride: override ? {
-					...(override.retryVersion === undefined ? {} : { retryVersion: override.retryVersion }),
-					...(override.promptMode ? { promptMode: override.promptMode } : {}),
-				} : null,
+				// Keep legacy suffix-only cache keys unchanged; new complete instructions need no provider override.
+				providerOverride: Object.keys(providerOverride).length ? providerOverride
+					: override && override.instructionOverride === undefined ? {} : null,
 				instruction: instructionFor(block.kind, annotation, unit.delivery, override),
 				assemblyGainDb: section.assemblyGainsDb?.[targetId] || 0,
 				normalizationMode: section.normalizationOverrides?.[targetId] || null,
